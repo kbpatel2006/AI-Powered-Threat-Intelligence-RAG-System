@@ -1,4 +1,4 @@
-# Triple Point Security Final Project
+##AI-Powered Threat Intelligence RAG System
 
 Cybersecurity knowledge-base and retrieval-augmented generation project that combines MITRE ATT&CK Enterprise data, selected CISA advisories, NIST SP 800-53 controls, and a NIST-to-ATT&CK cross-reference into queryable artifacts.
 
