@@ -1,0 +1,71 @@
+SOURCE: NIST SP 800-53 rev5 — Control Family PS
+FRAMEWORK: NIST SP 800-53 rev5
+CONTROL FAMILY: PS — Personnel Security
+CONTROL COUNT: 9
+======================================================================
+
+CONTROL: PS-1 — Policy and Procedures
+FAMILY: PS (Personnel Security)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop, document, and disseminate to {{ insert: param, ps-1_prm_1 }}: {{ insert: param, ps-01_odp.03 }} personnel security policy that: Addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and Is consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines; and Procedures to facilitate the implementation of the personnel security policy and the associated personnel security controls; Designate an {{ insert: param, ps-01_odp.04 }} to manage the development, docume
+
+──────────────────────────────────────────────────
+
+CONTROL: PS-2 — Position Risk Designation
+FAMILY: PS (Personnel Security)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Assign a risk designation to all organizational positions; Establish screening criteria for individuals filling those positions; and Review and update position risk designations {{ insert: param, ps-02_odp }}. Position risk designations reflect Office of Personnel Management (OPM) policy and guidance. Proper position designation is the foundation of an effective and consistent suitability and personnel security program. The Position Designation System (PDS) assesses the duties and responsibilities of a position to determine the degree of potential damage to the efficiency or integrity of the s
+
+──────────────────────────────────────────────────
+
+CONTROL: PS-3 — Personnel Screening
+FAMILY: PS (Personnel Security)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Screen individuals prior to authorizing access to the system; and Rescreen individuals in accordance with {{ insert: param, ps-3_prm_1 }}. Personnel screening and rescreening activities reflect applicable laws, executive orders, directives, regulations, policies, standards, guidelines, and specific criteria established for the risk designations of assigned positions. Examples of personnel screening include background investigations and agency checks. Organizations may define different rescreening conditions and frequencies for personnel accessing systems based on types of information processed
+ENHANCEMENTS: PS-3.1: Classified Information — Verify that individuals accessing a system processing, storing, or transmitting classified information are cleared and indoctrinated to the highest classification level of the information to which they have access on the system. Classified information is the most sensitive information that the Federal Government processes, stores, or transmits. It is imperative tha
+
+──────────────────────────────────────────────────
+
+CONTROL: PS-4 — Personnel Termination
+FAMILY: PS (Personnel Security)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Upon termination of individual employment: Disable system access within {{ insert: param, ps-04_odp.01 }}; Terminate or revoke any authenticators and credentials associated with the individual; Conduct exit interviews that include a discussion of {{ insert: param, ps-04_odp.02 }}; Retrieve all security-related organizational system-related property; and Retain access to organizational information and systems formerly controlled by terminated individual. System property includes hardware authentication tokens, system administration technical manuals, keys, identification cards, and building pas
+ENHANCEMENTS: PS-4.1: Post-employment Requirements — Notify terminated individuals of applicable, legally binding post-employment requirements for the protection of organizational information; and Require terminated individuals to sign an acknowledgment of post-employment requirements as part of the organizational termination process. Organizations consult with the Office of the General Counsel regarding matter
+
+──────────────────────────────────────────────────
+
+CONTROL: PS-5 — Personnel Transfer
+FAMILY: PS (Personnel Security)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Review and confirm ongoing operational need for current logical and physical access authorizations to systems and facilities when individuals are reassigned or transferred to other positions within the organization; Initiate {{ insert: param, ps-05_odp.01 }} within {{ insert: param, ps-05_odp.02 }}; Modify access authorization as needed to correspond with any changes in operational need due to reassignment or transfer; and Notify {{ insert: param, ps-05_odp.03 }} within {{ insert: param, ps-05_odp.04 }}. Personnel transfer applies when reassignments or transfers of individuals are permanent or
+
+──────────────────────────────────────────────────
+
+CONTROL: PS-6 — Access Agreements
+FAMILY: PS (Personnel Security)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop and document access agreements for organizational systems; Review and update the access agreements {{ insert: param, ps-06_odp.01 }} ; and Verify that individuals requiring access to organizational information and systems: Sign appropriate access agreements prior to being granted access; and Re-sign access agreements to maintain access to organizational systems when access agreements have been updated or {{ insert: param, ps-06_odp.02 }}. Access agreements include nondisclosure agreements, acceptable use agreements, rules of behavior, and conflict-of-interest agreements. Signed access 
+ENHANCEMENTS: PS-6.1: Information Requiring Special Protection —  | PS-6.2: Classified Information Requiring Special Protection — Verify that access to classified information requiring special protection is granted only to individuals who: Have a valid access authorization that is demonstrated by assigned official government duties; Satisfy associated personnel security criteria; and Have read, understood, and 
+
+──────────────────────────────────────────────────
+
+CONTROL: PS-7 — External Personnel Security
+FAMILY: PS (Personnel Security)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Establish personnel security requirements, including security roles and responsibilities for external providers; Require external providers to comply with personnel security policies and procedures established by the organization; Document personnel security requirements; Require external providers to notify {{ insert: param, ps-07_odp.01 }} of any personnel transfers or terminations of external personnel who possess organizational credentials and/or badges, or who have system privileges within {{ insert: param, ps-07_odp.02 }} ; and Monitor provider compliance with personnel security requirem
+
+──────────────────────────────────────────────────
+
+CONTROL: PS-8 — Personnel Sanctions
+FAMILY: PS (Personnel Security)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Employ a formal sanctions process for individuals failing to comply with established information security and privacy policies and procedures; and Notify {{ insert: param, ps-08_odp.01 }} within {{ insert: param, ps-08_odp.02 }} when a formal employee sanctions process is initiated, identifying the individual sanctioned and the reason for the sanction. Organizational sanctions reflect applicable laws, executive orders, directives, regulations, policies, standards, and guidelines. Sanctions processes are described in access agreements and can be included as part of general personnel policies fo
+
+──────────────────────────────────────────────────
+
+CONTROL: PS-9 — Position Descriptions
+FAMILY: PS (Personnel Security)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Incorporate security and privacy roles and responsibilities into organizational position descriptions. Specification of security and privacy roles in individual organizational position descriptions facilitates clarity in understanding the security or privacy responsibilities associated with the roles and the role-based security and privacy training requirements for the roles. security roles and responsibilities are incorporated into organizational position descriptions; privacy roles and responsibilities are incorporated into organizational position descriptions. Personnel security policy pers
+
+──────────────────────────────────────────────────

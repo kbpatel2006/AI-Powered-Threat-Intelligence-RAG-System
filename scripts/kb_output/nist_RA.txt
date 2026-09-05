@@ -1,0 +1,77 @@
+SOURCE: NIST SP 800-53 rev5 — Control Family RA
+FRAMEWORK: NIST SP 800-53 rev5
+CONTROL FAMILY: RA — Risk Assessment
+CONTROL COUNT: 10
+======================================================================
+
+CONTROL: RA-1 — Policy and Procedures
+FAMILY: RA (Risk Assessment)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop, document, and disseminate to {{ insert: param, ra-1_prm_1 }}: {{ insert: param, ra-01_odp.03 }} risk assessment policy that: Addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and Is consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines; and Procedures to facilitate the implementation of the risk assessment policy and the associated risk assessment controls; Designate an {{ insert: param, ra-01_odp.04 }} to manage the development, documentation, 
+
+──────────────────────────────────────────────────
+
+CONTROL: RA-2 — Security Categorization
+FAMILY: RA (Risk Assessment)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Categorize the system and information it processes, stores, and transmits; Document the security categorization results, including supporting rationale, in the security plan for the system; and Verify that the authorizing official or authorizing official designated representative reviews and approves the security categorization decision. Security categories describe the potential adverse impacts or negative consequences to organizational operations, organizational assets, and individuals if organizational information and systems are compromised through a loss of confidentiality, integrity, or 
+ENHANCEMENTS: RA-2.1: Impact-level Prioritization — Conduct an impact-level prioritization of organizational systems to obtain additional granularity on system impact levels. Organizations apply the "high-water mark" concept to each system categorized in accordance with [FIPS 199](#628d22a1-6a11-4784-bc59-5cd9497b5445) , resulting in systems designated as low impact, moderate impact, or high impact. Organizatio
+
+──────────────────────────────────────────────────
+
+CONTROL: RA-3 — Risk Assessment
+FAMILY: RA (Risk Assessment)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Conduct a risk assessment, including: Identifying threats to and vulnerabilities in the system; Determining the likelihood and magnitude of harm from unauthorized access, use, disclosure, disruption, modification, or destruction of the system, the information it processes, stores, or transmits, and any related information; and Determining the likelihood and impact of adverse effects on individuals arising from the processing of personally identifiable information; Integrate risk assessment results and risk management decisions from the organization and mission or business process perspectives 
+ENHANCEMENTS: RA-3.1: Supply Chain Risk Assessment — Assess supply chain risks associated with {{ insert: param, ra-03.01_odp.01 }} ; and Update the supply chain risk assessment {{ insert: param, ra-03.01_odp.02 }} , when there are significant changes to the relevant supply chain, or when changes to the system, environments of operation, or other conditions may necessitate a change in the supply chain. Supply c
+
+──────────────────────────────────────────────────
+
+CONTROL: RA-4 — Risk Assessment Update
+FAMILY: RA (Risk Assessment)
+FRAMEWORK: NIST SP 800-53 rev5
+
+──────────────────────────────────────────────────
+
+CONTROL: RA-5 — Vulnerability Monitoring and Scanning
+FAMILY: RA (Risk Assessment)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Monitor and scan for vulnerabilities in the system and hosted applications {{ insert: param, ra-5_prm_1 }} and when new vulnerabilities potentially affecting the system are identified and reported; Employ vulnerability monitoring tools and techniques that facilitate interoperability among tools and automate parts of the vulnerability management process by using standards for: Enumerating platforms, software flaws, and improper configurations; Formatting checklists and test procedures; and Measuring vulnerability impact; Analyze vulnerability scan reports and results from vulnerability monitori
+ENHANCEMENTS: RA-5.1: Update Tool Capability —  | RA-5.2: Update Vulnerabilities to Be Scanned — Update the system vulnerabilities to be scanned {{ insert: param, ra-05.02_odp.01 }}. Due to the complexity of modern software, systems, and other factors, new vulnerabilities are discovered on a regular basis. It is important that newly discovered vulnerabilities are added to the list of vulnerabilities to be scann
+
+──────────────────────────────────────────────────
+
+CONTROL: RA-6 — Technical Surveillance Countermeasures Survey
+FAMILY: RA (Risk Assessment)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Employ a technical surveillance countermeasures survey at {{ insert: param, ra-06_odp.01 }} {{ insert: param, ra-06_odp.02 }}. A technical surveillance countermeasures survey is a service provided by qualified personnel to detect the presence of technical surveillance devices and hazards and to identify technical security weaknesses that could be used in the conduct of a technical penetration of the surveyed facility. Technical surveillance countermeasures surveys also provide evaluations of the technical security posture of organizations and facilities and include visual, electronic, and phys
+
+──────────────────────────────────────────────────
+
+CONTROL: RA-7 — Risk Response
+FAMILY: RA (Risk Assessment)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Respond to findings from security and privacy assessments, monitoring, and audits in accordance with organizational risk tolerance. Organizations have many options for responding to risk including mitigating risk by implementing new controls or strengthening existing controls, accepting risk with appropriate justification or rationale, sharing or transferring risk, or avoiding risk. The risk tolerance of the organization influences risk response decisions and actions. Risk response addresses the need to determine an appropriate response to risk before generating a plan of action and milestones
+
+──────────────────────────────────────────────────
+
+CONTROL: RA-8 — Privacy Impact Assessments
+FAMILY: RA (Risk Assessment)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Conduct privacy impact assessments for systems, programs, or other activities before: Developing or procuring information technology that processes personally identifiable information; and Initiating a new collection of personally identifiable information that: Will be processed using information technology; and Includes personally identifiable information permitting the physical or virtual (online) contacting of a specific individual, if identical questions have been posed to, or identical reporting requirements imposed on, ten or more individuals, other than agencies, instrumentalities, or e
+
+──────────────────────────────────────────────────
+
+CONTROL: RA-9 — Criticality Analysis
+FAMILY: RA (Risk Assessment)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Identify critical system components and functions by performing a criticality analysis for {{ insert: param, ra-09_odp.01 }} at {{ insert: param, ra-09_odp.02 }}. Not all system components, functions, or services necessarily require significant protections. For example, criticality analysis is a key tenet of supply chain risk management and informs the prioritization of protection activities. The identification of critical system components and functions considers applicable laws, executive orders, regulations, directives, policies, standards, system functionality requirements, system and comp
+
+──────────────────────────────────────────────────
+
+CONTROL: RA-10 — Threat Hunting
+FAMILY: RA (Risk Assessment)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Establish and maintain a cyber threat hunting capability to: Search for indicators of compromise in organizational systems; and Detect, track, and disrupt threats that evade existing controls; and Employ the threat hunting capability {{ insert: param, ra-10_odp }}. Threat hunting is an active means of cyber defense in contrast to traditional protection measures, such as firewalls, intrusion detection and prevention systems, quarantining malicious code in sandboxes, and Security Information and Event Management technologies and systems. Cyber threat hunting involves proactively searching organi
+
+──────────────────────────────────────────────────

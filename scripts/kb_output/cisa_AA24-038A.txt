@@ -1,0 +1,29 @@
+SOURCE: CISA Advisory AA24-038A
+THREAT ACTOR: Volt Typhoon (PRC)
+DATE: 2024-02-07
+ADVISORY ID: AA24-038A
+======================================================================
+
+SECTION: Key Finding — KV Botnet
+TITLE: PRC Actors — KV Botnet via SOHO Routers
+ATT&CK TECHNIQUE IDs: T1090.002, T1584.005
+
+A February 2024 joint CISA/NSA/FBI advisory confirmed that PRC state-sponsored actors including Volt Typhoon operate a botnet of compromised SOHO routers known as the KV Botnet, used to proxy C2 traffic (T1090.002) and obfuscate intrusion origins. Affected devices include Cisco RV320/325, NETGEAR ProSAFE, and Axis IP cameras. Organizations should audit SOHO perimeter devices and isolate or replace end-of-life hardware immediately. The actors also compromise third-party infrastructure for use as operational relay boxes (T1584.005 — Compromise Infrastructure: Botnet).
+
+──────────────────────────────────────────────────
+
+SECTION: Key Finding — OT Intent
+TITLE: PRC Actors — OT Pre-Positioning Intent
+ATT&CK TECHNIQUE IDs: T1078, T1021, T1190
+
+The 2024 advisory elevated the threat assessment, stating that PRC state-sponsored actors are pre-positioning on U.S. critical infrastructure IT networks specifically to enable disruptive or destructive cyberattacks against OT systems during a major crisis or conflict. Valid accounts (T1078) and remote services (T1021) are the primary persistence mechanisms observed. Electric, water, transportation, and communications sectors are priority targets. Organizations should assume Volt Typhoon may already have persistent access and conduct proactive threat hunting.
+
+──────────────────────────────────────────────────
+
+SECTION: Detection Recommendations
+TITLE: PRC Actors — Detection Recommendations
+ATT&CK TECHNIQUE IDs: T1003.001, T1059.001, T1047, T1090.002
+
+AA24-038A specific detection guidance: Monitor ntdsutil.exe and comsvcs.dll execution outside maintenance windows (T1003.001 LSASS dump indicator). Alert on PowerShell encoded command execution and unusual wmic queries (T1059.001, T1047). Monitor authentication logs for accounts authenticating from unexpected source IPs — especially VPN/remote access. Implement LOLBin behavioral detection for certutil, mshta, and regsvr32 in unusual contexts. Deploy network flow monitoring to detect unusual outbound traffic to SOHO device IP ranges (T1090.002).
+
+──────────────────────────────────────────────────

@@ -1,0 +1,179 @@
+SOURCE: NIST SP 800-53 rev5 — Control Family PE
+FRAMEWORK: NIST SP 800-53 rev5
+CONTROL FAMILY: PE — Physical and Environmental Protection
+CONTROL COUNT: 23
+======================================================================
+
+CONTROL: PE-1 — Policy and Procedures
+FAMILY: PE (Physical and Environmental Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop, document, and disseminate to {{ insert: param, pe-1_prm_1 }}: {{ insert: param, pe-01_odp.03 }} physical and environmental protection policy that: Addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and Is consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines; and Procedures to facilitate the implementation of the physical and environmental protection policy and the associated physical and environmental protection controls; Designate an {{ insert:
+
+──────────────────────────────────────────────────
+
+CONTROL: PE-2 — Physical Access Authorizations
+FAMILY: PE (Physical and Environmental Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop, approve, and maintain a list of individuals with authorized access to the facility where the system resides; Issue authorization credentials for facility access; Review the access list detailing authorized facility access by individuals {{ insert: param, pe-02_odp }} ; and Remove individuals from the facility access list when access is no longer required. Physical access authorizations apply to employees and visitors. Individuals with permanent physical access authorization credentials are not considered visitors. Authorization credentials include ID badges, identification cards, and 
+ENHANCEMENTS: PE-2.1: Access by Position or Role — Authorize physical access to the facility where the system resides based on position or role. Role-based facility access includes access by authorized permanent and regular/routine maintenance personnel, duty officers, and emergency medical staff. physical access to the facility where the system resides is authorized based on position or role. Physical and envi
+
+──────────────────────────────────────────────────
+
+CONTROL: PE-3 — Physical Access Control
+FAMILY: PE (Physical and Environmental Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Enforce physical access authorizations at {{ insert: param, pe-03_odp.01 }} by: Verifying individual access authorizations before granting access to the facility; and Controlling ingress and egress to the facility using {{ insert: param, pe-03_odp.02 }}; Maintain physical access audit logs for {{ insert: param, pe-03_odp.04 }}; Control access to areas within the facility designated as publicly accessible by implementing the following controls: {{ insert: param, pe-03_odp.05 }}; Escort visitors and control visitor activity {{ insert: param, pe-03_odp.06 }}; Secure keys, combinations, and other 
+ENHANCEMENTS: PE-3.1: System Access — Enforce physical access authorizations to the system in addition to the physical access controls for the facility at {{ insert: param, pe-03.01_odp }}. Control of physical access to the system provides additional physical security for those areas within facilities where there is a concentration of system components. physical access authorizations to the system are enforced;
+
+──────────────────────────────────────────────────
+
+CONTROL: PE-4 — Access Control for Transmission
+FAMILY: PE (Physical and Environmental Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Control physical access to {{ insert: param, pe-04_odp.01 }} within organizational facilities using {{ insert: param, pe-04_odp.02 }}. Security controls applied to system distribution and transmission lines prevent accidental damage, disruption, and physical tampering. Such controls may also be necessary to prevent eavesdropping or modification of unencrypted transmissions. Security controls used to control physical access to system distribution and transmission lines include disconnected or locked spare jacks, locked wiring closets, protection of cabling by conduit or cable trays, and wiretap
+
+──────────────────────────────────────────────────
+
+CONTROL: PE-5 — Access Control for Output Devices
+FAMILY: PE (Physical and Environmental Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Control physical access to output from {{ insert: param, pe-05_odp }} to prevent unauthorized individuals from obtaining the output. Controlling physical access to output devices includes placing output devices in locked rooms or other secured areas with keypad or card reader access controls and allowing access to authorized individuals only, placing output devices in locations that can be monitored by personnel, installing monitor or screen filters, and using headphones. Examples of output devices include monitors, printers, scanners, audio devices, facsimile machines, and copiers. physical a
+ENHANCEMENTS: PE-5.1: Access to Output by Authorized Individuals —  | PE-5.2: Link to Individual Identity — Link individual identity to receipt of output from output devices. Methods for linking individual identity to the receipt of output from output devices include installing security functionality on facsimile machines, copiers, and printers. Such functionality allows organizations to implement authenticatio
+
+──────────────────────────────────────────────────
+
+CONTROL: PE-6 — Monitoring Physical Access
+FAMILY: PE (Physical and Environmental Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Monitor physical access to the facility where the system resides to detect and respond to physical security incidents; Review physical access logs {{ insert: param, pe-06_odp.01 }} and upon occurrence of {{ insert: param, pe-06_odp.02 }} ; and Coordinate results of reviews and investigations with the organizational incident response capability. Physical access monitoring includes publicly accessible areas within organizational facilities. Examples of physical access monitoring include the employment of guards, video surveillance equipment (i.e., cameras), and sensor devices. Reviewing physical
+ENHANCEMENTS: PE-6.1: Intrusion Alarms and Surveillance Equipment — Monitor physical access to the facility where the system resides using physical intrusion alarms and surveillance equipment. Physical intrusion alarms can be employed to alert security personnel when unauthorized access to the facility is attempted. Alarm systems work in conjunction with physical barriers, physical access control systems, and s
+
+──────────────────────────────────────────────────
+
+CONTROL: PE-7 — Visitor Control
+FAMILY: PE (Physical and Environmental Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+
+──────────────────────────────────────────────────
+
+CONTROL: PE-8 — Visitor Access Records
+FAMILY: PE (Physical and Environmental Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Maintain visitor access records to the facility where the system resides for {{ insert: param, pe-08_odp.01 }}; Review visitor access records {{ insert: param, pe-08_odp.02 }} ; and Report anomalies in visitor access records to {{ insert: param, pe-08_odp.03 }}. Visitor access records include the names and organizations of individuals visiting, visitor signatures, forms of identification, dates of access, entry and departure times, purpose of visits, and the names and organizations of individuals visited. Access record reviews determine if access authorizations are current and are still requir
+ENHANCEMENTS: PE-8.1: Automated Records Maintenance and Review — Maintain and review visitor access records using {{ insert: param, pe-8.1_prm_1 }}. Visitor access records may be stored and maintained in a database management system that is accessible by organizational personnel. Automated access to such records facilitates record reviews on a regular basis to determine if access authorizations are current and 
+
+──────────────────────────────────────────────────
+
+CONTROL: PE-9 — Power Equipment and Cabling
+FAMILY: PE (Physical and Environmental Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Protect power equipment and power cabling for the system from damage and destruction. Organizations determine the types of protection necessary for the power equipment and cabling employed at different locations that are both internal and external to organizational facilities and environments of operation. Types of power equipment and cabling include internal cabling and uninterruptable power sources in offices or data centers, generators and power cabling outside of buildings, and power sources for self-contained components such as satellites, vehicles, and other deployable systems. power equ
+ENHANCEMENTS: PE-9.1: Redundant Cabling — Employ redundant power cabling paths that are physically separated by {{ insert: param, pe-09.01_odp }}. Physically separate and redundant power cables ensure that power continues to flow in the event that one of the cables is cut or otherwise damaged. redundant power cabling paths that are physically separated by {{ insert: param, pe-09.01_odp }} are employed. Physical
+
+──────────────────────────────────────────────────
+
+CONTROL: PE-10 — Emergency Shutoff
+FAMILY: PE (Physical and Environmental Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Provide the capability of shutting off power to {{ insert: param, pe-10_odp.01 }} in emergency situations; Place emergency shutoff switches or devices in {{ insert: param, pe-10_odp.02 }} to facilitate access for authorized personnel; and Protect emergency power shutoff capability from unauthorized activation. Emergency power shutoff primarily applies to organizational facilities that contain concentrations of system resources, including data centers, mainframe computer rooms, server rooms, and areas with computer-controlled machinery. the capability to shut off power to {{ insert: param, pe-1
+ENHANCEMENTS: PE-10.1: Accidental and Unauthorized Activation — 
+
+──────────────────────────────────────────────────
+
+CONTROL: PE-11 — Emergency Power
+FAMILY: PE (Physical and Environmental Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Provide an uninterruptible power supply to facilitate {{ insert: param, pe-11_odp }} in the event of a primary power source loss. An uninterruptible power supply (UPS) is an electrical system or mechanism that provides emergency power when there is a failure of the main power source. A UPS is typically used to protect computers, data centers, telecommunication equipment, or other electrical equipment where an unexpected power disruption could cause injuries, fatalities, serious mission or business disruption, or loss of data or information. A UPS differs from an emergency power system or backu
+ENHANCEMENTS: PE-11.1: Alternate Power Supply — Minimal Operational Capability — Provide an alternate power supply for the system that is activated {{ insert: param, pe-11.01_odp }} and that can maintain minimally required operational capability in the event of an extended loss of the primary power source. Provision of an alternate power supply with minimal operating capability can be satisfied by accessing a s
+
+──────────────────────────────────────────────────
+
+CONTROL: PE-12 — Emergency Lighting
+FAMILY: PE (Physical and Environmental Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Employ and maintain automatic emergency lighting for the system that activates in the event of a power outage or disruption and that covers emergency exits and evacuation routes within the facility. The provision of emergency lighting applies primarily to organizational facilities that contain concentrations of system resources, including data centers, server rooms, and mainframe computer rooms. Emergency lighting provisions for the system are described in the contingency plan for the organization. If emergency lighting for the system fails or cannot be provided, organizations consider alterna
+ENHANCEMENTS: PE-12.1: Essential Mission and Business Functions — Provide emergency lighting for all areas within the facility supporting essential mission and business functions. Organizations define their essential missions and functions. emergency lighting is provided for all areas within the facility supporting essential mission and business functions. Physical and environmental protection policy procedures
+
+──────────────────────────────────────────────────
+
+CONTROL: PE-13 — Fire Protection
+FAMILY: PE (Physical and Environmental Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Employ and maintain fire detection and suppression systems that are supported by an independent energy source. The provision of fire detection and suppression systems applies primarily to organizational facilities that contain concentrations of system resources, including data centers, server rooms, and mainframe computer rooms. Fire detection and suppression systems that may require an independent energy source include sprinkler systems and smoke detectors. An independent energy source is an energy source, such as a microgrid, that is separate, or can be separated, from the energy sources pro
+ENHANCEMENTS: PE-13.1: Detection Systems — Automatic Activation and Notification — Employ fire detection systems that activate automatically and notify {{ insert: param, pe-13.01_odp.01 }} and {{ insert: param, pe-13.01_odp.02 }} in the event of a fire. Organizations can identify personnel, roles, and emergency responders if individuals on the notification list need to have access authorizations or clearances (
+
+──────────────────────────────────────────────────
+
+CONTROL: PE-14 — Environmental Controls
+FAMILY: PE (Physical and Environmental Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Maintain {{ insert: param, pe-14_odp.01 }} levels within the facility where the system resides at {{ insert: param, pe-14_odp.03 }} ; and Monitor environmental control levels {{ insert: param, pe-14_odp.04 }}. The provision of environmental controls applies primarily to organizational facilities that contain concentrations of system resources (e.g., data centers, mainframe computer rooms, and server rooms). Insufficient environmental controls, especially in very harsh environments, can have a significant adverse impact on the availability of systems and system components that are needed to sup
+ENHANCEMENTS: PE-14.1: Automatic Controls — Employ the following automatic environmental controls in the facility to prevent fluctuations potentially harmful to the system: {{ insert: param, pe-14.01_odp }}. The implementation of automatic environmental controls provides an immediate response to environmental conditions that can damage, degrade, or destroy organizational systems or systems components. {{ insert
+
+──────────────────────────────────────────────────
+
+CONTROL: PE-15 — Water Damage Protection
+FAMILY: PE (Physical and Environmental Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Protect the system from damage resulting from water leakage by providing master shutoff or isolation valves that are accessible, working properly, and known to key personnel. The provision of water damage protection primarily applies to organizational facilities that contain concentrations of system resources, including data centers, server rooms, and mainframe computer rooms. Isolation valves can be employed in addition to or in lieu of master shutoff valves to shut off water supplies in specific areas of concern without affecting entire organizations. the system is protected from damage resu
+ENHANCEMENTS: PE-15.1: Automation Support — Detect the presence of water near the system and alert {{ insert: param, pe-15.01_odp.01 }} using {{ insert: param, pe-15.01_odp.02 }}. Automated mechanisms include notification systems, water detection sensors, and alarms. the presence of water near the system can be detected automatically; {{ insert: param, pe-15.01_odp.01 }} is/are alerted using {{ insert: param, p
+
+──────────────────────────────────────────────────
+
+CONTROL: PE-16 — Delivery and Removal
+FAMILY: PE (Physical and Environmental Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Authorize and control {{ insert: param, pe-16_prm_1 }} entering and exiting the facility; and Maintain records of the system components. Enforcing authorizations for entry and exit of system components may require restricting access to delivery areas and isolating the areas from the system and media libraries. {{ insert: param, pe-16_odp.01 }} are authorized when entering the facility; {{ insert: param, pe-16_odp.01 }} are controlled when entering the facility; {{ insert: param, pe-16_odp.02 }} are authorized when exiting the facility; {{ insert: param, pe-16_odp.02 }} are controlled when exit
+
+──────────────────────────────────────────────────
+
+CONTROL: PE-17 — Alternate Work Site
+FAMILY: PE (Physical and Environmental Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Determine and document the {{ insert: param, pe-17_odp.01 }} allowed for use by employees; Employ the following controls at alternate work sites: {{ insert: param, pe-17_odp.02 }}; Assess the effectiveness of controls at alternate work sites; and Provide a means for employees to communicate with information security and privacy personnel in case of incidents. Alternate work sites include government facilities or the private residences of employees. While distinct from alternative processing sites, alternate work sites can provide readily available alternate locations during contingency operati
+
+──────────────────────────────────────────────────
+
+CONTROL: PE-18 — Location of System Components
+FAMILY: PE (Physical and Environmental Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Position system components within the facility to minimize potential damage from {{ insert: param, pe-18_odp }} and to minimize the opportunity for unauthorized access. Physical and environmental hazards include floods, fires, tornadoes, earthquakes, hurricanes, terrorism, vandalism, an electromagnetic pulse, electrical interference, and other forms of incoming electromagnetic radiation. Organizations consider the location of entry points where unauthorized individuals, while not being granted access, might nonetheless be near systems. Such proximity can increase the risk of unauthorized acces
+ENHANCEMENTS: PE-18.1: Facility Site — 
+
+──────────────────────────────────────────────────
+
+CONTROL: PE-19 — Information Leakage
+FAMILY: PE (Physical and Environmental Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Protect the system from information leakage due to electromagnetic signals emanations. Information leakage is the intentional or unintentional release of data or information to an untrusted environment from electromagnetic signals emanations. The security categories or classifications of systems (with respect to confidentiality), organizational security policies, and risk tolerance guide the selection of controls employed to protect systems against information leakage due to electromagnetic signals emanations. the system is protected from information leakage due to electromagnetic signal emana
+ENHANCEMENTS: PE-19.1: National Emissions Policies and Procedures — Protect system components, associated data communications, and networks in accordance with national Emissions Security policies and procedures based on the security category or classification of the information. Emissions Security (EMSEC) policies include the former TEMPEST policies. system components are protected in accordance with national e
+
+──────────────────────────────────────────────────
+
+CONTROL: PE-20 — Asset Monitoring and Tracking
+FAMILY: PE (Physical and Environmental Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Employ {{ insert: param, pe-20_odp.01 }} to track and monitor the location and movement of {{ insert: param, pe-20_odp.02 }} within {{ insert: param, pe-20_odp.03 }}. Asset location technologies can help ensure that critical assets—including vehicles, equipment, and system components—remain in authorized locations. Organizations consult with the Office of the General Counsel and senior agency official for privacy regarding the deployment and use of asset location technologies to address potential privacy concerns. {{ insert: param, pe-20_odp.01 }} are employed to track and monitor the location
+
+──────────────────────────────────────────────────
+
+CONTROL: PE-21 — Electromagnetic Pulse Protection
+FAMILY: PE (Physical and Environmental Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Employ {{ insert: param, pe-21_odp.01 }} against electromagnetic pulse damage for {{ insert: param, pe-21_odp.02 }}. An electromagnetic pulse (EMP) is a short burst of electromagnetic energy that is spread over a range of frequencies. Such energy bursts may be natural or man-made. EMP interference may be disruptive or damaging to electronic equipment. Protective measures used to mitigate EMP risk include shielding, surge suppressors, ferro-resonant transformers, and earth grounding. EMP protection may be especially significant for systems and applications that are part of the U.S. critical inf
+
+──────────────────────────────────────────────────
+
+CONTROL: PE-22 — Component Marking
+FAMILY: PE (Physical and Environmental Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Mark {{ insert: param, pe-22_odp }} indicating the impact level or classification level of the information permitted to be processed, stored, or transmitted by the hardware component. Hardware components that may require marking include input and output devices. Input devices include desktop and notebook computers, keyboards, tablets, and smart phones. Output devices include printers, monitors/video displays, facsimile machines, scanners, copiers, and audio devices. Permissions controlling output to the output devices are addressed in [AC-3](#ac-3) or [AC-4](#ac-4) . Components are marked to i
+
+──────────────────────────────────────────────────
+
+CONTROL: PE-23 — Facility Location
+FAMILY: PE (Physical and Environmental Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Plan the location or site of the facility where the system resides considering physical and environmental hazards; and For existing facilities, consider the physical and environmental hazards in the organizational risk management strategy. Physical and environmental hazards include floods, fires, tornadoes, earthquakes, hurricanes, terrorism, vandalism, an electromagnetic pulse, electrical interference, and other forms of incoming electromagnetic radiation. The location of system components within the facility is addressed in [PE-18](#pe-18). the location or site of the facility where the syst
+
+──────────────────────────────────────────────────

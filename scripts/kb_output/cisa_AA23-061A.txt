@@ -1,0 +1,45 @@
+SOURCE: CISA Advisory AA23-061A
+THREAT ACTOR: Royal Ransomware Group
+DATE: 2023-03-02
+ADVISORY ID: AA23-061A
+======================================================================
+
+SECTION: Overview
+TITLE: Royal Ransomware — Overview
+ATT&CK TECHNIQUE IDs: T1486, T1489
+
+Royal ransomware is a highly capable ransomware variant operated by a sophisticated threat group active since at least September 2022. CISA and the FBI issued AA23-061A noting Royal has targeted U.S. and international critical infrastructure including healthcare, education, manufacturing, and communications. Royal encrypts files (T1486 — Data Encrypted for Impact) and stops critical services before encryption (T1489 — Service Stop). The group demands ransoms ranging from $1 million to $11 million USD.
+
+──────────────────────────────────────────────────
+
+SECTION: TTPs — Initial Access
+TITLE: Royal Ransomware — Initial Access and Phishing
+ATT&CK TECHNIQUE IDs: T1566.001, T1566.002, T1078, T1190
+
+Royal primarily gains initial access via callback phishing — victims receive emails inducing them to call a phone number (T1566.001 Spearphishing Attachment variant). The caller is then socially engineered into installing remote access software. Additional vectors include malicious links (T1566.002), exploitation of public-facing applications (T1190), and use of valid credentials purchased from initial access brokers (T1078). Royal has also exploited unpatched vulnerabilities in Citrix and FortiOS.
+
+──────────────────────────────────────────────────
+
+SECTION: TTPs — Execution / Persistence
+TITLE: Royal Ransomware — Execution and Persistence
+ATT&CK TECHNIQUE IDs: T1059.003, T1547.001, T1053.005, T1112
+
+Royal uses Windows Command Shell (T1059.003) and PowerShell for execution. Persistence is established via registry run keys (T1547.001) and scheduled tasks (T1053.005). The group modifies the registry (T1112) to disable security tools and configure autostart. Royal has been observed deploying Cobalt Strike beacons and Qakbot/QBot malware as intermediate stages before deploying the final ransomware payload.
+
+──────────────────────────────────────────────────
+
+SECTION: TTPs — Lateral Movement / Exfiltration
+TITLE: Royal Ransomware — Lateral Movement and Exfiltration
+ATT&CK TECHNIQUE IDs: T1021.001, T1021.002, T1048, T1485
+
+Royal moves laterally using Remote Desktop Protocol (T1021.001) and SMB/Windows Admin Shares (T1021.002). Prior to encryption, the group exfiltrates data for double-extortion using tools such as Cobalt Strike and MEGAsync (T1048 — Exfiltration Over Alternative Protocol). Royal then deletes volume shadow copies (T1485 — Data Destruction) to prevent recovery and deploys the ransomware encryptor using batch scripts or PsExec for network-wide execution.
+
+──────────────────────────────────────────────────
+
+SECTION: Mitigations
+TITLE: Royal Ransomware — Mitigations
+ATT&CK TECHNIQUE IDs: T1486, T1566, T1078, T1021.001
+
+CISA/FBI recommended mitigations against Royal: (1) Maintain offline, encrypted backups tested regularly. (2) Implement a recovery plan for multiple backup copies in different locations. (3) Apply patches promptly, prioritizing internet-facing systems. (4) Enforce MFA on all accounts, especially RDP (T1021.001). (5) Segment networks to limit ransomware propagation. (6) Disable unnecessary remote access services. (7) Deploy endpoint detection and response (EDR) with behavioral analytics. (8) Train users to identify phishing attempts (T1566). (9) Monitor for volume shadow copy deletion commands.
+
+──────────────────────────────────────────────────

@@ -1,0 +1,181 @@
+SOURCE: NIST SP 800-53 rev5 — Control Family SA
+FRAMEWORK: NIST SP 800-53 rev5
+CONTROL FAMILY: SA — System and Services Acquisition
+CONTROL COUNT: 24
+======================================================================
+
+CONTROL: SA-1 — Policy and Procedures
+FAMILY: SA (System and Services Acquisition)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop, document, and disseminate to {{ insert: param, sa-1_prm_1 }}: {{ insert: param, sa-01_odp.03 }} system and services acquisition policy that: Addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and Is consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines; and Procedures to facilitate the implementation of the system and services acquisition policy and the associated system and services acquisition controls; Designate an {{ insert: param, sa-01_odp.
+
+──────────────────────────────────────────────────
+
+CONTROL: SA-2 — Allocation of Resources
+FAMILY: SA (System and Services Acquisition)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Determine the high-level information security and privacy requirements for the system or system service in mission and business process planning; Determine, document, and allocate the resources required to protect the system or system service as part of the organizational capital planning and investment control process; and Establish a discrete line item for information security and privacy in organizational programming and budgeting documentation. Resource allocation for information security and privacy includes funding for system and services acquisition, sustainment, and supply chain-relate
+
+──────────────────────────────────────────────────
+
+CONTROL: SA-3 — System Development Life Cycle
+FAMILY: SA (System and Services Acquisition)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Acquire, develop, and manage the system using {{ insert: param, sa-03_odp }} that incorporates information security and privacy considerations; Define and document information security and privacy roles and responsibilities throughout the system development life cycle; Identify individuals having information security and privacy roles and responsibilities; and Integrate the organizational information security and privacy risk management process into system development life cycle activities. A system development life cycle process provides the foundation for the successful development, implemen
+ENHANCEMENTS: SA-3.1: Manage Preproduction Environment — Protect system preproduction environments commensurate with risk throughout the system development life cycle for the system, system component, or system service. The preproduction environment includes development, test, and integration environments. The program protection planning processes established by the Department of Defense are examples of managin
+
+──────────────────────────────────────────────────
+
+CONTROL: SA-4 — Acquisition Process
+FAMILY: SA (System and Services Acquisition)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Include the following requirements, descriptions, and criteria, explicitly or by reference, using {{ insert: param, sa-04_odp.01 }} in the acquisition contract for the system, system component, or system service: Security and privacy functional requirements; Strength of mechanism requirements; Security and privacy assurance requirements; Controls needed to satisfy the security and privacy requirements. Security and privacy documentation requirements; Requirements for protecting security and privacy documentation; Description of the system development environment and environment in which the sy
+ENHANCEMENTS: SA-4.1: Functional Properties of Controls — Require the developer of the system, system component, or system service to provide a description of the functional properties of the controls to be implemented. Functional properties of security and privacy controls describe the functionality (i.e., security or privacy capability, functions, or mechanisms) visible at the interfaces of the controls and s
+
+──────────────────────────────────────────────────
+
+CONTROL: SA-5 — System Documentation
+FAMILY: SA (System and Services Acquisition)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Obtain or develop administrator documentation for the system, system component, or system service that describes: Secure configuration, installation, and operation of the system, component, or service; Effective use and maintenance of security and privacy functions and mechanisms; and Known vulnerabilities regarding configuration and use of administrative or privileged functions; Obtain or develop user documentation for the system, system component, or system service that describes: User-accessible security and privacy functions and mechanisms and how to effectively use those functions and mec
+ENHANCEMENTS: SA-5.1: Functional Properties of Security Controls —  | SA-5.2: Security-relevant External System Interfaces —  | SA-5.3: High-level Design —  | SA-5.4: Low-level Design —  | SA-5.5: Source Code — 
+
+──────────────────────────────────────────────────
+
+CONTROL: SA-6 — Software Usage Restrictions
+FAMILY: SA (System and Services Acquisition)
+FRAMEWORK: NIST SP 800-53 rev5
+
+──────────────────────────────────────────────────
+
+CONTROL: SA-7 — User-installed Software
+FAMILY: SA (System and Services Acquisition)
+FRAMEWORK: NIST SP 800-53 rev5
+
+──────────────────────────────────────────────────
+
+CONTROL: SA-8 — Security and Privacy Engineering Principles
+FAMILY: SA (System and Services Acquisition)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Apply the following systems security and privacy engineering principles in the specification, design, development, implementation, and modification of the system and system components: {{ insert: param, sa-8_prm_1 }}. Systems security and privacy engineering principles are closely related to and implemented throughout the system development life cycle (see [SA-3](#sa-3) ). Organizations can apply systems security and privacy engineering principles to new systems under development or to systems undergoing upgrades. For existing systems, organizations apply systems security and privacy engineeri
+ENHANCEMENTS: SA-8.1: Clear Abstractions — Implement the security design principle of clear abstractions. The principle of clear abstractions states that a system has simple, well-defined interfaces and functions that provide a consistent and intuitive view of the data and how the data is managed. The clarity, simplicity, necessity, and sufficiency of the system interfaces— combined with a precise definition of
+
+──────────────────────────────────────────────────
+
+CONTROL: SA-9 — External System Services
+FAMILY: SA (System and Services Acquisition)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Require that providers of external system services comply with organizational security and privacy requirements and employ the following controls: {{ insert: param, sa-09_odp.01 }}; Define and document organizational oversight and user roles and responsibilities with regard to external system services; and Employ the following processes, methods, and techniques to monitor control compliance by external service providers on an ongoing basis: {{ insert: param, sa-09_odp.02 }}. External system services are provided by an external provider, and the organization has no direct control over the imple
+ENHANCEMENTS: SA-9.1: Risk Assessments and Organizational Approvals — Conduct an organizational assessment of risk prior to the acquisition or outsourcing of information security services; and Verify that the acquisition or outsourcing of dedicated information security services is approved by {{ insert: param, sa-09.01_odp }}. Information security services include the operation of security devices, such as fire
+
+──────────────────────────────────────────────────
+
+CONTROL: SA-10 — Developer Configuration Management
+FAMILY: SA (System and Services Acquisition)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Require the developer of the system, system component, or system service to: Perform configuration management during system, component, or service {{ insert: param, sa-10_odp.01 }}; Document, manage, and control the integrity of changes to {{ insert: param, sa-10_odp.02 }}; Implement only organization-approved changes to the system, component, or service; Document approved changes to the system, component, or service and the potential security and privacy impacts of such changes; and Track security flaws and flaw resolution within the system, component, or service and report findings to {{ ins
+ENHANCEMENTS: SA-10.1: Software and Firmware Integrity Verification — Require the developer of the system, system component, or system service to enable integrity verification of software and firmware components. Software and firmware integrity verification allows organizations to detect unauthorized changes to software and firmware components using developer-provided tools, techniques, and mechanisms. The inte
+
+──────────────────────────────────────────────────
+
+CONTROL: SA-11 — Developer Testing and Evaluation
+FAMILY: SA (System and Services Acquisition)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Require the developer of the system, system component, or system service, at all post-design stages of the system development life cycle, to: Develop and implement a plan for ongoing security and privacy control assessments; Perform {{ insert: param, sa-11_odp.01 }} testing/evaluation {{ insert: param, sa-11_odp.02 }} at {{ insert: param, sa-11_odp.03 }}; Produce evidence of the execution of the assessment plan and the results of the testing and evaluation; Implement a verifiable flaw remediation process; and Correct flaws identified during testing and evaluation. Developmental testing and eva
+ENHANCEMENTS: SA-11.1: Static Code Analysis — Require the developer of the system, system component, or system service to employ static code analysis tools to identify common flaws and document the results of the analysis. Static code analysis provides a technology and methodology for security reviews and includes checking for weaknesses in the code as well as for the incorporation of libraries or other include
+
+──────────────────────────────────────────────────
+
+CONTROL: SA-12 — Supply Chain Protection
+FAMILY: SA (System and Services Acquisition)
+FRAMEWORK: NIST SP 800-53 rev5
+ENHANCEMENTS: SA-12.1: Acquisition Strategies / Tools / Methods —  | SA-12.2: Supplier Reviews —  | SA-12.3: Trusted Shipping and Warehousing —  | SA-12.4: Diversity of Suppliers —  | SA-12.5: Limitation of Harm —  | SA-12.6: Minimizing Procurement Time —  | SA-12.7: Assessments Prior to Selection / Acceptance / Update —  | SA-12.8: Use of All-source Intelligence —  | SA-12.9: Operations Security —  | SA-12.10:
+
+──────────────────────────────────────────────────
+
+CONTROL: SA-13 — Trustworthiness
+FAMILY: SA (System and Services Acquisition)
+FRAMEWORK: NIST SP 800-53 rev5
+
+──────────────────────────────────────────────────
+
+CONTROL: SA-14 — Criticality Analysis
+FAMILY: SA (System and Services Acquisition)
+FRAMEWORK: NIST SP 800-53 rev5
+ENHANCEMENTS: SA-14.1: Critical Components with No Viable Alternative Sourcing — 
+
+──────────────────────────────────────────────────
+
+CONTROL: SA-15 — Development Process, Standards, and Tools
+FAMILY: SA (System and Services Acquisition)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Require the developer of the system, system component, or system service to follow a documented development process that: Explicitly addresses security and privacy requirements; Identifies the standards and tools used in the development process; Documents the specific tool options and tool configurations used in the development process; and Documents, manages, and ensures the integrity of changes to the process and/or tools used in development; and Review the development process, standards, tools, tool options, and tool configurations {{ insert: param, sa-15_odp.01 }} to determine if the proce
+ENHANCEMENTS: SA-15.1: Quality Metrics — Require the developer of the system, system component, or system service to: Define quality metrics at the beginning of the development process; and Provide evidence of meeting the quality metrics {{ insert: param, sa-15.01_odp.01 }}. Organizations use quality metrics to establish acceptable levels of system quality. Metrics can include quality gates, which are collectio
+
+──────────────────────────────────────────────────
+
+CONTROL: SA-16 — Developer-provided Training
+FAMILY: SA (System and Services Acquisition)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Require the developer of the system, system component, or system service to provide the following training on the correct use and operation of the implemented security and privacy functions, controls, and/or mechanisms: {{ insert: param, sa-16_odp }}. Developer-provided training applies to external and internal (in-house) developers. Training personnel is essential to ensuring the effectiveness of the controls implemented within organizational systems. Types of training include web-based and computer-based training, classroom-style training, and hands-on training (including micro-training). Or
+
+──────────────────────────────────────────────────
+
+CONTROL: SA-17 — Developer Security and Privacy Architecture and Design
+FAMILY: SA (System and Services Acquisition)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Require the developer of the system, system component, or system service to produce a design specification and security and privacy architecture that: Is consistent with the organization’s security and privacy architecture that is an integral part the organization’s enterprise architecture; Accurately and completely describes the required security and privacy functionality, and the allocation of controls among physical and logical components; and Expresses how individual security and privacy functions, mechanisms, and services work together to provide required security and privacy capabilities
+ENHANCEMENTS: SA-17.1: Formal Policy Model — Require the developer of the system, system component, or system service to: Produce, as an integral part of the development process, a formal policy model describing the {{ insert: param, sa-17.1_prm_1 }} to be enforced; and Prove that the formal policy model is internally consistent and sufficient to enforce the defined elements of the organizational security and p
+
+──────────────────────────────────────────────────
+
+CONTROL: SA-18 — Tamper Resistance and Detection
+FAMILY: SA (System and Services Acquisition)
+FRAMEWORK: NIST SP 800-53 rev5
+ENHANCEMENTS: SA-18.1: Multiple Phases of System Development Life Cycle —  | SA-18.2: Inspection of Systems or Components — 
+
+──────────────────────────────────────────────────
+
+CONTROL: SA-19 — Component Authenticity
+FAMILY: SA (System and Services Acquisition)
+FRAMEWORK: NIST SP 800-53 rev5
+ENHANCEMENTS: SA-19.1: Anti-counterfeit Training —  | SA-19.2: Configuration Control for Component Service and Repair —  | SA-19.3: Component Disposal —  | SA-19.4: Anti-counterfeit Scanning — 
+
+──────────────────────────────────────────────────
+
+CONTROL: SA-20 — Customized Development of Critical Components
+FAMILY: SA (System and Services Acquisition)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Reimplement or custom develop the following critical system components: {{ insert: param, sa-20_odp }}. Organizations determine that certain system components likely cannot be trusted due to specific threats to and vulnerabilities in those components for which there are no viable security controls to adequately mitigate risk. Reimplementation or custom development of such components may satisfy requirements for higher assurance and is carried out by initiating changes to system components (including hardware, software, and firmware) such that the standard attacks by adversaries are less likely
+
+──────────────────────────────────────────────────
+
+CONTROL: SA-21 — Developer Screening
+FAMILY: SA (System and Services Acquisition)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Require that the developer of {{ insert: param, sa-21_odp.01 }}: Has appropriate access authorizations as determined by assigned {{ insert: param, sa-21_odp.02 }} ; and Satisfies the following additional personnel screening criteria: {{ insert: param, sa-21_odp.03 }}. Developer screening is directed at external developers. Internal developer screening is addressed by [PS-3](#ps-3) . Because the system, system component, or system service may be used in critical activities essential to the national or economic security interests of the United States, organizations have a strong interest in ensu
+ENHANCEMENTS: SA-21.1: Validation of Screening — 
+
+──────────────────────────────────────────────────
+
+CONTROL: SA-22 — Unsupported System Components
+FAMILY: SA (System and Services Acquisition)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Replace system components when support for the components is no longer available from the developer, vendor, or manufacturer; or Provide the following options for alternative sources for continued support for unsupported components {{ insert: param, sa-22_odp.01 }}. Support for system components includes software patches, firmware updates, replacement parts, and maintenance contracts. An example of unsupported components includes when vendors no longer provide critical software patches or product updates, which can result in an opportunity for adversaries to exploit weaknesses in the installed
+ENHANCEMENTS: SA-22.1: Alternative Sources for Continued Support — 
+
+──────────────────────────────────────────────────
+
+CONTROL: SA-23 — Specialization
+FAMILY: SA (System and Services Acquisition)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Employ {{ insert: param, sa-23_odp.01 }} on {{ insert: param, sa-23_odp.02 }} supporting mission essential services or functions to increase the trustworthiness in those systems or components. It is often necessary for a system or system component that supports mission-essential services or functions to be enhanced to maximize the trustworthiness of the resource. Sometimes this enhancement is done at the design level. In other instances, it is done post-design, either through modifications of the system in question or by augmenting the system with additional components. For example, supplement
+
+──────────────────────────────────────────────────
+
+CONTROL: SA-24 — Design For Cyber Resiliency
+FAMILY: SA (System and Services Acquisition)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Design organizational systems, system components, or system services to achieve cyber resiliency by: Defining the following cyber resiliency goals: {{ insert: param, sa-24_odp.01 }}. Defining the following cyber resiliency objectives: {{ insert: param, sa-24_odp.02 }}. Defining the following cyber resiliency techniques: {{ insert: param, sa-24_odp.03 }}. Defining the following cyber resiliency implementation approaches: {{ insert: param, sa-24_odp.04 }}. Defining the following cyber resiliency design principles: {{ insert: param, sa-24_odp.05 }}. Implement the selected cyber resiliency goals, 
+
+──────────────────────────────────────────────────

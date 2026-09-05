@@ -1,0 +1,194 @@
+SOURCE: NIST SP 800-53 rev5 — Control Family AC
+FRAMEWORK: NIST SP 800-53 rev5
+CONTROL FAMILY: AC — Access Control
+CONTROL COUNT: 25
+======================================================================
+
+CONTROL: AC-1 — Policy and Procedures
+FAMILY: AC (Access Control)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop, document, and disseminate to {{ insert: param, ac-1_prm_1 }}: {{ insert: param, ac-01_odp.03 }} access control policy that: Addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and Is consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines; and Procedures to facilitate the implementation of the access control policy and the associated access controls; Designate an {{ insert: param, ac-01_odp.04 }} to manage the development, documentation, and dissemi
+
+──────────────────────────────────────────────────
+
+CONTROL: AC-2 — Account Management
+FAMILY: AC (Access Control)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Define and document the types of accounts allowed and specifically prohibited for use within the system; Assign account managers; Require {{ insert: param, ac-02_odp.01 }} for group and role membership; Specify: Authorized users of the system; Group and role membership; and Access authorizations (i.e., privileges) and {{ insert: param, ac-02_odp.02 }} for each account; Require approvals by {{ insert: param, ac-02_odp.03 }} for requests to create accounts; Create, enable, modify, disable, and remove accounts in accordance with {{ insert: param, ac-02_odp.04 }}; Monitor the use of accounts; Noti
+ENHANCEMENTS: AC-2.1: Automated System Account Management — Support the management of system accounts using {{ insert: param, ac-02.01_odp }}. Automated system account management includes using automated mechanisms to create, enable, modify, disable, and remove accounts; notify account managers when an account is created, enabled, modified, disabled, or removed, or when users are terminated or transferred; moni
+
+──────────────────────────────────────────────────
+
+CONTROL: AC-3 — Access Enforcement
+FAMILY: AC (Access Control)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Enforce approved authorizations for logical access to information and system resources in accordance with applicable access control policies. Access control policies control access between active entities or subjects (i.e., users or processes acting on behalf of users) and passive entities or objects (i.e., devices, files, records, domains) in organizational systems. In addition to enforcing authorized access at the system level and recognizing that systems can host many applications and services in support of mission and business functions, access enforcement mechanisms can also be employed a
+ENHANCEMENTS: AC-3.1: Restricted Access to Privileged Functions —  | AC-3.2: Dual Authorization — Enforce dual authorization for {{ insert: param, ac-03.02_odp }}. Dual authorization, also known as two-person control, reduces risk related to insider threats. Dual authorization mechanisms require the approval of two authorized individuals to execute. To reduce the risk of collusion, organizations consider rotati
+
+──────────────────────────────────────────────────
+
+CONTROL: AC-4 — Information Flow Enforcement
+FAMILY: AC (Access Control)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Enforce approved authorizations for controlling the flow of information within the system and between connected systems based on {{ insert: param, ac-04_odp }}. Information flow control regulates where information can travel within a system and between systems (in contrast to who is allowed to access the information) and without regard to subsequent accesses to that information. Flow control restrictions include blocking external traffic that claims to be from within the organization, keeping export-controlled information from being transmitted in the clear to the Internet, restricting web req
+ENHANCEMENTS: AC-4.1: Object Security and Privacy Attributes — Use {{ insert: param, ac-4.1_prm_1 }} associated with {{ insert: param, ac-4.1_prm_2 }} to enforce {{ insert: param, ac-04.01_odp.09 }} as a basis for flow control decisions. Information flow enforcement mechanisms compare security and privacy attributes associated with information (i.e., data content and structure) and source and destination object
+
+──────────────────────────────────────────────────
+
+CONTROL: AC-5 — Separation of Duties
+FAMILY: AC (Access Control)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Identify and document {{ insert: param, ac-05_odp }} ; and Define system access authorizations to support separation of duties. Separation of duties addresses the potential for abuse of authorized privileges and helps to reduce the risk of malevolent activity without collusion. Separation of duties includes dividing mission or business functions and support functions among different individuals or roles, conducting system support functions with different individuals, and ensuring that security personnel who administer access control functions do not also administer audit functions. Because sep
+
+──────────────────────────────────────────────────
+
+CONTROL: AC-6 — Least Privilege
+FAMILY: AC (Access Control)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Employ the principle of least privilege, allowing only authorized accesses for users (or processes acting on behalf of users) that are necessary to accomplish assigned organizational tasks. Organizations employ least privilege for specific duties and systems. The principle of least privilege is also applied to system processes, ensuring that the processes have access to systems and operate at privilege levels no higher than necessary to accomplish organizational missions or business functions. Organizations consider the creation of additional processes, roles, and accounts as necessary to achi
+ENHANCEMENTS: AC-6.1: Authorize Access to Security Functions — Authorize access for {{ insert: param, ac-06.01_odp.01 }} to: {{ insert: param, ac-6.1_prm_2 }} ; and {{ insert: param, ac-06.01_odp.05 }}. Security functions include establishing system accounts, configuring access authorizations (i.e., permissions, privileges), configuring settings for events to be audited, and establishing intrusion detection par
+
+──────────────────────────────────────────────────
+
+CONTROL: AC-7 — Unsuccessful Logon Attempts
+FAMILY: AC (Access Control)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Enforce a limit of {{ insert: param, ac-07_odp.01 }} consecutive invalid logon attempts by a user during a {{ insert: param, ac-07_odp.02 }} ; and Automatically {{ insert: param, ac-07_odp.03 }} when the maximum number of unsuccessful attempts is exceeded. The need to limit unsuccessful logon attempts and take subsequent action when the maximum number of attempts is exceeded applies regardless of whether the logon occurs via a local or network connection. Due to the potential for denial of service, automatic lockouts initiated by systems are usually temporary and automatically release after a 
+ENHANCEMENTS: AC-7.1: Automatic Account Lock —  | AC-7.2: Purge or Wipe Mobile Device — Purge or wipe information from {{ insert: param, ac-07.02_odp.01 }} based on {{ insert: param, ac-07.02_odp.02 }} after {{ insert: param, ac-07.02_odp.03 }} consecutive, unsuccessful device logon attempts. A mobile device is a computing device that has a small form factor such that it can be carried by a single individual; i
+
+──────────────────────────────────────────────────
+
+CONTROL: AC-8 — System Use Notification
+FAMILY: AC (Access Control)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Display {{ insert: param, ac-08_odp.01 }} to users before granting access to the system that provides privacy and security notices consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines and state that: Users are accessing a U.S. Government system; System usage may be monitored, recorded, and subject to audit; Unauthorized use of the system is prohibited and subject to criminal and civil penalties; and Use of the system indicates consent to monitoring and recording; Retain the notification message or banner on the screen until users ackno
+
+──────────────────────────────────────────────────
+
+CONTROL: AC-9 — Previous Logon Notification
+FAMILY: AC (Access Control)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Notify the user, upon successful logon to the system, of the date and time of the last logon. Previous logon notification is applicable to system access via human user interfaces and access to systems that occurs in other types of architectures. Information about the last successful logon allows the user to recognize if the date and time provided is not consistent with the user’s last access. the user is notified, upon successful logon to the system, of the date and time of the last logon. Access control policy procedures addressing previous logon notification system design documentation syste
+ENHANCEMENTS: AC-9.1: Unsuccessful Logons — Notify the user, upon successful logon, of the number of unsuccessful logon attempts since the last successful logon. Information about the number of unsuccessful logon attempts since the last successful logon allows the user to recognize if the number of unsuccessful logon attempts is consistent with the user’s actual logon attempts. the user is notified, upon succes
+
+──────────────────────────────────────────────────
+
+CONTROL: AC-10 — Concurrent Session Control
+FAMILY: AC (Access Control)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Limit the number of concurrent sessions for each {{ insert: param, ac-10_odp.01 }} to {{ insert: param, ac-10_odp.02 }}. Organizations may define the maximum number of concurrent sessions for system accounts globally, by account type, by account, or any combination thereof. For example, organizations may limit the number of concurrent sessions for system administrators or other individuals working in particularly sensitive domains or mission-critical applications. Concurrent session control addresses concurrent sessions for system accounts. It does not, however, address concurrent sessions by 
+
+──────────────────────────────────────────────────
+
+CONTROL: AC-11 — Device Lock
+FAMILY: AC (Access Control)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Prevent further access to the system by {{ insert: param, ac-11_odp.01 }} ; and Retain the device lock until the user reestablishes access using established identification and authentication procedures. Device locks are temporary actions taken to prevent logical access to organizational systems when users stop work and move away from the immediate vicinity of those systems but do not want to log out because of the temporary nature of their absences. Device locks can be implemented at the operating system level or at the application level. A proximity lock may be used to initiate the device loc
+ENHANCEMENTS: AC-11.1: Pattern-hiding Displays — Conceal, via the device lock, information previously visible on the display with a publicly viewable image. The pattern-hiding display can include static or dynamic images, such as patterns used with screen savers, photographic images, solid colors, clock, battery life indicator, or a blank screen with the caveat that controlled unclassified information is not di
+
+──────────────────────────────────────────────────
+
+CONTROL: AC-12 — Session Termination
+FAMILY: AC (Access Control)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Automatically terminate a user session after {{ insert: param, ac-12_odp }}. Session termination addresses the termination of user-initiated logical sessions (in contrast to [SC-10](#sc-10) , which addresses the termination of network connections associated with communications sessions (i.e., network disconnect)). A logical session (for local, network, and remote access) is initiated whenever a user (or process acting on behalf of a user) accesses an organizational system. Such user sessions can be terminated without terminating network sessions. Session termination ends all processes associat
+ENHANCEMENTS: AC-12.1: User-initiated Logouts — Provide a logout capability for user-initiated communications sessions whenever authentication is used to gain access to {{ insert: param, ac-12.01_odp }}. Information resources to which users gain access via authentication include local workstations, databases, and password-protected websites or web-based services. a logout capability is provided for user-initiat
+
+──────────────────────────────────────────────────
+
+CONTROL: AC-13 — Supervision and Review — Access Control
+FAMILY: AC (Access Control)
+FRAMEWORK: NIST SP 800-53 rev5
+
+──────────────────────────────────────────────────
+
+CONTROL: AC-14 — Permitted Actions Without Identification or Authentication
+FAMILY: AC (Access Control)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Identify {{ insert: param, ac-14_odp }} that can be performed on the system without identification or authentication consistent with organizational mission and business functions; and Document and provide supporting rationale in the security plan for the system, user actions not requiring identification or authentication. Specific user actions may be permitted without identification or authentication if organizations determine that identification and authentication are not required for the specified user actions. Organizations may allow a limited number of user actions without identification o
+ENHANCEMENTS: AC-14.1: Necessary Uses — 
+
+──────────────────────────────────────────────────
+
+CONTROL: AC-15 — Automated Marking
+FAMILY: AC (Access Control)
+FRAMEWORK: NIST SP 800-53 rev5
+
+──────────────────────────────────────────────────
+
+CONTROL: AC-16 — Security and Privacy Attributes
+FAMILY: AC (Access Control)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Provide the means to associate {{ insert: param, ac-16_prm_1 }} with {{ insert: param, ac-16_prm_2 }} for information in storage, in process, and/or in transmission; Ensure that the attribute associations are made and retained with the information; Establish the following permitted security and privacy attributes from the attributes defined in [AC-16a](#ac-16_smt.a) for {{ insert: param, ac-16_prm_3 }}: {{ insert: param, ac-16_prm_4 }}; Determine the following permitted attribute values or ranges for each of the established attributes: {{ insert: param, ac-16_odp.09 }}; Audit changes to attrib
+ENHANCEMENTS: AC-16.1: Dynamic Attribute Association — Dynamically associate security and privacy attributes with {{ insert: param, ac-16.1_prm_1 }} in accordance with the following security and privacy policies as information is created and combined: {{ insert: param, ac-16.1_prm_2 }}. Dynamic association of attributes is appropriate whenever the security or privacy characteristics of information change over t
+
+──────────────────────────────────────────────────
+
+CONTROL: AC-17 — Remote Access
+FAMILY: AC (Access Control)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Establish and document usage restrictions, configuration/connection requirements, and implementation guidance for each type of remote access allowed; and Authorize each type of remote access to the system prior to allowing such connections. Remote access is access to organizational systems (or processes acting on behalf of users) that communicate through external networks such as the Internet. Types of remote access include dial-up, broadband, and wireless. Organizations use encrypted virtual private networks (VPNs) to enhance confidentiality and integrity for remote connections. The use of en
+ENHANCEMENTS: AC-17.1: Monitoring and Control — Employ automated mechanisms to monitor and control remote access methods. Monitoring and control of remote access methods allows organizations to detect attacks and help ensure compliance with remote access policies by auditing the connection activities of remote users on a variety of system components, including servers, notebook computers, workstations, smart ph
+
+──────────────────────────────────────────────────
+
+CONTROL: AC-18 — Wireless Access
+FAMILY: AC (Access Control)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Establish configuration requirements, connection requirements, and implementation guidance for each type of wireless access; and Authorize each type of wireless access to the system prior to allowing such connections. Wireless technologies include microwave, packet radio (ultra-high frequency or very high frequency), 802.11x, and Bluetooth. Wireless networks use authentication protocols that provide authenticator protection and mutual authentication. configuration requirements are established for each type of wireless access; connection requirements are established for each type of wireless ac
+ENHANCEMENTS: AC-18.1: Authentication and Encryption — Protect wireless access to the system using authentication of {{ insert: param, ac-18.01_odp }} and encryption. Wireless networking capabilities represent a significant potential vulnerability that can be exploited by adversaries. To protect systems with wireless access points, strong authentication of users and devices along with strong encryption can redu
+
+──────────────────────────────────────────────────
+
+CONTROL: AC-19 — Access Control for Mobile Devices
+FAMILY: AC (Access Control)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Establish configuration requirements, connection requirements, and implementation guidance for organization-controlled mobile devices, to include when such devices are outside of controlled areas; and Authorize the connection of mobile devices to organizational systems. A mobile device is a computing device that has a small form factor such that it can easily be carried by a single individual; is designed to operate without a physical connection; possesses local, non-removable or removable data storage; and includes a self-contained power source. Mobile device functionality may also include vo
+ENHANCEMENTS: AC-19.1: Use of Writable and Portable Storage Devices —  | AC-19.2: Use of Personally Owned Portable Storage Devices —  | AC-19.3: Use of Portable Storage Devices with No Identifiable Owner —  | AC-19.4: Restrictions for Classified Information — Prohibit the use of unclassified mobile devices in facilities containing systems processing, storing, or transmitting classified information unless specif
+
+──────────────────────────────────────────────────
+
+CONTROL: AC-20 — Use of External Systems
+FAMILY: AC (Access Control)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: {{ insert: param, ac-20_odp.01 }} , consistent with the trust relationships established with other organizations owning, operating, and/or maintaining external systems, allowing authorized individuals to: Access the system from external systems; and Process, store, or transmit organization-controlled information using external systems; or Prohibit the use of {{ insert: param, ac-20_odp.04 }}. External systems are systems that are used by but not part of organizational systems, and for which the organization has no direct control over the implementation of required controls or the assessment of
+ENHANCEMENTS: AC-20.1: Limits on Authorized Use — Permit authorized individuals to use an external system to access the system or to process, store, or transmit organization-controlled information only after: Verification of the implementation of controls on the external system as specified in the organization’s security and privacy policies and security and privacy plans; or Retention of approved system connec
+
+──────────────────────────────────────────────────
+
+CONTROL: AC-21 — Information Sharing
+FAMILY: AC (Access Control)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Enable authorized users to determine whether access authorizations assigned to a sharing partner match the information’s access and use restrictions for {{ insert: param, ac-21_odp.01 }} ; and Employ {{ insert: param, ac-21_odp.02 }} to assist users in making information sharing and collaboration decisions. Information sharing applies to information that may be restricted in some manner based on some formal or administrative determination. Examples of such information include, contract-sensitive information, classified information related to special access programs or compartments, privileged 
+ENHANCEMENTS: AC-21.1: Automated Decision Support — Employ {{ insert: param, ac-21.01_odp }} to enforce information-sharing decisions by authorized users based on access authorizations of sharing partners and access restrictions on information to be shared. Automated mechanisms are used to enforce information sharing decisions. {{ insert: param, ac-21.01_odp }} are employed to enforce information-sharing decisi
+
+──────────────────────────────────────────────────
+
+CONTROL: AC-22 — Publicly Accessible Content
+FAMILY: AC (Access Control)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Designate individuals authorized to make information publicly accessible; Train authorized individuals to ensure that publicly accessible information does not contain nonpublic information; Review the proposed content of information prior to posting onto the publicly accessible system to ensure that nonpublic information is not included; and Review the content on the publicly accessible system for nonpublic information {{ insert: param, ac-22_odp }} and remove such information, if discovered. In accordance with applicable laws, executive orders, directives, policies, regulations, standards, an
+
+──────────────────────────────────────────────────
+
+CONTROL: AC-23 — Data Mining Protection
+FAMILY: AC (Access Control)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Employ {{ insert: param, ac-23_odp.01 }} for {{ insert: param, ac-23_odp.02 }} to detect and protect against unauthorized data mining. Data mining is an analytical process that attempts to find correlations or patterns in large data sets for the purpose of data or knowledge discovery. Data storage objects include database records and database fields. Sensitive information can be extracted from data mining operations. When information is personally identifiable information, it may lead to unanticipated revelations about individuals and give rise to privacy risks. Prior to performing data mining
+
+──────────────────────────────────────────────────
+
+CONTROL: AC-24 — Access Control Decisions
+FAMILY: AC (Access Control)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: {{ insert: param, ac-24_odp.01 }} to ensure {{ insert: param, ac-24_odp.02 }} are applied to each access request prior to access enforcement. Access control decisions (also known as authorization decisions) occur when authorization information is applied to specific accesses. In contrast, access enforcement occurs when systems enforce access control decisions. While it is common to have access control decisions and access enforcement implemented by the same entity, it is not required, and it is not always an optimal implementation choice. For some architectures and distributed systems, differe
+ENHANCEMENTS: AC-24.1: Transmit Access Authorization Information — Transmit {{ insert: param, ac-24.01_odp.01 }} using {{ insert: param, ac-24.01_odp.02 }} to {{ insert: param, ac-24.01_odp.03 }} that enforce access control decisions. Authorization processes and access control decisions may occur in separate parts of systems or in separate systems. In such instances, authorization information is transmitted sec
+
+──────────────────────────────────────────────────
+
+CONTROL: AC-25 — Reference Monitor
+FAMILY: AC (Access Control)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Implement a reference monitor for {{ insert: param, ac-25_odp }} that is tamperproof, always invoked, and small enough to be subject to analysis and testing, the completeness of which can be assured. A reference monitor is a set of design requirements on a reference validation mechanism that, as a key component of an operating system, enforces an access control policy over all subjects and objects. A reference validation mechanism is always invoked, tamper-proof, and small enough to be subject to analysis and tests, the completeness of which can be assured (i.e., verifiable). Information is re
+
+──────────────────────────────────────────────────

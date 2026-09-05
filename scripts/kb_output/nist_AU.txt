@@ -1,0 +1,130 @@
+SOURCE: NIST SP 800-53 rev5 — Control Family AU
+FRAMEWORK: NIST SP 800-53 rev5
+CONTROL FAMILY: AU — Audit and Accountability
+CONTROL COUNT: 16
+======================================================================
+
+CONTROL: AU-1 — Policy and Procedures
+FAMILY: AU (Audit and Accountability)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop, document, and disseminate to {{ insert: param, au-1_prm_1 }}: {{ insert: param, au-01_odp.03 }} audit and accountability policy that: Addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and Is consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines; and Procedures to facilitate the implementation of the audit and accountability policy and the associated audit and accountability controls; Designate an {{ insert: param, au-01_odp.04 }} to manage the d
+
+──────────────────────────────────────────────────
+
+CONTROL: AU-2 — Event Logging
+FAMILY: AU (Audit and Accountability)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Identify the types of events that the system is capable of logging in support of the audit function: {{ insert: param, au-02_odp.01 }}; Coordinate the event logging function with other organizational entities requiring audit-related information to guide and inform the selection criteria for events to be logged; Specify the following event types for logging within the system: {{ insert: param, au-2_prm_2 }}; Provide a rationale for why the event types selected for logging are deemed to be adequate to support after-the-fact investigations of incidents; and Review and update the event types selec
+ENHANCEMENTS: AU-2.1: Compilation of Audit Records from Multiple Sources —  | AU-2.2: Selection of Audit Events by Component —  | AU-2.3: Reviews and Updates —  | AU-2.4: Privileged Functions — 
+
+──────────────────────────────────────────────────
+
+CONTROL: AU-3 — Content of Audit Records
+FAMILY: AU (Audit and Accountability)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Ensure that audit records contain information that establishes the following: What type of event occurred; When the event occurred; Where the event occurred; Source of the event; Outcome of the event; and Identity of any individuals, subjects, or objects/entities associated with the event. Audit record content that may be necessary to support the auditing function includes event descriptions (item a), time stamps (item b), source and destination addresses (item c), user or process identifiers (items d and f), success or fail indications (item e), and filenames involved (items a, c, e, and f) .
+ENHANCEMENTS: AU-3.1: Additional Audit Information — Generate audit records containing the following additional information: {{ insert: param, au-03.01_odp }}. The ability to add information generated in audit records is dependent on system functionality to configure the audit record content. Organizations may consider additional information in audit records including, but not limited to, access control or flow
+
+──────────────────────────────────────────────────
+
+CONTROL: AU-4 — Audit Log Storage Capacity
+FAMILY: AU (Audit and Accountability)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Allocate audit log storage capacity to accommodate {{ insert: param, au-04_odp }}. Organizations consider the types of audit logging to be performed and the audit log processing requirements when allocating audit log storage capacity. Allocating sufficient audit log storage capacity reduces the likelihood of such capacity being exceeded and resulting in the potential loss or reduction of audit logging capability. audit log storage capacity is allocated to accommodate {{ insert: param, au-04_odp }}. Audit and accountability policy procedures addressing audit storage capacity system security pla
+ENHANCEMENTS: AU-4.1: Transfer to Alternate Storage — Transfer audit logs {{ insert: param, au-04.01_odp }} to a different system, system component, or media other than the system or system component conducting the logging. Audit log transfer, also known as off-loading, is a common process in systems with limited audit log storage capacity and thus supports availability of the audit logs. The initial audit log 
+
+──────────────────────────────────────────────────
+
+CONTROL: AU-5 — Response to Audit Logging Process Failures
+FAMILY: AU (Audit and Accountability)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Alert {{ insert: param, au-05_odp.01 }} within {{ insert: param, au-05_odp.02 }} in the event of an audit logging process failure; and Take the following additional actions: {{ insert: param, au-05_odp.03 }}. Audit logging process failures include software and hardware errors, failures in audit log capturing mechanisms, and reaching or exceeding audit log storage capacity. Organization-defined actions include overwriting oldest audit records, shutting down the system, and stopping the generation of audit records. Organizations may choose to define additional actions for audit logging process f
+ENHANCEMENTS: AU-5.1: Storage Capacity Warning — Provide a warning to {{ insert: param, au-05.01_odp.01 }} within {{ insert: param, au-05.01_odp.02 }} when allocated audit log storage volume reaches {{ insert: param, au-05.01_odp.03 }} of repository maximum audit log storage capacity. Organizations may have multiple audit log storage repositories distributed across multiple system components with each repositor
+
+──────────────────────────────────────────────────
+
+CONTROL: AU-6 — Audit Record Review, Analysis, and Reporting
+FAMILY: AU (Audit and Accountability)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Review and analyze system audit records {{ insert: param, au-06_odp.01 }} for indications of {{ insert: param, au-06_odp.02 }} and the potential impact of the inappropriate or unusual activity; Report findings to {{ insert: param, au-06_odp.03 }} ; and Adjust the level of audit record review, analysis, and reporting within the system when there is a change in risk based on law enforcement information, intelligence information, or other credible sources of information. Audit record review, analysis, and reporting covers information security- and privacy-related logging performed by organization
+ENHANCEMENTS: AU-6.1: Automated Process Integration — Integrate audit record review, analysis, and reporting processes using {{ insert: param, au-06.01_odp }}. Organizational processes that benefit from integrated audit record review, analysis, and reporting include incident response, continuous monitoring, contingency planning, investigation and response to suspicious activities, and Inspector General audits. 
+
+──────────────────────────────────────────────────
+
+CONTROL: AU-7 — Audit Record Reduction and Report Generation
+FAMILY: AU (Audit and Accountability)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Provide and implement an audit record reduction and report generation capability that: Supports on-demand audit record review, analysis, and reporting requirements and after-the-fact investigations of incidents; and Does not alter the original content or time ordering of audit records. Audit record reduction is a process that manipulates collected audit log information and organizes it into a summary format that is more meaningful to analysts. Audit record reduction and report generation capabilities do not always emanate from the same system or from the same organizational entities that condu
+ENHANCEMENTS: AU-7.1: Automatic Processing — Provide and implement the capability to process, sort, and search audit records for events of interest based on the following content: {{ insert: param, au-07.01_odp }}. Events of interest can be identified by the content of audit records, including system resources involved, information objects accessed, identities of individuals, event types, event locations, event
+
+──────────────────────────────────────────────────
+
+CONTROL: AU-8 — Time Stamps
+FAMILY: AU (Audit and Accountability)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Use internal system clocks to generate time stamps for audit records; and Record time stamps for audit records that meet {{ insert: param, au-08_odp }} and that use Coordinated Universal Time, have a fixed local time offset from Coordinated Universal Time, or that include the local time offset as part of the time stamp. Time stamps generated by the system include date and time. Time is commonly expressed in Coordinated Universal Time (UTC), a modern continuation of Greenwich Mean Time (GMT), or local time with an offset from UTC. Granularity of time measurements refers to the degree of synchro
+ENHANCEMENTS: AU-8.1: Synchronization with Authoritative Time Source —  | AU-8.2: Secondary Authoritative Time Source — 
+
+──────────────────────────────────────────────────
+
+CONTROL: AU-9 — Protection of Audit Information
+FAMILY: AU (Audit and Accountability)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Protect audit information and audit logging tools from unauthorized access, modification, and deletion; and Alert {{ insert: param, au-09_odp }} upon detection of unauthorized access, modification, or deletion of audit information. Audit information includes all information needed to successfully audit system activity, such as audit records, audit log settings, audit reports, and personally identifiable information. Audit logging tools are those programs and devices used to conduct system audit and logging activities. Protection of audit information focuses on technical protection and limits t
+ENHANCEMENTS: AU-9.1: Hardware Write-once Media — Write audit trails to hardware-enforced, write-once media. Writing audit trails to hardware-enforced, write-once media applies to the initial generation of audit trails (i.e., the collection of audit records that represents the information to be used for detection, analysis, and reporting purposes) and to the backup of those audit trails. Writing audit trails to
+
+──────────────────────────────────────────────────
+
+CONTROL: AU-10 — Non-repudiation
+FAMILY: AU (Audit and Accountability)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Provide irrefutable evidence that an individual (or process acting on behalf of an individual) has performed {{ insert: param, au-10_odp }}. Types of individual actions covered by non-repudiation include creating information, sending and receiving messages, and approving information. Non-repudiation protects against claims by authors of not having authored certain documents, senders of not having transmitted messages, receivers of not having received messages, and signatories of not having signed documents. Non-repudiation services can be used to determine if information originated from an ind
+ENHANCEMENTS: AU-10.1: Association of Identities — Bind the identity of the information producer with the information to {{ insert: param, au-10.01_odp }} ; and Provide the means for authorized individuals to determine the identity of the producer of the information. Binding identities to the information supports audit requirements that provide organizational personnel with the means to identify who produced sp
+
+──────────────────────────────────────────────────
+
+CONTROL: AU-11 — Audit Record Retention
+FAMILY: AU (Audit and Accountability)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Retain audit records for {{ insert: param, au-11_odp }} to provide support for after-the-fact investigations of incidents and to meet regulatory and organizational information retention requirements. Organizations retain audit records until it is determined that the records are no longer needed for administrative, legal, audit, or other operational purposes. This includes the retention and availability of audit records relative to Freedom of Information Act (FOIA) requests, subpoenas, and law enforcement actions. Organizations develop standard categories of audit records relative to such types
+ENHANCEMENTS: AU-11.1: Long-term Retrieval Capability — Employ {{ insert: param, au-11.01_odp }} to ensure that long-term audit records generated by the system can be retrieved. Organizations need to access and read audit records requiring long-term storage (on the order of years). Measures employed to help facilitate the retrieval of audit records include converting records to newer formats, retaining equipmen
+
+──────────────────────────────────────────────────
+
+CONTROL: AU-12 — Audit Record Generation
+FAMILY: AU (Audit and Accountability)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Provide audit record generation capability for the event types the system is capable of auditing as defined in [AU-2a](#au-2_smt.a) on {{ insert: param, au-12_odp.01 }}; Allow {{ insert: param, au-12_odp.02 }} to select the event types that are to be logged by specific components of the system; and Generate audit records for the event types defined in [AU-2c](#au-2_smt.c) that include the audit record content defined in [AU-3](#au-3). Audit records can be generated from many different system components. The event types specified in [AU-2d](#au-2_smt.d) are the event types for which audit logs 
+ENHANCEMENTS: AU-12.1: System-wide and Time-correlated Audit Trail — Compile audit records from {{ insert: param, au-12.01_odp.01 }} into a system-wide (logical or physical) audit trail that is time-correlated to within {{ insert: param, au-12.01_odp.02 }}. Audit trails are time-correlated if the time stamps in the individual audit records can be reliably related to the time stamps in other audit records to ach
+
+──────────────────────────────────────────────────
+
+CONTROL: AU-13 — Monitoring for Information Disclosure
+FAMILY: AU (Audit and Accountability)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Monitor {{ insert: param, au-13_odp.01 }} {{ insert: param, au-13_odp.02 }} for evidence of unauthorized disclosure of organizational information; and If an information disclosure is discovered: Notify {{ insert: param, au-13_odp.03 }} ; and Take the following additional actions: {{ insert: param, au-13_odp.04 }}. Unauthorized disclosure of information is a form of data leakage. Open-source information includes social networking sites and code-sharing platforms and repositories. Examples of organizational information include personally identifiable information retained by the organization or p
+ENHANCEMENTS: AU-13.1: Use of Automated Tools — Monitor open-source information and information sites using {{ insert: param, au-13.01_odp }}. Automated mechanisms include commercial services that provide notifications and alerts to organizations and automated scripts to monitor new posts on websites. open-source information and information sites are monitored using {{ insert: param, au-13.01_odp }}. Audit and 
+
+──────────────────────────────────────────────────
+
+CONTROL: AU-14 — Session Audit
+FAMILY: AU (Audit and Accountability)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Provide and implement the capability for {{ insert: param, au-14_odp.01 }} to {{ insert: param, au-14_odp.02 }} the content of a user session under {{ insert: param, au-14_odp.03 }} ; and Develop, integrate, and use session auditing activities in consultation with legal counsel and in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines. Session audits can include monitoring keystrokes, tracking websites visited, and recording information and/or file transfers. Session audit capability is implemented in addition to event logging and ma
+ENHANCEMENTS: AU-14.1: System Start-up — Initiate session audits automatically at system start-up. The automatic initiation of session audits at startup helps to ensure that the information being captured on selected individuals is complete and not subject to compromise through tampering by malicious threat actors. session audits are initiated automatically at system start-up. Audit and accountability policy sy
+
+──────────────────────────────────────────────────
+
+CONTROL: AU-15 — Alternate Audit Logging Capability
+FAMILY: AU (Audit and Accountability)
+FRAMEWORK: NIST SP 800-53 rev5
+
+──────────────────────────────────────────────────
+
+CONTROL: AU-16 — Cross-organizational Audit Logging
+FAMILY: AU (Audit and Accountability)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Employ {{ insert: param, au-16_odp.01 }} for coordinating {{ insert: param, au-16_odp.02 }} among external organizations when audit information is transmitted across organizational boundaries. When organizations use systems or services of external organizations, the audit logging capability necessitates a coordinated, cross-organization approach. For example, maintaining the identity of individuals who request specific services across organizational boundaries may often be difficult, and doing so may prove to have significant performance and privacy ramifications. Therefore, it is often the ca
+ENHANCEMENTS: AU-16.1: Identity Preservation — Preserve the identity of individuals in cross-organizational audit trails. Identity preservation is applied when there is a need to be able to trace actions that are performed across organizational boundaries to a specific individual. the identity of individuals in cross-organizational audit trails is preserved. Audit and accountability policy system security plan 
+
+──────────────────────────────────────────────────

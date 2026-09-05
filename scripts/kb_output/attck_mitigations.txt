@@ -1,0 +1,1879 @@
+SOURCE: MITRE ATT&CK Mitigations
+FRAMEWORK: MITRE ATT&CK
+======================================================================
+
+MITIGATION: Application Developer Guidance
+MITIGATION ID: M1013
+ADDRESSES TECHNIQUES: T1078, T1195, T1195.001, T1212, T1496.003, T1550, T1550.001, T1559, T1559.003, T1564, T1564.009, T1564.012, T1574, T1574.001, T1593, T1593.003, T1647
+DESCRIPTION: Application Developer Guidance focuses on providing developers with the knowledge, tools, and best practices needed to write secure code, reduce vulnerabilities, and implement secure design principles. By integrating security throughout the software development lifecycle (SDLC), this mitigation aims to prevent the introduction of exploitable weaknesses in applications, systems, and APIs. This mitigation can be implemented through the following measures: Preventing SQL Injection (Secure Coding Pr
+
+──────────────────────────────────────────────────
+
+MITIGATION: Active Directory Configuration
+MITIGATION ID: M1015
+ADDRESSES TECHNIQUES: T1003, T1003.005, T1003.006, T1072, T1078, T1078.004, T1134.005, T1550, T1550.003, T1552, T1552.006, T1558, T1558.001, T1606.002, T1649
+DESCRIPTION: Implement robust Active Directory (AD) configurations using group policies to secure user accounts, control access, and minimize the attack surface. AD configurations enable centralized control over account settings, logon policies, and permissions, reducing the risk of unauthorized access and lateral movement within the network. This mitigation can be implemented through the following measures: Account Configuration: - Implementation: Use domain accounts instead of local accounts to leverage AD
+
+──────────────────────────────────────────────────
+
+MITIGATION: Vulnerability Scanning
+MITIGATION ID: M1016
+ADDRESSES TECHNIQUES: T1190, T1195, T1195.001, T1195.002, T1210
+DESCRIPTION: Vulnerability scanning involves the automated or manual assessment of systems, applications, and networks to identify misconfigurations, unpatched software, or other security weaknesses. The process helps prioritize remediation efforts by classifying vulnerabilities based on risk and impact, reducing the likelihood of exploitation by adversaries. This mitigation can be implemented through the following measures: Proactive Identification of Vulnerabilities - Implementation: Use tools like Nessus 
+
+──────────────────────────────────────────────────
+
+MITIGATION: User Training
+MITIGATION ID: M1017
+ADDRESSES TECHNIQUES: T1003, T1003.001, T1003.002, T1003.003, T1003.004, T1003.005, T1027, T1036, T1036.007, T1056.002, T1072, T1078, T1078.002, T1078.004, T1111, T1176, T1176.001, T1176.002, T1185, T1189, T1204, T1204.001, T1204.002, T1204.003, T1204.005, T1213, T1213.001, T1213.002, T1213.003, T1213.004, T1213.005, T1213.006, T1221, T1528, T1539, T1547.007, T1552, T1552.001, T1552.008, T1555.003, T1555.005, T1556.001, T1557, T1557.002, T1557.004, T1566, T1566.001, T1566.002, T1566.003, T1566.004, T1598, T1598.001, T1598.002, T1598.003, T1598.004, T1621, T1656, T1657, T1667
+DESCRIPTION: User Training involves educating employees and contractors on recognizing, reporting, and preventing cyber threats that rely on human interaction, such as phishing, social engineering, and other manipulative techniques. Comprehensive training programs create a human firewall by empowering users to be an active component of the organization's cybersecurity defenses. This mitigation can be implemented through the following measures: Create Comprehensive Training Programs: - Design training modules
+
+──────────────────────────────────────────────────
+
+MITIGATION: User Account Management
+MITIGATION ID: M1018
+ADDRESSES TECHNIQUES: T1006, T1020.001, T1021, T1021.001, T1021.004, T1021.008, T1036, T1036.010, T1040, T1047, T1048, T1053, T1053.002, T1053.003, T1053.005, T1053.006, T1053.007, T1059.008, T1072, T1078, T1078.002, T1078.003, T1078.004, T1087, T1087.004, T1098, T1098.001, T1098.003, T1098.004, T1098.006, T1110, T1110.004, T1134, T1134.001, T1134.002, T1134.003, T1185, T1195, T1197, T1199, T1213, T1213.001, T1213.002, T1213.003, T1213.004, T1213.006, T1484, T1484.001, T1484.002, T1485, T1485.001, T1489, T1490, T1505, T1505.003, T1528, T1530, T1537, T1538, T1543, T1543.002, T1543.003, T1543.004, T1543.005, T1546.003, T1547.004, T1547.006, T1547.009, T1547.012, T1547.013, T1548, T1548.005, T1550, T1550.002, T1550.003, T1552.007, T1555.003, T1555.005, T1556, T1556.006, T1556.009, T1562, T1562.001, T1562.002, T1562.004, T1562.006, T1562.007, T1562.008, T1562.012, T1562.013, T1563, T1563.002, T1566.001, T1566.002, T1566.003, T1569, T1569.001, T1569.003, T1574, T1574.005, T1574.010, T1574.012, T1578, T1578.001, T1578.002, T1578.003, T1578.005, T1580, T1606, T1606.002, T1609, T1610, T1613, T1619, T1648, T1654, T1657, T1666, T1675, T1677
+DESCRIPTION: User Account Management involves implementing and enforcing policies for the lifecycle of user accounts, including creation, modification, and deactivation. Proper account management reduces the attack surface by limiting unauthorized access, managing account privileges, and ensuring accounts are used according to organizational policies. This mitigation can be implemented through the following measures: Enforcing the Principle of Least Privilege - Implementation: Assign users only the minimum p
+
+──────────────────────────────────────────────────
+
+MITIGATION: Threat Intelligence Program
+MITIGATION ID: M1019
+ADDRESSES TECHNIQUES: T1068, T1210, T1211, T1212, T1656
+DESCRIPTION: A Threat Intelligence Program enables organizations to proactively identify, analyze, and act on cyber threats by leveraging internal and external data sources. The program supports decision-making processes, prioritizes defenses, and improves incident response by delivering actionable intelligence tailored to the organization's risk profile and operational environment. This mitigation can be implemented through the following measures: Establish a Threat Intelligence Team: - Form a dedicated tea
+
+──────────────────────────────────────────────────
+
+MITIGATION: SSL/TLS Inspection
+MITIGATION ID: M1020
+ADDRESSES TECHNIQUES: T1090, T1090.004, T1573, T1573.002
+DESCRIPTION: SSL/TLS inspection involves decrypting encrypted network traffic to examine its content for signs of malicious activity. This capability is crucial for detecting threats that use encryption to evade detection, such as phishing, malware, or data exfiltration. After inspection, the traffic is re-encrypted and forwarded to its destination. This mitigation can be implemented through the following measures: Deploy SSL/TLS Inspection Appliances: - Implement SSL/TLS inspection solutions to decrypt and 
+
+──────────────────────────────────────────────────
+
+MITIGATION: Restrict Web-Based Content
+MITIGATION ID: M1021
+ADDRESSES TECHNIQUES: T1059, T1059.005, T1059.007, T1102, T1102.001, T1102.002, T1102.003, T1127, T1127.002, T1133, T1189, T1204, T1204.001, T1204.004, T1218, T1218.001, T1528, T1539, T1550.001, T1555.003, T1566, T1566.001, T1566.002, T1566.003, T1567, T1567.001, T1567.002, T1567.003, T1568, T1568.002, T1659
+DESCRIPTION: Restricting web-based content involves enforcing policies and technologies that limit access to potentially malicious websites, unsafe downloads, and unauthorized browser behaviors. This can include URL filtering, download restrictions, script blocking, and extension control to protect against exploitation, phishing, and malware delivery. This mitigation can be implemented through the following measures: Deploy Web Proxy Filtering: - Use solutions to filter web traffic based on categories, reput
+
+──────────────────────────────────────────────────
+
+MITIGATION: Restrict File and Directory Permissions
+MITIGATION ID: M1022
+ADDRESSES TECHNIQUES: T1036, T1036.003, T1036.005, T1037, T1037.002, T1037.003, T1037.004, T1037.005, T1048, T1053, T1053.006, T1055.009, T1070, T1070.001, T1070.002, T1070.003, T1070.008, T1070.009, T1080, T1098, T1098.004, T1218.002, T1222, T1222.001, T1222.002, T1489, T1530, T1543, T1543.001, T1543.002, T1546.004, T1546.013, T1547.003, T1547.009, T1547.013, T1548, T1548.003, T1548.006, T1552, T1552.001, T1552.004, T1553.003, T1556, T1562, T1562.001, T1562.002, T1562.004, T1562.006, T1563.001, T1564.004, T1565, T1565.001, T1565.003, T1569, T1569.002, T1574, T1574.004, T1574.007, T1574.008, T1574.009, T1574.014
+DESCRIPTION: Restricting file and directory permissions involves setting access controls at the file system level to limit which users, groups, or processes can read, write, or execute files. By configuring permissions appropriately, organizations can reduce the attack surface for adversaries seeking to access sensitive data, plant malicious code, or tamper with system files. Enforce Least Privilege Permissions: - Remove unnecessary write permissions on sensitive files and directories. - Use file ownership a
+
+──────────────────────────────────────────────────
+
+MITIGATION: Restrict Registry Permissions
+MITIGATION ID: M1024
+ADDRESSES TECHNIQUES: T1037, T1037.001, T1070.007, T1112, T1489, T1505, T1505.005, T1547.003, T1553, T1553.003, T1553.006, T1556, T1556.008, T1562, T1562.001, T1562.002, T1562.004, T1574, T1574.011, T1574.012
+DESCRIPTION: Restricting registry permissions involves configuring access control settings for sensitive registry keys and hives to ensure that only authorized users or processes can make modifications. By limiting access, organizations can prevent unauthorized changes that adversaries might use for persistence, privilege escalation, or defense evasion. This mitigation can be implemented through the following measures: Review and Adjust Permissions on Critical Keys - Regularly review permissions on keys such
+
+──────────────────────────────────────────────────
+
+MITIGATION: Privileged Process Integrity
+MITIGATION ID: M1025
+ADDRESSES TECHNIQUES: T1003, T1003.001, T1547.002, T1547.005, T1547.008, T1556, T1556.001
+DESCRIPTION: Privileged Process Integrity focuses on defending highly privileged processes (e.g., system services, antivirus, or authentication processes) from tampering, injection, or compromise by adversaries. These processes often interact with critical components, making them prime targets for techniques like code injection, privilege escalation, and process manipulation. This mitigation can be implemented through the following measures: Protected Process Mechanisms: - Enable RunAsPPL on Windows systems 
+
+──────────────────────────────────────────────────
+
+MITIGATION: Privileged Account Management
+MITIGATION ID: M1026
+ADDRESSES TECHNIQUES: T1003, T1003.001, T1003.002, T1003.003, T1003.004, T1003.005, T1003.006, T1003.007, T1003.008, T1021.001, T1021.002, T1021.003, T1021.006, T1021.007, T1047, T1053, T1053.002, T1053.005, T1053.006, T1053.007, T1055, T1055.008, T1056.003, T1059, T1059.001, T1059.008, T1059.009, T1059.013, T1072, T1078, T1078.002, T1078.003, T1078.004, T1098, T1098.001, T1098.002, T1098.003, T1134, T1134.001, T1134.002, T1134.003, T1136, T1136.001, T1136.002, T1136.003, T1190, T1210, T1218, T1218.007, T1222, T1222.001, T1222.002, T1484, T1484.002, T1495, T1505, T1505.001, T1505.002, T1505.004, T1525, T1542, T1542.001, T1542.003, T1542.005, T1543, T1543.002, T1546, T1546.003, T1547.006, T1548, T1548.002, T1548.003, T1548.006, T1550, T1550.002, T1550.003, T1552, T1552.002, T1552.007, T1553, T1553.006, T1555, T1555.006, T1556, T1556.001, T1556.003, T1556.004, T1556.005, T1556.007, T1558, T1558.001, T1558.002, T1558.003, T1559, T1559.001, T1562.009, T1563, T1563.001, T1563.002, T1569, T1569.002, T1599, T1599.001, T1601, T1601.001, T1601.002, T1606, T1606.002, T1609, T1611, T1612, T1651
+DESCRIPTION: Privileged Account Management focuses on implementing policies, controls, and tools to securely manage privileged accounts (e.g., SYSTEM, root, or administrative accounts). This includes restricting access, limiting the scope of permissions, monitoring privileged account usage, and ensuring accountability through logging and auditing.This mitigation can be implemented through the following measures: Account Permissions and Roles: - Implement RBAC and least privilege principles to allocate permis
+
+──────────────────────────────────────────────────
+
+MITIGATION: Password Policies
+MITIGATION ID: M1027
+ADDRESSES TECHNIQUES: T1003, T1003.001, T1003.002, T1003.003, T1003.004, T1003.005, T1003.006, T1003.007, T1003.008, T1021, T1021.002, T1072, T1078, T1078.001, T1078.002, T1078.003, T1078.004, T1110, T1110.001, T1110.002, T1110.003, T1110.004, T1187, T1201, T1550, T1550.003, T1552, T1552.001, T1552.002, T1552.004, T1555, T1555.001, T1555.003, T1555.005, T1556, T1556.005, T1558, T1558.002, T1558.003, T1558.004, T1563, T1563.001, T1599, T1599.001, T1601, T1601.001, T1601.002
+DESCRIPTION: Set and enforce secure password policies for accounts to reduce the likelihood of unauthorized access. Strong password policies include enforcing password complexity, requiring regular password changes, and preventing password reuse. This mitigation can be implemented through the following measures: Windows Systems: - Use Group Policy Management Console (GPMC) to configure: - Minimum password length (e.g., 12+ characters). - Password complexity requirements. - Password history (e.g., disallow la
+
+──────────────────────────────────────────────────
+
+MITIGATION: Operating System Configuration
+MITIGATION ID: M1028
+ADDRESSES TECHNIQUES: T1003, T1003.001, T1003.002, T1003.005, T1011, T1011.001, T1021.001, T1036.007, T1053, T1053.002, T1053.005, T1087, T1087.001, T1087.002, T1092, T1098, T1135, T1136, T1136.002, T1197, T1490, T1542.005, T1543, T1543.003, T1546.008, T1548, T1548.001, T1548.003, T1552, T1552.003, T1553, T1553.004, T1556, T1556.002, T1556.008, T1562.003, T1563.002, T1564.002, T1574.006
+DESCRIPTION: Operating System Configuration involves adjusting system settings and hardening the default configurations of an operating system (OS) to mitigate adversary exploitation and prevent abuse of system functionality. Proper OS configurations address security vulnerabilities, limit attack surfaces, and ensure robust defense against a wide range of techniques. This mitigation can be implemented through the following measures: Disable Unused Features: - Turn off SMBv1, LLMNR, and NetBIOS where not need
+
+──────────────────────────────────────────────────
+
+MITIGATION: Remote Data Storage
+MITIGATION ID: M1029
+ADDRESSES TECHNIQUES: T1070, T1070.001, T1070.002, T1070.003, T1070.007, T1070.008, T1070.009, T1072, T1119, T1565, T1565.001
+DESCRIPTION: Remote Data Storage focuses on moving critical data, such as security logs and sensitive files, to secure, off-host locations to minimize unauthorized access, tampering, or destruction by adversaries. By leveraging remote storage solutions, organizations enhance the protection of forensic evidence, sensitive information, and monitoring data. This mitigation can be implemented through the following measures: Centralized Log Management: - Configure endpoints to forward security logs to a centraliz
+
+──────────────────────────────────────────────────
+
+MITIGATION: Network Segmentation
+MITIGATION ID: M1030
+ADDRESSES TECHNIQUES: T1021.001, T1021.003, T1021.006, T1040, T1046, T1048, T1048.001, T1048.002, T1048.003, T1072, T1095, T1098, T1098.001, T1133, T1136, T1136.002, T1136.003, T1190, T1199, T1210, T1482, T1489, T1552.007, T1557, T1557.001, T1563, T1563.002, T1565, T1565.003, T1571, T1602, T1602.001, T1602.002, T1610, T1612, T1613, T1669
+DESCRIPTION: Network segmentation involves dividing a network into smaller, isolated segments to control and limit the flow of traffic between devices, systems, and applications. By segmenting networks, organizations can reduce the attack surface, restrict lateral movement by adversaries, and protect critical assets from compromise. Effective network segmentation leverages a combination of physical boundaries, logical separation through VLANs, and access control policies enforced by network appliances like f
+
+──────────────────────────────────────────────────
+
+MITIGATION: Network Intrusion Prevention
+MITIGATION ID: M1031
+ADDRESSES TECHNIQUES: T1001, T1001.001, T1001.002, T1001.003, T1008, T1029, T1030, T1041, T1046, T1048, T1048.001, T1048.002, T1048.003, T1071, T1071.001, T1071.002, T1071.003, T1071.004, T1071.005, T1090, T1090.001, T1090.002, T1095, T1102, T1102.001, T1102.002, T1102.003, T1104, T1105, T1132, T1132.001, T1132.002, T1204, T1204.001, T1204.003, T1204.004, T1204.005, T1219, T1221, T1542.004, T1542.005, T1557, T1557.001, T1557.002, T1557.003, T1557.004, T1566, T1566.001, T1568, T1568.002, T1570, T1571, T1572, T1573, T1573.001, T1573.002, T1602, T1602.001, T1602.002
+DESCRIPTION: Use intrusion detection signatures to block traffic at network boundaries.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Multi-factor Authentication
+MITIGATION ID: M1032
+ADDRESSES TECHNIQUES: T1021, T1021.001, T1021.004, T1021.007, T1040, T1072, T1078, T1078.001, T1078.002, T1078.003, T1078.004, T1098, T1098.001, T1098.002, T1098.003, T1098.005, T1098.006, T1110, T1110.001, T1110.002, T1110.003, T1110.004, T1114, T1114.002, T1133, T1136, T1136.001, T1136.002, T1136.003, T1199, T1213, T1213.003, T1485, T1530, T1539, T1556, T1556.001, T1556.003, T1556.004, T1556.006, T1556.007, T1599, T1599.001, T1601, T1601.001, T1601.002, T1621, T1669
+DESCRIPTION: Multi-Factor Authentication (MFA) enhances security by requiring users to provide at least two forms of verification to prove their identity before granting access. These factors typically include: - *Something you know*: Passwords, PINs. - *Something you have*: Physical tokens, smartphone authenticator apps. - *Something you are*: Biometric data such as fingerprints, facial recognition, or retinal scans. Implementing MFA across all critical systems and services ensures robust protection against
+
+──────────────────────────────────────────────────
+
+MITIGATION: Limit Software Installation
+MITIGATION ID: M1033
+ADDRESSES TECHNIQUES: T1021.005, T1059, T1059.006, T1059.011, T1072, T1176, T1176.001, T1176.002, T1195, T1195.001, T1204, T1204.005, T1543, T1543.002, T1547.013, T1564, T1564.003
+DESCRIPTION: Prevent users or groups from installing unauthorized or unapproved software to reduce the risk of introducing malicious or vulnerable applications. This can be achieved through allowlists, software restriction policies, endpoint management tools, and least privilege access principles. This mitigation can be implemented through the following measures: Application Whitelisting - Implement Microsoft AppLocker or Windows Defender Application Control (WDAC) to create and enforce allowlists for approv
+
+──────────────────────────────────────────────────
+
+MITIGATION: Limit Hardware Installation
+MITIGATION ID: M1034
+ADDRESSES TECHNIQUES: T1052, T1052.001, T1091, T1200, T1219, T1219.003, T1674
+DESCRIPTION: Prevent unauthorized users or groups from installing or using hardware, such as external drives, peripheral devices, or unapproved internal hardware components, by enforcing hardware usage policies and technical controls. This includes disabling USB ports, restricting driver installation, and implementing endpoint security tools to monitor and block unapproved devices. This mitigation can be implemented through the following measures: Disable USB Ports and Hardware Installation Policies: - Use G
+
+──────────────────────────────────────────────────
+
+MITIGATION: Limit Access to Resource Over Network
+MITIGATION ID: M1035
+ADDRESSES TECHNIQUES: T1021, T1021.001, T1021.002, T1133, T1190, T1200, T1542, T1542.005, T1546.008, T1552, T1552.005, T1552.007, T1557, T1557.002, T1563.002, T1609, T1610, T1612, T1613
+DESCRIPTION: Restrict access to network resources, such as file shares, remote systems, and services, to only those users, accounts, or systems with a legitimate business requirement. This can include employing technologies like network concentrators, RDP gateways, and zero-trust network access (ZTNA) models, alongside hardening services and protocols. This mitigation can be implemented through the following measures: Audit and Restrict Access: - Regularly audit permissions for file shares, network services,
+
+──────────────────────────────────────────────────
+
+MITIGATION: Account Use Policies
+MITIGATION ID: M1036
+ADDRESSES TECHNIQUES: T1078, T1078.004, T1110, T1110.001, T1110.003, T1110.004, T1550, T1550.001, T1621, T1648
+DESCRIPTION: Account Use Policies help mitigate unauthorized access by configuring and enforcing rules that govern how and when accounts can be used. These policies include enforcing account lockout mechanisms, restricting login times, and setting inactivity timeouts. Proper configuration of these policies reduces the risk of brute-force attacks, credential theft, and unauthorized access by limiting the opportunities for malicious actors to exploit accounts. This mitigation can be implemented through the fol
+
+──────────────────────────────────────────────────
+
+MITIGATION: Filter Network Traffic
+MITIGATION ID: M1037
+ADDRESSES TECHNIQUES: T1021.002, T1021.005, T1048, T1048.001, T1048.002, T1048.003, T1071, T1071.001, T1071.002, T1071.003, T1071.004, T1071.005, T1090, T1090.003, T1095, T1105, T1187, T1190, T1197, T1205, T1205.001, T1205.002, T1218, T1218.012, T1219, T1219.002, T1498, T1498.001, T1498.002, T1499, T1499.001, T1499.002, T1499.003, T1499.004, T1530, T1537, T1552, T1552.005, T1557, T1557.001, T1557.002, T1557.003, T1570, T1572, T1599, T1599.001, T1602, T1602.001, T1602.002
+DESCRIPTION: Employ network appliances and endpoint software to filter ingress, egress, and lateral network traffic. This includes protocol-based filtering, enforcing firewall rules, and blocking or restricting traffic based on predefined conditions to limit adversary movement and data exfiltration. This mitigation can be implemented through the following measures: Ingress Traffic Filtering: - Use Case: Configure network firewalls to allow traffic only from authorized IP addresses to public-facing servers. -
+
+──────────────────────────────────────────────────
+
+MITIGATION: Execution Prevention
+MITIGATION ID: M1038
+ADDRESSES TECHNIQUES: T1036, T1036.005, T1036.008, T1047, T1059, T1059.001, T1059.002, T1059.003, T1059.004, T1059.005, T1059.006, T1059.007, T1059.008, T1059.009, T1059.010, T1059.011, T1059.013, T1068, T1080, T1106, T1127, T1127.001, T1127.003, T1129, T1176, T1176.001, T1176.002, T1204, T1204.002, T1204.004, T1216, T1216.001, T1216.002, T1218, T1218.001, T1218.002, T1218.003, T1218.004, T1218.005, T1218.008, T1218.009, T1218.012, T1218.013, T1218.014, T1218.015, T1219, T1219.001, T1219.002, T1220, T1490, T1505.004, T1546.002, T1546.006, T1546.008, T1546.009, T1546.010, T1547.004, T1547.006, T1547.009, T1548, T1548.004, T1553, T1553.001, T1553.003, T1553.005, T1562, T1562.001, T1562.011, T1564.003, T1564.006, T1574, T1574.001, T1574.006, T1574.007, T1574.008, T1574.009, T1574.012, T1609, T1611, T1674
+DESCRIPTION: Prevent the execution of unauthorized or malicious code on systems by implementing application control, script blocking, and other execution prevention mechanisms. This ensures that only trusted and authorized code is executed, reducing the risk of malware and unauthorized actions. This mitigation can be implemented through the following measures: Application Control: - Use Case: Use tools like AppLocker or Windows Defender Application Control (WDAC) to create whitelists of authorized applicatio
+
+──────────────────────────────────────────────────
+
+MITIGATION: Environment Variable Permissions
+MITIGATION ID: M1039
+ADDRESSES TECHNIQUES: T1070.003, T1562.003
+DESCRIPTION: Restrict the modification of environment variables to authorized users and processes by enforcing strict permissions and policies. This ensures the integrity of environment variables, preventing adversaries from abusing or altering them for malicious purposes. This mitigation can be implemented through the following measures: Restrict Write Access: - Use Case: Set file system-level permissions to restrict access to environment variable configuration files (e.g., `.bashrc`, `.bash_profile`, `.zsh
+
+──────────────────────────────────────────────────
+
+MITIGATION: Behavior Prevention on Endpoint
+MITIGATION ID: M1040
+ADDRESSES TECHNIQUES: T1003, T1003.001, T1006, T1027, T1027.009, T1027.010, T1027.012, T1027.013, T1027.014, T1036, T1036.008, T1047, T1055, T1055.001, T1055.002, T1055.003, T1055.004, T1055.005, T1055.008, T1055.009, T1055.011, T1055.012, T1055.013, T1055.014, T1055.015, T1059, T1059.005, T1059.007, T1091, T1106, T1137, T1137.001, T1137.002, T1137.003, T1137.004, T1137.005, T1137.006, T1204, T1204.002, T1216.001, T1486, T1543, T1543.003, T1546.003, T1559, T1559.002, T1564.014, T1569, T1569.002, T1574, T1574.013
+DESCRIPTION: Behavior Prevention on Endpoint refers to the use of technologies and strategies to detect and block potentially malicious activities by analyzing the behavior of processes, files, API calls, and other endpoint events. Rather than relying solely on known signatures, this approach leverages heuristics, machine learning, and real-time monitoring to identify anomalous patterns indicative of an attack. This mitigation can be implemented through the following measures: Suspicious Process Behavior: - 
+
+──────────────────────────────────────────────────
+
+MITIGATION: Encrypt Sensitive Information
+MITIGATION ID: M1041
+ADDRESSES TECHNIQUES: T1003, T1003.003, T1020.001, T1040, T1070, T1070.001, T1070.002, T1114, T1114.001, T1114.002, T1114.003, T1119, T1213, T1213.006, T1530, T1550.001, T1552, T1552.004, T1557, T1557.002, T1558, T1558.002, T1558.003, T1558.004, T1565, T1565.001, T1565.002, T1602, T1602.001, T1602.002, T1649, T1659, T1669
+DESCRIPTION: Protect sensitive information at rest, in transit, and during processing by using strong encryption algorithms. Encryption ensures the confidentiality and integrity of data, preventing unauthorized access or tampering. This mitigation can be implemented through the following measures: Encrypt Data at Rest: - Use Case: Use full-disk encryption or file-level encryption to secure sensitive data stored on devices. - Implementation: Implement BitLocker for Windows systems or FileVault for macOS devic
+
+──────────────────────────────────────────────────
+
+MITIGATION: Disable or Remove Feature or Program
+MITIGATION ID: M1042
+ADDRESSES TECHNIQUES: T1011, T1011.001, T1021, T1021.001, T1021.003, T1021.004, T1021.005, T1021.006, T1021.008, T1046, T1052, T1052.001, T1059, T1059.001, T1059.005, T1059.007, T1091, T1092, T1098, T1098.001, T1098.002, T1098.004, T1114.003, T1127, T1127.001, T1127.002, T1127.003, T1133, T1137, T1137.001, T1205, T1210, T1218, T1218.003, T1218.004, T1218.005, T1218.007, T1218.008, T1218.009, T1218.012, T1218.013, T1218.014, T1218.015, T1219, T1219.002, T1221, T1505, T1505.003, T1546.002, T1546.014, T1547.007, T1552.005, T1553.005, T1555.004, T1557, T1557.001, T1557.002, T1559, T1559.002, T1562, T1562.010, T1563, T1563.001, T1563.002, T1564.006, T1564.007, T1595.003, T1609, T1611, T1649, T1671
+DESCRIPTION: Disable or remove unnecessary and potentially vulnerable software, features, or services to reduce the attack surface and prevent abuse by adversaries. This involves identifying software or features that are no longer needed or that could be exploited and ensuring they are either removed or properly disabled. This mitigation can be implemented through the following measures: Remove Legacy Software: - Use Case: Disable or remove older versions of software that no longer receive updates or securit
+
+──────────────────────────────────────────────────
+
+MITIGATION: Credential Access Protection
+MITIGATION ID: M1043
+ADDRESSES TECHNIQUES: T1003, T1003.001, T1547.008, T1558, T1558.005, T1599, T1599.001, T1601, T1601.001, T1601.002
+DESCRIPTION: Credential Access Protection focuses on implementing measures to prevent adversaries from obtaining credentials, such as passwords, hashes, tokens, or keys, that could be used for unauthorized access. This involves restricting access to credential storage mechanisms, hardening configurations to block credential dumping methods, and using monitoring tools to detect suspicious credential-related activity. This mitigation can be implemented through the following measures: Restrict Access to Credent
+
+──────────────────────────────────────────────────
+
+MITIGATION: Restrict Library Loading
+MITIGATION ID: M1044
+ADDRESSES TECHNIQUES: T1547.008, T1574, T1574.001
+DESCRIPTION: Restricting library loading involves implementing security controls to ensure that only trusted and verified libraries (DLLs, shared objects, etc.) are loaded into processes. Adversaries often abuse Dynamic-Link Library (DLL) Injection, DLL Search Order Hijacking, or LD_PRELOAD mechanisms to execute malicious code by forcing the operating system to load untrusted libraries. This mitigation can be implemented through the following measures: Enforce Safe Library Loading Practices: - Enable `SafeDL
+
+──────────────────────────────────────────────────
+
+MITIGATION: Code Signing
+MITIGATION ID: M1045
+ADDRESSES TECHNIQUES: T1036, T1036.001, T1036.005, T1059, T1059.001, T1059.002, T1127.002, T1204.003, T1505, T1505.001, T1505.002, T1505.004, T1505.006, T1525, T1543, T1543.003, T1546.006, T1546.013, T1554, T1601, T1601.001, T1601.002
+DESCRIPTION: Code Signing is a security process that ensures the authenticity and integrity of software by digitally signing executables, scripts, and other code artifacts. It prevents untrusted or malicious code from executing by verifying the digital signatures against trusted sources. Code signing protects against tampering, impersonation, and distribution of unauthorized or malicious software, forming a critical defense against supply chain and software exploitation attacks. This mitigation can be implem
+
+──────────────────────────────────────────────────
+
+MITIGATION: Boot Integrity
+MITIGATION ID: M1046
+ADDRESSES TECHNIQUES: T1195, T1195.003, T1495, T1505, T1505.006, T1542, T1542.001, T1542.003, T1542.004, T1542.005, T1553.006, T1601, T1601.001, T1601.002
+DESCRIPTION: Boot Integrity ensures that a system starts securely by verifying the integrity of its boot process, operating system, and associated components. This mitigation focuses on leveraging secure boot mechanisms, hardware-rooted trust, and runtime integrity checks to prevent tampering during the boot sequence. It is designed to thwart adversaries attempting to modify system firmware, bootloaders, or critical OS components. This mitigation can be implemented through the following measures: Implementat
+
+──────────────────────────────────────────────────
+
+MITIGATION: Audit
+MITIGATION ID: M1047
+ADDRESSES TECHNIQUES: T1021, T1021.001, T1021.005, T1027, T1027.011, T1036, T1036.010, T1036.012, T1053, T1053.002, T1053.003, T1053.005, T1059, T1059.006, T1059.011, T1070.008, T1087.004, T1095, T1114, T1114.003, T1176, T1176.001, T1176.002, T1204.003, T1213, T1213.001, T1213.002, T1213.003, T1213.004, T1213.005, T1213.006, T1482, T1484, T1484.001, T1505, T1505.001, T1505.002, T1505.004, T1505.005, T1505.006, T1525, T1528, T1530, T1539, T1542, T1542.004, T1542.005, T1543, T1543.003, T1543.004, T1546.006, T1548, T1548.002, T1548.006, T1550, T1550.001, T1552, T1552.001, T1552.002, T1552.004, T1552.006, T1552.008, T1556, T1556.006, T1556.007, T1556.008, T1558, T1558.004, T1558.005, T1560, T1560.001, T1562, T1562.001, T1562.002, T1562.004, T1562.007, T1562.012, T1562.013, T1563.002, T1564, T1564.006, T1564.008, T1566, T1566.001, T1566.002, T1566.003, T1574, T1574.001, T1574.005, T1574.007, T1574.008, T1574.009, T1574.010, T1578, T1578.001, T1578.002, T1578.003, T1578.005, T1593, T1593.003, T1606, T1606.001, T1606.002, T1610, T1612, T1649, T1653, T1666, T1671
+DESCRIPTION: Auditing is the process of recording activity and systematically reviewing and analyzing the activity and system configurations. The primary purpose of auditing is to detect anomalies and identify potential threats or weaknesses in the environment. Proper auditing configurations can also help to meet compliance requirements. The process of auditing encompasses regular analysis of user behaviors and system logs in support of proactive security measures. Auditing is applicable to all systems used 
+
+──────────────────────────────────────────────────
+
+MITIGATION: Application Isolation and Sandboxing
+MITIGATION ID: M1048
+ADDRESSES TECHNIQUES: T1021.003, T1027.006, T1027.017, T1068, T1189, T1190, T1203, T1210, T1211, T1212, T1559, T1559.001, T1559.002, T1611
+DESCRIPTION: Application Isolation and Sandboxing refers to the technique of restricting the execution of code to a controlled and isolated environment (e.g., a virtual environment, container, or sandbox). This method prevents potentially malicious code from affecting the rest of the system or network by limiting access to sensitive resources and critical operations. The goal is to contain threats and minimize their impact. This mitigation can be implemented through the following measures: Browser Sandboxing
+
+──────────────────────────────────────────────────
+
+MITIGATION: Antivirus/Antimalware
+MITIGATION ID: M1049
+ADDRESSES TECHNIQUES: T1027, T1027.002, T1027.009, T1027.010, T1027.012, T1027.013, T1027.014, T1027.015, T1027.016, T1036, T1036.008, T1059, T1059.001, T1059.005, T1059.006, T1080, T1221, T1547.006, T1564, T1564.012, T1566, T1566.001, T1566.003
+DESCRIPTION: Antivirus/Antimalware solutions utilize signatures, heuristics, and behavioral analysis to detect, block, and remediate malicious software, including viruses, trojans, ransomware, and spyware. These solutions continuously monitor endpoints and systems for known malicious patterns and suspicious behaviors that indicate compromise. Antivirus/Antimalware software should be deployed across all devices, with automated updates to ensure protection against the latest threats. This mitigation can be imp
+
+──────────────────────────────────────────────────
+
+MITIGATION: Exploit Protection
+MITIGATION ID: M1050
+ADDRESSES TECHNIQUES: T1068, T1080, T1189, T1190, T1203, T1210, T1211, T1212, T1218, T1218.010, T1218.011, T1218.015
+DESCRIPTION: Deploy capabilities that detect, block, and mitigate conditions indicative of software exploits. These capabilities aim to prevent exploitation by addressing vulnerabilities, monitoring anomalous behaviors, and applying exploit-mitigation techniques to harden systems and software. Operating System Exploit Protections: - Use Case: Enable built-in exploit protection features provided by modern operating systems, such as Microsoft's Exploit Protection, which includes techniques like Data Execution 
+
+──────────────────────────────────────────────────
+
+MITIGATION: Update Software
+MITIGATION ID: M1051
+ADDRESSES TECHNIQUES: T1068, T1072, T1110.001, T1137, T1137.003, T1137.004, T1137.005, T1176, T1176.001, T1176.002, T1189, T1190, T1195, T1195.001, T1195.002, T1203, T1210, T1211, T1212, T1495, T1539, T1542, T1542.001, T1542.002, T1546, T1546.010, T1546.011, T1548, T1548.002, T1550.002, T1552, T1552.006, T1555, T1555.003, T1555.005, T1562.013, T1574, T1574.001, T1602, T1602.001, T1602.002, T1611
+DESCRIPTION: Software updates ensure systems are protected against known vulnerabilities by applying patches and upgrades provided by vendors. Regular updates reduce the attack surface and prevent adversaries from exploiting known security gaps. This includes patching operating systems, applications, drivers, and firmware. This mitigation can be implemented through the following measures: Regular Operating System Updates - Implementation: Apply the latest Windows security updates monthly using WSUS (Windows 
+
+──────────────────────────────────────────────────
+
+MITIGATION: User Account Control
+MITIGATION ID: M1052
+ADDRESSES TECHNIQUES: T1546.011, T1548, T1548.002, T1550.002, T1574, T1574.005, T1574.010
+DESCRIPTION: User Account Control (UAC) is a security feature in Microsoft Windows that prevents unauthorized changes to the operating system. UAC prompts users to confirm or provide administrator credentials when an action requires elevated privileges. Proper configuration of UAC reduces the risk of privilege escalation attacks. This mitigation can be implemented through the following measures: Enable UAC Globally: - Ensure UAC is enabled through Group Policy by setting `User Account Control: Run all admini
+
+──────────────────────────────────────────────────
+
+MITIGATION: Data Backup
+MITIGATION ID: M1053
+ADDRESSES TECHNIQUES: T1485, T1485.001, T1486, T1490, T1491, T1491.001, T1491.002, T1561, T1561.001, T1561.002
+DESCRIPTION: Data Backup involves taking and securely storing backups of data from end-user systems and critical servers. It ensures that data remains available in the event of system compromise, ransomware attacks, or other disruptions. Backup processes should include hardening backup systems, implementing secure storage solutions, and keeping backups isolated from the corporate network to prevent compromise during active incidents. This mitigation can be implemented through the following measures: Regular 
+
+──────────────────────────────────────────────────
+
+MITIGATION: Software Configuration
+MITIGATION ID: M1054
+ADDRESSES TECHNIQUES: T1137, T1137.002, T1213, T1213.004, T1213.006, T1535, T1537, T1539, T1543, T1543.005, T1546.013, T1550.004, T1553, T1553.004, T1555.005, T1559, T1559.002, T1562, T1562.006, T1562.009, T1562.010, T1566, T1566.001, T1566.002, T1590.002, T1598, T1598.002, T1598.003, T1602, T1602.001, T1602.002, T1606, T1606.001, T1666, T1667, T1672, T1677
+DESCRIPTION: Software configuration refers to making security-focused adjustments to the settings of applications, middleware, databases, or other software to mitigate potential threats. These changes help reduce the attack surface, enforce best practices, and protect sensitive data. This mitigation can be implemented through the following measures: Conduct a Security Review of Application Settings: - Review the software documentation to identify recommended security configurations. - Compare default setting
+
+──────────────────────────────────────────────────
+
+MITIGATION: Do Not Mitigate
+MITIGATION ID: M1055
+ADDRESSES TECHNIQUES: T1480, T1480.001, T1480.002
+DESCRIPTION: The Do Not Mitigate category highlights scenarios where attempting to mitigate a specific technique may inadvertently increase the organization's security risk or operational instability. This could happen due to the complexity of the system, the integration of critical processes, or the potential for introducing new vulnerabilities. Instead of direct mitigation, these situations may call for alternative strategies such as detection, monitoring, or response. The Do Not Mitigate category undersco
+
+──────────────────────────────────────────────────
+
+MITIGATION: Pre-compromise
+MITIGATION ID: M1056
+ADDRESSES TECHNIQUES: T1583, T1583.001, T1583.002, T1583.003, T1583.004, T1583.005, T1583.006, T1583.007, T1583.008, T1584, T1584.001, T1584.002, T1584.003, T1584.004, T1584.005, T1584.006, T1584.007, T1584.008, T1585, T1585.001, T1585.002, T1585.003, T1586, T1586.001, T1586.002, T1586.003, T1587, T1587.001, T1587.002, T1587.003, T1587.004, T1588, T1588.001, T1588.002, T1588.003, T1588.004, T1588.005, T1588.006, T1588.007, T1589, T1589.001, T1589.002, T1589.003, T1590, T1590.001, T1590.003, T1590.004, T1590.005, T1590.006, T1591, T1591.001, T1591.002, T1591.003, T1591.004, T1592, T1592.001, T1592.002, T1592.003, T1592.004, T1593.001, T1593.002, T1594, T1595, T1595.001, T1595.002, T1595.003, T1596, T1596.001, T1596.002, T1596.003, T1596.004, T1596.005, T1597, T1597.001, T1597.002, T1608, T1608.001, T1608.002, T1608.003, T1608.004, T1608.005, T1608.006, T1650, T1681
+DESCRIPTION: Pre-compromise mitigations involve proactive measures and defenses implemented to prevent adversaries from successfully identifying and exploiting weaknesses during the Reconnaissance and Resource Development phases of an attack. These activities focus on reducing an organization's attack surface, identify adversarial preparation efforts, and increase the difficulty for attackers to conduct successful operations. This mitigation can be implemented through the following measures: Limit Informatio
+
+──────────────────────────────────────────────────
+
+MITIGATION: Data Loss Prevention
+MITIGATION ID: M1057
+ADDRESSES TECHNIQUES: T1005, T1020.001, T1025, T1041, T1048, T1048.002, T1048.003, T1052, T1052.001, T1537, T1567, T1567.004
+DESCRIPTION: Data Loss Prevention (DLP) involves implementing strategies and technologies to identify, categorize, monitor, and control the movement of sensitive data within an organization. This includes protecting data formats indicative of Personally Identifiable Information (PII), intellectual property, or financial data from unauthorized access, transmission, or exfiltration. DLP solutions integrate with network, endpoint, and cloud platforms to enforce security policies and prevent accidental or malici
+
+──────────────────────────────────────────────────
+
+MITIGATION: Out-of-Band Communications Channel
+MITIGATION ID: M1060
+ADDRESSES TECHNIQUES: T1114, T1114.001, T1114.002, T1114.003, T1213, T1213.005, T1489
+DESCRIPTION: Establish secure out-of-band communication channels to ensure the continuity of critical communications during security incidents, data integrity attacks, or in-network communication failures. Out-of-band communication refers to using an alternative, separate communication path that is not dependent on the potentially compromised primary network infrastructure. This method can include secure messaging apps, encrypted phone lines, satellite communications, or dedicated emergency communication sys
+
+──────────────────────────────────────────────────
+
+MITIGATION: Data Obfuscation Mitigation
+MITIGATION ID: T1001
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Network intrusion detection and prevention systems that use network signatures to identify traffic for specific adversary malware can be used to mitigate activity at the network level. Signatures are often for unique indicators within protocols and may be based on the specific obfuscation technique used by a particular adversary or tool, and will likely be different across various malware families and versions. Adversaries will likely change tool C2 signatures over time or construct protocols in
+
+──────────────────────────────────────────────────
+
+MITIGATION: Data Compressed Mitigation
+MITIGATION ID: T1002
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify unnecessary system utilities, third-party tools, or potentially malicious software that may be used to compress files, and audit and/or block them by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate. If network intrusion prevention or data loss prevention tools are set to block specific file types from leaving the network over unencrypted channels, then an adversary may move to an encrypted channel.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Credential Dumping Mitigation
+MITIGATION ID: T1003
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: ### Windows Monitor/harden access to LSASS and SAM table with tools that allow process whitelisting. Limit credential overlap across systems to prevent lateral movement opportunities using [Valid Accounts](https://attack.mitre.org/techniques/T1078) if passwords and hashes are obtained. Ensure that local administrator accounts have complex, unique passwords across all systems on the network. Do not put user or admin domain accounts in the local administrator groups across systems unless they are 
+
+──────────────────────────────────────────────────
+
+MITIGATION: Winlogon Helper DLL Mitigation
+MITIGATION ID: T1004
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Limit the privileges of user accounts so that only authorized administrators can perform Winlogon helper changes. Identify and block potentially malicious software that may be executed through the Winlogon helper process by using whitelisting tools like AppLocker that are capable of auditing and/or blocking unknown DLLs.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Data from Local System Mitigation
+MITIGATION ID: T1005
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify unnecessary system utilities or potentially malicious software that may be used to collect data from the local system, and audit and/or block them by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: File System Logical Offsets Mitigation
+MITIGATION ID: T1006
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify potentially malicious software that may be used to access logical drives in this manner, and audit and/or block it by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: System Service Discovery Mitigation
+MITIGATION ID: T1007
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify unnecessary system utilities or potentially malicious software that may be used to acquire information about services, and audit and/or block them by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Fallback Channels Mitigation
+MITIGATION ID: T1008
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Network intrusion detection and prevention systems that use network signatures to identify traffic for specific adversary malware can be used to mitigate activity at the network level. Signatures are often for unique indicators within protocols and may be based on the specific protocol used by a particular adversary or tool, and will likely be different across various malware families and versions. Adversaries will likely change tool C2 signatures over time or construct protocols in such a way a
+
+──────────────────────────────────────────────────
+
+MITIGATION: Binary Padding Mitigation
+MITIGATION ID: T1009
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify potentially malicious software that may be executed from a padded or otherwise obfuscated binary, and audit and/or block it by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Application Window Discovery Mitigation
+MITIGATION ID: T1010
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify unnecessary system utilities or potentially malicious software that may be used to acquire information, and audit and/or block them by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Exfiltration Over Other Network Medium Mitigation
+MITIGATION ID: T1011
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Ensure host-based sensors maintain visibility into usage of all network adapters and prevent the creation of new ones where possible.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Query Registry Mitigation
+MITIGATION ID: T1012
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify unnecessary system utilities or potentially malicious software that may be used to acquire information within the Registry, and audit and/or block them by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Port Monitors Mitigation
+MITIGATION ID: T1013
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify and block potentially malicious software that may persist in this manner by using whitelisting tools capable of monitoring DLL loads by processes running under SYSTEM permissions.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Rootkit Mitigation
+MITIGATION ID: T1014
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify potentially malicious software that may contain rootkit functionality, and audit and/or block it by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Accessibility Features Mitigation
+MITIGATION ID: T1015
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: To use this technique remotely, an adversary must use it in conjunction with RDP. Ensure that Network Level Authentication is enabled to force the remote desktop session to authenticate before the session is created and the login screen displayed. It is enabled by default on Windows Vista and later. If possible, use a Remote Desktop Gateway to manage connections and security configuration of RDP within a network. Identify and block potentially malicious software that may be executed by an advers
+
+──────────────────────────────────────────────────
+
+MITIGATION: System Network Configuration Discovery Mitigation
+MITIGATION ID: T1016
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify unnecessary system utilities or potentially malicious software that may be used to acquire information about a system's network configuration, and audit and/or block them by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Application Deployment Software Mitigation
+MITIGATION ID: T1017
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Grant access to application deployment systems only to a limited number of authorized administrators. Ensure proper system and access isolation for critical network systems through use of firewalls, account privilege separation, group policy, and multifactor authentication. Verify that account credentials that may be used to access deployment systems are unique and not used throughout the enterprise network. Patch deployment systems regularly to prevent potential remote access through [Exploitat
+
+──────────────────────────────────────────────────
+
+MITIGATION: Remote System Discovery Mitigation
+MITIGATION ID: T1018
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify unnecessary system utilities or potentially malicious software that may be used to acquire information on remotely available systems, and audit and/or block them by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: System Firmware Mitigation
+MITIGATION ID: T1019
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Prevent adversary access to privileged accounts or access necessary to perform this technique. Check the integrity of the existing BIOS or EFI to determine if it is vulnerable to modification. Patch the BIOS and EFI as necessary. Use Trusted Platform Module technology.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Automated Exfiltration Mitigation
+MITIGATION ID: T1020
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify unnecessary system utilities, scripts, or potentially malicious software that may be used to transfer data outside of a network, and audit and/or block them by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Data Encrypted Mitigation
+MITIGATION ID: T1022
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify unnecessary system utilities, third-party tools, or potentially malicious software that may be used to encrypt files, and audit and/or block them by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Shortcut Modification Mitigation
+MITIGATION ID: T1023
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Limit permissions for who can create symbolic links in Windows to appropriate groups such as Administrators and necessary groups for virtualization. This can be done through GPO: Computer Configuration > [Policies] > Windows Settings > Security Settings > Local Policies > User Rights Assignment: Create symbolic links. Identify and block unknown, potentially malicious software that may be executed through shortcut modification by using whitelisting tools, like AppLocker, or Software Restriction P
+
+──────────────────────────────────────────────────
+
+MITIGATION: Custom Cryptographic Protocol Mitigation
+MITIGATION ID: T1024
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Network intrusion detection and prevention systems that use network signatures to identify traffic for specific adversary malware can be used to mitigate activity at the network level. Since the custom protocol used may not adhere to typical protocol standards, there may be opportunities to signature the traffic on a network level for detection. Signatures are often for unique indicators within protocols and may be based on the specific protocol used by a particular adversary or tool, and will l
+
+──────────────────────────────────────────────────
+
+MITIGATION: Data from Removable Media Mitigation
+MITIGATION ID: T1025
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify unnecessary system utilities or potentially malicious software that may be used to collect data from removable media, and audit and/or block them by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Multiband Communication Mitigation
+MITIGATION ID: T1026
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Network intrusion detection and prevention systems that use network signatures to identify traffic for specific adversary malware can be used to mitigate activity at the network level. Signatures are often for unique indicators within protocols and may be based on the specific protocol used by a particular adversary or tool, and will likely be different across various malware families and versions. Adversaries will likely change tool C2 signatures over time or construct protocols in such a way a
+
+──────────────────────────────────────────────────
+
+MITIGATION: Windows Remote Management Mitigation
+MITIGATION ID: T1028
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Disable the WinRM service. If the service is necessary, lock down critical enclaves with separate WinRM infrastructure, accounts, and permissions. Follow WinRM best practices on configuration of authentication methods and use of host firewalls to restrict WinRM access to allow communication only to/from specific devices.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Scheduled Transfer Mitigation
+MITIGATION ID: T1029
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Network intrusion detection and prevention systems that use network signatures to identify traffic for specific adversary command and control infrastructure and malware can be used to mitigate activity at the network level. Signatures are often for unique indicators within protocols and may be based on the specific obfuscation technique used by a particular adversary or tool, and will likely be different across various malware families and versions. Adversaries will likely change tool command an
+
+──────────────────────────────────────────────────
+
+MITIGATION: Data Transfer Size Limits Mitigation
+MITIGATION ID: T1030
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Network intrusion detection and prevention systems that use network signatures to identify traffic for specific adversary command and control infrastructure and malware can be used to mitigate activity at the network level. Signatures are often for unique indicators within protocols and may be based on the specific obfuscation technique used by a particular adversary or tool, and will likely be different across various malware families and versions. Adversaries will likely change tool command an
+
+──────────────────────────────────────────────────
+
+MITIGATION: Modify Existing Service Mitigation
+MITIGATION ID: T1031
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Use auditing tools capable of detecting privilege and service abuse opportunities on systems within an enterprise and correct them. Limit privileges of user accounts and groups so that only authorized administrators can interact with service changes and service configurations. Toolkits like the PowerSploit framework contain the PowerUp modules that can be used to explore systems for Privilege Escalation weaknesses. Identify and block potentially malicious software that may be executed through se
+
+──────────────────────────────────────────────────
+
+MITIGATION: Standard Cryptographic Protocol Mitigation
+MITIGATION ID: T1032
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Network intrusion detection and prevention systems that use network signatures to identify traffic for specific adversary malware can be used to mitigate activity at the network level. Use of encryption protocols may make typical network-based C2 detection more difficult due to a reduced ability to signature the traffic. Prior knowledge of adversary C2 infrastructure may be useful for domain and IP address blocking, but will likely not be an effective long-term solution because adversaries can c
+
+──────────────────────────────────────────────────
+
+MITIGATION: System Owner/User Discovery Mitigation
+MITIGATION ID: T1033
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify unnecessary system utilities or potentially malicious software that may be used to acquire information about system users, and audit and/or block them by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Path Interception Mitigation
+MITIGATION ID: T1034
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Eliminate path interception weaknesses in program configuration files, scripts, the PATH environment variable, services, and in shortcuts by surrounding PATH variables with quotation marks when functions allow for them . Be aware of the search order Windows uses for executing or loading binaries and use fully qualified paths wherever appropriate . Clean up old Windows Registry keys when software is uninstalled to avoid keys with no associated legitimate binaries. Periodically search for and corr
+
+──────────────────────────────────────────────────
+
+MITIGATION: Service Execution Mitigation
+MITIGATION ID: T1035
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Ensure that permissions disallow services that run at a higher permissions level from being created or interacted with by a user with a lower permission level. Also ensure that high permission level service binaries cannot be replaced or modified by users with a lower permission level. Identify unnecessary system utilities or potentially malicious software that may be used to interact with Windows services, and audit and/or block them by using whitelisting tools, like AppLocker, or Software Rest
+
+──────────────────────────────────────────────────
+
+MITIGATION: Masquerading Mitigation
+MITIGATION ID: T1036
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: When creating security rules, avoid exclusions based on file name or file path. Require signed binaries. Use file system access controls to protect folders such as C:\Windows\System32. Use tools that restrict program execution via whitelisting by attributes other than file name. Identify potentially malicious software that may look like a legitimate program based on name and location, and audit and/or block it by using whitelisting tools like AppLocker or Software Restriction Policies where appr
+
+──────────────────────────────────────────────────
+
+MITIGATION: Logon Scripts Mitigation
+MITIGATION ID: T1037
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Restrict write access to logon scripts to specific administrators. Prevent access to administrator accounts by mitigating Credential Access techniques and limiting account access and permissions of [Valid Accounts](https://attack.mitre.org/techniques/T1078). Identify and block potentially malicious software that may be executed through logon script modification by using whitelisting tools like AppLocker that are capable of auditing and/or blocking unknown programs.
+
+──────────────────────────────────────────────────
+
+MITIGATION: DLL Search Order Hijacking Mitigation
+MITIGATION ID: T1038
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Disallow loading of remote DLLs. This is included by default in Windows Server 2012+ and is available by patch for XP+ and Server 2003+. Path Algorithm Enable Safe DLL Search Mode to force search for system DLLs in directories with greater restrictions (e.g. <code>%SYSTEMROOT%</code>)to be used before local directory DLLs (e.g. a user's home directory). The Safe DLL Search Mode can be enabled via Group Policy at Computer Configuration > [Policies] > Administrative Templates > MSS (Legacy): MSS: 
+
+──────────────────────────────────────────────────
+
+MITIGATION: Data from Network Shared Drive Mitigation
+MITIGATION ID: T1039
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify unnecessary system utilities or potentially malicious software that may be used to collect data from a network share, and audit and/or block them by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Network Sniffing Mitigation
+MITIGATION ID: T1040
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Ensure that all wireless traffic is encrypted appropriately. Use Kerberos, SSL, and multifactor authentication wherever possible. Monitor switches and network for span port usage, ARP/DNS poisoning, and router reconfiguration. Identify and block potentially malicious software that may be used to sniff or analyze network traffic by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Exfiltration Over Command and Control Channel Mitigation
+MITIGATION ID: T1041
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Mitigations for command and control apply. Network intrusion detection and prevention systems that use network signatures to identify traffic for specific adversary malware can be used to mitigate activity at the network level. Signatures are often for unique indicators within protocols and may be based on the specific obfuscation technique used by a particular adversary or tool, and will likely be different across various malware families and versions. Adversaries will likely change tool comman
+
+──────────────────────────────────────────────────
+
+MITIGATION: Change Default File Association Mitigation
+MITIGATION ID: T1042
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Direct mitigation of this technique is not recommended since it is a legitimate function that can be performed by users for software preferences. Follow Microsoft's best practices for file associations. Identify and block potentially malicious software that may be executed by this technique using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Commonly Used Port Mitigation
+MITIGATION ID: T1043
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Network intrusion detection and prevention systems that use network signatures to identify traffic for specific adversary malware can be used to mitigate activity at the network level. Signatures are often for unique indicators within protocols and may be based on the specific protocol used by a particular adversary or tool, and will likely be different across various malware families and versions. Adversaries will likely change tool C2 signatures over time or construct protocols in such a way a
+
+──────────────────────────────────────────────────
+
+MITIGATION: File System Permissions Weakness Mitigation
+MITIGATION ID: T1044
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Use auditing tools capable of detecting file system permissions abuse opportunities on systems within an enterprise and correct them. Limit privileges of user accounts and groups so that only authorized administrators can interact with service changes and service binary target path locations. Toolkits like the PowerSploit framework contain PowerUp modules that can be used to explore systems for service file system permissions weaknesses. Identify and block potentially malicious software that may
+
+──────────────────────────────────────────────────
+
+MITIGATION: Software Packing Mitigation
+MITIGATION ID: T1045
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Ensure updated virus definitions. Create custom signatures for observed malware. Employ heuristic-based malware detection. Identify and prevent execution of potentially malicious software that may have been packed by using whitelisting tools like AppLocker or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Network Service Scanning Mitigation
+MITIGATION ID: T1046
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Use network intrusion detection/prevention systems to detect and prevent remote service scans. Ensure that unnecessary ports and services are closed and proper network segmentation is followed to protect critical servers and devices. Identify unnecessary system utilities or potentially malicious software that may be used to acquire information about services running on remote systems, and audit and/or block them by using whitelisting tools, like AppLocker, or Software Restriction Policies where 
+
+──────────────────────────────────────────────────
+
+MITIGATION: System Network Connections Discovery Mitigation
+MITIGATION ID: T1049
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify unnecessary system utilities or potentially malicious software that may be used to acquire information about network connections, and audit and/or block them by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: New Service Mitigation
+MITIGATION ID: T1050
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Limit privileges of user accounts and remediate Privilege Escalation vectors so only authorized administrators can create new services. Identify and block unnecessary system utilities or potentially malicious software that may be used to create services by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Shared Webroot Mitigation
+MITIGATION ID: T1051
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Networks that allow for open development and testing of Web content and allow users to set up their own Web servers on the enterprise network may be particularly vulnerable if the systems and Web servers are not properly secured to limit privileged account use, unauthenticated network share access, and network/system isolation. Ensure proper permissions on directories that are accessible through a Web server. Disallow remote access to the webroot or other directories used to serve Web content. D
+
+──────────────────────────────────────────────────
+
+MITIGATION: Exfiltration Over Physical Medium Mitigation
+MITIGATION ID: T1052
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Disable Autorun if it is unnecessary. Disallow or restrict removable media at an organizational policy level if they are not required for business operations.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Scheduled Task Mitigation
+MITIGATION ID: T1053
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Limit privileges of user accounts and remediate Privilege Escalation vectors so only authorized administrators can create scheduled tasks on remote systems. Toolkits like the PowerSploit framework contain PowerUp modules that can be used to explore systems for permission weaknesses in scheduled tasks that could be used to escalate privileges. Configure settings for scheduled tasks to force tasks to run under the context of the authenticated account instead of allowing them to run as SYSTEM. The 
+
+──────────────────────────────────────────────────
+
+MITIGATION: Indicator Blocking Mitigation
+MITIGATION ID: T1054
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Ensure event tracers/forwarders , firewall policies, and other associated mechanisms are secured with appropriate permissions and access controls. Consider automatically relaunching forwarding mechanisms at recurring intervals (ex: temporal, on-logon, etc.) as well as applying appropriate change management to firewall rules and other related system configurations.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Process Discovery Mitigation
+MITIGATION ID: T1057
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify unnecessary system utilities or potentially malicious software that may be used to acquire information about processes, and audit and/or block them by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Service Registry Permissions Weakness Mitigation
+MITIGATION ID: T1058
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Ensure proper permissions are set for Registry hives to prevent users from modifying keys for system components that may lead to privilege escalation. Identify and block potentially malicious software that may be executed through service abuse by using whitelisting tools like AppLocker that are capable of auditing and/or blocking unknown programs.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Registry Run Keys / Startup Folder Mitigation
+MITIGATION ID: T1060
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify and block potentially malicious software that may be executed through run key or startup folder persistence using whitelisting tools like AppLocker or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Graphical User Interface Mitigation
+MITIGATION ID: T1061
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Prevent adversaries from gaining access to credentials through Credential Access that can be used to log into remote desktop sessions on systems. Identify unnecessary system utilities, third-party tools, or potentially malicious software that may be used to log into remote interactive sessions, and audit and/or block them by using whitelisting tools, like AppLocker and Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Hypervisor Mitigation
+MITIGATION ID: T1062
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Prevent adversary access to privileged accounts necessary to install a hypervisor.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Security Software Discovery Mitigation
+MITIGATION ID: T1063
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify unnecessary system utilities or potentially malicious software that may be used to acquire information about local security software, and audit and/or block them by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Scripting Mitigation
+MITIGATION ID: T1064
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Turn off unused features or restrict access to scripting engines such as VBScript or scriptable administration frameworks such as PowerShell. Configure Office security settings enable Protected View, to execute within a sandbox environment, and to block macros through Group Policy. Other types of virtualization and application microsegmentation may also mitigate the impact of compromise. The risks of additional exploits and weaknesses in implementation may still exist.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Uncommonly Used Port Mitigation
+MITIGATION ID: T1065
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Properly configure firewalls and proxies to limit outgoing traffic to only necessary ports. Network intrusion detection and prevention systems that use network signatures to identify traffic for specific adversary malware can be used to mitigate activity at the network level. Signatures are often for unique indicators within protocols and may be based on the specific protocol used by a particular adversary or tool, and will likely be different across various malware families and versions. Advers
+
+──────────────────────────────────────────────────
+
+MITIGATION: Indicator Removal from Tools Mitigation
+MITIGATION ID: T1066
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Mitigation is difficult in instances like this because the adversary may have access to the system through another channel and can learn what techniques or tools are blocked by resident defenses. Exercising best practices with configuration and security as well as ensuring that proper process is followed during investigation of potential compromise is essential to detecting a larger intrusion through discrete alerts. Identify and block potentially malicious software that may be used by an advers
+
+──────────────────────────────────────────────────
+
+MITIGATION: Bootkit Mitigation
+MITIGATION ID: T1067
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Ensure proper permissions are in place to help prevent adversary access to privileged accounts necessary to perform this action. Use Trusted Platform Module technology and a secure or trusted boot process to prevent system integrity from being compromised.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Exploitation for Privilege Escalation Mitigation
+MITIGATION ID: T1068
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Update software regularly by employing patch management for internal enterprise endpoints and servers. Develop a robust cyber threat intelligence capability to determine what types and levels of threat may use software exploits and 0-days against a particular organization. Make it difficult for adversaries to advance their operation through exploitation of undiscovered or unpatched vulnerabilities by using sandboxing, if available. Other types of virtualization and application microsegmentation 
+
+──────────────────────────────────────────────────
+
+MITIGATION: Permission Groups Discovery Mitigation
+MITIGATION ID: T1069
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify unnecessary system utilities or potentially malicious software that may be used to acquire information about groups and permissions, and audit and/or block them by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Indicator Removal on Host Mitigation
+MITIGATION ID: T1070
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Automatically forward events to a log server or data repository to prevent conditions in which the adversary can locate and manipulate data on the local system. When possible, minimize time delay on event reporting to avoid prolonged storage on the local system. Protect generated event files that are stored locally with proper permissions and authentication and limit opportunities for adversaries to increase privileges by preventing Privilege Escalation opportunities. Obfuscate/encrypt event fil
+
+──────────────────────────────────────────────────
+
+MITIGATION: Third-party Software Mitigation
+MITIGATION ID: T1072
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Evaluate the security of third-party software that could be used in the enterprise environment. Ensure that access to management systems for third-party systems is limited, monitored, and secure. Have a strict approval policy for use of third-party systems. Grant access to Third-party systems only to a limited number of authorized administrators. Ensure proper system and access isolation for critical network systems through use of firewalls, account privilege separation, group policy, and multi-
+
+──────────────────────────────────────────────────
+
+MITIGATION: DLL Side-Loading Mitigation
+MITIGATION ID: T1073
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Update software regularly. Install software in write-protected locations. Use the program sxstrace.exe that is included with Windows along with manual inspection to check manifest files for side-loading vulnerabilities in software.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Data Staged Mitigation
+MITIGATION ID: T1074
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify system utilities, remote access or third-party tools, users or potentially malicious software that may be used to store compressed or encrypted data in a publicly writeable directory, central location, or commonly used staging directories (e.g. recycle bin) that is indicative of non-standard behavior, and audit and/or block them by using file integrity monitoring tools where appropriate. Consider applying data size limits or blocking file writes of common compression and encryption util
+
+──────────────────────────────────────────────────
+
+MITIGATION: Pass the Hash Mitigation
+MITIGATION ID: T1075
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Monitor systems and domain logs for unusual credential logon activity. Prevent access to [Valid Accounts](https://attack.mitre.org/techniques/T1078). Apply patch KB2871997 to Windows 7 and higher systems to limit the default access of accounts in the local administrator group. Enable pass the hash mitigations to apply UAC restrictions to local accounts on network logon. The associated Registry key is located <code>HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\LocalAccountTokenFi
+
+──────────────────────────────────────────────────
+
+MITIGATION: Remote Desktop Protocol Mitigation
+MITIGATION ID: T1076
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Disable the RDP service if it is unnecessary, remove unnecessary accounts and groups from Remote Desktop Users groups, and enable firewall rules to block RDP traffic between network security zones. Audit the Remote Desktop Users group membership regularly. Remove the local Administrators group from the list of groups allowed to log in through RDP. Limit remote user permissions if remote access is necessary. Use remote desktop gateways and multifactor authentication for remote logins. Do not leav
+
+──────────────────────────────────────────────────
+
+MITIGATION: Windows Admin Shares Mitigation
+MITIGATION ID: T1077
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Do not reuse local administrator account passwords across systems. Ensure password complexity and uniqueness such that the passwords cannot be cracked or guessed. Deny remote use of local admin credentials to log into systems. Do not allow domain user accounts to be in the local Administrators group multiple systems. Identify unnecessary system utilities or potentially malicious software that may be used to leverage SMB and the Windows admin shares, and audit and/or block them by using whitelist
+
+──────────────────────────────────────────────────
+
+MITIGATION: Valid Accounts Mitigation
+MITIGATION ID: T1078
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Take measures to detect or prevent techniques such as [OS Credential Dumping](https://attack.mitre.org/techniques/T1003) or installation of keyloggers to acquire credentials through [Input Capture](https://attack.mitre.org/techniques/T1056). Limit credential overlap across systems to prevent access if account credentials are obtained. Ensure that local administrator accounts have complex, unique passwords across all systems on the network. Do not put user or admin domain accounts in the local ad
+
+──────────────────────────────────────────────────
+
+MITIGATION: Multilayer Encryption Mitigation
+MITIGATION ID: T1079
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Network intrusion detection and prevention systems that use network signatures to identify traffic for specific adversary malware can be used to mitigate activity at the network level. Use of encryption protocols may make typical network-based C2 detection more difficult due to a reduced ability to signature the traffic. Prior knowledge of adversary C2 infrastructure may be useful for domain and IP address blocking, but will likely not be an effective long-term solution because adversaries can c
+
+──────────────────────────────────────────────────
+
+MITIGATION: Taint Shared Content Mitigation
+MITIGATION ID: T1080
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Protect shared folders by minimizing users who have write access. Use utilities that detect or mitigate common features used in exploitation, such as the Microsoft Enhanced Mitigation Experience Toolkit (EMET). Reduce potential lateral movement risk by using web-based document management and collaboration services that do not use network file and directory sharing. Identify potentially malicious software that may be used to taint content or may result from it and audit and/or block the unknown p
+
+──────────────────────────────────────────────────
+
+MITIGATION: Credentials in Files Mitigation
+MITIGATION ID: T1081
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Establish an organizational policy that prohibits password storage in files. Ensure that developers and system administrators are aware of the risk associated with having plaintext passwords in software configuration files that may be left on endpoint systems or servers. Preemptively search for files containing passwords and remove when found. Restrict file shares to specific directories with access only to necessary users. Remove vulnerable Group Policy Preferences.
+
+──────────────────────────────────────────────────
+
+MITIGATION: System Information Discovery Mitigation
+MITIGATION ID: T1082
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify unnecessary system utilities or potentially malicious software that may be used to acquire information about the operating system and underlying hardware, and audit and/or block them by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: File and Directory Discovery Mitigation
+MITIGATION ID: T1083
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: File system activity is a common part of an operating system, so it is unlikely that mitigation would be appropriate for this technique. It may still be beneficial to identify and block unnecessary system utilities or potentially malicious software by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Windows Management Instrumentation Event Subscription Mitigation
+MITIGATION ID: T1084
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Disabling WMI services may cause system instability and should be evaluated to assess the impact to a network. By default, only administrators are allowed to connect remotely using WMI; restrict other users that are allowed to connect, or disallow all users from connecting remotely to WMI. Prevent credential overlap across systems of administrator and privileged accounts.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Rundll32 Mitigation
+MITIGATION ID: T1085
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Microsoft's Enhanced Mitigation Experience Toolkit (EMET) Attack Surface Reduction (ASR) feature can be used to block methods of using rundll32.exe to bypass whitelisting.
+
+──────────────────────────────────────────────────
+
+MITIGATION: PowerShell Mitigation
+MITIGATION ID: T1086
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: It may be possible to remove PowerShell from systems when not needed, but a review should be performed to assess the impact to an environment, since it could be in use for many legitimate purposes and administrative functions. When PowerShell is necessary, restrict PowerShell execution policy to administrators and to only execute signed scripts. Be aware that there are methods of bypassing the PowerShell execution policy, depending on environment configuration. Disable/restrict the WinRM Service
+
+──────────────────────────────────────────────────
+
+MITIGATION: Account Discovery Mitigation
+MITIGATION ID: T1087
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Prevent administrator accounts from being enumerated when an application is elevating through UAC since it can lead to the disclosure of account names. The Registry key is located <code>HKLM\ SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\CredUI\EnumerateAdministrators</code>. It can be disabled through GPO: Computer Configuration > [Policies] > Administrative Templates > Windows Components > Credential User Interface: E numerate administrator accounts on elevation. Identify unnecessary syst
+
+──────────────────────────────────────────────────
+
+MITIGATION: Bypass User Account Control Mitigation
+MITIGATION ID: T1088
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Remove users from the local administrator group on systems. Although UAC bypass techniques exist, it is still prudent to use the highest enforcement level for UAC when possible and mitigate bypass opportunities that exist with techniques such as [DLL Search Order Hijacking](https://attack.mitre.org/techniques/T1038). Check for common UAC bypass weaknesses on Windows systems to be aware of the risk posture and address issues where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Disabling Security Tools Mitigation
+MITIGATION ID: T1089
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Ensure proper process, registry, and file permissions are in place to prevent adversaries from disabling or interfering with security services.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Replication Through Removable Media Mitigation
+MITIGATION ID: T1091
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Disable Autorun if it is unnecessary. Disallow or restrict removable media at an organizational policy level if it is not required for business operations. Identify potentially malicious software that may be used to infect removable media or may result from tainted removable media, and audit and/or block it by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Communication Through Removable Media Mitigation
+MITIGATION ID: T1092
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Disable Autorun if it is unnecessary. Disallow or restrict removable media at an organizational policy level if they are not required for business operations.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Process Hollowing Mitigation
+MITIGATION ID: T1093
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: This type of attack technique cannot be easily mitigated with preventive controls since it is based on the abuse of operating system design features. For example, mitigating specific API calls will likely have unintended side effects, such as preventing legitimate software (i.e., security products) from operating properly. Efforts should be focused on preventing adversary tools from running earlier in the chain of activity and on identifying subsequent malicious behavior. Although process hollow
+
+──────────────────────────────────────────────────
+
+MITIGATION: Custom Command and Control Protocol Mitigation
+MITIGATION ID: T1094
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Properly configure firewalls and proxies to limit outgoing traffic to only necessary ports and through proper network gateway systems. Also ensure hosts are only provisioned to communicate over authorized interfaces. Network intrusion detection and prevention systems that use network signatures to identify traffic for specific adversary malware can be used to mitigate activity at the network level. Signatures are often for unique indicators within protocols and may be based on the specific proto
+
+──────────────────────────────────────────────────
+
+MITIGATION: Standard Non-Application Layer Protocol Mitigation
+MITIGATION ID: T1095
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Properly configure firewalls and proxies to limit outgoing traffic to only necessary ports and through proper network gateway systems. Also ensure hosts are only provisioned to communicate over authorized interfaces. Network intrusion detection and prevention systems that use network signatures to identify traffic for specific adversary malware can be used to mitigate activity at the network level. Signatures are often for unique indicators within protocols and may be based on the specific obfus
+
+──────────────────────────────────────────────────
+
+MITIGATION: NTFS File Attributes Mitigation
+MITIGATION ID: T1096
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: It may be difficult or inadvisable to block access to EA and ADSs. Efforts should be focused on preventing potentially malicious software from running. Identify and block potentially malicious software that may contain functionality to hide information in EA and ADSs by using whitelisting tools like AppLocker or Software Restriction Policies where appropriate. Consider adjusting read and write permissions for NTFS EA, though this should be tested to ensure routine OS operations are not impeded.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Pass the Ticket Mitigation
+MITIGATION ID: T1097
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Monitor domains for unusual credential logons. Limit credential overlap across systems to prevent the damage of credential compromise. Ensure that local administrator accounts have complex, unique passwords. Do not allow a user to be a local administrator for multiple systems. Limit domain admin account permissions to domain controllers and limited servers. Delegate other admin functions to separate accounts. For containing the impact of a previously generated golden ticket, reset the built-in K
+
+──────────────────────────────────────────────────
+
+MITIGATION: Timestomp Mitigation
+MITIGATION ID: T1099
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Mitigation of timestomping specifically is likely difficult. Efforts should be focused on preventing potentially malicious software from running. Identify and block potentially malicious software that may contain functionality to perform timestomping by using whitelisting tools like AppLocker or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Web Shell Mitigation
+MITIGATION ID: T1100
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Ensure that externally facing Web servers are patched regularly to prevent adversary access through [Exploitation for Privilege Escalation](https://attack.mitre.org/techniques/T1068) to gain remote code access or through file inclusion weaknesses that may allow adversaries to upload files or scripts that are automatically served as Web pages. Audit account and group permissions to ensure that accounts used to manage servers do not overlap with accounts and permissions of users in the internal ne
+
+──────────────────────────────────────────────────
+
+MITIGATION: Security Support Provider Mitigation
+MITIGATION ID: T1101
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Windows 8.1, Windows Server 2012 R2, and later versions may make LSA run as a Protected Process Light (PPL) by setting the Registry key <code>HKLM\SYSTEM\CurrentControlSet\Control\Lsa\RunAsPPL</code>, which requires all SSP DLLs to be signed by Microsoft.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Web Service Mitigation
+MITIGATION ID: T1102
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Firewalls and Web proxies can be used to enforce external network communication policy. It may be difficult for an organization to block particular services because so many of them are commonly used during the course of business. Network intrusion detection and prevention systems that use network signatures to identify traffic for specific adversary malware can be used to mitigate activity at the network level. Signatures are often for unique indicators within protocols and may be based on the s
+
+──────────────────────────────────────────────────
+
+MITIGATION: AppInit DLLs Mitigation
+MITIGATION ID: T1103
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Upgrade to Windows 8 or later and enable secure boot. Identify and block potentially malicious software that may be executed through AppInit DLLs by using whitelisting tools, like AppLocker, that are capable of auditing and/or blocking unknown DLLs.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Multi-Stage Channels Mitigation
+MITIGATION ID: T1104
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Command and control infrastructure used in a multi-stage channel may be blocked if known ahead of time. If unique signatures are present in the C2 traffic, they could also be used as the basis of identifying and blocking the channel.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Remote File Copy Mitigation
+MITIGATION ID: T1105
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Network intrusion detection and prevention systems that use network signatures to identify traffic for specific adversary malware or unusual data transfer over known tools and protocols like FTP can be used to mitigate activity at the network level. Signatures are often for unique indicators within protocols and may be based on the specific obfuscation technique used by a particular adversary or tool, and will likely be different across various malware families and versions. Adversaries will lik
+
+──────────────────────────────────────────────────
+
+MITIGATION: File Deletion Mitigation
+MITIGATION ID: T1107
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify unnecessary system utilities, third-party tools, or potentially malicious software that may be used to delete files, and audit and/or block them by using whitelisting tools like AppLocker or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Redundant Access Mitigation
+MITIGATION ID: T1108
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify and block potentially malicious software that may be used as a remote access tool, and audit and/or block it by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate. Network intrusion detection and prevention systems that use network signatures to identify traffic for specific adversary malware can be used to mitigate activity at the network level. Signatures are often for unique indicators within protocols and will be different across various mal
+
+──────────────────────────────────────────────────
+
+MITIGATION: Component Firmware Mitigation
+MITIGATION ID: T1109
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Prevent adversary access to privileged accounts or access necessary to perform this technique. Consider removing and replacing system components suspected of being compromised.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Brute Force Mitigation
+MITIGATION ID: T1110
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Set account lockout policies after a certain number of failed login attempts to prevent passwords from being guessed. Too strict a policy can create a denial of service condition and render environments un-usable, with all accounts being locked-out permanently. Use multifactor authentication. Follow best practices for mitigating access to [Valid Accounts](https://attack.mitre.org/techniques/T1078) Refer to NIST guidelines when creating passwords. Where possible, also enable multi factor authenti
+
+──────────────────────────────────────────────────
+
+MITIGATION: Two-Factor Authentication Interception Mitigation
+MITIGATION ID: T1111
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Remove smart cards when not in use. Protect devices and services used to transmit and receive out-of-band codes. Identify and block potentially malicious software that may be used to intercept 2FA credentials on a system by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Modify Registry Mitigation
+MITIGATION ID: T1112
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Misconfiguration of permissions in the Registry may lead to opportunities for an adversary to execute code, like through [Service Registry Permissions Weakness](https://attack.mitre.org/techniques/T1058). Ensure proper permissions are set for Registry hives to prevent users from modifying keys for system components that may lead to privilege escalation. Identify and block unnecessary system utilities or potentially malicious software that may be used to modify the Registry by using whitelisting 
+
+──────────────────────────────────────────────────
+
+MITIGATION: Screen Capture Mitigation
+MITIGATION ID: T1113
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Blocking software based on screen capture functionality may be difficult, and there may be legitimate software that performs those actions. Instead, identify potentially malicious software that may have functionality to acquire screen captures, and audit and/or block it by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Email Collection Mitigation
+MITIGATION ID: T1114
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Use of encryption provides an added layer of security to sensitive information sent over email. Encryption using public key cryptography requires the adversary to obtain the private certificate along with an encryption key to decrypt messages. Use of two-factor authentication for public-facing webmail servers is also a recommended best practice to minimize the usefulness of user names and passwords to adversaries. Identify unnecessary system utilities or potentially malicious software that may b
+
+──────────────────────────────────────────────────
+
+MITIGATION: Clipboard Data Mitigation
+MITIGATION ID: T1115
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Instead of blocking software based on clipboard capture behavior, identify potentially malicious software that may contain this functionality, and audit and/or block it by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Code Signing Mitigation
+MITIGATION ID: T1116
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Process whitelisting and trusted publishers to verify authenticity of software can help prevent signed malicious or untrusted code from executing on a system.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Regsvr32 Mitigation
+MITIGATION ID: T1117
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Microsoft's Enhanced Mitigation Experience Toolkit (EMET) Attack Surface Reduction (ASR) feature can be used to block regsvr32.exe from being used to bypass whitelisting.
+
+──────────────────────────────────────────────────
+
+MITIGATION: InstallUtil Mitigation
+MITIGATION ID: T1118
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: InstallUtil may not be necessary within a given environment. Use application whitelisting configured to block execution of InstallUtil.exe if it is not required for a given system or network to prevent potential misuse by adversaries.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Automated Collection Mitigation
+MITIGATION ID: T1119
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Encryption and off-system storage of sensitive information may be one way to mitigate collection of files, but may not stop an adversary from acquiring the information if an intrusion persists over a long period of time and the adversary is able to discover and access the data through other means. A keylogger installed on a system may be able to intercept passwords through [Input Capture](https://attack.mitre.org/techniques/T1056) and be used to decrypt protected documents that an adversary may 
+
+──────────────────────────────────────────────────
+
+MITIGATION: Peripheral Device Discovery Mitigation
+MITIGATION ID: T1120
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify unnecessary system utilities or potentially malicious software that may be used to acquire information about peripheral devices, and audit and/or block them by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Regsvcs/Regasm Mitigation
+MITIGATION ID: T1121
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Regsvcs and Regasm may not be necessary within a given environment. Block execution of Regsvcs.exe and Regasm.exe if they are not required for a given system or network to prevent potential misuse by adversaries.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Component Object Model Hijacking Mitigation
+MITIGATION ID: T1122
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Direct mitigation of this technique may not be recommended for a particular environment since COM objects are a legitimate part of the operating system and installed software. Blocking COM object changes may have unforeseen side effects to legitimate functionality. Instead, identify and block potentially malicious software that may execute, or be executed by, this technique using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Audio Capture Mitigation
+MITIGATION ID: T1123
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Mitigating this technique specifically may be difficult as it requires fine-grained API control. Efforts should be focused on preventing unwanted or unknown code from executing on a system. Identify and block potentially malicious software that may be used to record audio by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: System Time Discovery Mitigation
+MITIGATION ID: T1124
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Benign software uses legitimate processes to gather system time. Efforts should be focused on preventing unwanted or unknown code from executing on a system. Some common tools, such as net.exe, may be blocked by policy to prevent common ways of acquiring remote system time. Identify unnecessary system utilities or potentially malicious software that may be used to acquire system time information, and audit and/or block them by using whitelisting tools, like AppLocker, or Software Restriction Pol
+
+──────────────────────────────────────────────────
+
+MITIGATION: Video Capture Mitigation
+MITIGATION ID: T1125
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Mitigating this technique specifically may be difficult as it requires fine-grained API control. Efforts should be focused on preventing unwanted or unknown code from executing on a system. Identify and block potentially malicious software that may be used to capture video and images by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Network Share Connection Removal Mitigation
+MITIGATION ID: T1126
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Follow best practices for mitigation of activity related to establishing [Windows Admin Shares](https://attack.mitre.org/techniques/T1077). Identify unnecessary system utilities or potentially malicious software that may be used to leverage network shares, and audit and/or block them by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Netsh Helper DLL Mitigation
+MITIGATION ID: T1128
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify and block potentially malicious software that may persist in this manner by using whitelisting tools capable of monitoring DLL loads by Windows utilities like AppLocker.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Execution through Module Load Mitigation
+MITIGATION ID: T1129
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Directly mitigating module loads and API calls related to module loads will likely have unintended side effects, such as preventing legitimate software from operating properly. Efforts should be focused on preventing adversary tools from running earlier in the chain of activity and on identifying and correlated subsequent behavior to determine if it is the result of malicious activity.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Install Root Certificate Mitigation
+MITIGATION ID: T1130
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: HTTP Public Key Pinning (HPKP) is one method to mitigate potential man-in-the-middle situations where and adversary uses a mis-issued or fraudulent certificate to intercept encrypted communications by enforcing use of an expected certificate. Windows Group Policy can be used to manage root certificates and the <code>Flags</code> value of <code>HKLM\SOFTWARE\Policies\Microsoft\SystemCertificates\Root\ProtectedRoots</code> can be set to 1 to prevent non-administrator users from making further root
+
+──────────────────────────────────────────────────
+
+MITIGATION: Authentication Package Mitigation
+MITIGATION ID: T1131
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Windows 8.1, Windows Server 2012 R2, and later versions, may make LSA run as a Protected Process Light (PPL) by setting the Registry key <code>HKLM\SYSTEM\CurrentControlSet\Control\Lsa\RunAsPPL</code>, which requires all DLLs loaded by LSA to be signed by Microsoft.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Data Encoding Mitigation
+MITIGATION ID: T1132
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Network intrusion detection and prevention systems that use network signatures to identify traffic for specific adversary malware can be used to mitigate activity at the network level. Signatures are often for unique indicators within protocols and may be based on the specific obfuscation technique used by a particular adversary or tool, and will likely be different across various malware families and versions. Adversaries will likely change tool C2 signatures over time or construct protocols in
+
+──────────────────────────────────────────────────
+
+MITIGATION: External Remote Services Mitigation
+MITIGATION ID: T1133
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Limit access to remote services through centrally managed concentrators such as VPNs and other managed remote access systems. Deny direct remote access to internal systems through the use of network proxies, gateways, and firewalls. Disable or block remotely available services such as [Windows Remote Management](https://attack.mitre.org/techniques/T1028). Use strong two-factor or multi-factor authentication for remote service accounts to mitigate an adversary's ability to leverage stolen credent
+
+──────────────────────────────────────────────────
+
+MITIGATION: Access Token Manipulation Mitigation
+MITIGATION ID: T1134
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Access tokens are an integral part of the security system within Windows and cannot be turned off. However, an attacker must already have administrator level access on the local system to make full use of this technique; be sure to restrict users and accounts to the least privileges they require to do their job. Any user can also spoof access tokens if they have legitimate credentials. Follow mitigation guidelines for preventing adversary use of [Valid Accounts](https://attack.mitre.org/techniqu
+
+──────────────────────────────────────────────────
+
+MITIGATION: Network Share Discovery Mitigation
+MITIGATION ID: T1135
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify unnecessary system utilities or potentially malicious software that may be used to acquire network share information, and audit and/or block them by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Create Account Mitigation
+MITIGATION ID: T1136
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Use and enforce multifactor authentication. Follow guidelines to prevent or limit adversary access to [Valid Accounts](https://attack.mitre.org/techniques/T1078) that may be used to create privileged accounts within an environment. Adversaries that create local accounts on systems may have limited access within a network if access levels are properly locked down. These accounts may only be needed for persistence on individual systems and their usefulness depends on the utility of the system they
+
+──────────────────────────────────────────────────
+
+MITIGATION: Application Shimming Mitigation
+MITIGATION ID: T1138
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: There currently aren't a lot of ways to mitigate application shimming. Disabling the Shim Engine isn't recommended because Windows depends on shimming for interoperability and software may become unstable or not work. Microsoft released an optional patch update - KB3045645 - that will remove the "auto-elevate" flag within the sdbinst.exe. This will prevent use of application shimming to bypass UAC. Changing UAC settings to "Always Notify" will give the user more visibility when UAC elevation is 
+
+──────────────────────────────────────────────────
+
+MITIGATION: Bash History Mitigation
+MITIGATION ID: T1139
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: There are multiple methods of preventing a user's command history from being flushed to their .bash_history file, including use of the following commands: <code>set +o history</code> and <code>set -o history</code> to start logging again; <code>unset HISTFILE</code> being added to a user's .bash_rc file; and <code>ln -s /dev/null ~/.bash_history</code> to write commands to <code>/dev/null</code>instead.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Deobfuscate/Decode Files or Information Mitigation
+MITIGATION ID: T1140
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify unnecessary system utilities or potentially malicious software that may be used to deobfuscate or decode files or information, and audit and/or block them by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Input Prompt Mitigation
+MITIGATION ID: T1141
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: This technique exploits users' tendencies to always supply credentials when prompted, which makes it very difficult to mitigate. Use user training as a way to bring awareness and raise suspicion for potentially malicious events (ex: Office documents prompting for credentials).
+
+──────────────────────────────────────────────────
+
+MITIGATION: Keychain Mitigation
+MITIGATION ID: T1142
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: The password for the user's login keychain can be changed from the user's login password. This increases the complexity for an adversary because they need to know an additional password.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Hidden Window Mitigation
+MITIGATION ID: T1143
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Whitelist programs that are allowed to have this plist tag. All other programs should be considered suspicious.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Gatekeeper Bypass Mitigation
+MITIGATION ID: T1144
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Other tools should be used to supplement Gatekeeper's functionality. Additionally, system settings can prevent applications from running that haven't been downloaded through the Apple Store which can help mitigate some of these issues.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Private Keys Mitigation
+MITIGATION ID: T1145
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Use strong passphrases for private keys to make cracking difficult. When possible, store keys on separate cryptographic hardware instead of on the local system. Ensure only authorized keys are allowed access to critical resources and audit access lists regularly. Ensure permissions are properly set on folders containing sensitive private keys to prevent unintended access. Use separate infrastructure for managing critical systems to prevent overlap of credentials and permissions on systems that c
+
+──────────────────────────────────────────────────
+
+MITIGATION: Clear Command History Mitigation
+MITIGATION ID: T1146
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Preventing users from deleting or writing to certain files can stop adversaries from maliciously altering their <code>~/.bash_history</code> files. Additionally, making these environment variables readonly can make sure that the history is preserved .
+
+──────────────────────────────────────────────────
+
+MITIGATION: Hidden Users Mitigation
+MITIGATION ID: T1147
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: If the computer is domain joined, then group policy can help restrict the ability to create or hide users. Similarly, preventing the modification of the <code>/Library/Preferences/com.apple.loginwindow</code> <code>Hide500Users</code> value will force all users to be visible.
+
+──────────────────────────────────────────────────
+
+MITIGATION: HISTCONTROL Mitigation
+MITIGATION ID: T1148
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Prevent users from changing the <code>HISTCONTROL</code> environment variable . Also, make sure that the <code>HISTCONTROL</code> environment variable is set to “ignoredup” instead of “ignoreboth” or “ignorespace”.
+
+──────────────────────────────────────────────────
+
+MITIGATION: LC_MAIN Hijacking Mitigation
+MITIGATION ID: T1149
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Enforce valid digital signatures for signed code on all applications and only trust applications with signatures from trusted parties.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Plist Modification Mitigation
+MITIGATION ID: T1150
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Prevent plist files from being modified by users by making them read-only.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Space after Filename Mitigation
+MITIGATION ID: T1151
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Prevent files from having a trailing space after the extension.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Launchctl Mitigation
+MITIGATION ID: T1152
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Prevent users from installing their own launch agents or launch daemons and instead require them to be pushed out by group policy.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Source Mitigation
+MITIGATION ID: T1153
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Due to potential legitimate uses of source commands, it's may be difficult to mitigate use of this technique.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Trap Mitigation
+MITIGATION ID: T1154
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Due to potential legitimate uses of trap commands, it's may be difficult to mitigate use of this technique.
+
+──────────────────────────────────────────────────
+
+MITIGATION: AppleScript Mitigation
+MITIGATION ID: T1155
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Require that all AppleScript be signed by a trusted developer ID before being executed - this will prevent random AppleScript code from executing . This subjects AppleScript code to the same scrutiny as other .app files passing through Gatekeeper.
+
+──────────────────────────────────────────────────
+
+MITIGATION: .bash_profile and .bashrc Mitigation
+MITIGATION ID: T1156
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Making these files immutable and only changeable by certain administrators will limit the ability for adversaries to easily create user level persistence.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Dylib Hijacking Mitigation
+MITIGATION ID: T1157
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Prevent users from being able to write files to the search paths for applications, both in the folders where applications are run from and the standard dylib folders. If users can't write to these directories, then they can't intercept the search path.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Hidden Files and Directories Mitigation
+MITIGATION ID: T1158
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Mitigation of this technique may be difficult and unadvised due to the the legitimate use of hidden files and directories.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Launch Agent Mitigation
+MITIGATION ID: T1159
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Restrict user's abilities to create Launch Agents with group policy.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Launch Daemon Mitigation
+MITIGATION ID: T1160
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Limit privileges of user accounts and remediate Privilege Escalation vectors so only authorized administrators can create new Launch Daemons.
+
+──────────────────────────────────────────────────
+
+MITIGATION: LC_LOAD_DYLIB Addition Mitigation
+MITIGATION ID: T1161
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Enforce that all binaries be signed by the correct Apple Developer IDs, and whitelist applications via known hashes. Binaries can also be baselined for what dynamic libraries they require, and if an app requires a new dynamic library that wasn’t included as part of an update, it should be investigated.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Login Item Mitigation
+MITIGATION ID: T1162
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Restrict users from being able to create their own login items. Additionally, holding the shift key during login prevents apps from opening automatically .
+
+──────────────────────────────────────────────────
+
+MITIGATION: Rc.common Mitigation
+MITIGATION ID: T1163
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Limit privileges of user accounts so only authorized users can edit the rc.common file.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Re-opened Applications Mitigation
+MITIGATION ID: T1164
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Holding the Shift key while logging in prevents apps from opening automatically . This feature can be disabled entirely with the following terminal command: <code>defaults write -g ApplePersistence -bool no</code>.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Startup Items Mitigation
+MITIGATION ID: T1165
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Since StartupItems are deprecated, preventing all users from writing to the <code>/Library/StartupItems</code> directory would prevent any startup items from getting registered. Similarly, appropriate permissions should be applied such that only specific users can edit the startup items so that they can’t be leveraged for privilege escalation.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Setuid and Setgid Mitigation
+MITIGATION ID: T1166
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Applications with known vulnerabilities or known shell escapes should not have the setuid or setgid bits set to reduce potential damage if an application is compromised. Additionally, the number of programs with setuid or setgid bits set should be minimized across a system.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Local Job Scheduling Mitigation
+MITIGATION ID: T1168
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Limit privileges of user accounts and remediate Privilege Escalation vectors so only authorized users can create scheduled jobs. Identify and block unnecessary system utilities or potentially malicious software that may be used to schedule jobs using whitelisting tools.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Sudo Mitigation
+MITIGATION ID: T1169
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: The sudoers file should be strictly edited such that passwords are always required and that users can’t spawn risky processes as users with higher privilege. By requiring a password, even if an adversary can get terminal access, they must know the password to run anything in the sudoers file.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Mshta Mitigation
+MITIGATION ID: T1170
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Mshta.exe may not be necessary within a given environment since its functionality is tied to older versions of Internet Explorer that have reached end of life. Use application whitelisting configured to block execution of mshta.exe if it is not required for a given system or network to prevent potential misuse by adversaries.
+
+──────────────────────────────────────────────────
+
+MITIGATION: LLMNR/NBT-NS Poisoning Mitigation
+MITIGATION ID: T1171
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Disable LLMNR and NetBIOS in local computer security settings or by group policy if they are not needed within an environment. Use host-based security software to block LLMNR/NetBIOS traffic. Enabling SMB Signing can stop NTLMv2 relay attacks.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Domain Fronting Mitigation
+MITIGATION ID: T1172
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: If it is possible to inspect HTTPS traffic, the captures can be analyzed for connections that appear to be Domain Fronting. In order to use domain fronting, attackers will likely need to deploy additional tools to compromised systems. It may be possible to detect or prevent the installation of these tools with Host-based solutions.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Dynamic Data Exchange Mitigation
+MITIGATION ID: T1173
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Registry keys specific to Microsoft Office feature control security can be set to disable automatic DDE/OLE execution. Microsoft also created, and enabled by default, Registry keys to completely disable DDE execution in Word and Excel. Ensure Protected View is enabled and consider disabling embedded files in Office programs, such as OneNote, not enrolled in Protected View. On Windows 10, enable Attack Surface Reduction (ASR) rules to prevent DDE attacks and spawning of child processes from Offic
+
+──────────────────────────────────────────────────
+
+MITIGATION: Password Filter DLL Mitigation
+MITIGATION ID: T1174
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Ensure only valid password filters are registered. Filter DLLs must be present in Windows installation directory (<code>C:\Windows\System32\</code> by default) of a domain controller and/or local computer with a corresponding entry in <code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Notification Packages</code>.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Distributed Component Object Model Mitigation
+MITIGATION ID: T1175
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Modify Registry settings (directly or using Dcomcnfg.exe) in <code>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\AppID\{AppID_GUID}</code> associated with the process-wide security of individual COM applications. Modify Registry settings (directly or using Dcomcnfg.exe) in <code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Ole</code> associated with system-wide security defaults for all COM applications that do no set their own process-wide security. Consider disabling DCOM through Dcomcnfg.exe. Enable Windows f
+
+──────────────────────────────────────────────────
+
+MITIGATION: Browser Extensions Mitigation
+MITIGATION ID: T1176
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Only install browser extensions from trusted sources that can be verified. Ensure extensions that are installed are the intended ones as many malicious extensions will masquerade as legitimate ones. Browser extensions for some browsers can be controlled through Group Policy. Set a browser extension white or black list as appropriate for your security policy. Change settings to prevent the browser from installing extensions without sufficient permissions. Close out all browser sessions when finis
+
+──────────────────────────────────────────────────
+
+MITIGATION: LSASS Driver Mitigation
+MITIGATION ID: T1177
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: On Windows 8.1 and Server 2012 R2, enable LSA Protection by setting the Registry key <code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\RunAsPPL</code> to <code>dword:00000001</code>. LSA Protection ensures that LSA plug-ins and drivers are only loaded if they are digitally signed with a Microsoft signature and adhere to the Microsoft Security Development Lifecycle (SDL) process guidance. On Windows 10 and Server 2016, enable Windows Defender Credential Guard to run lsass.exe in an is
+
+──────────────────────────────────────────────────
+
+MITIGATION: SID-History Injection Mitigation
+MITIGATION ID: T1178
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Clean up SID-History attributes after legitimate account migration is complete. Consider applying SID Filtering to interforest trusts, such as forest trusts and external trusts, to exclude SID-History from requests to access domain resources. SID Filtering ensures that any authentication requests over a trust only contain SIDs of security principals from the trusted domain (i.e. preventing the trusted domain from claiming a user has membership in groups outside of the domain). SID Filtering of f
+
+──────────────────────────────────────────────────
+
+MITIGATION: Hooking Mitigation
+MITIGATION ID: T1179
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: This type of attack technique cannot be easily mitigated with preventive controls since it is based on the abuse of operating system design features. For example, mitigating all hooking will likely have unintended side effects, such as preventing legitimate software (i.e., security products) from operating properly. Efforts should be focused on preventing adversary tools from running earlier in the chain of activity and on identifying subsequent malicious behavior.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Screensaver Mitigation
+MITIGATION ID: T1180
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Block .scr files from being executed from non-standard locations. Set Group Policy to force users to have a dedicated screensaver where local changes should not override the settings to prevent changes. Use Group Policy to disable screensavers if they are unnecessary.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Extra Window Memory Injection Mitigation
+MITIGATION ID: T1181
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: This type of attack technique cannot be easily mitigated with preventive controls since it is based on the abuse of operating system design features. For example, mitigating specific API calls will likely have unintended side effects, such as preventing legitimate software (i.e., security products) from operating properly. Efforts should be focused on preventing adversary tools from running earlier in the chain of activity and on identifying subsequent malicious behavior. Although EWM injection 
+
+──────────────────────────────────────────────────
+
+MITIGATION: AppCert DLLs Mitigation
+MITIGATION ID: T1182
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify and block potentially malicious software that may be executed through AppCert DLLs by using whitelisting tools, like AppLocker, that are capable of auditing and/or blocking unknown DLLs.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Image File Execution Options Injection Mitigation
+MITIGATION ID: T1183
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: This type of attack technique cannot be easily mitigated with preventive controls since it is based on the abuse of operating system design features. For example, mitigating all IFEO will likely have unintended side effects, such as preventing legitimate software (i.e., security products) from operating properly. Efforts should be focused on preventing adversary tools from running earlier in the chain of activity and on identifying subsequent malicious behavior. Identify and block potentially ma
+
+──────────────────────────────────────────────────
+
+MITIGATION: SSH Hijacking Mitigation
+MITIGATION ID: T1184
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Ensure SSH key pairs have strong passwords and refrain from using key-store technologies such as ssh-agent unless they are properly protected. Ensure that all private keys are stored securely in locations where only the legitimate owner has access to with strong passwords and are rotated frequently. Ensure proper file permissions are set and harden system to prevent root privilege escalation opportunities. Do not allow remote access via SSH as root or other privileged accounts. Ensure that agent
+
+──────────────────────────────────────────────────
+
+MITIGATION: Man in the Browser Mitigation
+MITIGATION ID: T1185
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Since browser pivoting requires a high integrity process to launch from, restricting user permissions and addressing Privilege Escalation and [Bypass User Account Control](https://attack.mitre.org/techniques/T1088) opportunities can limit the exposure to this technique. Close all browser sessions regularly and when they are no longer needed.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Process Doppelgänging Mitigation
+MITIGATION ID: T1186
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: This type of attack technique cannot be easily mitigated with preventive controls or patched since it is based on the abuse of operating system design features. For example, mitigating specific API calls will likely have unintended side effects, such as preventing legitimate process-loading mechanisms from operating properly. Efforts should be focused on preventing adversary tools from running earlier in the chain of activity and on identifying subsequent malicious behavior. Although Process Dop
+
+──────────────────────────────────────────────────
+
+MITIGATION: Forced Authentication Mitigation
+MITIGATION ID: T1187
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Block SMB traffic from exiting an enterprise network with egress filtering or by blocking TCP ports 139, 445 and UDP port 137. Filter or block WebDAV protocol traffic from exiting the network. If access to external resources over SMB and WebDAV is necessary, then traffic should be tightly limited with whitelisting. For internal traffic, monitor the workstation-to-workstation unusual (vs. baseline) SMB traffic. For many networks there should not be any, but it depends on how systems on the networ
+
+──────────────────────────────────────────────────
+
+MITIGATION: Multi-hop Proxy Mitigation
+MITIGATION ID: T1188
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Traffic to known anonymity networks and C2 infrastructure can be blocked through the use of network black and white lists. It should be noted that this kind of blocking may be circumvented by other techniques like [Domain Fronting](https://attack.mitre.org/techniques/T1172).
+
+──────────────────────────────────────────────────
+
+MITIGATION: Drive-by Compromise Mitigation
+MITIGATION ID: T1189
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Drive-by compromise relies on there being a vulnerable piece of software on the client end systems. Use modern browsers with security features turned on. Ensure all browsers and plugins kept updated can help prevent the exploit phase of this technique. For malicious code served up through ads, adblockers can help prevent that code from executing in the first place. Script blocking extensions can help prevent the execution of JavaScript that may commonly be used during the exploitation process. B
+
+──────────────────────────────────────────────────
+
+MITIGATION: Exploit Public-Facing Application Mitigation
+MITIGATION ID: T1190
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Application isolation and least privilege help lesson the impact of an exploit. Application isolation will limit what other processes and system features the exploited target can access, and least privilege for service accounts will limit what permissions the exploited process gets on the rest of the system. Web Application Firewalls may be used to limit exposure of applications. Segment externally facing servers and services from the rest of the network with a DMZ or on separate hosting infrast
+
+──────────────────────────────────────────────────
+
+MITIGATION: CMSTP Mitigation
+MITIGATION ID: T1191
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: CMSTP.exe may not be necessary within a given environment (unless using it for VPN connection installation). Consider using application whitelisting configured to block execution of CMSTP.exe if it is not required for a given system or network to prevent potential misuse by adversaries.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Spearphishing Link Mitigation
+MITIGATION ID: T1192
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Because this technique involves user interaction on the endpoint, it's difficult to fully mitigate. However, there are potential mitigations. Users can be trained to identify social engineering techniques and spearphishing emails with malicious links. Determine if certain websites that can be used for spearphishing are necessary for business operations and consider blocking access if activity cannot be monitored well or if it poses a significant risk. Other mitigations can take place as [User Ex
+
+──────────────────────────────────────────────────
+
+MITIGATION: Spearphishing Attachment Mitigation
+MITIGATION ID: T1193
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Network intrusion prevention systems and systems designed to scan and remove malicious email attachments can be used to block activity. Solutions can be signature and behavior based, but adversaries may construct attachments in a way to avoid these systems. Block unknown or unused attachments by default that should not be transmitted over email as a best practice to prevent some vectors, such as .scr, .exe, .pif, .cpl, etc. Some email scanning devices can open and analyze compressed and encrypte
+
+──────────────────────────────────────────────────
+
+MITIGATION: Spearphishing via Service Mitigation
+MITIGATION ID: T1194
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Determine if certain social media sites, personal webmail services, or other service that can be used for spearphishing is necessary for business operations and consider blocking access if activity cannot be monitored well or if it poses a significant risk. Because this technique involves use of legitimate services and user interaction on the endpoint, it's difficult to fully mitigate. However, there are potential mitigations. Users can be trained to identify social engineering techniques and sp
+
+──────────────────────────────────────────────────
+
+MITIGATION: Supply Chain Compromise Mitigation
+MITIGATION ID: T1195
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Apply supply chain risk management (SCRM) practices and procedures , such as supply chain analysis and appropriate risk management, throughout the life-cycle of a system. Leverage established software development lifecycle (SDLC) practices : * Uniquely Identify Supply Chain Elements, Processes, and Actors * Limit Access and Exposure within the Supply Chain * Establish and Maintain the Provenance of Elements, Processes, Tools, and Data * Share Information within Strict Limits * Perform SCRM Aware
+
+──────────────────────────────────────────────────
+
+MITIGATION: Control Panel Items Mitigation
+MITIGATION ID: T1196
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: This type of attack technique cannot be easily mitigated with preventive controls since it is based on the abuse of operating system design features. For example, mitigating specific Windows API calls and/or execution of particular file extensions will likely have unintended side effects, such as preventing legitimate software (i.e., drivers and configuration tools) from operating properly. Efforts should be focused on preventing adversary tools from running earlier in the chain of activity and 
+
+──────────────────────────────────────────────────
+
+MITIGATION: BITS Jobs Mitigation
+MITIGATION ID: T1197
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: This type of attack technique cannot be easily mitigated with preventive controls since it is based on the abuse of operating system design features. For example, disabling all BITS functionality will likely have unintended side effects, such as preventing legitimate software patching and updating. Efforts should be focused on preventing adversary tools from running earlier in the chain of activity and on identification of subsequent malicious behavior. Modify network and/or host firewall rules,
+
+──────────────────────────────────────────────────
+
+MITIGATION: SIP and Trust Provider Hijacking Mitigation
+MITIGATION ID: T1198
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Ensure proper permissions are set for Registry hives to prevent users from modifying keys related to SIP and trust provider components. Also ensure that these values contain their full path to prevent [DLL Search Order Hijacking](https://attack.mitre.org/techniques/T1038). Consider removing unnecessary and/or stale SIPs. Restrict storage and execution of SIP DLLs to protected directories, such as C:\Windows, rather than user directories. Enable whitelisting solutions such as AppLocker and/or Dev
+
+──────────────────────────────────────────────────
+
+MITIGATION: Trusted Relationship Mitigation
+MITIGATION ID: T1199
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Network segmentation can be used to isolate infrastructure components that do not require broad network access. Properly manage accounts and permissions used by parties in trusted relationships to minimize potential abuse by the party and if the party is compromised by an adversary. Vet the security policies and procedures of organizations that are contracted for work that require privileged access to network resources.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Hardware Additions Mitigation
+MITIGATION ID: T1200
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Establish network access control policies, such as using device certificates and the 802.1x standard. Restrict use of DHCP to registered devices to prevent unregistered devices from communicating with trusted systems. Block unknown devices and accessories by endpoint security configuration and monitoring agent.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Password Policy Discovery Mitigation
+MITIGATION ID: T1201
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Mitigating discovery of password policies is not advised since the information is required to be known by systems and users of a network. Ensure password policies are such that they mitigate brute force attacks yet will not give an adversary an information advantage because the policies are too light. Active Directory is a common way to set and enforce password policies throughout an enterprise network.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Indirect Command Execution Mitigation
+MITIGATION ID: T1202
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify or block potentially malicious software that may contain abusive functionality by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate. . These mechanisms can also be used to disable and/or limit user access to Windows utilities and file types/locations used to invoke malicious execution.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Exploitation for Client Execution Mitigation
+MITIGATION ID: T1203
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Browser sandboxes can be used to mitigate some of the impact of exploitation, but sandbox escapes may still exist. Other types of virtualization and application microsegmentation may also mitigate the impact of client-side exploitation. The risks of additional exploits and weaknesses in implementation may still exist. Security applications that look for behavior used during exploitation such as Windows Defender Exploit Guard (WDEG) and the Enhanced Mitigation Experience Toolkit (EMET) can be use
+
+──────────────────────────────────────────────────
+
+MITIGATION: User Execution Mitigation
+MITIGATION ID: T1204
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Use user training as a way to bring awareness to common phishing and spearphishing techniques and how to raise suspicion for potentially malicious events. Application whitelisting may be able to prevent the running of executables masquerading as other files. If a link is being visited by a user, block unknown or unused files in transit by default that should not be downloaded or by policy from suspicious sites as a best practice to prevent some vectors, such as .scr, .exe, .lnk, .pif, .cpl, etc.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Port Knocking Mitigation
+MITIGATION ID: T1205
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Mitigation of some variants of this technique could be achieved through the use of stateful firewalls, depending upon how it is implemented.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Sudo Caching Mitigation
+MITIGATION ID: T1206
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Setting the <code>timestamp_timeout</code> to 0 will require the user to input their password every time <code>sudo</code> is executed. Similarly, ensuring that the <code>tty_tickets</code> setting is enabled will prevent this leakage across tty sessions.
+
+──────────────────────────────────────────────────
+
+MITIGATION: DCShadow Mitigation
+MITIGATION ID: T1207
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: This type of attack technique cannot be easily mitigated with preventive controls since it is based on the abuse of AD design features. For example, mitigating specific AD API calls will likely have unintended side effects, such as preventing DC replication from operating properly. Efforts should be focused on preventing adversary tools from running earlier in the chain of activity and on identification of subsequent malicious behavior.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Kerberoasting Mitigation
+MITIGATION ID: T1208
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Ensure strong password length (ideally 25+ characters) and complexity for service accounts and that these passwords periodically expire. Also consider using Group Managed Service Accounts or another third party product such as password vaulting. Limit service accounts to minimal required privileges, including membership in privileged groups such as Domain Administrators. Enable AES Kerberos encryption (or another stronger encryption algorithm), rather than RC4, where possible.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Time Providers Mitigation
+MITIGATION ID: T1209
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify and block potentially malicious software that may be executed as a time provider by using whitelisting tools, like AppLocker, that are capable of auditing and/or blocking unknown DLLs. Consider using Group Policy to configure and block subsequent modifications to W32Time parameters.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Exploitation of Remote Services Mitigation
+MITIGATION ID: T1210
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Segment networks and systems appropriately to reduce access to critical systems and services to controlled methods. Minimize available services to only those that are necessary. Regularly scan the internal network for available services to identify new and potentially vulnerable services. Minimize permissions and access for service accounts to limit impact of exploitation. Update software regularly by employing patch management for internal enterprise endpoints and servers. Develop a robust cybe
+
+──────────────────────────────────────────────────
+
+MITIGATION: Exploitation for Defense Evasion Mitigation
+MITIGATION ID: T1211
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Update software regularly by employing patch management for internal enterprise endpoints and servers. Develop a robust cyber threat intelligence capability to determine what types and levels of threat may use software exploits and 0-days against a particular organization. Make it difficult for adversaries to advance their operation through exploitation of undiscovered or unpatched vulnerabilities by using sandboxing, if available. Other types of virtualization and application microsegmentation 
+
+──────────────────────────────────────────────────
+
+MITIGATION: Exploitation for Credential Access Mitigation
+MITIGATION ID: T1212
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Update software regularly by employing patch management for internal enterprise endpoints and servers. Develop a robust cyber threat intelligence capability to determine what types and levels of threat may use software exploits and 0-days against a particular organization. Make it difficult for adversaries to advance their operation through exploitation of undiscovered or unpatched vulnerabilities by using sandboxing, if available. Other types of virtualization and application microsegmentation 
+
+──────────────────────────────────────────────────
+
+MITIGATION: Data from Information Repositories Mitigation
+MITIGATION ID: T1213
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: To mitigate adversary access to information repositories for collection: * Develop and publish policies that define acceptable information to be stored * Appropriate implementation of access control mechanisms that include both authentication and appropriate authorization * Enforce the principle of least-privilege * Periodic privilege review of accounts * Mitigate access to [Valid Accounts](https://attack.mitre.org/techniques/T1078) that may be used to access repositories
+
+──────────────────────────────────────────────────
+
+MITIGATION: Credentials in Registry Mitigation
+MITIGATION ID: T1214
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Do not store credentials within the Registry. Proactively search for credentials within Registry keys and attempt to remediate the risk. If necessary software must store credentials, then ensure those accounts have limited permissions so they cannot be abused if obtained by an adversary.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Kernel Modules and Extensions Mitigation
+MITIGATION ID: T1215
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Common tools for detecting Linux rootkits include: rkhunter , chrootkit , although rootkits may be designed to evade certain detection tools. LKMs and Kernel extensions require root level permissions to be installed. Limit access to the root account and prevent users from loading kernel modules and extensions through proper privilege separation and limiting Privilege Escalation opportunities. Application whitelisting and software restriction tools, such as SELinux, can also aide in restricting k
+
+──────────────────────────────────────────────────
+
+MITIGATION: Signed Script Proxy Execution Mitigation
+MITIGATION ID: T1216
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Certain signed scripts that can be used to execute other programs may not be necessary within a given environment. Use application whitelisting configured to block execution of these scripts if they are not required for a given system or network to prevent potential misuse by adversaries.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Browser Bookmark Discovery Mitigation
+MITIGATION ID: T1217
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: File system activity is a common part of an operating system, so it is unlikely that mitigation would be appropriate for this technique. For example, mitigating accesses to browser bookmark files will likely have unintended side effects such as preventing legitimate software from operating properly. Efforts should be focused on preventing adversary tools from running earlier in the chain of activity and on identification of subsequent malicious behavior. It may still be beneficial to identify an
+
+──────────────────────────────────────────────────
+
+MITIGATION: Remote Access Tools Mitigation
+MITIGATION ID: T1219
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Properly configure firewalls, application firewalls, and proxies to limit outgoing traffic to sites and services used by remote access tools. Network intrusion detection and prevention systems that use network signatures may be able to prevent traffic to these services as well. Use application whitelisting to mitigate use of and installation of unapproved software.
+
+──────────────────────────────────────────────────
+
+MITIGATION: XSL Script Processing Mitigation
+MITIGATION ID: T1220
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: [Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047) and/or msxsl.exe may or may not be used within a given environment. Disabling WMI may cause system instability and should be evaluated to assess the impact to a network. If msxsl.exe is unnecessary, then block its execution to prevent abuse by adversaries.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Template Injection Mitigation
+MITIGATION ID: T1221
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Consider disabling Microsoft Office macros/active content to prevent the execution of malicious payloads in documents , though this setting may not mitigate the [Forced Authentication](https://attack.mitre.org/techniques/T1187) use for this technique. Because this technique involves user interaction on the endpoint, it's difficult to fully mitigate. However, there are potential mitigations including training users to identify social engineering techniques and spearphishing emails. Network/Host i
+
+──────────────────────────────────────────────────
+
+MITIGATION: Compiled HTML File Mitigation
+MITIGATION ID: T1223
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Consider blocking download/transfer and execution of potentially uncommon file types known to be used in adversary campaigns, such as CHM files. Also consider using application whitelisting to prevent execution of hh.exe if it is not required for a given system or network to prevent potential misuse by adversaries.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Environmental Keying Mitigation
+MITIGATION ID: T1480
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: This technique likely should not be mitigated with preventative controls because it may protect unintended targets from being compromised. If targeted, efforts should be focused on preventing adversary tools from running earlier in the chain of activity and on identifying subsequent malicious behavior if compromised.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Domain Trust Discovery Mitigation
+MITIGATION ID: T1482
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Map the trusts within existing domains/forests and keep trust relationships to a minimum. Employ network segmentation for sensitive domains.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Domain Generation Algorithms Mitigation
+MITIGATION ID: T1483
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: This technique may be difficult to mitigate since the domains can be registered just before they are used, and disposed shortly after. Malware researchers can reverse-engineer malware variants that use DGAs and determine future domains that the malware will attempt to contact, but this is a time and resource intensive effort. Malware is also increasingly incorporating seed values that can be unique for each instance, which would then need to be determined to extract future generated domains. In 
+
+──────────────────────────────────────────────────
+
+MITIGATION: Data Encrypted for Impact Mitigation
+MITIGATION ID: T1486
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Consider implementing IT disaster recovery plans that contain procedures for regularly taking and testing data backups that can be used to restore organizational data. In some cases, the means to decrypt files affected by a ransomware campaign is released to the public. Research trusted sources for public releases of decryptor tools/keys to reverse the effects of ransomware. Identify potentially malicious software and audit and/or block it by using whitelisting tools, like AppLocker, or Software
+
+──────────────────────────────────────────────────
+
+MITIGATION: Data Destruction Mitigation
+MITIGATION ID: T1488
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Consider implementing IT disaster recovery plans that contain procedures for taking regular data backups that can be used to restore organizational data. Ensure backups are stored off system and is protected from common methods adversaries may use to gain access and destroy the backups to prevent recovery. Identify potentially malicious software and audit and/or block it by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Service Stop Mitigation
+MITIGATION ID: T1489
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Ensure proper process, registry, and file permissions are in place to inhibit adversaries from disabling or interfering with critical services. Limit privileges of user accounts and groups so that only authorized administrators can interact with service changes and service configurations. Harden systems used to serve critical network, business, and communications functions. Operate intrusion detection, analysis, and response systems on a separate network from the production environment to lessen
+
+──────────────────────────────────────────────────
+
+MITIGATION: Inhibit System Recovery Mitigation
+MITIGATION ID: T1490
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Consider technical controls to prevent the disabling of services or deletion of files involved in system recovery. Consider implementing IT disaster recovery plans that contain procedures for taking regular data backups that can be used to restore organizational data. Ensure backups are stored off system and is protected from common methods adversaries may use to gain access and destroy the backups to prevent recovery. Identify potentially malicious software and audit and/or block it by using wh
+
+──────────────────────────────────────────────────
+
+MITIGATION: Defacement Mitigation
+MITIGATION ID: T1491
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Implementing best practices for websites such as defending against [Exploit Public-Facing Application](https://attack.mitre.org/techniques/T1190) . Consider implementing IT disaster recovery plans that contain procedures for taking regular data backups that can be used to restore organizational data. (Ready.gov IT DRP) Ensure backups are stored off system and is protected from common methods adversaries may use to gain access and destroy the backups to prevent recovery.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Stored Data Manipulation Mitigation
+MITIGATION ID: T1492
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify critical business and system processes that may be targeted by adversaries and work to secure the data related to those processes against tampering. Ensure least privilege principles are applied to important information resources to reduce exposure to data manipulation risk. Consider encrypting important information to reduce an adversaries ability to perform tailor data modifications. Where applicable, examine using file monitoring software to check integrity on important files and dir
+
+──────────────────────────────────────────────────
+
+MITIGATION: Transmitted Data Manipulation Mitigation
+MITIGATION ID: T1493
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify critical business and system processes that may be targeted by adversaries and work to secure communications related to those processes against tampering. Encrypt all important data flows to reduce the impact of tailored modifications on data in transit.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Runtime Data Manipulation Mitigation
+MITIGATION ID: T1494
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify critical business and system processes that may be targeted by adversaries and work to secure those systems against tampering. Prevent critical business and system processes from being replaced, overwritten, or reconfigured to load potentially malicious code. Identify potentially malicious software and audit and/or block it by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Firmware Corruption Mitigation
+MITIGATION ID: T1495
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Prevent adversary access to privileged accounts or access necessary to perform this technique. Check the integrity of the existing BIOS and device firmware to determine if it is vulnerable to modification. Patch the BIOS and other firmware as necessary to prevent successful use of known vulnerabilities.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Resource Hijacking Mitigation
+MITIGATION ID: T1496
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Identify potentially malicious software and audit and/or block it by using whitelisting tools, like AppLocker, or Software Restriction Policies where appropriate.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Network Denial of Service Mitigation
+MITIGATION ID: T1498
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: When flood volumes exceed the capacity of the network connection being targeted, it is typically necessary to intercept the incoming traffic upstream to filter out the attack traffic from the legitimate traffic. Such defenses can be provided by the hosting Internet Service Provider (ISP) or by a 3rd party such as a Content Delivery Network (CDN) or providers specializing in DoS mitigations. Depending on flood volume, on-premises filtering may be possible by blocking source addresses sourcing the
+
+──────────────────────────────────────────────────
+
+MITIGATION: Endpoint Denial of Service Mitigation
+MITIGATION ID: T1499
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: Leverage services provided by Content Delivery Networks (CDN) or providers specializing in DoS mitigations to filter traffic upstream from services. Filter boundary traffic by blocking source addresses sourcing the attack, blocking ports that are being targeted, or blocking protocols being used for transport. To defend against SYN floods, enable SYN Cookies.
+
+──────────────────────────────────────────────────
+
+MITIGATION: Compile After Delivery Mitigation
+MITIGATION ID: T1500
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: This type of technique cannot be easily mitigated with preventive controls or patched since it is based on the abuse of operating system design features. For example, blocking all file compilation may have unintended side effects, such as preventing legitimate OS frameworks and code development mechanisms from operating properly. Consider removing compilers if not needed, otherwise efforts should be focused on preventing adversary tools from running earlier in the chain of activity and on identi
+
+──────────────────────────────────────────────────
+
+MITIGATION: Systemd Service Mitigation
+MITIGATION ID: T1501
+ADDRESSES TECHNIQUES: 
+DESCRIPTION: The creation and modification of systemd service unit files is generally reserved for administrators such as the Linux root user and other users with superuser privileges. Limit user access to system utilities such as systemctl to only users who have a legitimate need. Restrict read/write access to systemd unit files to only select privileged users who have a legitimate need to manage system services. Additionally, the installation of software commonly adds and changes systemd service unit files
+
+──────────────────────────────────────────────────

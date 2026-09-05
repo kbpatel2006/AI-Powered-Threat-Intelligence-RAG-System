@@ -1,0 +1,104 @@
+SOURCE: NIST SP 800-53 rev5 — Control Family IA
+FRAMEWORK: NIST SP 800-53 rev5
+CONTROL FAMILY: IA — Identification and Authentication
+CONTROL COUNT: 13
+======================================================================
+
+CONTROL: IA-1 — Policy and Procedures
+FAMILY: IA (Identification and Authentication)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop, document, and disseminate to {{ insert: param, ia-1_prm_1 }}: {{ insert: param, ia-01_odp.03 }} identification and authentication policy that: Addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and Is consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines; and Procedures to facilitate the implementation of the identification and authentication policy and the associated identification and authentication controls; Designate an {{ insert: param, ia-0
+
+──────────────────────────────────────────────────
+
+CONTROL: IA-2 — Identification and Authentication (Organizational Users)
+FAMILY: IA (Identification and Authentication)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Uniquely identify and authenticate organizational users and associate that unique identification with processes acting on behalf of those users. Organizations can satisfy the identification and authentication requirements by complying with the requirements in [HSPD 12](#f16e438e-7114-4144-bfe2-2dfcad8cb2d0) . Organizational users include employees or individuals who organizations consider to have an equivalent status to employees (e.g., contractors and guest researchers). Unique identification and authentication of users applies to all accesses other than those that are explicitly identified i
+ENHANCEMENTS: IA-2.1: Multi-factor Authentication to Privileged Accounts — Implement multi-factor authentication for access to privileged accounts. Multi-factor authentication requires the use of two or more different factors to achieve authentication. The authentication factors are defined as follows: something you know (e.g., a personal identification number [PIN]), something you have (e.g., a physical authen
+
+──────────────────────────────────────────────────
+
+CONTROL: IA-3 — Device Identification and Authentication
+FAMILY: IA (Identification and Authentication)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Uniquely identify and authenticate {{ insert: param, ia-03_odp.01 }} before establishing a {{ insert: param, ia-03_odp.02 }} connection. Devices that require unique device-to-device identification and authentication are defined by type, device, or a combination of type and device. Organization-defined device types include devices that are not owned by the organization. Systems use shared known information (e.g., Media Access Control [MAC], Transmission Control Protocol/Internet Protocol [TCP/IP] addresses) for device identification or organizational authentication solutions (e.g., Institute of
+ENHANCEMENTS: IA-3.1: Cryptographic Bidirectional Authentication — Authenticate {{ insert: param, ia-03.01_odp.01 }} before establishing {{ insert: param, ia-03.01_odp.02 }} connection using bidirectional authentication that is cryptographically based. A local connection is a connection with a device that communicates without the use of a network. A network connection is a connection with a device that communic
+
+──────────────────────────────────────────────────
+
+CONTROL: IA-4 — Identifier Management
+FAMILY: IA (Identification and Authentication)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Manage system identifiers by: Receiving authorization from {{ insert: param, ia-04_odp.01 }} to assign an individual, group, role, service, or device identifier; Selecting an identifier that identifies an individual, group, role, service, or device; Assigning the identifier to the intended individual, group, role, service, or device; and Preventing reuse of identifiers for {{ insert: param, ia-04_odp.02 }}. Common device identifiers include Media Access Control (MAC) addresses, Internet Protocol (IP) addresses, or device-unique token identifiers. The management of individual identifiers is not
+ENHANCEMENTS: IA-4.1: Prohibit Account Identifiers as Public Identifiers — Prohibit the use of system account identifiers that are the same as public identifiers for individual accounts. Prohibiting account identifiers as public identifiers applies to any publicly disclosed account identifier used for communication such as, electronic mail and instant messaging. Prohibiting the use of systems account identifier
+
+──────────────────────────────────────────────────
+
+CONTROL: IA-5 — Authenticator Management
+FAMILY: IA (Identification and Authentication)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Manage system authenticators by: Verifying, as part of the initial authenticator distribution, the identity of the individual, group, role, service, or device receiving the authenticator; Establishing initial authenticator content for any authenticators issued by the organization; Ensuring that authenticators have sufficient strength of mechanism for their intended use; Establishing and implementing administrative procedures for initial authenticator distribution, for lost or compromised or damaged authenticators, and for revoking authenticators; Changing default authenticators prior to first 
+ENHANCEMENTS: IA-5.1: Password-based Authentication — For password-based authentication: Maintain a list of commonly-used, expected, or compromised passwords and update the list {{ insert: param, ia-05.01_odp.01 }} and when organizational passwords are suspected to have been compromised directly or indirectly; Verify, when users create or update passwords, that the passwords are not found on the list of commonl
+
+──────────────────────────────────────────────────
+
+CONTROL: IA-6 — Authentication Feedback
+FAMILY: IA (Identification and Authentication)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Obscure feedback of authentication information during the authentication process to protect the information from possible exploitation and use by unauthorized individuals. Authentication feedback from systems does not provide information that would allow unauthorized individuals to compromise authentication mechanisms. For some types of systems, such as desktops or notebooks with relatively large monitors, the threat (referred to as shoulder surfing) may be significant. For other types of systems, such as mobile devices with small displays, the threat may be less significant and is balanced ag
+
+──────────────────────────────────────────────────
+
+CONTROL: IA-7 — Cryptographic Module Authentication
+FAMILY: IA (Identification and Authentication)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Implement mechanisms for authentication to a cryptographic module that meet the requirements of applicable laws, executive orders, directives, policies, regulations, standards, and guidelines for such authentication. Authentication mechanisms may be required within a cryptographic module to authenticate an operator accessing the module and to verify that the operator is authorized to assume the requested role and perform services within that role. mechanisms for authentication to a cryptographic module are implemented that meet the requirements of applicable laws, executive orders, directives,
+
+──────────────────────────────────────────────────
+
+CONTROL: IA-8 — Identification and Authentication (Non-organizational Users)
+FAMILY: IA (Identification and Authentication)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Uniquely identify and authenticate non-organizational users or processes acting on behalf of non-organizational users. Non-organizational users include system users other than organizational users explicitly covered by [IA-2](#ia-2) . Non-organizational users are uniquely identified and authenticated for accesses other than those explicitly identified and documented in [AC-14](#ac-14) . Identification and authentication of non-organizational users accessing federal systems may be required to protect federal, proprietary, or privacy-related information (with exceptions noted for national securi
+ENHANCEMENTS: IA-8.1: Acceptance of PIV Credentials from Other Agencies — Accept and electronically verify Personal Identity Verification-compliant credentials from other federal agencies. Acceptance of Personal Identity Verification (PIV) credentials from other federal agencies applies to both logical and physical access control systems. PIV credentials are those credentials issued by federal agencies that con
+
+──────────────────────────────────────────────────
+
+CONTROL: IA-9 — Service Identification and Authentication
+FAMILY: IA (Identification and Authentication)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Uniquely identify and authenticate {{ insert: param, ia-09_odp }} before establishing communications with devices, users, or other services or applications. Services that may require identification and authentication include web applications using digital certificates or services or applications that query a database. Identification and authentication methods for system services and applications include information or code signing, provenance graphs, and electronic signatures that indicate the sources of services. Decisions regarding the validity of identification and authentication claims can
+ENHANCEMENTS: IA-9.1: Information Exchange —  | IA-9.2: Transmission of Decisions — 
+
+──────────────────────────────────────────────────
+
+CONTROL: IA-10 — Adaptive Authentication
+FAMILY: IA (Identification and Authentication)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Require individuals accessing the system to employ {{ insert: param, ia-10_odp.01 }} under specific {{ insert: param, ia-10_odp.02 }}. Adversaries may compromise individual authentication mechanisms employed by organizations and subsequently attempt to impersonate legitimate users. To address this threat, organizations may employ specific techniques or mechanisms and establish protocols to assess suspicious behavior. Suspicious behavior may include accessing information that individuals do not typically access as part of their duties, roles, or responsibilities; accessing greater quantities of
+
+──────────────────────────────────────────────────
+
+CONTROL: IA-11 — Re-authentication
+FAMILY: IA (Identification and Authentication)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Require users to re-authenticate when {{ insert: param, ia-11_odp }}. In addition to the re-authentication requirements associated with device locks, organizations may require re-authentication of individuals in certain situations, including when roles, authenticators or credentials change, when security categories of systems change, when the execution of privileged functions occurs, after a fixed time period, or periodically. users are required to re-authenticate when {{ insert: param, ia-11_odp }}. Identification and authentication policy procedures addressing user and device re-authenticati
+
+──────────────────────────────────────────────────
+
+CONTROL: IA-12 — Identity Proofing
+FAMILY: IA (Identification and Authentication)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Identity proof users that require accounts for logical access to systems based on appropriate identity assurance level requirements as specified in applicable standards and guidelines; Resolve user identities to a unique individual; and Collect, validate, and verify identity evidence. Identity proofing is the process of collecting, validating, and verifying a user’s identity information for the purposes of establishing credentials for accessing a system. Identity proofing is intended to mitigate threats to the registration of users and the establishment of their accounts. Standards and guideli
+ENHANCEMENTS: IA-12.1: Supervisor Authorization — Require that the registration process to receive an account for logical access includes supervisor or sponsor authorization. Including supervisor or sponsor authorization as part of the registration process provides an additional level of scrutiny to ensure that the user’s management chain is aware of the account, the account is essential to carry out organizati
+
+──────────────────────────────────────────────────
+
+CONTROL: IA-13 — Identity Providers and Authorization Servers
+FAMILY: IA (Identification and Authentication)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Employ identity providers and authorization servers to manage user, device, and non-person entity (NPE) identities, attributes, and access rights supporting authentication and authorization decisions in accordance with {{ insert: param, ia-13_odp.01 }} using {{ insert: param, ia-13_odp.02 }}. Identity providers, both internal and external to the organization, manage the user, device, and NPE authenticators and issue statements, often called identity assertions, attesting to identities of other systems or systems components. Authorization servers create and issue access tokens to identified and
+ENHANCEMENTS: IA-13.1: Protection of Cryptographic Keys — Cryptographic keys that protect access tokens are generated, managed, and protected from disclosure and misuse. Identity assertions and access tokens are typically digitally signed. The private keys used to sign these assertions and tokens are protected commensurate with the impact of the system and information resources that can be accessed. cryptograph
+
+──────────────────────────────────────────────────

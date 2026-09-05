@@ -1,0 +1,326 @@
+[
+  {
+    "mapping_id": "XREF-001",
+    "category": "Identity and Access Management",
+    "nist_controls": [
+      "AC-2",
+      "AC-3",
+      "AC-6"
+    ],
+    "attck_mitigations": [
+      "M1026",
+      "M1018"
+    ],
+    "technique_ids": [
+      "T1078",
+      "T1136",
+      "T1548",
+      "T1134"
+    ],
+    "rationale": "AC-2 (Account Management) and AC-6 (Least Privilege) directly correspond to ATT&CK Mitigation M1026 (Privileged Account Management). These controls limit the blast radius of T1078 (Valid Accounts) abuse and prevent T1548 (Abuse Elevation Control Mechanism). AC-3 (Access Enforcement) maps to M1018 (User Account Management) to constrain unauthorized account creation (T1136)."
+  },
+  {
+    "mapping_id": "XREF-002",
+    "category": "Multi-Factor Authentication",
+    "nist_controls": [
+      "IA-2",
+      "IA-5",
+      "IA-12"
+    ],
+    "attck_mitigations": [
+      "M1032",
+      "M1027"
+    ],
+    "technique_ids": [
+      "T1078",
+      "T1110",
+      "T1621",
+      "T1556"
+    ],
+    "rationale": "IA-2 (Identification and Authentication) maps to M1032 (Multi-Factor Authentication), the primary control against credential-based attacks T1078 (Valid Accounts) and T1110 (Brute Force). IA-5 (Authenticator Management) corresponds to M1027 (Password Policies) to mitigate T1110 and credential theft. IA-12 directly supports resistance to T1621 (MFA Request Generation) used by Scattered Spider."
+  },
+  {
+    "mapping_id": "XREF-003",
+    "category": "Credential Protection",
+    "nist_controls": [
+      "SC-28",
+      "SC-28(1)",
+      "IA-5"
+    ],
+    "attck_mitigations": [
+      "M1041",
+      "M1027",
+      "M1026"
+    ],
+    "technique_ids": [
+      "T1003",
+      "T1003.001",
+      "T1555",
+      "T1552"
+    ],
+    "rationale": "SC-28 (Protection of Information at Rest) with enhancement SC-28(1) (Cryptographic Protection) maps to M1041 (Encrypt Sensitive Information) to protect credentials stored on disk from T1003 (OS Credential Dumping) and T1555 (Credentials from Password Stores). IA-5 supplemented by M1027 constrains exposure of cleartext credentials (T1552)."
+  },
+  {
+    "mapping_id": "XREF-004",
+    "category": "Remote Access Control",
+    "nist_controls": [
+      "AC-17",
+      "AC-17(1)",
+      "SC-8"
+    ],
+    "attck_mitigations": [
+      "M1035",
+      "M1037"
+    ],
+    "technique_ids": [
+      "T1133",
+      "T1021",
+      "T1021.001",
+      "T1090"
+    ],
+    "rationale": "AC-17 (Remote Access) and its encryption enhancement AC-17(1) map to M1035 (Limit Access to Resource over Network) to restrict T1133 (External Remote Services) and T1021 (Remote Services) abuse. SC-8 (Transmission Confidentiality) corresponds to M1037 (Filter Network Traffic) to detect and block unauthorized proxy tunnels (T1090) and RDP lateral movement (T1021.001)."
+  },
+  {
+    "mapping_id": "XREF-005",
+    "category": "Audit Logging and Monitoring",
+    "nist_controls": [
+      "AU-2",
+      "AU-3",
+      "AU-6",
+      "AU-12"
+    ],
+    "attck_mitigations": [
+      "M1047"
+    ],
+    "technique_ids": [
+      "T1562.001",
+      "T1562.002",
+      "T1070",
+      "T1070.004"
+    ],
+    "rationale": "AU-2 (Event Logging), AU-3 (Content of Audit Records), AU-6 (Audit Record Review), and AU-12 (Audit Record Generation) collectively map to M1047 (Audit) and provide the detection foundation against T1562 (Impair Defenses) and T1070 (Indicator Removal on Host). Comprehensive logging is the primary detection mechanism for T1070.004 (File Deletion) used by Volt Typhoon to remove command history."
+  },
+  {
+    "mapping_id": "XREF-006",
+    "category": "Security Monitoring and Anomaly Detection",
+    "nist_controls": [
+      "SI-4",
+      "SI-4(2)",
+      "SI-4(4)"
+    ],
+    "attck_mitigations": [
+      "M1031",
+      "M1035"
+    ],
+    "technique_ids": [
+      "T1046",
+      "T1049",
+      "T1016",
+      "T1018",
+      "T1595"
+    ],
+    "rationale": "SI-4 (System Monitoring) and its network monitoring enhancements SI-4(2) (Automated Tools for Real-Time Analysis) and SI-4(4) (Inbound and Outbound Communications Traffic) map to M1031 (Network Intrusion Prevention). These controls detect discovery activity including T1046 (Network Service Discovery), T1049 (System Network Connections Discovery), T1016 (System Network Configuration Discovery), and T1595 (Active Scanning) used in pre-attack reconnaissance."
+  },
+  {
+    "mapping_id": "XREF-007",
+    "category": "Patch and Vulnerability Management",
+    "nist_controls": [
+      "SI-2",
+      "SI-2(2)",
+      "RA-5"
+    ],
+    "attck_mitigations": [
+      "M1051",
+      "M1019"
+    ],
+    "technique_ids": [
+      "T1190",
+      "T1203",
+      "T1211",
+      "T1068"
+    ],
+    "rationale": "SI-2 (Flaw Remediation) and SI-2(2) (Automated Flaw Remediation Status) directly map to M1051 (Update Software) \u2014 the primary control against T1190 (Exploit Public-Facing Application) used by Volt Typhoon and GRU Unit 29155, and T1203 (Exploitation for Client Execution). RA-5 (Vulnerability Monitoring and Scanning) supports M1019 (Threat Intelligence Program) to maintain awareness of exploitable vulnerabilities."
+  },
+  {
+    "mapping_id": "XREF-008",
+    "category": "Secure Configuration Management",
+    "nist_controls": [
+      "CM-2",
+      "CM-6",
+      "CM-7"
+    ],
+    "attck_mitigations": [
+      "M1054",
+      "M1042"
+    ],
+    "technique_ids": [
+      "T1543",
+      "T1546",
+      "T1059",
+      "T1047"
+    ],
+    "rationale": "CM-6 (Configuration Settings) maps to M1054 (Software Configuration) to harden against T1543 (Create or Modify System Process) and T1546 (Event Triggered Execution). CM-7 (Least Functionality) maps to M1042 (Disable or Remove Feature or Program) to limit exposure from T1059 (Command and Scripting Interpreter) and T1047 (Windows Management Instrumentation) \u2014 both core to Volt Typhoon's LotL methodology."
+  },
+  {
+    "mapping_id": "XREF-009",
+    "category": "Script and Execution Control",
+    "nist_controls": [
+      "CM-7",
+      "CM-7(2)",
+      "CM-7(5)"
+    ],
+    "attck_mitigations": [
+      "M1038",
+      "M1026",
+      "M1042"
+    ],
+    "technique_ids": [
+      "T1059.001",
+      "T1059.003",
+      "T1047",
+      "T1204.002"
+    ],
+    "rationale": "CM-7(2) (Prevent Use of Programs) and CM-7(5) (Authorized Software \u2014 Allowlisting) directly implement M1038 (Execution Prevention) to block unauthorized T1059.001 (PowerShell), T1059.003 (Windows Command Shell), T1047 (WMI), and T1204.002 (Malicious File) execution. Application allowlisting is the highest-confidence control against living-off-the-land abuse of built-in Windows tools."
+  },
+  {
+    "mapping_id": "XREF-010",
+    "category": "Network Segmentation and Boundary Protection",
+    "nist_controls": [
+      "SC-7",
+      "SC-7(3)",
+      "SC-7(5)",
+      "SC-7(8)"
+    ],
+    "attck_mitigations": [
+      "M1030",
+      "M1037"
+    ],
+    "technique_ids": [
+      "T1090",
+      "T1090.002",
+      "T1021",
+      "T1041",
+      "T1048"
+    ],
+    "rationale": "SC-7 (Boundary Protection) and its sub-enhancements SC-7(3) (Access Points), SC-7(5) (Deny by Default), and SC-7(8) (Route Traffic to Authenticated Proxy Servers) map to M1030 (Network Segmentation) and M1037 (Filter Network Traffic). These controls limit lateral movement via T1021 (Remote Services), C2 via T1090.002 (External Proxy), and exfiltration via T1041/T1048. Critical for IT/OT boundary protection against Volt Typhoon pre-positioning."
+  },
+  {
+    "mapping_id": "XREF-011",
+    "category": "Malware Defense",
+    "nist_controls": [
+      "SI-3",
+      "SI-3(2)",
+      "SI-3(10)"
+    ],
+    "attck_mitigations": [
+      "M1049",
+      "M1045"
+    ],
+    "technique_ids": [
+      "T1204",
+      "T1059",
+      "T1486",
+      "T1561"
+    ],
+    "rationale": "SI-3 (Malware Protection) and SI-3(2) (Automatic Updates) map to M1049 (Antivirus/Antimalware) for detection of malicious payloads including T1486 (Data Encrypted for Impact \u2014 ransomware) and T1561 (Disk Wipe \u2014 wiper malware). SI-3(10) (Malicious Code Analysis) supports deeper behavioral analysis. M1045 (Code Signing) through CM-7(5) reduces execution of unsigned malicious binaries (T1204 \u2014 User Execution)."
+  },
+  {
+    "mapping_id": "XREF-012",
+    "category": "Incident Response Capability",
+    "nist_controls": [
+      "IR-4",
+      "IR-5",
+      "IR-6",
+      "IR-8"
+    ],
+    "attck_mitigations": [],
+    "technique_ids": [
+      "T1486",
+      "T1485",
+      "T1491"
+    ],
+    "rationale": "IR-4 (Incident Handling), IR-5 (Incident Monitoring), IR-6 (Incident Reporting), and IR-8 (Incident Response Plan) are the NIST 800-53 framework controls governing the incident response lifecycle described in NIST SP 800-61r2. While these controls do not map to specific ATT&CK mitigations (which are preventive), they govern organizational response to high-impact techniques including T1486 (ransomware), T1485 (data destruction), and T1491 (defacement). The IR control family corresponds to Phases 2-4 of the NIST IR lifecycle: Detection & Analysis, Containment/Eradication/Recovery, and Post-Incident Activity."
+  },
+  {
+    "mapping_id": "XREF-013",
+    "category": "Backup and Recovery",
+    "nist_controls": [
+      "CP-9",
+      "CP-9(1)",
+      "CP-9(3)",
+      "CP-10"
+    ],
+    "attck_mitigations": [
+      "M1053"
+    ],
+    "technique_ids": [
+      "T1486",
+      "T1485",
+      "T1561.002"
+    ],
+    "rationale": "CP-9 (System Backup) with enhancements CP-9(1) (Testing for Reliability and Integrity) and CP-9(3) (Separate Storage for Critical Information) map to M1053 (Data Backup) \u2014 the definitive control against T1486 (Data Encrypted for Impact \u2014 ransomware), T1485 (Data Destruction), and T1561.002 (Disk Structure Wipe). CP-10 (System Recovery) governs the restoration phase of IR. Immutable, offline backups tested regularly are the primary recovery mechanism against ransomware and wiper attacks."
+  },
+  {
+    "mapping_id": "XREF-014",
+    "category": "Privileged Access Management",
+    "nist_controls": [
+      "AC-6(1)",
+      "AC-6(2)",
+      "AC-6(5)",
+      "AC-6(9)"
+    ],
+    "attck_mitigations": [
+      "M1026",
+      "M1018"
+    ],
+    "technique_ids": [
+      "T1003",
+      "T1003.001",
+      "T1078.003",
+      "T1548.002"
+    ],
+    "rationale": "AC-6 enhancements target privileged access: AC-6(1) (Authorize Access to Security Functions), AC-6(2) (Non-Privileged Access for Non-Security Functions), AC-6(5) (Privileged Accounts), and AC-6(9) (Log Use of Privileged Functions) all map to M1026 (Privileged Account Management). These directly mitigate T1003 (OS Credential Dumping) including T1003.001 (LSASS Memory) used by Volt Typhoon, and T1548.002 (Bypass User Account Control). Limiting LSASS read access requires privileged account restrictions enforced through these controls."
+  },
+  {
+    "mapping_id": "XREF-015",
+    "category": "Supply Chain and Third-Party Security",
+    "nist_controls": [
+      "SR-3",
+      "SR-5",
+      "SR-6",
+      "SA-9"
+    ],
+    "attck_mitigations": [
+      "M1016"
+    ],
+    "technique_ids": [
+      "T1195",
+      "T1195.002",
+      "T1199",
+      "T1584"
+    ],
+    "rationale": "SR-3 (Supply Chain Controls), SR-5 (Acquisition Strategies), SR-6 (Supplier Assessments), and SA-9 (External System Services) collectively implement M1016 (Vulnerability Scanning) requirements for third-party components and map to supply chain attacks T1195 (Supply Chain Compromise) and T1199 (Trusted Relationship). These controls are particularly relevant for T1584 (Compromise Infrastructure) scenarios where adversaries leverage compromised third-party infrastructure as seen in Volt Typhoon KV Botnet operations."
+  },
+  {
+    "mapping_id": "XREF-016",
+    "category": "Data Protection and Exfiltration Prevention",
+    "nist_controls": [
+      "SC-28",
+      "AC-4",
+      "AC-4(17)",
+      "SI-12"
+    ],
+    "attck_mitigations": [
+      "M1041",
+      "M1057"
+    ],
+    "technique_ids": [
+      "T1530",
+      "T1537",
+      "T1567",
+      "T1041",
+      "T1048"
+    ],
+    "rationale": "AC-4 (Information Flow Enforcement) and AC-4(17) (Domain Authentication) map to M1057 (Data Loss Prevention) to detect and prevent data exfiltration techniques including T1530 (Data from Cloud Storage \u2014 Scattered Spider), T1537 (Transfer to Cloud Account), T1567 (Exfiltration to Web Service), and T1041/T1048. SC-28 (Protection of Information at Rest) and SI-12 (Information Management and Retention) supplement with M1041 (Encrypt Sensitive Information) to limit value of exfiltrated data."
+  }
+]

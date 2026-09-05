@@ -1,0 +1,346 @@
+[
+  {
+    "advisory_id": "AA23-144A",
+    "title": "Volt Typhoon \u2014 Overview",
+    "date": "2023-05-24",
+    "section": "Overview",
+    "threat_actor": "Volt Typhoon (PRC)",
+    "technique_ids": [],
+    "content": "Volt Typhoon is a People's Republic of China (PRC) state-sponsored cyber actor active since at least mid-2021. The actor targets U.S. critical infrastructure including communications, energy, transportation, and water sectors. CISA, NSA, and FBI assess Volt Typhoon is pre-positioning on IT networks to enable lateral movement to OT assets to disrupt critical functions during geopolitical tensions or military conflict with the United States."
+  },
+  {
+    "advisory_id": "AA23-144A",
+    "title": "Volt Typhoon \u2014 Living Off The Land Techniques",
+    "date": "2023-05-24",
+    "section": "TTPs \u2014 Living Off The Land",
+    "threat_actor": "Volt Typhoon (PRC)",
+    "technique_ids": [
+      "T1059",
+      "T1059.001",
+      "T1047"
+    ],
+    "content": "Volt Typhoon relies almost exclusively on living-off-the-land (LotL) techniques and built-in Windows tools including wmic (T1047), ntdsutil, netsh, and PowerShell (T1059.001) to blend in with normal system activity. The actor minimizes custom malware use to avoid detection, using command-line interfaces to execute commands and scripts (T1059) and Windows Management Instrumentation for execution and discovery (T1047)."
+  },
+  {
+    "advisory_id": "AA23-144A",
+    "title": "Volt Typhoon \u2014 Initial Access",
+    "date": "2023-05-24",
+    "section": "TTPs \u2014 Initial Access",
+    "threat_actor": "Volt Typhoon (PRC)",
+    "technique_ids": [
+      "T1190",
+      "T1078"
+    ],
+    "content": "Volt Typhoon gains initial access primarily by exploiting internet-facing network appliances: Fortinet FortiGuard, Ivanti Connect Secure, NETGEAR, Citrix, and Cisco RV320/325 routers. Techniques used include exploitation of public-facing applications (T1190) and use of valid accounts (T1078) obtained through credential access. The actor targets VPN infrastructure to establish footholds in victim networks."
+  },
+  {
+    "advisory_id": "AA23-144A",
+    "title": "Volt Typhoon \u2014 Credential Access",
+    "date": "2023-05-24",
+    "section": "TTPs \u2014 Credential Access",
+    "threat_actor": "Volt Typhoon (PRC)",
+    "technique_ids": [
+      "T1003.001",
+      "T1555.003",
+      "T1078"
+    ],
+    "content": "Volt Typhoon performs credential dumping using ntdsutil.exe for Active Directory credential extraction and comsvcs.dll to dump LSASS memory (T1003.001). The group also extracts credentials from web browsers (T1555.003) and leverages harvested credentials via valid accounts (T1078) to access additional systems without deploying further tooling."
+  },
+  {
+    "advisory_id": "AA23-144A",
+    "title": "Volt Typhoon \u2014 Command and Control",
+    "date": "2023-05-24",
+    "section": "TTPs \u2014 C2",
+    "threat_actor": "Volt Typhoon (PRC)",
+    "technique_ids": [
+      "T1090.002",
+      "T1572"
+    ],
+    "content": "Volt Typhoon routes C2 traffic through compromised SOHO network devices including NETGEAR, Cisco, and ASUS routers (T1090.002 \u2014 External Proxy). This blends malicious traffic with legitimate network activity and obscures the true source of intrusions. The group also uses the open-source FRP (Fast Reverse Proxy) tool to establish encrypted tunnels for C2 communication (T1572 \u2014 Protocol Tunneling)."
+  },
+  {
+    "advisory_id": "AA23-144A",
+    "title": "Volt Typhoon \u2014 Defense Evasion",
+    "date": "2023-05-24",
+    "section": "TTPs \u2014 Defense Evasion",
+    "threat_actor": "Volt Typhoon (PRC)",
+    "technique_ids": [
+      "T1070.004",
+      "T1036",
+      "T1090"
+    ],
+    "content": "Volt Typhoon deletes command history and log files (T1070.004 \u2014 Indicator Removal on Host: File Deletion) and masquerades malicious processes as legitimate system processes (T1036). The actor uses proxy infrastructure through compromised devices to obfuscate network traffic (T1090) and deliberately maintains a low operational tempo \u2014 a 'low and slow' approach \u2014 to avoid triggering behavioral detection systems."
+  },
+  {
+    "advisory_id": "AA23-144A",
+    "title": "Volt Typhoon \u2014 Discovery",
+    "date": "2023-05-24",
+    "section": "TTPs \u2014 Discovery",
+    "threat_actor": "Volt Typhoon (PRC)",
+    "technique_ids": [
+      "T1049",
+      "T1016",
+      "T1082",
+      "T1046"
+    ],
+    "content": "Volt Typhoon conducts network and system discovery using built-in Windows tools: netstat for active network connections (T1049), ipconfig and net commands for network configuration (T1016), PowerShell Get-NetTCPConnection, and wmic and system utilities for process/system enumeration (T1082). The actor maps victim network topology before lateral movement and uses port scanning for network service discovery (T1046)."
+  },
+  {
+    "advisory_id": "AA23-144A",
+    "title": "Volt Typhoon \u2014 Mitigations",
+    "date": "2023-05-24",
+    "section": "Mitigations",
+    "threat_actor": "Volt Typhoon (PRC)",
+    "technique_ids": [
+      "T1190",
+      "T1078",
+      "T1003.001",
+      "T1090.002"
+    ],
+    "content": "CISA recommended mitigations against Volt Typhoon: (1) Apply patches for internet-facing systems immediately, prioritizing network appliances and VPN. (2) Enforce multi-factor authentication on all remote access. (3) Audit and remove unnecessary accounts; enforce least privilege. (4) Monitor for unusual use of wmic, ntdsutil, netsh, and PowerShell outside maintenance windows. (5) Implement network segmentation between IT and OT. (6) Enable enhanced logging including PowerShell script block logging and Windows event logs. (7) Review and restrict outbound connections to SOHO device IP ranges."
+  },
+  {
+    "advisory_id": "AA23-144A",
+    "title": "Volt Typhoon \u2014 Affected Sectors",
+    "date": "2023-05-24",
+    "section": "Affected Sectors",
+    "threat_actor": "Volt Typhoon (PRC)",
+    "technique_ids": [],
+    "content": "Volt Typhoon has been confirmed targeting U.S. critical infrastructure: Communications, Energy (including electric utilities), Transportation Systems (maritime and aviation), Water and Wastewater Systems, and government facilities. The combination of LotL techniques and pre-positioning behavior indicates preparation for potential disruptive or destructive cyberattacks rather than traditional espionage."
+  },
+  {
+    "advisory_id": "AA24-038A",
+    "title": "PRC Actors \u2014 KV Botnet via SOHO Routers",
+    "date": "2024-02-07",
+    "section": "Key Finding \u2014 KV Botnet",
+    "threat_actor": "Volt Typhoon (PRC)",
+    "technique_ids": [
+      "T1090.002",
+      "T1584.005"
+    ],
+    "content": "A February 2024 joint CISA/NSA/FBI advisory confirmed that PRC state-sponsored actors including Volt Typhoon operate a botnet of compromised SOHO routers known as the KV Botnet, used to proxy C2 traffic (T1090.002) and obfuscate intrusion origins. Affected devices include Cisco RV320/325, NETGEAR ProSAFE, and Axis IP cameras. Organizations should audit SOHO perimeter devices and isolate or replace end-of-life hardware immediately. The actors also compromise third-party infrastructure for use as operational relay boxes (T1584.005 \u2014 Compromise Infrastructure: Botnet)."
+  },
+  {
+    "advisory_id": "AA24-038A",
+    "title": "PRC Actors \u2014 OT Pre-Positioning Intent",
+    "date": "2024-02-07",
+    "section": "Key Finding \u2014 OT Intent",
+    "threat_actor": "Volt Typhoon (PRC)",
+    "technique_ids": [
+      "T1078",
+      "T1021",
+      "T1190"
+    ],
+    "content": "The 2024 advisory elevated the threat assessment, stating that PRC state-sponsored actors are pre-positioning on U.S. critical infrastructure IT networks specifically to enable disruptive or destructive cyberattacks against OT systems during a major crisis or conflict. Valid accounts (T1078) and remote services (T1021) are the primary persistence mechanisms observed. Electric, water, transportation, and communications sectors are priority targets. Organizations should assume Volt Typhoon may already have persistent access and conduct proactive threat hunting."
+  },
+  {
+    "advisory_id": "AA24-038A",
+    "title": "PRC Actors \u2014 Detection Recommendations",
+    "date": "2024-02-07",
+    "section": "Detection Recommendations",
+    "threat_actor": "Volt Typhoon (PRC)",
+    "technique_ids": [
+      "T1003.001",
+      "T1059.001",
+      "T1047",
+      "T1090.002"
+    ],
+    "content": "AA24-038A specific detection guidance: Monitor ntdsutil.exe and comsvcs.dll execution outside maintenance windows (T1003.001 LSASS dump indicator). Alert on PowerShell encoded command execution and unusual wmic queries (T1059.001, T1047). Monitor authentication logs for accounts authenticating from unexpected source IPs \u2014 especially VPN/remote access. Implement LOLBin behavioral detection for certutil, mshta, and regsvr32 in unusual contexts. Deploy network flow monitoring to detect unusual outbound traffic to SOHO device IP ranges (T1090.002)."
+  },
+  {
+    "advisory_id": "AA23-061A",
+    "title": "Royal Ransomware \u2014 Overview",
+    "date": "2023-03-02",
+    "section": "Overview",
+    "threat_actor": "Royal Ransomware Group",
+    "technique_ids": [
+      "T1486",
+      "T1489"
+    ],
+    "content": "Royal ransomware is a highly capable ransomware variant operated by a sophisticated threat group active since at least September 2022. CISA and the FBI issued AA23-061A noting Royal has targeted U.S. and international critical infrastructure including healthcare, education, manufacturing, and communications. Royal encrypts files (T1486 \u2014 Data Encrypted for Impact) and stops critical services before encryption (T1489 \u2014 Service Stop). The group demands ransoms ranging from $1 million to $11 million USD."
+  },
+  {
+    "advisory_id": "AA23-061A",
+    "title": "Royal Ransomware \u2014 Initial Access and Phishing",
+    "date": "2023-03-02",
+    "section": "TTPs \u2014 Initial Access",
+    "threat_actor": "Royal Ransomware Group",
+    "technique_ids": [
+      "T1566.001",
+      "T1566.002",
+      "T1078",
+      "T1190"
+    ],
+    "content": "Royal primarily gains initial access via callback phishing \u2014 victims receive emails inducing them to call a phone number (T1566.001 Spearphishing Attachment variant). The caller is then socially engineered into installing remote access software. Additional vectors include malicious links (T1566.002), exploitation of public-facing applications (T1190), and use of valid credentials purchased from initial access brokers (T1078). Royal has also exploited unpatched vulnerabilities in Citrix and FortiOS."
+  },
+  {
+    "advisory_id": "AA23-061A",
+    "title": "Royal Ransomware \u2014 Execution and Persistence",
+    "date": "2023-03-02",
+    "section": "TTPs \u2014 Execution / Persistence",
+    "threat_actor": "Royal Ransomware Group",
+    "technique_ids": [
+      "T1059.003",
+      "T1547.001",
+      "T1053.005",
+      "T1112"
+    ],
+    "content": "Royal uses Windows Command Shell (T1059.003) and PowerShell for execution. Persistence is established via registry run keys (T1547.001) and scheduled tasks (T1053.005). The group modifies the registry (T1112) to disable security tools and configure autostart. Royal has been observed deploying Cobalt Strike beacons and Qakbot/QBot malware as intermediate stages before deploying the final ransomware payload."
+  },
+  {
+    "advisory_id": "AA23-061A",
+    "title": "Royal Ransomware \u2014 Lateral Movement and Exfiltration",
+    "date": "2023-03-02",
+    "section": "TTPs \u2014 Lateral Movement / Exfiltration",
+    "threat_actor": "Royal Ransomware Group",
+    "technique_ids": [
+      "T1021.001",
+      "T1021.002",
+      "T1048",
+      "T1485"
+    ],
+    "content": "Royal moves laterally using Remote Desktop Protocol (T1021.001) and SMB/Windows Admin Shares (T1021.002). Prior to encryption, the group exfiltrates data for double-extortion using tools such as Cobalt Strike and MEGAsync (T1048 \u2014 Exfiltration Over Alternative Protocol). Royal then deletes volume shadow copies (T1485 \u2014 Data Destruction) to prevent recovery and deploys the ransomware encryptor using batch scripts or PsExec for network-wide execution."
+  },
+  {
+    "advisory_id": "AA23-061A",
+    "title": "Royal Ransomware \u2014 Mitigations",
+    "date": "2023-03-02",
+    "section": "Mitigations",
+    "threat_actor": "Royal Ransomware Group",
+    "technique_ids": [
+      "T1486",
+      "T1566",
+      "T1078",
+      "T1021.001"
+    ],
+    "content": "CISA/FBI recommended mitigations against Royal: (1) Maintain offline, encrypted backups tested regularly. (2) Implement a recovery plan for multiple backup copies in different locations. (3) Apply patches promptly, prioritizing internet-facing systems. (4) Enforce MFA on all accounts, especially RDP (T1021.001). (5) Segment networks to limit ransomware propagation. (6) Disable unnecessary remote access services. (7) Deploy endpoint detection and response (EDR) with behavioral analytics. (8) Train users to identify phishing attempts (T1566). (9) Monitor for volume shadow copy deletion commands."
+  },
+  {
+    "advisory_id": "AA23-320A",
+    "title": "Scattered Spider \u2014 Overview",
+    "date": "2023-11-16",
+    "section": "Overview",
+    "threat_actor": "Scattered Spider (UNC3944)",
+    "technique_ids": [],
+    "content": "Scattered Spider (also known as UNC3944, Muddled Libra, and 0ktapus) is a financially motivated threat actor active since at least 2022. CISA and FBI issued AA23-320A noting the group's sophisticated social engineering capabilities and focus on cloud environments. The group has targeted telecommunications, technology, hospitality, and financial services organizations. Scattered Spider members are English-speaking and often pose as help desk or IT support staff."
+  },
+  {
+    "advisory_id": "AA23-320A",
+    "title": "Scattered Spider \u2014 Social Engineering and Initial Access",
+    "date": "2023-11-16",
+    "section": "TTPs \u2014 Initial Access",
+    "threat_actor": "Scattered Spider (UNC3944)",
+    "technique_ids": [
+      "T1566.004",
+      "T1621",
+      "T1656",
+      "T1078"
+    ],
+    "content": "Scattered Spider is known for sophisticated social engineering. TTPs include: SIM swapping to intercept SMS MFA codes (T1621 \u2014 MFA Request Generation); voice phishing (vishing) impersonating IT help desk staff to trick employees into revealing credentials; phishing kits including Okta credential harvesters (T1566.004); and impersonation of vendor support (T1656 \u2014 Impersonation). Once credentials are obtained, the group uses valid accounts (T1078) for initial access to cloud platforms and VPN systems."
+  },
+  {
+    "advisory_id": "AA23-320A",
+    "title": "Scattered Spider \u2014 Cloud and Identity Abuse",
+    "date": "2023-11-16",
+    "section": "TTPs \u2014 Cloud Exploitation",
+    "threat_actor": "Scattered Spider (UNC3944)",
+    "technique_ids": [
+      "T1530",
+      "T1537",
+      "T1556.006",
+      "T1538"
+    ],
+    "content": "After gaining initial access, Scattered Spider targets cloud identity infrastructure heavily. TTPs include: accessing data from cloud storage (T1530 \u2014 Data from Cloud Storage Object); transferring data to external cloud accounts (T1537 \u2014 Transfer Data to Cloud Account); modifying cloud authentication processes including SSO and Okta (T1556.006); and enumerating cloud infrastructure via management APIs (T1538 \u2014 Cloud Service Dashboard). The group has been observed creating new Okta accounts and modifying identity provider configurations to establish persistent access."
+  },
+  {
+    "advisory_id": "AA23-320A",
+    "title": "Scattered Spider \u2014 Data Theft and Extortion",
+    "date": "2023-11-16",
+    "section": "TTPs \u2014 Exfiltration / Impact",
+    "threat_actor": "Scattered Spider (UNC3944)",
+    "technique_ids": [
+      "T1041",
+      "T1567.002",
+      "T1657"
+    ],
+    "content": "Scattered Spider's primary objective is data theft for extortion. The group exfiltrates data over existing C2 channels (T1041) and uses cloud services like MEGA for exfiltration (T1567.002 \u2014 Exfiltration to Code Repository). The group employs financial extortion (T1657 \u2014 Financial Theft) by threatening to release stolen data publicly. In later campaigns, the group deployed BlackCat/ALPHV ransomware in addition to data theft, indicating a shift toward combined ransomware and extortion attacks."
+  },
+  {
+    "advisory_id": "AA23-320A",
+    "title": "Scattered Spider \u2014 Mitigations",
+    "date": "2023-11-16",
+    "section": "Mitigations",
+    "threat_actor": "Scattered Spider (UNC3944)",
+    "technique_ids": [
+      "T1621",
+      "T1566.004",
+      "T1078",
+      "T1530"
+    ],
+    "content": "CISA/FBI recommended mitigations against Scattered Spider: (1) Implement phishing-resistant MFA (FIDO2/hardware tokens) \u2014 SMS and voice-based MFA are susceptible to SIM swapping. (2) Establish strict identity verification procedures for help desk interactions including callback verification to known numbers. (3) Deploy conditional access policies based on device compliance and geographic location. (4) Monitor cloud logs for unusual account creation, role assignments, and SSO configuration changes. (5) Conduct user awareness training on vishing and social engineering. (6) Implement data loss prevention (DLP) controls on cloud storage. (7) Review and audit identity provider (IdP) configurations regularly."
+  },
+  {
+    "advisory_id": "AA24-190A",
+    "title": "GRU Unit 29155 \u2014 Overview",
+    "date": "2024-07-09",
+    "section": "Overview",
+    "threat_actor": "GRU Unit 29155 (Russia)",
+    "technique_ids": [],
+    "content": "GRU Unit 29155, also known as Cadet Blizzard and previously associated with WhisperGate destructive malware, is a Russian military intelligence (GRU) unit responsible for global operations including cyberattacks, assassinations, and sabotage. A July 2024 joint advisory (AA24-190A) from CISA, NSA, FBI, and international partners identified Unit 29155 as conducting espionage and disruptive cyberattacks against NATO member states, Ukraine, and other European governments since at least 2020. The unit operates with disruptive and destructive objectives distinct from traditional Russian intelligence cyber units."
+  },
+  {
+    "advisory_id": "AA24-190A",
+    "title": "GRU Unit 29155 \u2014 Initial Access and Reconnaissance",
+    "date": "2024-07-09",
+    "section": "TTPs \u2014 Initial Access",
+    "threat_actor": "GRU Unit 29155 (Russia)",
+    "technique_ids": [
+      "T1595",
+      "T1190",
+      "T1133",
+      "T1589"
+    ],
+    "content": "GRU Unit 29155 conducts extensive pre-compromise reconnaissance (T1595 \u2014 Active Scanning) including subdomain enumeration and vulnerability scanning of target infrastructure. Initial access is primarily achieved through exploitation of public-facing applications (T1190) including CVE-2021-33044 (Dahua IP cameras), CVE-2022-26134 (Atlassian Confluence), and various edge device CVEs. The unit also uses external remote services (T1133) and conducts credential gathering operations (T1589 \u2014 Gather Victim Identity Information) to identify valid accounts for initial access."
+  },
+  {
+    "advisory_id": "AA24-190A",
+    "title": "GRU Unit 29155 \u2014 Destructive Malware and WhisperGate",
+    "date": "2024-07-09",
+    "section": "TTPs \u2014 Destructive Activity",
+    "threat_actor": "GRU Unit 29155 (Russia)",
+    "technique_ids": [
+      "T1561.002",
+      "T1485",
+      "T1491.001"
+    ],
+    "content": "GRU Unit 29155's most notable destructive capability is WhisperGate, a multi-stage wiper malware that corrupts the Master Boot Record (T1561.002 \u2014 Disk Structure Wipe) and overwrites files to render systems unbootable. The unit also conducts data destruction operations (T1485 \u2014 Data Destruction) and website defacement (T1491.001 \u2014 Defacement: Internal Defacement). These destructive objectives distinguish Unit 29155 from espionage-focused Russian APT groups. The advisory notes deployments of WhisperGate against Ukrainian government and critical infrastructure targets in January 2022."
+  },
+  {
+    "advisory_id": "AA24-190A",
+    "title": "GRU Unit 29155 \u2014 Persistence and Lateral Movement",
+    "date": "2024-07-09",
+    "section": "TTPs \u2014 Persistence / Lateral Movement",
+    "threat_actor": "GRU Unit 29155 (Russia)",
+    "technique_ids": [
+      "T1505.003",
+      "T1021.002",
+      "T1550.002",
+      "T1078"
+    ],
+    "content": "Unit 29155 establishes persistence using web shells (T1505.003 \u2014 Server Software Component: Web Shell) on compromised internet-facing servers. Lateral movement is conducted via SMB/Windows Admin Shares (T1021.002) and pass-the-hash techniques (T1550.002). The unit uses valid accounts (T1078) extensively once inside the network. Tools observed include Impacket for lateral movement, and the group leverages Active Directory enumeration to identify high-value targets before deploying destructive payloads."
+  },
+  {
+    "advisory_id": "AA24-190A",
+    "title": "GRU Unit 29155 \u2014 Mitigations",
+    "date": "2024-07-09",
+    "section": "Mitigations",
+    "threat_actor": "GRU Unit 29155 (Russia)",
+    "technique_ids": [
+      "T1190",
+      "T1561.002",
+      "T1505.003",
+      "T1078"
+    ],
+    "content": "CISA/NSA recommended mitigations against GRU Unit 29155: (1) Prioritize patching internet-facing systems \u2014 especially edge devices, VPN, and collaboration tools exploited by this unit. (2) Implement immutable, offline backups to recover from wiper attacks. (3) Harden web-facing servers to prevent web shell deployment; monitor for unusual web server process children. (4) Deploy network monitoring for unusual SMB activity and lateral movement indicators. (5) Enforce least privilege and segment networks to limit blast radius of destructive payload deployment. (6) Enable Windows Defender Credential Guard to prevent pass-the-hash. (7) Monitor for MBR modification and mass file overwrite activity as destructive indicators."
+  }
+]

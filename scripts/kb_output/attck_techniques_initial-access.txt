@@ -1,0 +1,140 @@
+SOURCE: MITRE ATT&CK Enterprise — Tactic: Initial Access
+FRAMEWORK: MITRE ATT&CK
+TACTIC: Initial Access
+TECHNIQUE COUNT: 15
+======================================================================
+
+TECHNIQUE: Compromise Software Dependencies and Development Tools
+TECHNIQUE ID: T1195.001
+TACTIC: Initial Access
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may manipulate software dependencies and development tools prior to receipt by a final consumer for the purpose of data or system compromise. Applications often depend on external software to function properly. Popular open source projects that are used as dependencies in many applications, such as pip and NPM packages, may be targeted as a means to add malicious code to users of the dependency. This may also include abandoned packages, which in some cases could be re-registered by threat actors after being removed by adversaries. Adversaries may also employ "typosquatting" or name-confusion by choosing names similar to existing popular libraries or packages in order to deceive a
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Spearphishing Link
+TECHNIQUE ID: T1566.002
+TACTIC: Initial Access
+PLATFORMS: Identity Provider, Linux, macOS, Office Suite, SaaS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may send spearphishing emails with a malicious link in an attempt to gain access to victim systems. Spearphishing with a link is a specific variant of spearphishing. It is different from other forms of spearphishing in that it employs the use of links to download malware contained in email, instead of attaching malicious files to the email itself, to avoid defenses that may inspect email attachments. Spearphishing may also involve social engineering techniques, such as posing as a trusted source. All forms of spearphishing are electronically delivered social engineering targeted at a specific individual, company, or industry. In this case, the malicious emails contain links. Gene
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Spearphishing Attachment
+TECHNIQUE ID: T1566.001
+TACTIC: Initial Access
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may send spearphishing emails with a malicious attachment in an attempt to gain access to victim systems. Spearphishing attachment is a specific variant of spearphishing. Spearphishing attachment is different from other forms of spearphishing in that it employs the use of malware attached to an email. All forms of spearphishing are electronically delivered social engineering targeted at a specific individual, company, or industry. In this scenario, adversaries attach a file to the spearphishing email and usually rely upon [User Execution](https://attack.mitre.org/techniques/T1204) to gain execution. Spearphishing may also involve social engineering techniques, such as posing as a
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Compromise Hardware Supply Chain
+TECHNIQUE ID: T1195.003
+TACTIC: Initial Access
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may manipulate hardware components in products prior to receipt by a final consumer for the purpose of data or system compromise. By modifying hardware or firmware in the supply chain, adversaries can insert a backdoor into consumer networks that may be difficult to detect and give the adversary a high degree of control over the system. Hardware backdoors may be inserted into various devices, such as servers, workstations, network infrastructure, or peripherals.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Supply Chain Compromise
+TECHNIQUE ID: T1195
+TACTIC: Initial Access
+PLATFORMS: Linux, Windows, macOS, SaaS
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may manipulate products or product delivery mechanisms prior to receipt by a final consumer for the purpose of data or system compromise. Supply chain compromise can take place at any stage of the supply chain including: * Manipulation of development tools * Manipulation of a development environment * Manipulation of source code repositories (public or private) * Manipulation of source code in open-source dependencies * Manipulation of software update/distribution mechanisms * Compromised/infected system images (removable media infected at the factory) * Replacement of legitimate software with modified versions * Sales of modified/counterfeit products to legitimate distributors *
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Exploit Public-Facing Application
+TECHNIQUE ID: T1190
+TACTIC: Initial Access
+PLATFORMS: Containers, ESXi, IaaS, Linux, macOS, Network Devices, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may attempt to exploit a weakness in an Internet-facing host or system to initially access a network. The weakness in the system can be a software bug, a temporary glitch, or a misconfiguration. Exploited applications are often websites/web servers, but can also include databases (like SQL), standard services (like SMB or SSH), network device administration and management protocols (like SNMP and Smart Install), and any other system with Internet-accessible open sockets. On ESXi infrastructure, adversaries may exploit exposed OpenSLP services; they may alternatively exploit exposed VMware vCenter servers. Depending on the flaw being exploited, this may also involve [Exploitation 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Content Injection
+TECHNIQUE ID: T1659
+TACTIC: Initial Access, Command And Control
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may gain access and continuously communicate with victims by injecting malicious content into systems through online network traffic. Rather than luring victims to malicious payloads hosted on a compromised website (i.e., [Drive-by Target](https://attack.mitre.org/techniques/T1608/004) followed by [Drive-by Compromise](https://attack.mitre.org/techniques/T1189)), adversaries may initially access victims through compromised data-transfer channels where they can manipulate traffic and/or inject their own content. These compromised online network channels may also be used to deliver additional payloads (i.e., [Ingress Tool Transfer](https://attack.mitre.org/techniques/T1105)) and ot
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Trusted Relationship
+TECHNIQUE ID: T1199
+TACTIC: Initial Access
+PLATFORMS: Windows, SaaS, IaaS, Linux, macOS, Identity Provider, Office Suite
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may breach or otherwise leverage organizations who have access to intended victims. Access through trusted third party relationship abuses an existing connection that may not be protected or receives less scrutiny than standard mechanisms of gaining access to a network. Organizations often grant elevated access to second or third-party external providers in order to allow them to manage internal systems as well as cloud-based environments. Some examples of these relationships include IT services contractors, managed security providers, infrastructure contractors (e.g. HVAC, elevators, physical security). The third-party provider's access may be intended to be limited to the infra
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Phishing
+TECHNIQUE ID: T1566
+TACTIC: Initial Access
+PLATFORMS: Identity Provider, Linux, macOS, Office Suite, SaaS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may send phishing messages to gain access to victim systems. All forms of phishing are electronically delivered social engineering. Phishing can be targeted, known as spearphishing. In spearphishing, a specific individual, company, or industry will be targeted by the adversary. More generally, adversaries can conduct non-targeted phishing, such as in mass malware spam campaigns. Adversaries may send victims emails containing malicious attachments or links, typically to execute malicious code on victim systems. Phishing may also be conducted via third-party services, like social media platforms. Phishing may also involve social engineering techniques, such as posing as a trusted s
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Spearphishing Voice
+TECHNIQUE ID: T1566.004
+TACTIC: Initial Access
+PLATFORMS: Linux, macOS, Windows, Identity Provider
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may use voice communications to ultimately gain access to victim systems. Spearphishing voice is a specific variant of spearphishing. It is different from other forms of spearphishing in that it employs the use of manipulating a user into providing access to systems through a phone call or other forms of voice communications. Spearphishing frequently involves social engineering techniques, such as posing as a trusted source (ex: [Impersonation](https://attack.mitre.org/techniques/T1656)) and/or creating a sense of urgency or alarm for the recipient. All forms of phishing are electronically delivered social engineering. In this scenario, adversaries are not directly sending malwar
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Compromise Software Supply Chain
+TECHNIQUE ID: T1195.002
+TACTIC: Initial Access
+PLATFORMS: Linux, Windows, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may manipulate application software prior to receipt by a final consumer for the purpose of data or system compromise. Supply chain compromise of software can take place in a number of ways, including manipulation of the application source code, manipulation of the update/distribution mechanism for that software, or replacing compiled releases with a modified version. Targeting may be specific to a desired victim set or may be distributed to a broad set of consumers but only move on to additional tactics on specific victims.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Hardware Additions
+TECHNIQUE ID: T1200
+TACTIC: Initial Access
+PLATFORMS: Windows, Linux, macOS
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may physically introduce computer accessories, networking hardware, or other computing devices into a system or network that can be used as a vector to gain access. Rather than just connecting and distributing payloads via removable storage (i.e. [Replication Through Removable Media](https://attack.mitre.org/techniques/T1091)), more robust hardware additions can be used to introduce new functionalities and/or features into a system that can then be abused. While public references of usage by threat actors are scarce, many red teams/penetration testers leverage hardware additions for initial access. Commercial and open source products can be leveraged with capabilities such as pas
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Drive-by Compromise
+TECHNIQUE ID: T1189
+TACTIC: Initial Access
+PLATFORMS: Identity Provider, Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may gain access to a system through a user visiting a website over the normal course of browsing. Multiple ways of delivering exploit code to a browser exist (i.e., [Drive-by Target](https://attack.mitre.org/techniques/T1608/004)), including: * A legitimate website is compromised, allowing adversaries to inject malicious code * Script files served to a legitimate website from a publicly writeable cloud storage bucket are modified by an adversary * Malicious ads are paid for and served through legitimate ad providers (i.e., [Malvertising](https://attack.mitre.org/techniques/T1583/008)) * Built-in web application interfaces that allow user-controllable content are leveraged for the
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Spearphishing via Service
+TECHNIQUE ID: T1566.003
+TACTIC: Initial Access
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may send spearphishing messages via third-party services in an attempt to gain access to victim systems. Spearphishing via service is a specific variant of spearphishing. It is different from other forms of spearphishing in that it employs the use of third party services rather than directly via enterprise email channels. All forms of spearphishing are electronically delivered social engineering targeted at a specific individual, company, or industry. In this scenario, adversaries send messages through various social media services, personal webmail, and other non-enterprise controlled services. These services are more likely to have a less-strict security policy than an enterpri
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Wi-Fi Networks
+TECHNIQUE ID: T1669
+TACTIC: Initial Access
+PLATFORMS: Linux, Network Devices, Windows, macOS
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may gain initial access to target systems by connecting to wireless networks. They may accomplish this by exploiting open Wi-Fi networks used by target devices or by accessing secured Wi-Fi networks — requiring [Valid Accounts](https://attack.mitre.org/techniques/T1078) — belonging to a target organization. Establishing a connection to a Wi-Fi access point requires a certain level of proximity to both discover and maintain a stable network connection. Adversaries may establish a wireless connection through various methods, such as by physically positioning themselves near a Wi-Fi network to conduct close access operations. To bypass the need for physical proximity, adversaries ma
+
+──────────────────────────────────────────────────

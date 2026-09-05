@@ -1,0 +1,114 @@
+SOURCE: NIST SP 800-53 rev5 — Control Family CM
+FRAMEWORK: NIST SP 800-53 rev5
+CONTROL FAMILY: CM — Configuration Management
+CONTROL COUNT: 14
+======================================================================
+
+CONTROL: CM-1 — Policy and Procedures
+FAMILY: CM (Configuration Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop, document, and disseminate to {{ insert: param, cm-1_prm_1 }}: {{ insert: param, cm-01_odp.03 }} configuration management policy that: Addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and Is consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines; and Procedures to facilitate the implementation of the configuration management policy and the associated configuration management controls; Designate an {{ insert: param, cm-01_odp.04 }} to manage the d
+
+──────────────────────────────────────────────────
+
+CONTROL: CM-2 — Baseline Configuration
+FAMILY: CM (Configuration Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop, document, and maintain under configuration control, a current baseline configuration of the system; and Review and update the baseline configuration of the system: {{ insert: param, cm-02_odp.01 }}; When required due to {{ insert: param, cm-02_odp.02 }} ; and When system components are installed or upgraded. Baseline configurations for systems and system components include connectivity, operational, and communications aspects of systems. Baseline configurations are documented, formally reviewed, and agreed-upon specifications for systems or configuration items within those systems. Ba
+ENHANCEMENTS: CM-2.1: Reviews and Updates —  | CM-2.2: Automation Support for Accuracy and Currency — Maintain the currency, completeness, accuracy, and availability of the baseline configuration of the system using {{ insert: param, cm-02.02_odp }}. Automated mechanisms that help organizations maintain consistent baseline configurations for systems include configuration management tools, hardware, software, fi
+
+──────────────────────────────────────────────────
+
+CONTROL: CM-3 — Configuration Change Control
+FAMILY: CM (Configuration Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Determine and document the types of changes to the system that are configuration-controlled; Review proposed configuration-controlled changes to the system and approve or disapprove such changes with explicit consideration for security and privacy impact analyses; Document configuration change decisions associated with the system; Implement approved configuration-controlled changes to the system; Retain records of configuration-controlled changes to the system for {{ insert: param, cm-03_odp.01 }}; Monitor and review activities associated with configuration-controlled changes to the system; an
+ENHANCEMENTS: CM-3.1: Automated Documentation, Notification, and Prohibition of Changes — Use {{ insert: param, cm-03.01_odp.01 }} to: Document proposed changes to the system; Notify {{ insert: param, cm-03.01_odp.02 }} of proposed changes to the system and request change approval; Highlight proposed changes to the system that have not been approved or disapproved within {{ insert: param, cm-03.01_odp.03 }}; Pr
+
+──────────────────────────────────────────────────
+
+CONTROL: CM-4 — Impact Analyses
+FAMILY: CM (Configuration Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Analyze changes to the system to determine potential security and privacy impacts prior to change implementation. Organizational personnel with security or privacy responsibilities conduct impact analyses. Individuals conducting impact analyses possess the necessary skills and technical expertise to analyze the changes to systems as well as the security or privacy ramifications. Impact analyses include reviewing security and privacy plans, policies, and procedures to understand control requirements; reviewing system design documentation and operational procedures to understand control implemen
+ENHANCEMENTS: CM-4.1: Separate Test Environments — Analyze changes to the system in a separate test environment before implementation in an operational environment, looking for security and privacy impacts due to flaws, weaknesses, incompatibility, or intentional malice. A separate test environment requires an environment that is physically or logically separate and distinct from the operational environment. Th
+
+──────────────────────────────────────────────────
+
+CONTROL: CM-5 — Access Restrictions for Change
+FAMILY: CM (Configuration Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Define, document, approve, and enforce physical and logical access restrictions associated with changes to the system. Changes to the hardware, software, or firmware components of systems or the operational procedures related to the system can potentially have significant effects on the security of the systems or individuals’ privacy. Therefore, organizations permit only qualified and authorized individuals to access systems for purposes of initiating changes. Access restrictions include physical and logical access controls (see [AC-3](#ac-3) and [PE-3](#pe-3) ), software libraries, workflow a
+ENHANCEMENTS: CM-5.1: Automated Access Enforcement and Audit Records — Enforce access restrictions using {{ insert: param, cm-05.01_odp }} ; and Automatically generate audit records of the enforcement actions. Organizations log system accesses associated with applying configuration changes to ensure that configuration change control is implemented and to support after-the-fact actions should organizations disco
+
+──────────────────────────────────────────────────
+
+CONTROL: CM-6 — Configuration Settings
+FAMILY: CM (Configuration Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Establish and document configuration settings for components employed within the system that reflect the most restrictive mode consistent with operational requirements using {{ insert: param, cm-06_odp.01 }}; Implement the configuration settings; Identify, document, and approve any deviations from established configuration settings for {{ insert: param, cm-06_odp.02 }} based on {{ insert: param, cm-06_odp.03 }} ; and Monitor and control changes to the configuration settings in accordance with organizational policies and procedures. Configuration settings are the parameters that can be changed 
+ENHANCEMENTS: CM-6.1: Automated Management, Application, and Verification — Manage, apply, and verify configuration settings for {{ insert: param, cm-06.01_odp.01 }} using {{ insert: param, cm-6.1_prm_2 }}. Automated tools (e.g., hardening tools, baseline configuration tools) can improve the accuracy, consistency, and availability of configuration settings information. Automation can also provide data aggregati
+
+──────────────────────────────────────────────────
+
+CONTROL: CM-7 — Least Functionality
+FAMILY: CM (Configuration Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Configure the system to provide only {{ insert: param, cm-07_odp.01 }} ; and Prohibit or restrict the use of the following functions, ports, protocols, software, and/or services: {{ insert: param, cm-7_prm_2 }}. Systems provide a wide variety of functions and services. Some of the functions and services routinely provided by default may not be necessary to support essential organizational missions, functions, or operations. Additionally, it is sometimes convenient to provide multiple services from a single system component, but doing so increases risk over limiting the services provided by tha
+ENHANCEMENTS: CM-7.1: Periodic Review — Review the system {{ insert: param, cm-07.01_odp.01 }} to identify unnecessary and/or nonsecure functions, ports, protocols, software, and services; and Disable or remove {{ insert: param, cm-7.1_prm_2 }}. Organizations review functions, ports, protocols, and services provided by systems or system components to determine the functions and services that are candidates for 
+
+──────────────────────────────────────────────────
+
+CONTROL: CM-8 — System Component Inventory
+FAMILY: CM (Configuration Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop and document an inventory of system components that: Accurately reflects the system; Includes all components within the system; Does not include duplicate accounting of components or components assigned to any other system; Is at the level of granularity deemed necessary for tracking and reporting; and Includes the following information to achieve system component accountability: {{ insert: param, cm-08_odp.01 }} ; and Review and update the system component inventory {{ insert: param, cm-08_odp.02 }}. System components are discrete, identifiable information technology assets that inclu
+ENHANCEMENTS: CM-8.1: Updates During Installation and Removal — Update the inventory of system components as part of component installations, removals, and system updates. Organizations can improve the accuracy, completeness, and consistency of system component inventories if the inventories are updated as part of component installations or removals or during general system updates. If inventories are not updat
+
+──────────────────────────────────────────────────
+
+CONTROL: CM-9 — Configuration Management Plan
+FAMILY: CM (Configuration Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop, document, and implement a configuration management plan for the system that: Addresses roles, responsibilities, and configuration management processes and procedures; Establishes a process for identifying configuration items throughout the system development life cycle and for managing the configuration of the configuration items; Defines the configuration items for the system and places the configuration items under configuration management; Is reviewed and approved by {{ insert: param, cm-09_odp }} ; and Protects the configuration management plan from unauthorized disclosure and mod
+ENHANCEMENTS: CM-9.1: Assignment of Responsibility — Assign responsibility for developing the configuration management process to organizational personnel that are not directly involved in system development. In the absence of dedicated configuration management teams assigned within organizations, system developers may be tasked with developing configuration management processes using personnel who are not dire
+
+──────────────────────────────────────────────────
+
+CONTROL: CM-10 — Software Usage Restrictions
+FAMILY: CM (Configuration Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Use software and associated documentation in accordance with contract agreements and copyright laws; Track the use of software and associated documentation protected by quantity licenses to control copying and distribution; and Control and document the use of peer-to-peer file sharing technology to ensure that this capability is not used for the unauthorized distribution, display, performance, or reproduction of copyrighted work. Software license tracking can be accomplished by manual or automated methods, depending on organizational needs. Examples of contract agreements include software lice
+ENHANCEMENTS: CM-10.1: Open-source Software — Establish the following restrictions on the use of open-source software: {{ insert: param, cm-10.01_odp }}. Open-source software refers to software that is available in source code form. Certain software rights normally reserved for copyright holders are routinely provided under software license agreements that permit individuals to study, change, and improve the so
+
+──────────────────────────────────────────────────
+
+CONTROL: CM-11 — User-installed Software
+FAMILY: CM (Configuration Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Establish {{ insert: param, cm-11_odp.01 }} governing the installation of software by users; Enforce software installation policies through the following methods: {{ insert: param, cm-11_odp.02 }} ; and Monitor policy compliance {{ insert: param, cm-11_odp.03 }}. If provided the necessary privileges, users can install software in organizational systems. To maintain control over the software installed, organizations identify permitted and prohibited actions regarding software installation. Permitted software installations include updates and security patches to existing software and downloading
+ENHANCEMENTS: CM-11.1: Alerts for Unauthorized Installations —  | CM-11.2: Software Installation with Privileged Status — Allow user installation of software only with explicit privileged status. Privileged status can be obtained, for example, by serving in the role of system administrator. user installation of software is allowed only with explicit privileged status. Configuration management policy procedures 
+
+──────────────────────────────────────────────────
+
+CONTROL: CM-12 — Information Location
+FAMILY: CM (Configuration Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Identify and document the location of {{ insert: param, cm-12_odp }} and the specific system components on which the information is processed and stored; Identify and document the users who have access to the system and system components where the information is processed and stored; and Document changes to the location (i.e., system or system components) where the information is processed and stored. Information location addresses the need to understand where information is being processed and stored. Information location includes identifying where specific information types and information r
+ENHANCEMENTS: CM-12.1: Automated Tools to Support Information Location — Use automated tools to identify {{ insert: param, cm-12.01_odp.01 }} on {{ insert: param, cm-12.01_odp.02 }} to ensure controls are in place to protect organizational information and individual privacy. The use of automated tools helps to increase the effectiveness and efficiency of the information location capability implemented within th
+
+──────────────────────────────────────────────────
+
+CONTROL: CM-13 — Data Action Mapping
+FAMILY: CM (Configuration Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop and document a map of system data actions. Data actions are system operations that process personally identifiable information. The processing of such information encompasses the full information life cycle, which includes collection, generation, transformation, use, disclosure, retention, and disposal. A map of system data actions includes discrete data actions, elements of personally identifiable information being processed in the data actions, system components involved in the data actions, and the owners or operators of the system components. Understanding what personally identifia
+
+──────────────────────────────────────────────────
+
+CONTROL: CM-14 — Signed Components
+FAMILY: CM (Configuration Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Prevent the installation of {{ insert: param, cm-14_prm_1 }} without verification that the component has been digitally signed using a certificate that is recognized and approved by the organization. Software and firmware components prevented from installation unless signed with recognized and approved certificates include software and firmware version updates, patches, service packs, device drivers, and basic input/output system updates. Organizations can identify applicable software and firmware components by type, by specific items, or a combination of both. Digital signatures and organizat
+
+──────────────────────────────────────────────────

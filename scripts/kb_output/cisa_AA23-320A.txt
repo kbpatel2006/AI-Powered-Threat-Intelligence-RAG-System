@@ -1,0 +1,45 @@
+SOURCE: CISA Advisory AA23-320A
+THREAT ACTOR: Scattered Spider (UNC3944)
+DATE: 2023-11-16
+ADVISORY ID: AA23-320A
+======================================================================
+
+SECTION: Overview
+TITLE: Scattered Spider — Overview
+ATT&CK TECHNIQUE IDs: N/A
+
+Scattered Spider (also known as UNC3944, Muddled Libra, and 0ktapus) is a financially motivated threat actor active since at least 2022. CISA and FBI issued AA23-320A noting the group's sophisticated social engineering capabilities and focus on cloud environments. The group has targeted telecommunications, technology, hospitality, and financial services organizations. Scattered Spider members are English-speaking and often pose as help desk or IT support staff.
+
+──────────────────────────────────────────────────
+
+SECTION: TTPs — Initial Access
+TITLE: Scattered Spider — Social Engineering and Initial Access
+ATT&CK TECHNIQUE IDs: T1566.004, T1621, T1656, T1078
+
+Scattered Spider is known for sophisticated social engineering. TTPs include: SIM swapping to intercept SMS MFA codes (T1621 — MFA Request Generation); voice phishing (vishing) impersonating IT help desk staff to trick employees into revealing credentials; phishing kits including Okta credential harvesters (T1566.004); and impersonation of vendor support (T1656 — Impersonation). Once credentials are obtained, the group uses valid accounts (T1078) for initial access to cloud platforms and VPN systems.
+
+──────────────────────────────────────────────────
+
+SECTION: TTPs — Cloud Exploitation
+TITLE: Scattered Spider — Cloud and Identity Abuse
+ATT&CK TECHNIQUE IDs: T1530, T1537, T1556.006, T1538
+
+After gaining initial access, Scattered Spider targets cloud identity infrastructure heavily. TTPs include: accessing data from cloud storage (T1530 — Data from Cloud Storage Object); transferring data to external cloud accounts (T1537 — Transfer Data to Cloud Account); modifying cloud authentication processes including SSO and Okta (T1556.006); and enumerating cloud infrastructure via management APIs (T1538 — Cloud Service Dashboard). The group has been observed creating new Okta accounts and modifying identity provider configurations to establish persistent access.
+
+──────────────────────────────────────────────────
+
+SECTION: TTPs — Exfiltration / Impact
+TITLE: Scattered Spider — Data Theft and Extortion
+ATT&CK TECHNIQUE IDs: T1041, T1567.002, T1657
+
+Scattered Spider's primary objective is data theft for extortion. The group exfiltrates data over existing C2 channels (T1041) and uses cloud services like MEGA for exfiltration (T1567.002 — Exfiltration to Code Repository). The group employs financial extortion (T1657 — Financial Theft) by threatening to release stolen data publicly. In later campaigns, the group deployed BlackCat/ALPHV ransomware in addition to data theft, indicating a shift toward combined ransomware and extortion attacks.
+
+──────────────────────────────────────────────────
+
+SECTION: Mitigations
+TITLE: Scattered Spider — Mitigations
+ATT&CK TECHNIQUE IDs: T1621, T1566.004, T1078, T1530
+
+CISA/FBI recommended mitigations against Scattered Spider: (1) Implement phishing-resistant MFA (FIDO2/hardware tokens) — SMS and voice-based MFA are susceptible to SIM swapping. (2) Establish strict identity verification procedures for help desk interactions including callback verification to known numbers. (3) Deploy conditional access policies based on device compliance and geographic location. (4) Monitor cloud logs for unusual account creation, role assignments, and SSO configuration changes. (5) Conduct user awareness training on vishing and social engineering. (6) Implement data loss prevention (DLP) controls on cloud storage. (7) Review and audit identity provider (IdP) configurations regularly.
+
+──────────────────────────────────────────────────

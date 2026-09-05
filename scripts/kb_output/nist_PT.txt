@@ -1,0 +1,67 @@
+SOURCE: NIST SP 800-53 rev5 — Control Family PT
+FRAMEWORK: NIST SP 800-53 rev5
+CONTROL FAMILY: PT — Personally Identifiable Information Processing and Transparency
+CONTROL COUNT: 8
+======================================================================
+
+CONTROL: PT-1 — Policy and Procedures
+FAMILY: PT (Personally Identifiable Information Processing and Transparency)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop, document, and disseminate to {{ insert: param, pt-1_prm_1 }}: {{ insert: param, pt-01_odp.03 }} personally identifiable information processing and transparency policy that: Addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and Is consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines; and Procedures to facilitate the implementation of the personally identifiable information processing and transparency policy and the associated personally identifi
+
+──────────────────────────────────────────────────
+
+CONTROL: PT-2 — Authority to Process Personally Identifiable Information
+FAMILY: PT (Personally Identifiable Information Processing and Transparency)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Determine and document the {{ insert: param, pt-02_odp.01 }} that permits the {{ insert: param, pt-02_odp.02 }} of personally identifiable information; and Restrict the {{ insert: param, pt-02_odp.03 }} of personally identifiable information to only that which is authorized. The processing of personally identifiable information is an operation or set of operations that the information system or organization performs with respect to personally identifiable information across the information life cycle. Processing includes but is not limited to creation, collection, use, processing, storage, mai
+ENHANCEMENTS: PT-2.1: Data Tagging — Attach data tags containing {{ insert: param, pt-02.01_odp.01 }} to {{ insert: param, pt-02.01_odp.02 }}. Data tags support the tracking and enforcement of authorized processing by conveying the types of processing that are authorized along with the relevant elements of personally identifiable information throughout the system. Data tags may also support the use of automated
+
+──────────────────────────────────────────────────
+
+CONTROL: PT-3 — Personally Identifiable Information Processing Purposes
+FAMILY: PT (Personally Identifiable Information Processing and Transparency)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Identify and document the {{ insert: param, pt-03_odp.01 }} for processing personally identifiable information; Describe the purpose(s) in the public privacy notices and policies of the organization; Restrict the {{ insert: param, pt-03_odp.02 }} of personally identifiable information to only that which is compatible with the identified purpose(s); and Monitor changes in processing personally identifiable information and implement {{ insert: param, pt-03_odp.03 }} to ensure that any changes are made in accordance with {{ insert: param, pt-03_odp.04 }}. Identifying and documenting the purpose f
+ENHANCEMENTS: PT-3.1: Data Tagging — Attach data tags containing the following purposes to {{ insert: param, pt-03.01_odp.02 }}: {{ insert: param, pt-03.01_odp.01 }}. Data tags support the tracking of processing purposes by conveying the purposes along with the relevant elements of personally identifiable information throughout the system. By conveying the processing purposes in a data tag along with the person
+
+──────────────────────────────────────────────────
+
+CONTROL: PT-4 — Consent
+FAMILY: PT (Personally Identifiable Information Processing and Transparency)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Implement {{ insert: param, pt-04_odp }} for individuals to consent to the processing of their personally identifiable information prior to its collection that facilitate individuals’ informed decision-making. Consent allows individuals to participate in making decisions about the processing of their information and transfers some of the risk that arises from the processing of personally identifiable information from the organization to an individual. Consent may be required by applicable laws, executive orders, directives, regulations, policies, standards, or guidelines. Otherwise, when selec
+ENHANCEMENTS: PT-4.1: Tailored Consent — Provide {{ insert: param, pt-04.01_odp }} to allow individuals to tailor processing permissions to selected elements of personally identifiable information. While some processing may be necessary for the basic functionality of the product or service, other processing may not. In these circumstances, organizations allow individuals to select how specific personally identi
+
+──────────────────────────────────────────────────
+
+CONTROL: PT-5 — Privacy Notice
+FAMILY: PT (Personally Identifiable Information Processing and Transparency)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Provide notice to individuals about the processing of personally identifiable information that: Is available to individuals upon first interacting with an organization, and subsequently at {{ insert: param, pt-05_odp.01 }}; Is clear and easy-to-understand, expressing information about personally identifiable information processing in plain language; Identifies the authority that authorizes the processing of personally identifiable information; Identifies the purposes for which personally identifiable information is to be processed; and Includes {{ insert: param, pt-05_odp.02 }}. Privacy notice
+ENHANCEMENTS: PT-5.1: Just-in-time Notice — Present notice of personally identifiable information processing to individuals at a time and location where the individual provides personally identifiable information or in conjunction with a data action, or {{ insert: param, pt-05.01_odp }}. Just-in-time notices inform individuals of how organizations process their personally identifiable information at a time when
+
+──────────────────────────────────────────────────
+
+CONTROL: PT-6 — System of Records Notice
+FAMILY: PT (Personally Identifiable Information Processing and Transparency)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: For systems that process information that will be maintained in a Privacy Act system of records: Draft system of records notices in accordance with OMB guidance and submit new and significantly modified system of records notices to the OMB and appropriate congressional committees for advance review; Publish system of records notices in the Federal Register; and Keep system of records notices accurate, up-to-date, and scoped in accordance with policy. The [PRIVACT](#18e71fec-c6fd-475a-925a-5d8495cf8455) requires that federal agencies publish a system of records notice in the Federal Register up
+ENHANCEMENTS: PT-6.1: Routine Uses — Review all routine uses published in the system of records notice at {{ insert: param, pt-06.01_odp }} to ensure continued accuracy, and to ensure that routine uses continue to be compatible with the purpose for which the information was collected. A [PRIVACT](#18e71fec-c6fd-475a-925a-5d8495cf8455) routine use is a particular kind of disclosure of a record outside of the fed
+
+──────────────────────────────────────────────────
+
+CONTROL: PT-7 — Specific Categories of Personally Identifiable Information
+FAMILY: PT (Personally Identifiable Information Processing and Transparency)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Apply {{ insert: param, pt-07_odp }} for specific categories of personally identifiable information. Organizations apply any conditions or protections that may be necessary for specific categories of personally identifiable information. These conditions may be required by laws, executive orders, directives, regulations, policies, standards, or guidelines. The requirements may also come from the results of privacy risk assessments that factor in contextual changes that may result in an organizational determination that a particular category of personally identifiable information is particularly
+ENHANCEMENTS: PT-7.1: Social Security Numbers — When a system processes Social Security numbers: Eliminate unnecessary collection, maintenance, and use of Social Security numbers, and explore alternatives to their use as a personal identifier; Do not deny any individual any right, benefit, or privilege provided by law because of such individual’s refusal to disclose his or her Social Security number; and Inform
+
+──────────────────────────────────────────────────
+
+CONTROL: PT-8 — Computer Matching Requirements
+FAMILY: PT (Personally Identifiable Information Processing and Transparency)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: When a system or organization processes information for the purpose of conducting a matching program: Obtain approval from the Data Integrity Board to conduct the matching program; Develop and enter into a computer matching agreement; Publish a matching notice in the Federal Register; Independently verify the information produced by the matching program before taking adverse action against an individual, if required; and Provide individuals with notice and an opportunity to contest the findings before taking adverse action against an individual. The [PRIVACT](#18e71fec-c6fd-475a-925a-5d8495cf8
+
+──────────────────────────────────────────────────

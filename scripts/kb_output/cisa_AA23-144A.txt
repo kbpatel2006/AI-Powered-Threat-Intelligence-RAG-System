@@ -1,0 +1,77 @@
+SOURCE: CISA Advisory AA23-144A
+THREAT ACTOR: Volt Typhoon (PRC)
+DATE: 2023-05-24
+ADVISORY ID: AA23-144A
+======================================================================
+
+SECTION: Overview
+TITLE: Volt Typhoon — Overview
+ATT&CK TECHNIQUE IDs: N/A
+
+Volt Typhoon is a People's Republic of China (PRC) state-sponsored cyber actor active since at least mid-2021. The actor targets U.S. critical infrastructure including communications, energy, transportation, and water sectors. CISA, NSA, and FBI assess Volt Typhoon is pre-positioning on IT networks to enable lateral movement to OT assets to disrupt critical functions during geopolitical tensions or military conflict with the United States.
+
+──────────────────────────────────────────────────
+
+SECTION: TTPs — Living Off The Land
+TITLE: Volt Typhoon — Living Off The Land Techniques
+ATT&CK TECHNIQUE IDs: T1059, T1059.001, T1047
+
+Volt Typhoon relies almost exclusively on living-off-the-land (LotL) techniques and built-in Windows tools including wmic (T1047), ntdsutil, netsh, and PowerShell (T1059.001) to blend in with normal system activity. The actor minimizes custom malware use to avoid detection, using command-line interfaces to execute commands and scripts (T1059) and Windows Management Instrumentation for execution and discovery (T1047).
+
+──────────────────────────────────────────────────
+
+SECTION: TTPs — Initial Access
+TITLE: Volt Typhoon — Initial Access
+ATT&CK TECHNIQUE IDs: T1190, T1078
+
+Volt Typhoon gains initial access primarily by exploiting internet-facing network appliances: Fortinet FortiGuard, Ivanti Connect Secure, NETGEAR, Citrix, and Cisco RV320/325 routers. Techniques used include exploitation of public-facing applications (T1190) and use of valid accounts (T1078) obtained through credential access. The actor targets VPN infrastructure to establish footholds in victim networks.
+
+──────────────────────────────────────────────────
+
+SECTION: TTPs — Credential Access
+TITLE: Volt Typhoon — Credential Access
+ATT&CK TECHNIQUE IDs: T1003.001, T1555.003, T1078
+
+Volt Typhoon performs credential dumping using ntdsutil.exe for Active Directory credential extraction and comsvcs.dll to dump LSASS memory (T1003.001). The group also extracts credentials from web browsers (T1555.003) and leverages harvested credentials via valid accounts (T1078) to access additional systems without deploying further tooling.
+
+──────────────────────────────────────────────────
+
+SECTION: TTPs — C2
+TITLE: Volt Typhoon — Command and Control
+ATT&CK TECHNIQUE IDs: T1090.002, T1572
+
+Volt Typhoon routes C2 traffic through compromised SOHO network devices including NETGEAR, Cisco, and ASUS routers (T1090.002 — External Proxy). This blends malicious traffic with legitimate network activity and obscures the true source of intrusions. The group also uses the open-source FRP (Fast Reverse Proxy) tool to establish encrypted tunnels for C2 communication (T1572 — Protocol Tunneling).
+
+──────────────────────────────────────────────────
+
+SECTION: TTPs — Defense Evasion
+TITLE: Volt Typhoon — Defense Evasion
+ATT&CK TECHNIQUE IDs: T1070.004, T1036, T1090
+
+Volt Typhoon deletes command history and log files (T1070.004 — Indicator Removal on Host: File Deletion) and masquerades malicious processes as legitimate system processes (T1036). The actor uses proxy infrastructure through compromised devices to obfuscate network traffic (T1090) and deliberately maintains a low operational tempo — a 'low and slow' approach — to avoid triggering behavioral detection systems.
+
+──────────────────────────────────────────────────
+
+SECTION: TTPs — Discovery
+TITLE: Volt Typhoon — Discovery
+ATT&CK TECHNIQUE IDs: T1049, T1016, T1082, T1046
+
+Volt Typhoon conducts network and system discovery using built-in Windows tools: netstat for active network connections (T1049), ipconfig and net commands for network configuration (T1016), PowerShell Get-NetTCPConnection, and wmic and system utilities for process/system enumeration (T1082). The actor maps victim network topology before lateral movement and uses port scanning for network service discovery (T1046).
+
+──────────────────────────────────────────────────
+
+SECTION: Mitigations
+TITLE: Volt Typhoon — Mitigations
+ATT&CK TECHNIQUE IDs: T1190, T1078, T1003.001, T1090.002
+
+CISA recommended mitigations against Volt Typhoon: (1) Apply patches for internet-facing systems immediately, prioritizing network appliances and VPN. (2) Enforce multi-factor authentication on all remote access. (3) Audit and remove unnecessary accounts; enforce least privilege. (4) Monitor for unusual use of wmic, ntdsutil, netsh, and PowerShell outside maintenance windows. (5) Implement network segmentation between IT and OT. (6) Enable enhanced logging including PowerShell script block logging and Windows event logs. (7) Review and restrict outbound connections to SOHO device IP ranges.
+
+──────────────────────────────────────────────────
+
+SECTION: Affected Sectors
+TITLE: Volt Typhoon — Affected Sectors
+ATT&CK TECHNIQUE IDs: N/A
+
+Volt Typhoon has been confirmed targeting U.S. critical infrastructure: Communications, Energy (including electric utilities), Transportation Systems (maritime and aviation), Water and Wastewater Systems, and government facilities. The combination of LotL techniques and pre-positioning behavior indicates preparation for potential disruptive or destructive cyberattacks rather than traditional espionage.
+
+──────────────────────────────────────────────────

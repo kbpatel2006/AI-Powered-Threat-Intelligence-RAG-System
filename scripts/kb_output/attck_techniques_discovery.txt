@@ -1,0 +1,392 @@
+SOURCE: MITRE ATT&CK Enterprise — Tactic: Discovery
+FRAMEWORK: MITRE ATT&CK
+TACTIC: Discovery
+TECHNIQUE COUNT: 43
+======================================================================
+
+TECHNIQUE: System Owner/User Discovery
+TECHNIQUE ID: T1033
+TACTIC: Discovery
+PLATFORMS: Linux, macOS, Network Devices, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may attempt to identify the primary user, currently logged in user, set of users that commonly uses a system, or whether a user is actively using the system. They may do this, for example, by retrieving account usernames or by using [OS Credential Dumping](https://attack.mitre.org/techniques/T1003). The information may be collected in a number of different ways using other Discovery techniques, because user and username details are prevalent throughout a system and include running process ownership, file/directory ownership, session information, and system logs. Adversaries may use the information from [System Owner/User Discovery](https://attack.mitre.org/techniques/T1033) durin
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Container and Resource Discovery
+TECHNIQUE ID: T1613
+TACTIC: Discovery
+PLATFORMS: Containers
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may attempt to discover containers and other resources that are available within a containers environment. Other resources may include images, deployments, pods, nodes, and other information such as the status of a cluster. These resources can be viewed within web applications such as the Kubernetes dashboard or can be queried via the Docker and Kubernetes APIs. In Docker, logs may leak information about the environment, such as the environment’s configuration, which services are available, and what cloud provider the victim may be utilizing. The discovery of these resources may inform an adversary’s next steps in the environment, such as how to perform lateral movement and which
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Internet Connection Discovery
+TECHNIQUE ID: T1016.001
+TACTIC: Discovery
+PLATFORMS: Windows, Linux, macOS, ESXi
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may check for Internet connectivity on compromised systems. This may be performed during automated discovery and can be accomplished in numerous ways such as using [Ping](https://attack.mitre.org/software/S0097), <code>tracert</code>, and GET requests to websites, or performing initial speed testing to confirm bandwidth. Adversaries may use the results and responses from these requests to determine if the system is capable of communicating with their C2 servers before attempting to connect to them. The results may also be used to identify routes, redirectors, and proxy servers.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Permission Groups Discovery
+TECHNIQUE ID: T1069
+TACTIC: Discovery
+PLATFORMS: Containers, IaaS, Identity Provider, Linux, macOS, Office Suite, SaaS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may attempt to discover group and permission settings. This information can help adversaries determine which user accounts and groups are available, the membership of users in particular groups, and which users and groups have elevated permissions. Adversaries may attempt to discover group permission settings in many different ways. This data may provide the adversary with information about the compromised environment that can be used in follow-on activity and targeting.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Cloud Groups
+TECHNIQUE ID: T1069.003
+TACTIC: Discovery
+PLATFORMS: SaaS, IaaS, Office Suite, Identity Provider
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may attempt to find cloud groups and permission settings. The knowledge of cloud permission groups can help adversaries determine the particular roles of users and groups within an environment, as well as which users are associated with a particular group. With authenticated access there are several tools that can be used to find permissions groups. The <code>Get-MsolRole</code> PowerShell cmdlet can be used to obtain roles and permissions groups for Exchange and Office 365 accounts . Azure CLI (AZ CLI) and the Google Cloud Identity Provider API also provide interfaces to obtain permissions groups. The command <code>az ad user get-member-groups</code> will list groups associated 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Group Policy Discovery
+TECHNIQUE ID: T1615
+TACTIC: Discovery
+PLATFORMS: Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may gather information on Group Policy settings to identify paths for privilege escalation, security measures applied within a domain, and to discover patterns in domain objects that can be manipulated or used to blend in the environment. Group Policy allows for centralized management of user and computer settings in Active Directory (AD). Group policy objects (GPOs) are containers for group policy settings made up of files stored within a predictable network path `\<DOMAIN>\SYSVOL\<DOMAIN>\Policies\`. Adversaries may use commands such as <code>gpresult</code> or various publicly available PowerShell functions, such as <code>Get-DomainGPO</code> and <code>Get-DomainGPOLocalGroup<
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Device Driver Discovery
+TECHNIQUE ID: T1652
+TACTIC: Discovery
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may attempt to enumerate local device drivers on a victim host. Information about device drivers may highlight various insights that shape follow-on behaviors, such as the function/purpose of the host, present security tools (i.e. [Security Software Discovery](https://attack.mitre.org/techniques/T1518/001)) or other defenses (e.g., [Virtualization/Sandbox Evasion](https://attack.mitre.org/techniques/T1497)), as well as potential exploitable vulnerabilities (e.g., [Exploitation for Privilege Escalation](https://attack.mitre.org/techniques/T1068)). Many OS utilities may provide information about local device drivers, such as `driverquery.exe` and the `EnumDeviceDrivers()` API funct
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Domain Account
+TECHNIQUE ID: T1087.002
+TACTIC: Discovery
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may attempt to get a listing of domain accounts. This information can help adversaries determine which domain accounts exist to aid in follow-on behavior such as targeting specific accounts which possess particular privileges. Commands such as <code>net user /domain</code> and <code>net group /domain</code> of the [Net](https://attack.mitre.org/software/S0039) utility, <code>dscacheutil -q group</code> on macOS, and <code>ldapsearch</code> on Linux can list domain users and groups. [PowerShell](https://attack.mitre.org/techniques/T1059/001) cmdlets including <code>Get-ADUser</code> and <code>Get-ADGroupMember</code> may enumerate members of Active Directory groups.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Local Account
+TECHNIQUE ID: T1087.001
+TACTIC: Discovery
+PLATFORMS: ESXi, Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may attempt to get a listing of local system accounts. This information can help adversaries determine which local accounts exist on a system to aid in follow-on behavior. Commands such as <code>net user</code> and <code>net localgroup</code> of the [Net](https://attack.mitre.org/software/S0039) utility and <code>id</code> and <code>groups</code> on macOS and Linux can list local users and groups. On Linux, local users can also be enumerated through the use of the <code>/etc/passwd</code> file. On macOS, the <code>dscl . list /Users</code> command can be used to enumerate local accounts. On ESXi servers, the `esxcli system account list` command can list local user accounts.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Domain Groups
+TECHNIQUE ID: T1069.002
+TACTIC: Discovery
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may attempt to find domain-level groups and permission settings. The knowledge of domain-level permission groups can help adversaries determine which groups exist and which users belong to a particular group. Adversaries may use this information to determine which users have elevated permissions, such as domain administrators. Commands such as <code>net group /domain</code> of the [Net](https://attack.mitre.org/software/S0039) utility, <code>dscacheutil -q group</code> on macOS, and <code>ldapsearch</code> on Linux can list domain-level groups.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: System Service Discovery
+TECHNIQUE ID: T1007
+TACTIC: Discovery
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may try to gather information about registered local system services. Adversaries may obtain information about services using tools as well as OS utility commands such as <code>sc query</code>, <code>tasklist /svc</code>, <code>systemctl --type=service</code>, and <code>net start</code>. Adversaries may also gather information about schedule tasks via commands such as `schtasks` on Windows or `crontab -l` on Linux and macOS. Adversaries may use the information from [System Service Discovery](https://attack.mitre.org/techniques/T1007) during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific ac
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Network Share Discovery
+TECHNIQUE ID: T1135
+TACTIC: Discovery
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may look for folders and drives shared on remote systems as a means of identifying sources of information to gather as a precursor for Collection and to identify potential systems of interest for Lateral Movement. Networks often contain shared network drives and folders that enable users to access file directories on various systems across a network. File sharing over a Windows network occurs over the SMB protocol. [Net](https://attack.mitre.org/software/S0039) can be used to query a remote system for available shared drives using the <code>net view \\\\remotesystem</code> command. It can also be used to query shared drives on the local system using <code>net share</code>. For ma
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Peripheral Device Discovery
+TECHNIQUE ID: T1120
+TACTIC: Discovery
+PLATFORMS: Linux, Windows, macOS
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may attempt to gather information about attached peripheral devices and components connected to a computer system. Peripheral devices could include auxiliary resources that support a variety of functionalities such as keyboards, printers, cameras, smart card readers, or removable storage. The information may be used to enhance their awareness of the system and network environment or may be used for further actions.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: System Information Discovery
+TECHNIQUE ID: T1082
+TACTIC: Discovery
+PLATFORMS: ESXi, IaaS, Linux, macOS, Network Devices, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: An adversary may attempt to get detailed information about the operating system and hardware, including version, patches, hotfixes, service packs, and architecture. Adversaries may use this information to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions. This behavior is distinct from [Local Storage Discovery](https://attack.mitre.org/techniques/T1680) which is an adversary's discovery of local drive, disks and/or volumes. Tools such as [Systeminfo](https://attack.mitre.org/software/S0096) can be used to gather detailed system information. If running with privileged access, a breakdown of system data can be gathered t
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Wi-Fi Discovery
+TECHNIQUE ID: T1016.002
+TACTIC: Discovery
+PLATFORMS: Linux, Windows, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may search for information about Wi-Fi networks, such as network names and passwords, on compromised systems. Adversaries may use Wi-Fi information as part of [Account Discovery](https://attack.mitre.org/techniques/T1087), [Remote System Discovery](https://attack.mitre.org/techniques/T1018), and other discovery or [Credential Access](https://attack.mitre.org/tactics/TA0006) activity to support both ongoing and future campaigns. Adversaries may collect various types of information about Wi-Fi networks from hosts. For example, on Windows names and passwords of all Wi-Fi networks a device has previously connected to may be available through `netsh wlan show profiles` to enumerate Wi
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Backup Software Discovery
+TECHNIQUE ID: T1518.002
+TACTIC: Discovery
+PLATFORMS: Windows, macOS, Linux
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may attempt to get a listing of backup software or configurations that are installed on a system. Adversaries may use this information to shape follow-on behaviors, such as [Data Destruction](https://attack.mitre.org/techniques/T1485), [Inhibit System Recovery](https://attack.mitre.org/techniques/T1490), or [Data Encrypted for Impact](https://attack.mitre.org/techniques/T1486). Commands that can be used to obtain security software information are [netsh](https://attack.mitre.org/software/S0108), `reg query` with [Reg](https://attack.mitre.org/software/S0075), `dir` with [cmd](https://attack.mitre.org/software/S0106), and [Tasklist](https://attack.mitre.org/software/S0057), but ot
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Application Window Discovery
+TECHNIQUE ID: T1010
+TACTIC: Discovery
+PLATFORMS: Linux, Windows, macOS
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may attempt to get a listing of open application windows. Window listings could convey information about how the system is used. For example, information about application windows could be used identify potential data to collect as well as identifying security tooling ([Security Software Discovery](https://attack.mitre.org/techniques/T1518/001)) to evade. Adversaries typically abuse system features for this type of enumeration. For example, they may gather information through native system features such as [Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059) commands and [Native API](https://attack.mitre.org/techniques/T1106) functions.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Email Account
+TECHNIQUE ID: T1087.003
+TACTIC: Discovery
+PLATFORMS: Windows, Office Suite
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may attempt to get a listing of email addresses and accounts. Adversaries may try to dump Exchange address lists such as global address lists (GALs). In on-premises Exchange and Exchange Online, the <code>Get-GlobalAddressList</code> PowerShell cmdlet can be used to obtain email addresses and accounts from a domain using an authenticated session. In Google Workspace, the GAL is shared with Microsoft Outlook users through the Google Workspace Sync for Microsoft Outlook (GWSMO) service. Additionally, the Google Workspace Directory allows for users to get a listing of other users within the organization.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Cloud Infrastructure Discovery
+TECHNIQUE ID: T1580
+TACTIC: Discovery
+PLATFORMS: IaaS
+SUB-TECHNIQUE: No
+DESCRIPTION: An adversary may attempt to discover infrastructure and resources that are available within an infrastructure-as-a-service (IaaS) environment. This includes compute service resources such as instances, virtual machines, and snapshots as well as resources of other services including the storage and database services. Cloud providers offer methods such as APIs and commands issued through CLIs to serve information about infrastructure. For example, AWS provides a <code>DescribeInstances</code> API within the Amazon EC2 API that can return information about one or more instances within an account, the <code>ListBuckets</code> API that returns a list of all buckets owned by the authenticated send
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Browser Information Discovery
+TECHNIQUE ID: T1217
+TACTIC: Discovery
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may enumerate information about browsers to learn more about compromised environments. Data saved by browsers (such as bookmarks, accounts, and browsing history) may reveal a variety of personal information about users (e.g., banking sites, relationships/interests, social media, etc.) as well as details about internal network resources such as servers, tools/dashboards, or other related infrastructure. Browser information may also highlight additional targets after an adversary has access to valid credentials, especially [Credentials In Files](https://attack.mitre.org/techniques/T1552/001) associated with logins cached by a browser. Specific storage locations vary based on platfo
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Virtual Machine Discovery
+TECHNIQUE ID: T1673
+TACTIC: Discovery
+PLATFORMS: ESXi, Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: An adversary may attempt to enumerate running virtual machines (VMs) after gaining access to a host or hypervisor. For example, adversaries may enumerate a list of VMs on an ESXi hypervisor using a [Hypervisor CLI](https://attack.mitre.org/techniques/T1059/012) such as `esxcli` or `vim-cmd` (e.g. `esxcli vm process list or vim-cmd vmsvc/getallvms`). Adversaries may also directly leverage a graphical user interface, such as VMware vCenter, in order to view virtual machines on a host. Adversaries may use the information from [Virtual Machine Discovery](https://attack.mitre.org/techniques/T1673) during discovery to shape follow-on behaviors. Subsequently discovered VMs may be leveraged for foll
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: System Network Configuration Discovery
+TECHNIQUE ID: T1016
+TACTIC: Discovery
+PLATFORMS: ESXi, Linux, macOS, Network Devices, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may look for details about the network configuration and settings, such as IP and/or MAC addresses, of systems they access or through information discovery of remote systems. Several operating system administration utilities exist that can be used to gather this information. Examples include [Arp](https://attack.mitre.org/software/S0099), [ipconfig](https://attack.mitre.org/software/S0100)/[ifconfig](https://attack.mitre.org/software/S0101), [nbtstat](https://attack.mitre.org/software/S0102), and [route](https://attack.mitre.org/software/S0103). Adversaries may also leverage a [Network Device CLI](https://attack.mitre.org/techniques/T1059/008) on network devices to gather informa
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Account Discovery
+TECHNIQUE ID: T1087
+TACTIC: Discovery
+PLATFORMS: ESXi, IaaS, Identity Provider, Linux, macOS, Office Suite, SaaS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may attempt to get a listing of valid accounts, usernames, or email addresses on a system or within a compromised environment. This information can help adversaries determine which accounts exist, which can aid in follow-on behavior such as brute-forcing, spear-phishing attacks, or account takeovers (e.g., [Valid Accounts](https://attack.mitre.org/techniques/T1078)). Adversaries may use several methods to enumerate accounts, including abuse of existing tools, built-in commands, and potential misconfigurations that leak account names and roles or permissions in the targeted environment. For examples, cloud environments typically provide easily accessible interfaces to obtain user 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Domain Trust Discovery
+TECHNIQUE ID: T1482
+TACTIC: Discovery
+PLATFORMS: Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may attempt to gather information on domain trust relationships that may be used to identify lateral movement opportunities in Windows multi-domain/forest environments. Domain trusts provide a mechanism for a domain to allow access to resources based on the authentication procedures of another domain. Domain trusts allow the users of the trusted domain to access resources in the trusting domain. The information discovered may help the adversary conduct [SID-History Injection](https://attack.mitre.org/techniques/T1134/005), [Pass the Ticket](https://attack.mitre.org/techniques/T1550/003), and [Kerberoasting](https://attack.mitre.org/techniques/T1558/003). Domain trusts can be enum
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: File and Directory Discovery
+TECHNIQUE ID: T1083
+TACTIC: Discovery
+PLATFORMS: ESXi, Linux, macOS, Network Devices, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may enumerate files and directories or may search in specific locations of a host or network share for certain information within a file system. Adversaries may use the information from [File and Directory Discovery](https://attack.mitre.org/techniques/T1083) during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions. Many command shell utilities can be used to obtain this information. Examples include <code>dir</code>, <code>tree</code>, <code>ls</code>, <code>find</code>, and <code>locate</code>. Custom tools may also be used to gather file and directory information and interact with 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: System Network Connections Discovery
+TECHNIQUE ID: T1049
+TACTIC: Discovery
+PLATFORMS: Windows, IaaS, Linux, macOS, Network Devices, ESXi
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may attempt to get a listing of network connections to or from the compromised system they are currently accessing or from remote systems by querying for information over the network. An adversary who gains access to a system that is part of a cloud-based environment may map out Virtual Private Clouds or Virtual Networks in order to determine what systems and services are connected. The actions performed are likely the same types of discovery techniques depending on the operating system, but the resulting information may include details about the networked cloud environment relevant to the adversary's goals. Cloud providers may have different ways in which their virtual networks 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Cloud Storage Object Discovery
+TECHNIQUE ID: T1619
+TACTIC: Discovery
+PLATFORMS: IaaS
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may enumerate objects in cloud storage infrastructure. Adversaries may use this information during automated discovery to shape follow-on behaviors, including requesting all or specific objects from cloud storage. Similar to [File and Directory Discovery](https://attack.mitre.org/techniques/T1083) on a local host, after identifying available storage services (i.e. [Cloud Infrastructure Discovery](https://attack.mitre.org/techniques/T1580)) adversaries may access the contents/objects stored in cloud infrastructure. Cloud service providers offer APIs allowing users to enumerate objects stored within cloud storage. Examples include ListObjectsV2 in AWS and List Blobs in Azure .
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Log Enumeration
+TECHNIQUE ID: T1654
+TACTIC: Discovery
+PLATFORMS: ESXi, IaaS, Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may enumerate system and service logs to find useful data. These logs may highlight various types of valuable insights for an adversary, such as user authentication records ([Account Discovery](https://attack.mitre.org/techniques/T1087)), security or vulnerable software ([Software Discovery](https://attack.mitre.org/techniques/T1518)), or hosts within a compromised network ([Remote System Discovery](https://attack.mitre.org/techniques/T1018)). Host binaries may be leveraged to collect system logs. Examples include using `wevtutil.exe` or [PowerShell](https://attack.mitre.org/techniques/T1059/001) on Windows to access and/or export security event information. In cloud environments
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Cloud Account
+TECHNIQUE ID: T1087.004
+TACTIC: Discovery
+PLATFORMS: IaaS, Identity Provider, Office Suite, SaaS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may attempt to get a listing of cloud accounts. Cloud accounts are those created and configured by an organization for use by users, remote support, services, or for administration of resources within a cloud service provider or SaaS application. With authenticated access there are several tools that can be used to find accounts. The <code>Get-MsolRoleMember</code> PowerShell cmdlet can be used to obtain account names given a role or permissions group in Office 365. The Azure CLI (AZ CLI) also provides an interface to obtain user accounts with authenticated access to a domain. The command <code>az ad user list</code> will list all users within a domain. The AWS command <code>aws 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Process Discovery
+TECHNIQUE ID: T1057
+TACTIC: Discovery
+PLATFORMS: ESXi, Linux, macOS, Network Devices, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may attempt to get information about running processes on a system. Information obtained could be used to gain an understanding of common software/applications running on systems within the network. Administrator or otherwise elevated access may provide better process details. Adversaries may use the information from [Process Discovery](https://attack.mitre.org/techniques/T1057) during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions. In Windows environments, adversaries could obtain details on running processes using the [Tasklist](https://attack.mitre.org/software/S0057) utility vi
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Local Groups
+TECHNIQUE ID: T1069.001
+TACTIC: Discovery
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may attempt to find local system groups and permission settings. The knowledge of local system permission groups can help adversaries determine which groups exist and which users belong to a particular group. Adversaries may use this information to determine which users have elevated permissions, such as the users found within the local administrators group. Commands such as <code>net localgroup</code> of the [Net](https://attack.mitre.org/software/S0039) utility, <code>dscl . -list /Groups</code> on macOS, and <code>groups</code> on Linux can list local groups.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Password Policy Discovery
+TECHNIQUE ID: T1201
+TACTIC: Discovery
+PLATFORMS: Windows, Linux, macOS, IaaS, Network Devices, Identity Provider, SaaS, Office Suite
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may attempt to access detailed information about the password policy used within an enterprise network or cloud environment. Password policies are a way to enforce complex passwords that are difficult to guess or crack through [Brute Force](https://attack.mitre.org/techniques/T1110). This information may help the adversary to create a list of common passwords and launch dictionary and/or brute force attacks which adheres to the policy (e.g. if the minimum password length should be 8, then not trying passwords such as 'pass123'; not checking for more than 3-4 passwords per account if the lockout is set to 6 as to not lock out accounts). Password policies can be set and discovered 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: System Language Discovery
+TECHNIQUE ID: T1614.001
+TACTIC: Discovery
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may attempt to gather information about the system language of a victim in order to infer the geographical location of that host. This information may be used to shape follow-on behaviors, including whether the adversary infects the target and/or attempts specific actions. This decision may be employed by malware developers and operators to reduce their risk of attracting the attention of specific law enforcement agencies or prosecution/scrutiny from other entities. There are various sources of data an adversary could use to infer system language, such as system defaults and keyboard layouts. Specific checks will vary based on the target and/or adversary, but may involve behavior
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Query Registry
+TECHNIQUE ID: T1012
+TACTIC: Discovery
+PLATFORMS: Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may interact with the Windows Registry to gather information about the system, configuration, and installed software. The Registry contains a significant amount of information about the operating system, configuration, software, and security. Information can easily be queried using the [Reg](https://attack.mitre.org/software/S0075) utility, though other means to access the Registry exist. Some of the information may help adversaries to further their operation within a network. Adversaries may use the information from [Query Registry](https://attack.mitre.org/techniques/T1012) during automated discovery to shape follow-on behaviors, including whether or not the adversary fully inf
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: System Location Discovery
+TECHNIQUE ID: T1614
+TACTIC: Discovery
+PLATFORMS: IaaS, Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may gather information in an attempt to calculate the geographical location of a victim host. Adversaries may use the information from [System Location Discovery](https://attack.mitre.org/techniques/T1614) during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions. Adversaries may attempt to infer the location of a system using various system checks, such as time zone, keyboard layout, and/or language settings. Windows API functions such as <code>GetLocaleInfoW</code> can also be used to determine the locale of the host. In cloud environments, an instance's availability zone may also be
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Security Software Discovery
+TECHNIQUE ID: T1518.001
+TACTIC: Discovery
+PLATFORMS: IaaS, Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may attempt to get a listing of security software, configurations, defensive tools, and sensors that are installed on a system or in a cloud environment. This may include things such as cloud monitoring agents and anti-virus. Adversaries may use the information from [Security Software Discovery](https://attack.mitre.org/techniques/T1518/001) during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions. Example commands that can be used to obtain security software information are [netsh](https://attack.mitre.org/software/S0108), <code>reg query</code> with [Reg](https://attack.mitre.org/so
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Cloud Service Discovery
+TECHNIQUE ID: T1526
+TACTIC: Discovery
+PLATFORMS: IaaS, Identity Provider, Office Suite, SaaS
+SUB-TECHNIQUE: No
+DESCRIPTION: An adversary may attempt to enumerate the cloud services running on a system after gaining access. These methods can differ from platform-as-a-service (PaaS), to infrastructure-as-a-service (IaaS), or software-as-a-service (SaaS). Many services exist throughout the various cloud providers and can include Continuous Integration and Continuous Delivery (CI/CD), Lambda Functions, Entra ID, etc. They may also include security services, such as AWS GuardDuty and Microsoft Defender for Cloud, and logging services, such as AWS CloudTrail and Google Cloud Audit Logs. Adversaries may attempt to discover information about the services enabled throughout the environment. Azure tools and APIs, such as t
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Remote System Discovery
+TECHNIQUE ID: T1018
+TACTIC: Discovery
+PLATFORMS: ESXi, Linux, macOS, Network Devices, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may attempt to get a listing of other systems by IP address, hostname, or other logical identifier on a network that may be used for Lateral Movement from the current system. Functionality could exist within remote access tools to enable this, but utilities available on the operating system could also be used such as [Ping](https://attack.mitre.org/software/S0097), <code>net view</code> using [Net](https://attack.mitre.org/software/S0039), or, on ESXi servers, `esxcli network diag ping`. Adversaries may also analyze data from local host files (ex: <code>C:\Windows\System32\Drivers\etc\hosts</code> or <code>/etc/hosts</code>) or other passive means (such as local [Arp](https://att
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Network Service Discovery
+TECHNIQUE ID: T1046
+TACTIC: Discovery
+PLATFORMS: Containers, IaaS, Linux, macOS, Network Devices, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may attempt to get a listing of services running on remote hosts and local network infrastructure devices, including those that may be vulnerable to remote software exploitation. Common methods to acquire this information include port, vulnerability, and/or wordlist scans using tools that are brought onto a system. Within cloud environments, adversaries may attempt to discover services running on other cloud hosts. Additionally, if the cloud environment is connected to a on-premises environment, adversaries may be able to identify services running on non-cloud systems as well. Within macOS environments, adversaries may use the native Bonjour application to discover services runni
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Software Discovery
+TECHNIQUE ID: T1518
+TACTIC: Discovery
+PLATFORMS: ESXi, IaaS, Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may attempt to get a listing of software and software versions that are installed on a system or in a cloud environment. Adversaries may use the information from [Software Discovery](https://attack.mitre.org/techniques/T1518) during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions. Such software may be deployed widely across the environment for configuration management or security reasons, such as [Software Deployment Tools](https://attack.mitre.org/techniques/T1072), and may allow adversaries broad access to infect devices or move laterally. Adversaries may attempt to enumerate soft
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Cloud Service Dashboard
+TECHNIQUE ID: T1538
+TACTIC: Discovery
+PLATFORMS: IaaS, SaaS, Office Suite, Identity Provider
+SUB-TECHNIQUE: No
+DESCRIPTION: An adversary may use a cloud service dashboard GUI with stolen credentials to gain useful information from an operational cloud environment, such as specific services, resources, and features. For example, the GCP Command Center can be used to view all assets, review findings of potential security risks, and run additional queries, such as finding public IP addresses and open ports. Depending on the configuration of the environment, an adversary may be able to enumerate more information via the graphical dashboard than an API. This also allows the adversary to gain information without manually making any API requests.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Local Storage Discovery
+TECHNIQUE ID: T1680
+TACTIC: Discovery
+PLATFORMS: ESXi, IaaS, Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may enumerate local drives, disks, and/or volumes and their attributes like total or free space and volume serial number. This can be done to prepare for ransomware-related encryption, to perform [Lateral Movement](https://attack.mitre.org/tactics/TA0109), or as a precursor to [Direct Volume Access](https://attack.mitre.org/techniques/T1006). On ESXi systems, adversaries may use [Hypervisor CLI](https://attack.mitre.org/techniques/T1059/012) commands such as `esxcli` to list storage connected to the host as well as `.vmdk` files. On Windows systems, adversaries can use `wmic logicaldisk get` to find information about local network drives. They can also use `Get-PSDrive` in PowerS
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: System Time Discovery
+TECHNIQUE ID: T1124
+TACTIC: Discovery
+PLATFORMS: ESXi, Linux, macOS, Network Devices, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: An adversary may gather the system time and/or time zone settings from a local or remote system. The system time is set and stored by services, such as the Windows Time Service on Windows or <code>systemsetup</code> on macOS. These time settings may also be synchronized between systems and services in an enterprise network, typically accomplished with a network time server within a domain. System time information may be gathered in a number of ways, such as with [Net](https://attack.mitre.org/software/S0039) on Windows by performing <code>net time \\hostname</code> to gather the system time on a remote system. The victim's time zone may also be inferred from the current system time or gather
+
+──────────────────────────────────────────────────

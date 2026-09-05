@@ -1,0 +1,178 @@
+SOURCE: NIST SP 800-53 rev5 — Control Family SI
+FRAMEWORK: NIST SP 800-53 rev5
+CONTROL FAMILY: SI — System and Information Integrity
+CONTROL COUNT: 23
+======================================================================
+
+CONTROL: SI-1 — Policy and Procedures
+FAMILY: SI (System and Information Integrity)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop, document, and disseminate to {{ insert: param, si-1_prm_1 }}: {{ insert: param, si-01_odp.03 }} system and information integrity policy that: Addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and Is consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines; and Procedures to facilitate the implementation of the system and information integrity policy and the associated system and information integrity controls; Designate an {{ insert: param, si-01_o
+
+──────────────────────────────────────────────────
+
+CONTROL: SI-2 — Flaw Remediation
+FAMILY: SI (System and Information Integrity)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Identify, report, and correct system flaws; Test software and firmware updates related to flaw remediation for effectiveness and potential side effects before installation; Install security-relevant software and firmware updates within {{ insert: param, si-02_odp }} of the release of the updates; and Incorporate flaw remediation into the organizational configuration management process. The need to remediate system flaws applies to all types of software and firmware. Organizations identify systems affected by software flaws, including potential vulnerabilities resulting from those flaws, and re
+ENHANCEMENTS: SI-2.1: Central Management —  | SI-2.2: Automated Flaw Remediation Status — Determine if system components have applicable security-relevant software and firmware updates installed using {{ insert: param, si-02.02_odp.01 }} {{ insert: param, si-02.02_odp.02 }}. Automated mechanisms can track and determine the status of known flaws for system components. system components have applicable security-r
+
+──────────────────────────────────────────────────
+
+CONTROL: SI-3 — Malicious Code Protection
+FAMILY: SI (System and Information Integrity)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Implement {{ insert: param, si-03_odp.01 }} malicious code protection mechanisms at system entry and exit points to detect and eradicate malicious code; Automatically update malicious code protection mechanisms as new releases are available in accordance with organizational configuration management policy and procedures; Configure malicious code protection mechanisms to: Perform periodic scans of the system {{ insert: param, si-03_odp.02 }} and real-time scans of files from external sources at {{ insert: param, si-03_odp.03 }} as the files are downloaded, opened, or executed in accordance with
+ENHANCEMENTS: SI-3.1: Central Management —  | SI-3.2: Automatic Updates —  | SI-3.3: Non-privileged Users —  | SI-3.4: Updates Only by Privileged Users — Update malicious code protection mechanisms only when directed by a privileged user. Protection mechanisms for malicious code are typically categorized as security-related software and, as such, are only updated by organizational personnel with appropriate acc
+
+──────────────────────────────────────────────────
+
+CONTROL: SI-4 — System Monitoring
+FAMILY: SI (System and Information Integrity)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Monitor the system to detect: Attacks and indicators of potential attacks in accordance with the following monitoring objectives: {{ insert: param, si-04_odp.01 }} ; and Unauthorized local, network, and remote connections; Identify unauthorized use of the system through the following techniques and methods: {{ insert: param, si-04_odp.02 }}; Invoke internal monitoring capabilities or deploy monitoring devices: Strategically within the system to collect organization-determined essential information; and At ad hoc locations within the system to track specific types of transactions of interest to
+ENHANCEMENTS: SI-4.1: System-wide Intrusion Detection System — Connect and configure individual intrusion detection tools into a system-wide intrusion detection system. Linking individual intrusion detection tools into a system-wide intrusion detection system provides additional coverage and effective detection capabilities. The information contained in one intrusion detection tool can be shared widely across t
+
+──────────────────────────────────────────────────
+
+CONTROL: SI-5 — Security Alerts, Advisories, and Directives
+FAMILY: SI (System and Information Integrity)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Receive system security alerts, advisories, and directives from {{ insert: param, si-05_odp.01 }} on an ongoing basis; Generate internal security alerts, advisories, and directives as deemed necessary; Disseminate security alerts, advisories, and directives to: {{ insert: param, si-05_odp.02 }} ; and Implement security directives in accordance with established time frames, or notify the issuing organization of the degree of noncompliance. The Cybersecurity and Infrastructure Security Agency (CISA) generates security alerts and advisories to maintain situational awareness throughout the Federal
+ENHANCEMENTS: SI-5.1: Automated Alerts and Advisories — Broadcast security alert and advisory information throughout the organization using {{ insert: param, si-05.01_odp }}. The significant number of changes to organizational systems and environments of operation requires the dissemination of security-related information to a variety of organizational entities that have a direct interest in the success of orga
+
+──────────────────────────────────────────────────
+
+CONTROL: SI-6 — Security and Privacy Function Verification
+FAMILY: SI (System and Information Integrity)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Verify the correct operation of {{ insert: param, si-6_prm_1 }}; Perform the verification of the functions specified in SI-6a {{ insert: param, si-06_odp.03 }}; Alert {{ insert: param, si-06_odp.06 }} to failed security and privacy verification tests; and {{ insert: param, si-06_odp.07 }} when anomalies are discovered. Transitional states for systems include system startup, restart, shutdown, and abort. System notifications include hardware indicator lights, electronic alerts to system administrators, and messages to local computer consoles. In contrast to security function verification, priva
+ENHANCEMENTS: SI-6.1: Notification of Failed Security Tests —  | SI-6.2: Automation Support for Distributed Testing — Implement automated mechanisms to support the management of distributed security and privacy function testing. The use of automated mechanisms to support the management of distributed function testing helps to ensure the integrity, timeliness, completeness, and efficacy of such testing. automate
+
+──────────────────────────────────────────────────
+
+CONTROL: SI-7 — Software, Firmware, and Information Integrity
+FAMILY: SI (System and Information Integrity)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Employ integrity verification tools to detect unauthorized changes to the following software, firmware, and information: {{ insert: param, si-7_prm_1 }} ; and Take the following actions when unauthorized changes to the software, firmware, and information are detected: {{ insert: param, si-7_prm_2 }}. Unauthorized changes to software, firmware, and information can occur due to errors or malicious activity. Software includes operating systems (with key internal components, such as kernels or drivers), middleware, and applications. Firmware interfaces include Unified Extensible Firmware Interface
+ENHANCEMENTS: SI-7.1: Integrity Checks — Perform an integrity check of {{ insert: param, si-7.1_prm_1 }} {{ insert: param, si-7.1_prm_2 }}. Security-relevant events include the identification of new threats to which organizational systems are susceptible and the installation of new hardware, software, or firmware. Transitional states include system startup, restart, shutdown, and abort. an integrity check of {{
+
+──────────────────────────────────────────────────
+
+CONTROL: SI-8 — Spam Protection
+FAMILY: SI (System and Information Integrity)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Employ spam protection mechanisms at system entry and exit points to detect and act on unsolicited messages; and Update spam protection mechanisms when new releases are available in accordance with organizational configuration management policy and procedures. System entry and exit points include firewalls, remote-access servers, electronic mail servers, web servers, proxy servers, workstations, notebook computers, and mobile devices. Spam can be transported by different means, including email, email attachments, and web accesses. Spam protection mechanisms include signature definitions. spam 
+ENHANCEMENTS: SI-8.1: Central Management —  | SI-8.2: Automatic Updates — Automatically update spam protection mechanisms {{ insert: param, si-08.02_odp }}. Using automated mechanisms to update spam protection mechanisms helps to ensure that updates occur on a regular basis and provide the latest content and protection capabilities. spam protection mechanisms are automatically updated {{ insert: param, si-08.02
+
+──────────────────────────────────────────────────
+
+CONTROL: SI-9 — Information Input Restrictions
+FAMILY: SI (System and Information Integrity)
+FRAMEWORK: NIST SP 800-53 rev5
+
+──────────────────────────────────────────────────
+
+CONTROL: SI-10 — Information Input Validation
+FAMILY: SI (System and Information Integrity)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Check the validity of the following information inputs: {{ insert: param, si-10_odp }}. Checking the valid syntax and semantics of system inputs—including character set, length, numerical range, and acceptable values—verifies that inputs match specified definitions for format and content. For example, if the organization specifies that numerical values between 1-100 are the only acceptable inputs for a field in a given application, inputs of "387," "abc," or "%K%" are invalid inputs and are not accepted as input to the system. Valid inputs are likely to vary from field to field within a softwa
+ENHANCEMENTS: SI-10.1: Manual Override Capability — Provide a manual override capability for input validation of the following information inputs: {{ insert: param, si-10_odp }}; Restrict the use of the manual override capability to only {{ insert: param, si-10.01_odp }} ; and Audit the use of the manual override capability. In certain situations, such as during events that are defined in contingency plans, a m
+
+──────────────────────────────────────────────────
+
+CONTROL: SI-11 — Error Handling
+FAMILY: SI (System and Information Integrity)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Generate error messages that provide information necessary for corrective actions without revealing information that could be exploited; and Reveal error messages only to {{ insert: param, si-11_odp }}. Organizations consider the structure and content of error messages. The extent to which systems can handle error conditions is guided and informed by organizational policy and operational requirements. Exploitable information includes stack traces and implementation details; erroneous logon attempts with passwords mistakenly entered as the username; mission or business information that can be d
+
+──────────────────────────────────────────────────
+
+CONTROL: SI-12 — Information Management and Retention
+FAMILY: SI (System and Information Integrity)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Manage and retain information within the system and information output from the system in accordance with applicable laws, executive orders, directives, regulations, policies, standards, guidelines and operational requirements. Information management and retention requirements cover the full life cycle of information, in some cases extending beyond system disposal. Information to be retained may also include policies, procedures, plans, reports, data output from control implementation, and other types of administrative information. The National Archives and Records Administration (NARA) provid
+ENHANCEMENTS: SI-12.1: Limit Personally Identifiable Information Elements — Limit personally identifiable information being processed in the information life cycle to the following elements of personally identifiable information: {{ insert: param, si-12.01_odp }}. Limiting the use of personally identifiable information throughout the information life cycle when the information is not needed for operational purp
+
+──────────────────────────────────────────────────
+
+CONTROL: SI-13 — Predictable Failure Prevention
+FAMILY: SI (System and Information Integrity)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Determine mean time to failure (MTTF) for the following system components in specific environments of operation: {{ insert: param, si-13_odp.01 }} ; and Provide substitute system components and a means to exchange active and standby components in accordance with the following criteria: {{ insert: param, si-13_odp.02 }}. While MTTF is primarily a reliability issue, predictable failure prevention is intended to address potential failures of system components that provide security capabilities. Failure rates reflect installation-specific consideration rather than the industry-average. Organizatio
+ENHANCEMENTS: SI-13.1: Transferring Component Responsibilities — Take system components out of service by transferring component responsibilities to substitute components no later than {{ insert: param, si-13.01_odp }} of mean time to failure. Transferring primary system component responsibilities to other substitute components prior to primary component failure is important to reduce the risk of degraded or de
+
+──────────────────────────────────────────────────
+
+CONTROL: SI-14 — Non-persistence
+FAMILY: SI (System and Information Integrity)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Implement non-persistent {{ insert: param, si-14_odp.01 }} that are initiated in a known state and terminated {{ insert: param, si-14_odp.02 }}. Implementation of non-persistent components and services mitigates risk from advanced persistent threats (APTs) by reducing the targeting capability of adversaries (i.e., window of opportunity and available attack surface) to initiate and complete attacks. By implementing the concept of non-persistence for selected system components, organizations can provide a trusted, known state computing resource for a specific time period that does not give adver
+ENHANCEMENTS: SI-14.1: Refresh from Trusted Sources — Obtain software and data employed during system component and service refreshes from the following trusted sources: {{ insert: param, si-14.01_odp }}. Trusted sources include software and data from write-once, read-only media or from selected offline secure storage facilities. the software and data employed during system component and service refreshes are o
+
+──────────────────────────────────────────────────
+
+CONTROL: SI-15 — Information Output Filtering
+FAMILY: SI (System and Information Integrity)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Validate information output from the following software programs and/or applications to ensure that the information is consistent with the expected content: {{ insert: param, si-15_odp }}. Certain types of attacks, including SQL injections, produce output results that are unexpected or inconsistent with the output results that would be expected from software programs or applications. Information output filtering focuses on detecting extraneous content, preventing such extraneous content from being displayed, and then alerting monitoring tools that anomalous behavior has been discovered. inform
+
+──────────────────────────────────────────────────
+
+CONTROL: SI-16 — Memory Protection
+FAMILY: SI (System and Information Integrity)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Implement the following controls to protect the system memory from unauthorized code execution: {{ insert: param, si-16_odp }}. Some adversaries launch attacks with the intent of executing code in non-executable regions of memory or in memory locations that are prohibited. Controls employed to protect memory include data execution prevention and address space layout randomization. Data execution prevention controls can either be hardware-enforced or software-enforced with hardware enforcement providing the greater strength of mechanism. {{ insert: param, si-16_odp }} are implemented to protect
+
+──────────────────────────────────────────────────
+
+CONTROL: SI-17 — Fail-safe Procedures
+FAMILY: SI (System and Information Integrity)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Implement the indicated fail-safe procedures when the indicated failures occur: {{ insert: param, si-17_prm_1 }}. Failure conditions include the loss of communications among critical system components or between system components and operational facilities. Fail-safe procedures include alerting operator personnel and providing specific instructions on subsequent steps to take. Subsequent steps may include doing nothing, reestablishing system settings, shutting down processes, restarting the system, or contacting designated organizational personnel. {{ insert: param, si-17_odp.01 }} are impleme
+
+──────────────────────────────────────────────────
+
+CONTROL: SI-18 — Personally Identifiable Information Quality Operations
+FAMILY: SI (System and Information Integrity)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Check the accuracy, relevance, timeliness, and completeness of personally identifiable information across the information life cycle {{ insert: param, si-18_prm_1 }} ; and Correct or delete inaccurate or outdated personally identifiable information. Personally identifiable information quality operations include the steps that organizations take to confirm the accuracy and relevance of personally identifiable information throughout the information life cycle. The information life cycle includes the creation, collection, use, processing, storage, maintenance, dissemination, disclosure, and dispo
+ENHANCEMENTS: SI-18.1: Automation Support — Correct or delete personally identifiable information that is inaccurate or outdated, incorrectly determined regarding impact, or incorrectly de-identified using {{ insert: param, si-18.01_odp }}. The use of automated mechanisms to improve data quality may inadvertently create privacy risks. Automated tools may connect to external or otherwise unrelated systems, and t
+
+──────────────────────────────────────────────────
+
+CONTROL: SI-19 — De-identification
+FAMILY: SI (System and Information Integrity)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Remove the following elements of personally identifiable information from datasets: {{ insert: param, si-19_odp.01 }} ; and Evaluate {{ insert: param, si-19_odp.02 }} for effectiveness of de-identification. De-identification is the general term for the process of removing the association between a set of identifying data and the data subject. Many datasets contain information about individuals that can be used to distinguish or trace an individual’s identity, such as name, social security number, date and place of birth, mother’s maiden name, or biometric records. Datasets may also contain oth
+ENHANCEMENTS: SI-19.1: Collection — De-identify the dataset upon collection by not collecting personally identifiable information. If a data source contains personally identifiable information but the information will not be used, the dataset can be de-identified when it is created by not collecting the data elements that contain the personally identifiable information. For example, if an organization does not 
+
+──────────────────────────────────────────────────
+
+CONTROL: SI-20 — Tainting
+FAMILY: SI (System and Information Integrity)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Embed data or capabilities in the following systems or system components to determine if organizational data has been exfiltrated or improperly removed from the organization: {{ insert: param, si-20_odp }}. Many cyber-attacks target organizational information, or information that the organization holds on behalf of other entities (e.g., personally identifiable information), and exfiltrate that data. In addition, insider attacks and erroneous user procedures can remove information from the system that is in violation of the organizational policies. Tainting approaches can range from passive to 
+
+──────────────────────────────────────────────────
+
+CONTROL: SI-21 — Information Refresh
+FAMILY: SI (System and Information Integrity)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Refresh {{ insert: param, si-21_odp.01 }} at {{ insert: param, si-21_odp.02 }} or generate the information on demand and delete the information when no longer needed. Retaining information for longer than it is needed makes it an increasingly valuable and enticing target for adversaries. Keeping information available for the minimum period of time needed to support organizational missions or business functions reduces the opportunity for adversaries to compromise, capture, and exfiltrate that information. the {{ insert: param, si-21_odp.01 }} is refreshed {{ insert: param, si-21_odp.02 }} or i
+
+──────────────────────────────────────────────────
+
+CONTROL: SI-22 — Information Diversity
+FAMILY: SI (System and Information Integrity)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Identify the following alternative sources of information for {{ insert: param, si-22_odp.02 }}: {{ insert: param, si-22_odp.01 }} ; and Use an alternative information source for the execution of essential functions or services on {{ insert: param, si-22_odp.03 }} when the primary source of information is corrupted or unavailable. Actions taken by a system service or a function are often driven by the information it receives. Corruption, fabrication, modification, or deletion of that information could impact the ability of the service function to properly carry out its intended actions. By hav
+
+──────────────────────────────────────────────────
+
+CONTROL: SI-23 — Information Fragmentation
+FAMILY: SI (System and Information Integrity)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Based on {{ insert: param, si-23_odp.01 }}: Fragment the following information: {{ insert: param, si-23_odp.02 }} ; and Distribute the fragmented information across the following systems or system components: {{ insert: param, si-23_odp.03 }}. One objective of the advanced persistent threat is to exfiltrate valuable information. Once exfiltrated, there is generally no way for the organization to recover the lost information. Therefore, organizations may consider dividing the information into disparate elements and distributing those elements across multiple systems or system components and loc
+
+──────────────────────────────────────────────────

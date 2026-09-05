@@ -1,0 +1,230 @@
+SOURCE: MITRE ATT&CK Enterprise — Tactic: Privilege Escalation
+FRAMEWORK: MITRE ATT&CK
+TACTIC: Privilege Escalation
+TECHNIQUE COUNT: 25
+======================================================================
+
+TECHNIQUE: PowerShell Profile
+TECHNIQUE ID: T1546.013
+TACTIC: Privilege Escalation, Persistence
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may gain persistence and elevate privileges by executing malicious content triggered by PowerShell profiles. A PowerShell profile (<code>profile.ps1</code>) is a script that runs when [PowerShell](https://attack.mitre.org/techniques/T1059/001) starts and can be used as a logon script to customize user environments. [PowerShell](https://attack.mitre.org/techniques/T1059/001) supports several profiles depending on the user or host program. For example, there can be different profiles for [PowerShell](https://attack.mitre.org/techniques/T1059/001) host programs such as the PowerShell console, PowerShell ISE or Visual Studio Code. An administrator can also configure a profile that ap
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: LC_LOAD_DYLIB Addition
+TECHNIQUE ID: T1546.006
+TACTIC: Privilege Escalation, Persistence
+PLATFORMS: macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may establish persistence by executing malicious content triggered by the execution of tainted binaries. Mach-O binaries have a series of headers that are used to perform certain operations when a binary is loaded. The LC_LOAD_DYLIB header in a Mach-O binary tells macOS and OS X which dynamic libraries (dylibs) to load during execution time. These can be added ad-hoc to the compiled binary as long as adjustments are made to the rest of the fields and dependencies. There are tools available to perform these changes. Adversaries may modify Mach-O binary headers to load and execute malicious dylibs every time the binary is executed. Although any changes will invalidate digital signa
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Bypass User Account Control
+TECHNIQUE ID: T1548.002
+TACTIC: Privilege Escalation, Defense Evasion
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may bypass UAC mechanisms to elevate process privileges on system. Windows User Account Control (UAC) allows a program to elevate its privileges (tracked as integrity levels ranging from low to high) to perform a task under administrator-level permissions, possibly by prompting the user for confirmation. The impact to the user ranges from denying the operation under high enforcement to allowing the user to perform the action if they are in the local administrators group and click through the prompt or allowing them to enter an administrator password to complete the action. If the UAC protection level of a computer is set to anything but the highest level, certain Windows programs
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Sudo and Sudo Caching
+TECHNIQUE ID: T1548.003
+TACTIC: Privilege Escalation, Defense Evasion
+PLATFORMS: Linux, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may perform sudo caching and/or use the sudoers file to elevate privileges. Adversaries may do this to execute commands as other users or spawn processes with higher privileges. Within Linux and MacOS systems, sudo (sometimes referred to as "superuser do") allows users to perform commands from terminals with elevated privileges and to control who can perform these commands on the system. The <code>sudo</code> command "allows a system administrator to delegate authority to give certain users (or groups of users) the ability to run some (or all) commands as root or another user while providing an audit trail of the commands and their arguments." Since sudo was made for the system a
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Application Shimming
+TECHNIQUE ID: T1546.011
+TACTIC: Privilege Escalation, Persistence
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may establish persistence and/or elevate privileges by executing malicious content triggered by application shims. The Microsoft Windows Application Compatibility Infrastructure/Framework (Application Shim) was created to allow for backward compatibility of software as the operating system codebase changes over time. For example, the application shimming feature allows developers to apply fixes to applications (without rewriting code) that were created for Windows XP so that it will work with Windows 10. Within the framework, shims are created to act as a buffer between the program (or more specifically, the Import Address Table) and the Windows OS. When a program is executed, th
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Escape to Host
+TECHNIQUE ID: T1611
+TACTIC: Privilege Escalation
+PLATFORMS: Windows, Linux, Containers, ESXi
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may break out of a container or virtualized environment to gain access to the underlying host. This can allow an adversary access to other containerized or virtualized resources from the host level or to the host itself. In principle, containerized / virtualized resources should provide a clear separation of application functionality and be isolated from the host environment. There are multiple ways an adversary may escape from a container to a host environment. Examples include creating a container configured to mount the host’s filesystem using the bind parameter, which allows the adversary to drop payloads and execute control utilities such as cron on the host; utilizing a pri
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Trap
+TECHNIQUE ID: T1546.005
+TACTIC: Privilege Escalation, Persistence
+PLATFORMS: macOS, Linux
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may establish persistence by executing malicious content triggered by an interrupt signal. The <code>trap</code> command allows programs and shells to specify commands that will be executed upon receiving interrupt signals. A common situation is a script allowing for graceful termination and handling of common keyboard interrupts like <code>ctrl+c</code> and <code>ctrl+d</code>. Adversaries can use this to register code to be executed when the shell encounters specific interrupts as a persistence mechanism. Trap commands are of the following format <code>trap 'command list' signals</code> where "command list" will be executed when "signals" are received.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Abuse Elevation Control Mechanism
+TECHNIQUE ID: T1548
+TACTIC: Privilege Escalation, Defense Evasion
+PLATFORMS: Linux, macOS, Windows, IaaS, Office Suite, Identity Provider
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may circumvent mechanisms designed to control elevate privileges to gain higher-level permissions. Most modern systems contain native elevation control mechanisms that are intended to limit privileges that a user can perform on a machine. Authorization has to be granted to specific users in order to perform tasks that can be considered of higher risk. An adversary can perform several methods to take advantage of built-in control mechanisms in order to escalate privileges on a system.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Setuid and Setgid
+TECHNIQUE ID: T1548.001
+TACTIC: Privilege Escalation, Defense Evasion
+PLATFORMS: Linux, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: An adversary may abuse configurations where an application has the setuid or setgid bits set in order to get code running in a different (and possibly more privileged) user’s context. On Linux or macOS, when the setuid or setgid bits are set for an application binary, the application will run with the privileges of the owning user or group respectively. Normally an application is run in the current user’s context, regardless of which user or group owns the application. However, there are instances where programs need to be executed in an elevated context to function properly, but the user running them may not have the specific required privileges. Instead of creating an entry in the sudoers 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Image File Execution Options Injection
+TECHNIQUE ID: T1546.012
+TACTIC: Privilege Escalation, Persistence
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may establish persistence and/or elevate privileges by executing malicious content triggered by Image File Execution Options (IFEO) debuggers. IFEOs enable a developer to attach a debugger to an application. When a process is created, a debugger present in an application’s IFEO will be prepended to the application’s name, effectively launching the new process under the debugger (e.g., <code>C:\dbg\ntsd.exe -g notepad.exe</code>). IFEOs can be set directly via the Registry or in Global Flags via the GFlags tool. IFEOs are represented as <code>Debugger</code> values in the Registry under <code>HKLM\SOFTWARE{\Wow6432Node}\Microsoft\Windows NT\CurrentVersion\Image File Execution Opti
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Temporary Elevated Cloud Access
+TECHNIQUE ID: T1548.005
+TACTIC: Privilege Escalation, Defense Evasion
+PLATFORMS: IaaS, Office Suite, Identity Provider
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may abuse permission configurations that allow them to gain temporarily elevated access to cloud resources. Many cloud environments allow administrators to grant user or service accounts permission to request just-in-time access to roles, impersonate other accounts, pass roles onto resources and services, or otherwise gain short-term access to a set of privileges that may be distinct from their own. Just-in-time access is a mechanism for granting additional roles to cloud accounts in a granular, temporary manner. This allows accounts to operate with only the permissions they need on a daily basis, and to request additional permissions as necessary. Sometimes just-in-time access r
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Accessibility Features
+TECHNIQUE ID: T1546.008
+TACTIC: Privilege Escalation, Persistence
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may establish persistence and/or elevate privileges by executing malicious content triggered by accessibility features. Windows contains accessibility features that may be launched with a key combination before a user has logged in (ex: when the user is on the Windows logon screen). An adversary can modify the way these programs are launched to get a command prompt or backdoor without logging in to the system. Two common accessibility programs are <code>C:\Windows\System32\sethc.exe</code>, launched when the shift key is pressed five times and <code>C:\Windows\System32\utilman.exe</code>, launched when the Windows + U key combination is pressed. The sethc.exe program is often ref
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: AppCert DLLs
+TECHNIQUE ID: T1546.009
+TACTIC: Privilege Escalation, Persistence
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may establish persistence and/or elevate privileges by executing malicious content triggered by AppCert DLLs loaded into processes. Dynamic-link libraries (DLLs) that are specified in the <code>AppCertDLLs</code> Registry key under <code>HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\</code> are loaded into every process that calls the ubiquitously used application programming interface (API) functions <code>CreateProcess</code>, <code>CreateProcessAsUser</code>, <code>CreateProcessWithLoginW</code>, <code>CreateProcessWithTokenW</code>, or <code>WinExec</code>. Similar to [Process Injection](https://attack.mitre.org/techniques/T1055), this value can be abuse
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Windows Management Instrumentation Event Subscription
+TECHNIQUE ID: T1546.003
+TACTIC: Privilege Escalation, Persistence
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may establish persistence and elevate privileges by executing malicious content triggered by a Windows Management Instrumentation (WMI) event subscription. WMI can be used to install event filters, providers, consumers, and bindings that execute code when a defined event occurs. Examples of events that may be subscribed to are the wall clock time, user login, or the computer's uptime. Adversaries may use the capabilities of WMI to subscribe to an event and execute arbitrary code when that event occurs, providing persistence on a system. Adversaries may also compile WMI scripts – using `mofcomp.exe` –into Windows Management Object (MOF) files (.mof extension) that can be used to c
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Change Default File Association
+TECHNIQUE ID: T1546.001
+TACTIC: Privilege Escalation, Persistence
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may establish persistence by executing malicious content triggered by a file type association. When a file is opened, the default program used to open the file (also called the file association or handler) is checked. File association selections are stored in the Windows Registry and can be edited by users, administrators, or programs that have Registry access or by administrators using the built-in assoc utility. Applications can modify the file association for a given file extension to call an arbitrary program when a file with the given extension is opened. System file associations are listed under <code>HKEY_CLASSES_ROOT\.[extension]</code>, for example <code>HKEY_CLASSES_ROO
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Emond
+TECHNIQUE ID: T1546.014
+TACTIC: Privilege Escalation, Persistence
+PLATFORMS: macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may gain persistence and elevate privileges by executing malicious content triggered by the Event Monitor Daemon (emond). Emond is a [Launch Daemon](https://attack.mitre.org/techniques/T1543/004) that accepts events from various services, runs them through a simple rules engine, and takes action. The emond binary at <code>/sbin/emond</code> will load any rules from the <code>/etc/emond.d/rules/</code> directory and take action once an explicitly defined event takes place. The rule files are in the plist format and define the name, event type, and action to take. Some examples of event types include system startup and user authentication. Examples of actions are to run a system co
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Exploitation for Privilege Escalation
+TECHNIQUE ID: T1068
+TACTIC: Privilege Escalation
+PLATFORMS: Containers, Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may exploit software vulnerabilities in an attempt to elevate privileges. Exploitation of a software vulnerability occurs when an adversary takes advantage of a programming error in a program, service, or within the operating system software or kernel itself to execute adversary-controlled code. Security constructs such as permission levels will often hinder access to information and use of certain techniques, so adversaries will likely need to perform privilege escalation to include use of software exploitation to circumvent those restrictions. When initially gaining access to a system, an adversary may be operating within a lower privileged process which will prevent them from 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Event Triggered Execution
+TECHNIQUE ID: T1546
+TACTIC: Privilege Escalation, Persistence
+PLATFORMS: Linux, macOS, Windows, SaaS, IaaS, Office Suite
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may establish persistence and/or elevate privileges using system mechanisms that trigger execution based on specific events. Various operating systems have means to monitor and subscribe to events such as logons or other user activity such as running specific applications/binaries. Cloud environments may also support various functions and services that monitor and can be invoked in response to specific cloud events. Adversaries may abuse these mechanisms as a means of maintaining persistent access to a victim via repeatedly executing malicious code. After gaining access to a victim system, adversaries may create/modify event triggers to point to malicious content that will be exe
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Unix Shell Configuration Modification
+TECHNIQUE ID: T1546.004
+TACTIC: Privilege Escalation, Persistence
+PLATFORMS: Linux, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may establish persistence through executing malicious commands triggered by a user’s shell. User [Unix Shell](https://attack.mitre.org/techniques/T1059/004)s execute several configuration scripts at different points throughout the session based on events. For example, when a user opens a command-line interface or remotely logs in (such as via SSH) a login shell is initiated. The login shell executes scripts from the system (<code>/etc</code>) and the user’s home directory (<code>~/</code>) to configure the environment. All login shells on a system use /etc/profile when initiated. These configuration scripts run at the permission level of their directory and are often used to set 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Elevated Execution with Prompt
+TECHNIQUE ID: T1548.004
+TACTIC: Privilege Escalation, Defense Evasion
+PLATFORMS: macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may leverage the <code>AuthorizationExecuteWithPrivileges</code> API to escalate privileges by prompting the user for credentials. The purpose of this API is to give application developers an easy way to perform operations with root privileges, such as for application installation or updating. This API does not validate that the program requesting root privileges comes from a reputable source or has been maliciously modified. Although this API is deprecated, it still fully functions in the latest releases of macOS. When calling this API, the user will be prompted to enter their credentials but no checks on the origin or integrity of the program are made. The program calling the A
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Component Object Model Hijacking
+TECHNIQUE ID: T1546.015
+TACTIC: Privilege Escalation, Persistence
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may establish persistence by executing malicious content triggered by hijacked references to Component Object Model (COM) objects. COM is a system within Windows to enable interaction between software components through the operating system. References to various COM objects are stored in the Registry. Adversaries may use the COM system to insert malicious code that can be executed in place of legitimate software through hijacking the COM references and relationships as a means for persistence. Hijacking a COM object requires a change in the Registry to replace a reference to a legitimate system component which may cause that component to not work when executed. When that system 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: AppInit DLLs
+TECHNIQUE ID: T1546.010
+TACTIC: Privilege Escalation, Persistence
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may establish persistence and/or elevate privileges by executing malicious content triggered by AppInit DLLs loaded into processes. Dynamic-link libraries (DLLs) that are specified in the <code>AppInit_DLLs</code> value in the Registry keys <code>HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Windows</code> or <code>HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Windows</code> are loaded by user32.dll into every process that loads user32.dll. In practice this is nearly every program, since user32.dll is a very common library. Similar to Process Injection, these values can be abused to obtain elevated privileges by causing a malicious 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Screensaver
+TECHNIQUE ID: T1546.002
+TACTIC: Privilege Escalation, Persistence
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may establish persistence by executing malicious content triggered by user inactivity. Screensavers are programs that execute after a configurable time of user inactivity and consist of Portable Executable (PE) files with a .scr file extension. The Windows screensaver application scrnsave.scr is located in <code>C:\Windows\System32\</code>, and <code>C:\Windows\sysWOW64\</code> on 64-bit Windows systems, along with screensavers included with base Windows installations. The following screensaver settings are stored in the Registry (<code>HKCU\Control Panel\Desktop\</code>) and could be manipulated to achieve persistence: * <code>SCRNSAVE.exe</code> - set to malicious PE path * <co
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Installer Packages
+TECHNIQUE ID: T1546.016
+TACTIC: Privilege Escalation, Persistence
+PLATFORMS: Linux, Windows, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may establish persistence and elevate privileges by using an installer to trigger the execution of malicious content. Installer packages are OS specific and contain the resources an operating system needs to install applications on a system. Installer packages can include scripts that run prior to installation as well as after installation is complete. Installer scripts may inherit elevated permissions when executed. Developers often use these scripts to prepare the environment for installation, check requirements, download dependencies, and remove files after installation. Using legitimate applications, adversaries have distributed applications with modified installer scripts to
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Netsh Helper DLL
+TECHNIQUE ID: T1546.007
+TACTIC: Privilege Escalation, Persistence
+PLATFORMS: Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may establish persistence by executing malicious content triggered by Netsh Helper DLLs. Netsh.exe (also referred to as Netshell) is a command-line scripting utility used to interact with the network configuration of a system. It contains functionality to add helper DLLs for extending functionality of the utility. The paths to registered netsh.exe helper DLLs are entered into the Windows Registry at <code>HKLM\SOFTWARE\Microsoft\Netsh</code>. Adversaries can use netsh.exe helper DLLs to trigger execution of arbitrary code in a persistent manner. This execution would take place anytime netsh.exe is executed, which could happen automatically, with another persistence technique, or 
+
+──────────────────────────────────────────────────

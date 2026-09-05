@@ -1,0 +1,67 @@
+SOURCE: NIST SP 800-53 rev5 — Control Family MP
+FRAMEWORK: NIST SP 800-53 rev5
+CONTROL FAMILY: MP — Media Protection
+CONTROL COUNT: 8
+======================================================================
+
+CONTROL: MP-1 — Policy and Procedures
+FAMILY: MP (Media Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop, document, and disseminate to {{ insert: param, mp-1_prm_1 }}: {{ insert: param, mp-01_odp.03 }} media protection policy that: Addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and Is consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines; and Procedures to facilitate the implementation of the media protection policy and the associated media protection controls; Designate an {{ insert: param, mp-01_odp.04 }} to manage the development, documentatio
+
+──────────────────────────────────────────────────
+
+CONTROL: MP-2 — Media Access
+FAMILY: MP (Media Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Restrict access to {{ insert: param, mp-2_prm_1 }} to {{ insert: param, mp-2_prm_2 }}. System media includes digital and non-digital media. Digital media includes flash drives, diskettes, magnetic tapes, external or removable hard disk drives (e.g., solid state, magnetic), compact discs, and digital versatile discs. Non-digital media includes paper and microfilm. Denying access to patient medical records in a community hospital unless the individuals seeking access to such records are authorized healthcare providers is an example of restricting access to non-digital media. Limiting access to t
+ENHANCEMENTS: MP-2.1: Automated Restricted Access —  | MP-2.2: Cryptographic Protection — 
+
+──────────────────────────────────────────────────
+
+CONTROL: MP-3 — Media Marking
+FAMILY: MP (Media Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Mark system media indicating the distribution limitations, handling caveats, and applicable security markings (if any) of the information; and Exempt {{ insert: param, mp-03_odp.01 }} from marking if the media remain within {{ insert: param, mp-03_odp.02 }}. Security marking refers to the application or use of human-readable security attributes. Digital media includes diskettes, magnetic tapes, external or removable hard disk drives (e.g., solid state, magnetic), flash drives, compact discs, and digital versatile discs. Non-digital media includes paper and microfilm. Controlled unclassified in
+
+──────────────────────────────────────────────────
+
+CONTROL: MP-4 — Media Storage
+FAMILY: MP (Media Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Physically control and securely store {{ insert: param, mp-4_prm_1 }} within {{ insert: param, mp-4_prm_2 }} ; and Protect system media types defined in MP-4a until the media are destroyed or sanitized using approved equipment, techniques, and procedures. System media includes digital and non-digital media. Digital media includes flash drives, diskettes, magnetic tapes, external or removable hard disk drives (e.g., solid state, magnetic), compact discs, and digital versatile discs. Non-digital media includes paper and microfilm. Physically controlling stored media includes conducting inventori
+ENHANCEMENTS: MP-4.1: Cryptographic Protection —  | MP-4.2: Automated Restricted Access — Restrict access to media storage areas and log access attempts and access granted using {{ insert: param, mp-4.2_prm_1 }}. Automated mechanisms include keypads, biometric readers, or card readers on the external entries to media storage areas. access to media storage areas is restricted using {{ insert: param, mp-04.02_odp
+
+──────────────────────────────────────────────────
+
+CONTROL: MP-5 — Media Transport
+FAMILY: MP (Media Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Protect and control {{ insert: param, mp-05_odp.01 }} during transport outside of controlled areas using {{ insert: param, mp-5_prm_2 }}; Maintain accountability for system media during transport outside of controlled areas; Document activities associated with the transport of system media; and Restrict the activities associated with the transport of system media to authorized personnel. System media includes digital and non-digital media. Digital media includes flash drives, diskettes, magnetic tapes, external or removable hard disk drives (e.g., solid state and magnetic), compact discs, and 
+ENHANCEMENTS: MP-5.1: Protection Outside of Controlled Areas —  | MP-5.2: Documentation of Activities —  | MP-5.3: Custodians — Employ an identified custodian during transport of system media outside of controlled areas. Identified custodians provide organizations with specific points of contact during the media transport process and facilitate individual accountability. Custodial responsibilities can be transf
+
+──────────────────────────────────────────────────
+
+CONTROL: MP-6 — Media Sanitization
+FAMILY: MP (Media Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Sanitize {{ insert: param, mp-6_prm_1 }} prior to disposal, release out of organizational control, or release for reuse using {{ insert: param, mp-6_prm_2 }} ; and Employ sanitization mechanisms with the strength and integrity commensurate with the security category or classification of the information. Media sanitization applies to all digital and non-digital system media subject to disposal or reuse, whether or not the media is considered removable. Examples include digital media in scanners, copiers, printers, notebook computers, workstations, network components, mobile devices, and non-dig
+ENHANCEMENTS: MP-6.1: Review, Approve, Track, Document, and Verify — Review, approve, track, document, and verify media sanitization and disposal actions. Organizations review and approve media to be sanitized to ensure compliance with records retention policies. Tracking and documenting actions include listing personnel who reviewed and approved sanitization and disposal actions, types of media sanitized, file
+
+──────────────────────────────────────────────────
+
+CONTROL: MP-7 — Media Use
+FAMILY: MP (Media Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: {{ insert: param, mp-07_odp.02 }} the use of {{ insert: param, mp-07_odp.01 }} on {{ insert: param, mp-07_odp.03 }} using {{ insert: param, mp-07_odp.04 }} ; and Prohibit the use of portable storage devices in organizational systems when such devices have no identifiable owner. System media includes both digital and non-digital media. Digital media includes diskettes, magnetic tapes, flash drives, compact discs, digital versatile discs, and removable hard disk drives. Non-digital media includes paper and microfilm. Media use protections also apply to mobile devices with information storage cap
+ENHANCEMENTS: MP-7.1: Prohibit Use Without Owner —  | MP-7.2: Prohibit Use of Sanitization-resistant Media — Prohibit the use of sanitization-resistant media in organizational systems. Sanitization resistance refers to how resistant media are to non-destructive sanitization techniques with respect to the capability to purge information from media. Certain types of media do not support sanitization commands, or 
+
+──────────────────────────────────────────────────
+
+CONTROL: MP-8 — Media Downgrading
+FAMILY: MP (Media Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Establish {{ insert: param, mp-08_odp.01 }} that includes employing downgrading mechanisms with strength and integrity commensurate with the security category or classification of the information; Verify that the system media downgrading process is commensurate with the security category and/or classification level of the information to be removed and the access authorizations of the potential recipients of the downgraded information; Identify {{ insert: param, mp-08_odp.02 }} ; and Downgrade the identified system media using the established process. Media downgrading applies to digital and no
+ENHANCEMENTS: MP-8.1: Documentation of Process — Document system media downgrading actions. Organizations can document the media downgrading process by providing information, such as the downgrading technique employed, the identification number of the downgraded media, and the identity of the individual that authorized and/or performed the downgrading action. system media downgrading actions are documented. Sys
+
+──────────────────────────────────────────────────

@@ -1,0 +1,234 @@
+SOURCE: NIST SP 800-53 rev5 — Control Family PM
+FRAMEWORK: NIST SP 800-53 rev5
+CONTROL FAMILY: PM — Program Management
+CONTROL COUNT: 32
+======================================================================
+
+CONTROL: PM-1 — Information Security Program Plan
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop and disseminate an organization-wide information security program plan that: Provides an overview of the requirements for the security program and a description of the security program management controls and common controls in place or planned for meeting those requirements; Includes the identification and assignment of roles, responsibilities, management commitment, coordination among organizational entities, and compliance; Reflects the coordination among organizational entities responsible for information security; and Is approved by a senior official with responsibility and accoun
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-2 — Information Security Program Leadership Role
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Appoint a senior agency information security officer with the mission and resources to coordinate, develop, implement, and maintain an organization-wide information security program. The senior agency information security officer is an organizational official. For federal agencies (as defined by applicable laws, executive orders, regulations, directives, policies, and standards), this official is the senior agency information security officer. Organizations may also refer to this official as the senior information security officer or chief information security officer. a senior agency informat
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-3 — Information Security and Privacy Resources
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Include the resources needed to implement the information security and privacy programs in capital planning and investment requests and document all exceptions to this requirement; Prepare documentation required for addressing information security and privacy programs in capital planning and investment requests in accordance with applicable laws, executive orders, directives, policies, regulations, standards; and Make available for expenditure, the planned information security and privacy resources. Organizations consider establishing champions for information security and privacy and, as part
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-4 — Plan of Action and Milestones Process
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Implement a process to ensure that plans of action and milestones for the information security, privacy, and supply chain risk management programs and associated organizational systems: Are developed and maintained; Document the remedial information security, privacy, and supply chain risk management actions to adequately respond to risk to organizational operations and assets, individuals, other organizations, and the Nation; and Are reported in accordance with established reporting requirements. Review plans of action and milestones for consistency with the organizational risk management str
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-5 — System Inventory
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop and update {{ insert: param, pm-05_odp }} an inventory of organizational systems. [OMB A-130](#27847491-5ce1-4f6a-a1e4-9e483782f0ef) provides guidance on developing systems inventories and associated reporting requirements. System inventory refers to an organization-wide inventory of systems, not system components as described in [CM-8](#cm-8). an inventory of organizational systems is developed; the inventory of organizational systems is updated {{ insert: param, pm-05_odp }}. Information security program plan system inventory procedures addressing system inventory development and mai
+ENHANCEMENTS: PM-5.1: Inventory of Personally Identifiable Information — Establish, maintain, and update {{ insert: param, pm-05.01_odp }} an inventory of all systems, applications, and projects that process personally identifiable information. An inventory of systems, applications, and projects that process personally identifiable information supports the mapping of data actions, providing individuals with pri
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-6 — Measures of Performance
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop, monitor, and report on the results of information security and privacy measures of performance. Measures of performance are outcome-based metrics used by an organization to measure the effectiveness or efficiency of the information security and privacy programs and the controls employed in support of the program. To facilitate security and privacy risk management, organizations consider aligning measures of performance with the organizational risk tolerance as defined in the risk management strategy. information security measures of performance are developed; information security meas
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-7 — Enterprise Architecture
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop and maintain an enterprise architecture with consideration for information security, privacy, and the resulting risk to organizational operations and assets, individuals, other organizations, and the Nation. The integration of security and privacy requirements and controls into the enterprise architecture helps to ensure that security and privacy considerations are addressed throughout the system development life cycle and are explicitly related to the organization’s mission and business processes. The process of security and privacy requirements integration also embeds into the enterp
+ENHANCEMENTS: PM-7.1: Offloading — Offload {{ insert: param, pm-07.01_odp }} to other systems, system components, or an external provider. Not every function or service that a system provides is essential to organizational mission or business functions. Printing or copying is an example of a non-essential but supporting service for an organization. Whenever feasible, such supportive but non-essential functions 
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-8 — Critical Infrastructure Plan
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Address information security and privacy issues in the development, documentation, and updating of a critical infrastructure and key resources protection plan. Protection strategies are based on the prioritization of critical assets and resources. The requirement and guidance for defining critical infrastructure and key resources and for preparing an associated critical infrastructure protection plan are found in applicable laws, executive orders, directives, policies, regulations, standards, and guidelines. information security issues are addressed in the development of a critical infrastruct
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-9 — Risk Management Strategy
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develops a comprehensive strategy to manage: Security risk to organizational operations and assets, individuals, other organizations, and the Nation associated with the operation and use of organizational systems; and Privacy risk to individuals resulting from the authorized processing of personally identifiable information; Implement the risk management strategy consistently across the organization; and Review and update the risk management strategy {{ insert: param, pm-09_odp }} or as required, to address organizational changes. An organization-wide risk management strategy includes an expre
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-10 — Authorization Process
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Manage the security and privacy state of organizational systems and the environments in which those systems operate through authorization processes; Designate individuals to fulfill specific roles and responsibilities within the organizational risk management process; and Integrate the authorization processes into an organization-wide risk management program. Authorization processes for organizational systems and environments of operation require the implementation of an organization-wide risk management process and associated security and privacy standards and guidelines. Specific roles for r
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-11 — Mission and Business Process Definition
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Define organizational mission and business processes with consideration for information security and privacy and the resulting risk to organizational operations, organizational assets, individuals, other organizations, and the Nation; and Determine information protection and personally identifiable information processing needs arising from the defined mission and business processes; and Review and revise the mission and business processes {{ insert: param, pm-11_odp }}. Protection needs are technology-independent capabilities that are required to counter threats to organizations, individuals, 
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-12 — Insider Threat Program
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Implement an insider threat program that includes a cross-discipline insider threat incident handling team. Organizations that handle classified information are required, under Executive Order 13587 [EO 13587](#0af071a6-cf8e-48ee-8c82-fe91efa20f94) and the National Insider Threat Policy [ODNI NITP](#06d74ea9-2178-449c-a9c5-b2980f804ac8) , to establish insider threat programs. The same standards and guidelines that apply to insider threat programs in classified environments can also be employed effectively to improve the security of controlled unclassified and other information in non-national 
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-13 — Security and Privacy Workforce
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Establish a security and privacy workforce development and improvement program. Security and privacy workforce development and improvement programs include defining the knowledge, skills, and abilities needed to perform security and privacy duties and tasks; developing role-based training programs for individuals assigned security and privacy roles and responsibilities; and providing standards and guidelines for measuring and building individual qualifications for incumbents and applicants for security- and privacy-related positions. Such workforce development and improvement programs can also
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-14 — Testing, Training, and Monitoring
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Implement a process for ensuring that organizational plans for conducting security and privacy testing, training, and monitoring activities associated with organizational systems: Are developed and maintained; and Continue to be executed; and Review testing, training, and monitoring plans for consistency with the organizational risk management strategy and organization-wide priorities for risk response actions. A process for organization-wide security and privacy testing, training, and monitoring helps ensure that organizations provide oversight for testing, training, and monitoring activities
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-15 — Security and Privacy Groups and Associations
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Establish and institutionalize contact with selected groups and associations within the security and privacy communities: To facilitate ongoing security and privacy education and training for organizational personnel; To maintain currency with recommended security and privacy practices, techniques, and technologies; and To share current security and privacy information, including threats, vulnerabilities, and incidents. Ongoing contact with security and privacy groups and associations is important in an environment of rapidly changing technologies and threats. Groups and associations include s
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-16 — Threat Awareness Program
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Implement a threat awareness program that includes a cross-organization information-sharing capability for threat intelligence. Because of the constantly changing and increasing sophistication of adversaries, especially the advanced persistent threat (APT), it may be more likely that adversaries can successfully breach or compromise organizational systems. One of the best techniques to address this concern is for organizations to share threat information, including threat events (i.e., tactics, techniques, and procedures) that organizations have experienced, mitigations that organizations have
+ENHANCEMENTS: PM-16.1: Automated Means for Sharing Threat Intelligence — Employ automated mechanisms to maximize the effectiveness of sharing threat intelligence information. To maximize the effectiveness of monitoring, it is important to know what threat observables and indicators the sensors need to be searching for. By using well-established frameworks, services, and automated tools, organizations improve th
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-17 — Protecting Controlled Unclassified Information on External Systems
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Establish policy and procedures to ensure that requirements for the protection of controlled unclassified information that is processed, stored or transmitted on external systems, are implemented in accordance with applicable laws, executive orders, directives, policies, regulations, and standards; and Review and update the policy and procedures {{ insert: param, pm-17_prm_1 }}. Controlled unclassified information is defined by the National Archives and Records Administration along with the safeguarding and dissemination requirements for such information and is codified in [32 CFR 2002](#91f99
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-18 — Privacy Program Plan
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop and disseminate an organization-wide privacy program plan that provides an overview of the agency’s privacy program, and: Includes a description of the structure of the privacy program and the resources dedicated to the privacy program; Provides an overview of the requirements for the privacy program and a description of the privacy program management controls and common controls in place or planned for meeting those requirements; Includes the role of the senior agency official for privacy and the identification and assignment of roles of other privacy officials and staff and their res
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-19 — Privacy Program Leadership Role
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Appoint a senior agency official for privacy with the authority, mission, accountability, and resources to coordinate, develop, and implement, applicable privacy requirements and manage privacy risks through the organization-wide privacy program. The privacy officer is an organizational official. For federal agencies—as defined by applicable laws, executive orders, directives, regulations, policies, standards, and guidelines—this official is designated as the senior agency official for privacy. Organizations may also refer to this official as the chief privacy officer. The senior agency offici
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-20 — Dissemination of Privacy Program Information
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Maintain a central resource webpage on the organization’s principal public website that serves as a central source of information about the organization’s privacy program and that: Ensures that the public has access to information about organizational privacy activities and can communicate with its senior agency official for privacy; Ensures that organizational privacy practices and reports are publicly available; and Employs publicly facing email addresses and/or phone lines to enable the public to provide feedback and/or direct questions to privacy offices regarding privacy practices. For fe
+ENHANCEMENTS: PM-20.1: Privacy Policies on Websites, Applications, and Digital Services — Develop and post privacy policies on all external-facing websites, mobile applications, and other digital services, that: Are written in plain language and organized in a way that is easy to understand and navigate; Provide information needed by the public to make an informed decision about whether and how to interact with
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-21 — Accounting of Disclosures
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop and maintain an accurate accounting of disclosures of personally identifiable information, including: Date, nature, and purpose of each disclosure; and Name and address, or other contact information of the individual or organization to which the disclosure was made; Retain the accounting of disclosures for the length of the time the personally identifiable information is maintained or five years after the disclosure is made, whichever is longer; and Make the accounting of disclosures available to the individual to whom the personally identifiable information relates upon request. The p
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-22 — Personally Identifiable Information Quality Management
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop and document organization-wide policies and procedures for: Reviewing for the accuracy, relevance, timeliness, and completeness of personally identifiable information across the information life cycle; Correcting or deleting inaccurate or outdated personally identifiable information; Disseminating notice of corrected or deleted personally identifiable information to individuals or other appropriate entities; and Appeals of adverse decisions on correction or deletion requests. Personally identifiable information quality management includes steps that organizations take to confirm the ac
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-23 — Data Governance Body
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Establish a Data Governance Body consisting of {{ insert: param, pm-23_odp.01 }} with {{ insert: param, pm-23_odp.02 }}. A Data Governance Body can help ensure that the organization has coherent policies and the ability to balance the utility of data with security and privacy requirements. The Data Governance Body establishes policies, procedures, and standards that facilitate data governance so that data, including personally identifiable information, is effectively managed and maintained in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and g
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-24 — Data Integrity Board
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Establish a Data Integrity Board to: Review proposals to conduct or participate in a matching program; and Conduct an annual review of all matching programs in which the agency has participated. A Data Integrity Board is the board of senior officials designated by the head of a federal agency and is responsible for, among other things, reviewing the agency’s proposals to conduct or participate in a matching program and conducting an annual review of all matching programs in which the agency has participated. As a general matter, a matching program is a computerized comparison of records from t
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-25 — Minimization of Personally Identifiable Information Used in Testing, Training, and Research
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop, document, and implement policies and procedures that address the use of personally identifiable information for internal testing, training, and research; Limit or minimize the amount of personally identifiable information used for internal testing, training, and research purposes; Authorize the use of personally identifiable information when such information is required for internal testing, training, and research; and Review and update policies and procedures {{ insert: param, pm-25_prm_1 }}. The use of personally identifiable information in testing, research, and training increases 
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-26 — Complaint Management
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Implement a process for receiving and responding to complaints, concerns, or questions from individuals about the organizational security and privacy practices that includes: Mechanisms that are easy to use and readily accessible by the public; All information necessary for successfully filing complaints; Tracking mechanisms to ensure all complaints received are reviewed and addressed within {{ insert: param, pm-26_prm_1 }}; Acknowledgement of receipt of complaints, concerns, or questions from individuals within {{ insert: param, pm-26_odp.03 }} ; and Response to complaints, concerns, or quest
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-27 — Privacy Reporting
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop {{ insert: param, pm-27_odp.01 }} and disseminate to: {{ insert: param, pm-27_odp.02 }} to demonstrate accountability with statutory, regulatory, and policy privacy mandates; and {{ insert: param, pm-27_odp.03 }} and other personnel with responsibility for monitoring privacy program compliance; and Review and update privacy reports {{ insert: param, pm-27_odp.04 }}. Through internal and external reporting, organizations promote accountability and transparency in organizational privacy operations. Reporting can also help organizations to determine progress in meeting privacy compliance 
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-28 — Risk Framing
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Identify and document: Assumptions affecting risk assessments, risk responses, and risk monitoring; Constraints affecting risk assessments, risk responses, and risk monitoring; Priorities and trade-offs considered by the organization for managing risk; and Organizational risk tolerance; Distribute the results of risk framing activities to {{ insert: param, pm-28_odp.01 }} ; and Review and update risk framing considerations {{ insert: param, pm-28_odp.02 }}. Risk framing is most effective when conducted at the organization level and in consultation with stakeholders throughout the organization 
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-29 — Risk Management Program Leadership Roles
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Appoint a Senior Accountable Official for Risk Management to align organizational information security and privacy management processes with strategic, operational, and budgetary planning processes; and Establish a Risk Executive (function) to view and analyze risk from an organization-wide perspective and ensure management of risk is consistent across the organization. The senior accountable official for risk management leads the risk executive (function) in organization-wide risk management activities. a Senior Accountable Official for Risk Management is appointed; a Senior Accountable Offic
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-30 — Supply Chain Risk Management Strategy
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop an organization-wide strategy for managing supply chain risks associated with the development, acquisition, maintenance, and disposal of systems, system components, and system services; Implement the supply chain risk management strategy consistently across the organization; and Review and update the supply chain risk management strategy on {{ insert: param, pm-30_odp }} or as required, to address organizational changes. An organization-wide supply chain risk management strategy includes an unambiguous expression of the supply chain risk appetite and tolerance for the organization, acc
+ENHANCEMENTS: PM-30.1: Suppliers of Critical or Mission-essential Items — Identify, prioritize, and assess suppliers of critical or mission-essential technologies, products, and services. The identification and prioritization of suppliers of critical or mission-essential technologies, products, and services is paramount to the mission/business success of organizations. The assessment of suppliers is conducted u
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-31 — Continuous Monitoring Strategy
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop an organization-wide continuous monitoring strategy and implement continuous monitoring programs that include: Establishing the following organization-wide metrics to be monitored: {{ insert: param, pm-31_odp.01 }}; Establishing {{ insert: param, pm-31_odp.02 }} and {{ insert: param, pm-31_odp.03 }} for control effectiveness; Ongoing monitoring of organizationally-defined metrics in accordance with the continuous monitoring strategy; Correlation and analysis of information generated by control assessments and monitoring; Response actions to address results of the analysis of control as
+
+──────────────────────────────────────────────────
+
+CONTROL: PM-32 — Purposing
+FAMILY: PM (Program Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Analyze {{ insert: param, pm-32_odp }} supporting mission essential services or functions to ensure that the information resources are being used consistent with their intended purpose. Systems are designed to support a specific mission or business function. However, over time, systems and system components may be used to support services and functions that are outside of the scope of the intended mission or business functions. This can result in exposing information resources to unintended environments and uses that can significantly increase threat exposure. In doing so, the systems are more
+
+──────────────────────────────────────────────────

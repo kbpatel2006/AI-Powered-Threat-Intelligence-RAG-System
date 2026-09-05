@@ -1,0 +1,302 @@
+SOURCE: MITRE ATT&CK Enterprise — Tactic: Impact
+FRAMEWORK: MITRE ATT&CK
+TACTIC: Impact
+TECHNIQUE COUNT: 33
+======================================================================
+
+TECHNIQUE: Disk Structure Wipe
+TECHNIQUE ID: T1561.002
+TACTIC: Impact
+PLATFORMS: Linux, macOS, Windows, Network Devices
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may corrupt or wipe the disk data structures on a hard drive necessary to boot a system; targeting specific critical systems or in large numbers in a network to interrupt availability to system and network resources. Adversaries may attempt to render the system unable to boot by overwriting critical data located in structures such as the master boot record (MBR) or partition table. The data contained in disk structures may include the initial executable code for loading an operating system or the location of the file system partitions on disk. If this information is not present, the computer will not be able to load an operating system during the boot process, leaving the compute
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Direct Network Flood
+TECHNIQUE ID: T1498.001
+TACTIC: Impact
+PLATFORMS: Windows, IaaS, Linux, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may attempt to cause a denial of service (DoS) by directly sending a high-volume of network traffic to a target. This DoS attack may also reduce the availability and functionality of the targeted system(s) and network. [Direct Network Flood](https://attack.mitre.org/techniques/T1498/001)s are when one or more systems are used to send a high-volume of network packets towards the targeted service's network. Almost any network protocol may be used for flooding. Stateless protocols such as UDP or ICMP are commonly used but stateful protocols such as TCP can be used as well. Botnets are commonly used to conduct network flooding attacks against networks and services. Large botnets can 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: External Defacement
+TECHNIQUE ID: T1491.002
+TACTIC: Impact
+PLATFORMS: Windows, IaaS, Linux, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: An adversary may deface systems external to an organization in an attempt to deliver messaging, intimidate, or otherwise mislead an organization or users. [External Defacement](https://attack.mitre.org/techniques/T1491/002) may ultimately cause users to distrust the systems and to question/discredit the system’s integrity. Externally-facing websites are a common victim of defacement; often targeted by adversary and hacktivist groups in order to push a political message or spread propaganda. [External Defacement](https://attack.mitre.org/techniques/T1491/002) may be used as a catalyst to trigger events, or as a response to actions taken by an organization or government. Similarly, website def
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: OS Exhaustion Flood
+TECHNIQUE ID: T1499.001
+TACTIC: Impact
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may launch a denial of service (DoS) attack targeting an endpoint's operating system (OS). A system's OS is responsible for managing the finite resources as well as preventing the entire system from being overwhelmed by excessive demands on its capacity. These attacks do not need to exhaust the actual resources on a system; the attacks may simply exhaust the limits and available resources that an OS self-imposes. Different ways to achieve this exist, including TCP state-exhaustion attacks such as SYN floods and ACK floods. With SYN floods, excessive amounts of SYN packets are sent, but the 3-way TCP handshake is never completed. Because each OS has a maximum number of concurrent 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Lifecycle-Triggered Deletion
+TECHNIQUE ID: T1485.001
+TACTIC: Impact
+PLATFORMS: IaaS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may modify the lifecycle policies of a cloud storage bucket to destroy all objects stored within. Cloud storage buckets often allow users to set lifecycle policies to automate the migration, archival, or deletion of objects after a set period of time. If a threat actor has sufficient permissions to modify these policies, they may be able to delete all objects at once. For example, in AWS environments, an adversary with the `PutLifecycleConfiguration` permission may use the `PutBucketLifecycle` API call to apply a lifecycle policy to an S3 bucket that deletes all objects in the bucket after one day. In addition to destroying data for purposes of extortion and [Financial Theft](htt
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: SMS Pumping
+TECHNIQUE ID: T1496.003
+TACTIC: Impact
+PLATFORMS: SaaS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may leverage messaging services for SMS pumping, which may impact system and/or hosted service availability. SMS pumping is a type of telecommunications fraud whereby a threat actor first obtains a set of phone numbers from a telecommunications provider, then leverages a victim’s messaging infrastructure to send large amounts of SMS messages to numbers in that set. By generating SMS traffic to their phone number set, a threat actor may earn payments from the telecommunications provider. Threat actors often use publicly available web forms, such as one-time password (OTP) or account verification fields, in order to generate SMS traffic. These fields may leverage services such as T
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Application Exhaustion Flood
+TECHNIQUE ID: T1499.003
+TACTIC: Impact
+PLATFORMS: Windows, IaaS, Linux, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may target resource intensive features of applications to cause a denial of service (DoS), denying availability to those applications. For example, specific features in web applications may be highly resource intensive. Repeated requests to those features may be able to exhaust system resources and deny access to the application or the server itself.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Disk Wipe
+TECHNIQUE ID: T1561
+TACTIC: Impact
+PLATFORMS: Linux, macOS, Windows, Network Devices
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may wipe or corrupt raw disk data on specific systems or in large numbers in a network to interrupt availability to system and network resources. With direct write access to a disk, adversaries may attempt to overwrite portions of disk data. Adversaries may opt to wipe arbitrary portions of disk data and/or wipe disk structures like the master boot record (MBR). A complete wipe of all disk sectors may be attempted. To maximize impact on the target organization in operations where network-wide availability interruption is the goal, malware used for wiping disks may have worm-like features to propagate across a network by leveraging additional techniques like [Valid Accounts](https
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Stored Data Manipulation
+TECHNIQUE ID: T1565.001
+TACTIC: Impact
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may insert, delete, or manipulate data at rest in order to influence external outcomes or hide activity, thus threatening the integrity of the data. By manipulating stored data, adversaries may attempt to affect a business process, organizational understanding, and decision making. Stored data could include a variety of file formats, such as Office files, databases, stored emails, and custom file formats. The type of modification and the impact it will have depends on the type of data as well as the goals and objectives of the adversary. For complex systems, an adversary would likely need special expertise and possibly access to specialized software related to the system that wou
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Service Stop
+TECHNIQUE ID: T1489
+TACTIC: Impact
+PLATFORMS: ESXi, IaaS, Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may stop or disable services on a system to render those services unavailable to legitimate users. Stopping critical services or processes can inhibit or stop response to an incident or aid in the adversary's overall objectives to cause damage to the environment. Adversaries may accomplish this by disabling individual services of high importance to an organization, such as <code>MSExchangeIS</code>, which will make Exchange content inaccessible. In some cases, adversaries may stop or disable many or all services to render systems unusable. Services or processes may not allow for modification of their data stores while running. Adversaries may stop services or processes in order t
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Application or System Exploitation
+TECHNIQUE ID: T1499.004
+TACTIC: Impact
+PLATFORMS: Windows, IaaS, Linux, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may exploit software vulnerabilities that can cause an application or system to crash and deny availability to users. Some systems may automatically restart critical applications and services when crashes occur, but they can likely be re-exploited to cause a persistent denial of service (DoS) condition. Adversaries may exploit known or zero-day vulnerabilities to crash applications and/or systems, which may also lead to dependent applications and/or systems to be in a DoS condition. Crashed or restarted applications or systems may also have other effects such as [Data Destruction](https://attack.mitre.org/techniques/T1485), [Firmware Corruption](https://attack.mitre.org/technique
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Runtime Data Manipulation
+TECHNIQUE ID: T1565.003
+TACTIC: Impact
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may modify systems in order to manipulate the data as it is accessed and displayed to an end user, thus threatening the integrity of the data. By manipulating runtime data, adversaries may attempt to affect a business process, organizational understanding, and decision making. Adversaries may alter application binaries used to display data in order to cause runtime manipulations. Adversaries may also conduct [Change Default File Association](https://attack.mitre.org/techniques/T1546/001) and [Masquerading](https://attack.mitre.org/techniques/T1036) to cause a similar effect. The type of modification and the impact it will have depends on the target application and process as well
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Reflection Amplification
+TECHNIQUE ID: T1498.002
+TACTIC: Impact
+PLATFORMS: Windows, IaaS, Linux, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may attempt to cause a denial of service (DoS) by reflecting a high-volume of network traffic to a target. This type of Network DoS takes advantage of a third-party server intermediary that hosts and will respond to a given spoofed source IP address. This third-party server is commonly termed a reflector. An adversary accomplishes a reflection attack by sending packets to reflectors with the spoofed address of the victim. Similar to Direct Network Floods, more than one system may be used to conduct the attack, or a botnet may be used. Likewise, one or more reflectors may be used to focus traffic on the target. This Network DoS attack may also reduce the availability and functiona
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Service Exhaustion Flood
+TECHNIQUE ID: T1499.002
+TACTIC: Impact
+PLATFORMS: Windows, IaaS, Linux, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may target the different network services provided by systems to conduct a denial of service (DoS). Adversaries often target the availability of DNS and web services, however others have been targeted as well. Web server software can be attacked through a variety of means, some of which apply generally while others are specific to the software being used to provide the service. One example of this type of attack is known as a simple HTTP flood, where an adversary sends a large number of HTTP requests to a web server to overwhelm it and/or an application that runs on top of it. This flood relies on raw volume to accomplish the objective, exhausting any of the various resources req
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Defacement
+TECHNIQUE ID: T1491
+TACTIC: Impact
+PLATFORMS: Windows, IaaS, Linux, macOS, ESXi
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may modify visual content available internally or externally to an enterprise network, thus affecting the integrity of the original content. Reasons for [Defacement](https://attack.mitre.org/techniques/T1491) include delivering messaging, intimidation, or claiming (possibly false) credit for an intrusion. Disturbing or offensive images may be used as a part of [Defacement](https://attack.mitre.org/techniques/T1491) in order to cause user discomfort, or to pressure compliance with accompanying messages.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Bandwidth Hijacking
+TECHNIQUE ID: T1496.002
+TACTIC: Impact
+PLATFORMS: Linux, Windows, macOS, IaaS, Containers
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may leverage the network bandwidth resources of co-opted systems to complete resource-intensive tasks, which may impact system and/or hosted service availability. Adversaries may also use malware that leverages a system's network bandwidth as part of a botnet in order to facilitate [Network Denial of Service](https://attack.mitre.org/techniques/T1498) campaigns and/or to seed malicious torrents. Alternatively, they may engage in proxyjacking by selling use of the victims' network bandwidth and IP address to proxyware services. Finally, they may engage in internet-wide scanning in order to identify additional targets for compromise. In addition to incurring potential financial cos
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Financial Theft
+TECHNIQUE ID: T1657
+TACTIC: Impact
+PLATFORMS: Linux, macOS, Office Suite, SaaS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may steal monetary resources from targets through extortion, social engineering, technical theft, or other methods aimed at their own financial gain at the expense of the availability of these resources for victims. Financial theft is the ultimate objective of several popular campaign types including extortion by ransomware, business email compromise (BEC) and fraud, "pig butchering," bank hacking, and exploiting cryptocurrency networks. Adversaries may [Compromise Accounts](https://attack.mitre.org/techniques/T1586) to conduct unauthorized transfers of funds. In the case of business email compromise or email fraud, an adversary may utilize [Impersonation](https://attack.mitre.or
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Internal Defacement
+TECHNIQUE ID: T1491.001
+TACTIC: Impact
+PLATFORMS: ESXi, Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: An adversary may deface systems internal to an organization in an attempt to intimidate or mislead users, thus discrediting the integrity of the systems. This may take the form of modifications to internal websites or server login messages, or directly to user systems with the replacement of the desktop wallpaper. Disturbing or offensive images may be used as a part of [Internal Defacement](https://attack.mitre.org/techniques/T1491/001) in order to cause user discomfort, or to pressure compliance with accompanying messages. Since internally defacing systems exposes an adversary's presence, it often takes place after other intrusion goals have been accomplished.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Cloud Service Hijacking
+TECHNIQUE ID: T1496.004
+TACTIC: Impact
+PLATFORMS: SaaS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may leverage compromised software-as-a-service (SaaS) applications to complete resource-intensive tasks, which may impact hosted service availability. For example, adversaries may leverage email and messaging services, such as AWS Simple Email Service (SES), AWS Simple Notification Service (SNS), SendGrid, and Twilio, in order to send large quantities of spam / [Phishing](https://attack.mitre.org/techniques/T1566) emails and SMS messages. Alternatively, they may engage in LLMJacking by leveraging reverse proxies to hijack the power of cloud-hosted AI models. In some cases, adversaries may leverage services that the victim is already using. In others, particularly when the service
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Compute Hijacking
+TECHNIQUE ID: T1496.001
+TACTIC: Impact
+PLATFORMS: Windows, IaaS, Linux, macOS, Containers
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may leverage the compute resources of co-opted systems to complete resource-intensive tasks, which may impact system and/or hosted service availability. One common purpose for [Compute Hijacking](https://attack.mitre.org/techniques/T1496/001) is to validate transactions of cryptocurrency networks and earn virtual currency. Adversaries may consume enough system resources to negatively impact and/or cause affected machines to become unresponsive. Servers and cloud-based systems are common targets because of the high potential for available resources, but user endpoint systems may also be compromised and used for [Compute Hijacking](https://attack.mitre.org/techniques/T1496/001) and
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Data Manipulation
+TECHNIQUE ID: T1565
+TACTIC: Impact
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may insert, delete, or manipulate data in order to influence external outcomes or hide activity, thus threatening the integrity of the data. By manipulating data, adversaries may attempt to affect a business process, organizational understanding, or decision making. The type of modification and the impact it will have depends on the target application and process as well as the goals and objectives of the adversary. For complex systems, an adversary would likely need special expertise and possibly access to specialized software related to the system that would typically be gained through a prolonged information gathering campaign in order to have the desired impact.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Account Access Removal
+TECHNIQUE ID: T1531
+TACTIC: Impact
+PLATFORMS: Linux, macOS, Windows, SaaS, IaaS, Office Suite, ESXi
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may interrupt availability of system and network resources by inhibiting access to accounts utilized by legitimate users. Accounts may be deleted, locked, or manipulated (ex: changed credentials, revoked permissions for SaaS platforms such as Sharepoint) to remove access to accounts. Adversaries may also subsequently log off and/or perform a [System Shutdown/Reboot](https://attack.mitre.org/techniques/T1529) to set malicious changes into place. In Windows, [Net](https://attack.mitre.org/software/S0039) utility, <code>Set-LocalUser</code> and <code>Set-ADAccountPassword</code> [PowerShell](https://attack.mitre.org/techniques/T1059/001) cmdlets may be used by adversaries to modify 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Data Encrypted for Impact
+TECHNIQUE ID: T1486
+TACTIC: Impact
+PLATFORMS: ESXi, IaaS, Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may encrypt data on target systems or on large numbers of systems in a network to interrupt availability to system and network resources. They can attempt to render stored data inaccessible by encrypting files or data on local and remote drives and withholding access to a decryption key. This may be done in order to extract monetary compensation from a victim in exchange for decryption or a decryption key (ransomware) or to render data permanently inaccessible in cases where the key is not saved or transmitted. In the case of ransomware, it is typical that common user files like Office documents, PDFs, images, videos, audio, text, and source code files will be encrypted (and ofte
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Email Bombing
+TECHNIQUE ID: T1667
+TACTIC: Impact
+PLATFORMS: Linux, Office Suite, Windows, macOS
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may flood targeted email addresses with an overwhelming volume of messages. This may bury legitimate emails in a flood of spam and disrupt business operations. An adversary may accomplish email bombing by leveraging an automated bot to register a targeted address for e-mail lists that do not validate new signups, such as online newsletters. The result can be a wave of thousands of e-mails that effectively overloads the victim’s inbox. By sending hundreds or thousands of e-mails in quick succession, adversaries may successfully divert attention away from and bury legitimate messages including security alerts, daily business processes like help desk tickets and client correspondenc
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Endpoint Denial of Service
+TECHNIQUE ID: T1499
+TACTIC: Impact
+PLATFORMS: Windows, Linux, macOS, Containers, IaaS
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may perform Endpoint Denial of Service (DoS) attacks to degrade or block the availability of services to users. Endpoint DoS can be performed by exhausting the system resources those services are hosted on or exploiting the system to cause a persistent crash condition. Example services include websites, email services, DNS, and web-based applications. Adversaries have been observed conducting DoS attacks for political purposes and to support other malicious activities, including distraction, hacktivism, and extortion. An Endpoint DoS denies the availability of a service without saturating the network used to provide access to the service. Adversaries can target various layers of 
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Resource Hijacking
+TECHNIQUE ID: T1496
+TACTIC: Impact
+PLATFORMS: Windows, IaaS, Linux, macOS, Containers, SaaS
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may leverage the resources of co-opted systems to complete resource-intensive tasks, which may impact system and/or hosted service availability. Resource hijacking may take a number of different forms. For example, adversaries may: * Leverage compute resources in order to mine cryptocurrency * Sell network bandwidth to proxy networks * Generate SMS traffic for profit * Abuse cloud-based messaging services to send large quantities of spam messages In some cases, adversaries may leverage multiple types of Resource Hijacking at once.
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Transmitted Data Manipulation
+TECHNIQUE ID: T1565.002
+TACTIC: Impact
+PLATFORMS: Linux, macOS, Windows
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may alter data en route to storage or other systems in order to manipulate external outcomes or hide activity, thus threatening the integrity of the data. By manipulating transmitted data, adversaries may attempt to affect a business process, organizational understanding, and decision making. Manipulation may be possible over a network connection or between system processes where there is an opportunity deploy a tool that will intercept and change information. The type of modification and the impact it will have depends on the target transmission mechanism as well as the goals and objectives of the adversary. For complex systems, an adversary would likely need special expertise a
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Data Destruction
+TECHNIQUE ID: T1485
+TACTIC: Impact
+PLATFORMS: Containers, ESXi, IaaS, Linux, macOS, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may destroy data and files on specific systems or in large numbers on a network to interrupt availability to systems, services, and network resources. Data destruction is likely to render stored data irrecoverable by forensic techniques through overwriting files or data on local and remote drives. Common operating system file deletion commands such as <code>del</code> and <code>rm</code> often only remove pointers to files without wiping the contents of the files themselves, making the files recoverable by proper forensic methodology. This behavior is distinct from [Disk Content Wipe](https://attack.mitre.org/techniques/T1561/001) and [Disk Structure Wipe](https://attack.mitre.or
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Network Denial of Service
+TECHNIQUE ID: T1498
+TACTIC: Impact
+PLATFORMS: Windows, IaaS, Linux, macOS, Containers
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may perform Network Denial of Service (DoS) attacks to degrade or block the availability of targeted resources to users. Network DoS can be performed by exhausting the network bandwidth services rely on. Example resources include specific websites, email services, DNS, and web-based applications. Adversaries have been observed conducting network DoS attacks for political purposes and to support other malicious activities, including distraction, hacktivism, and extortion. A Network DoS will occur when the bandwidth capacity of the network connection to a system is exhausted due to the volume of malicious traffic directed at the resource or the network connections and network devic
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Firmware Corruption
+TECHNIQUE ID: T1495
+TACTIC: Impact
+PLATFORMS: Linux, macOS, Network Devices, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may overwrite or corrupt the flash memory contents of system BIOS or other firmware in devices attached to a system in order to render them inoperable or unable to boot, thus denying the availability to use the devices and/or the system. Firmware is software that is loaded and executed from non-volatile memory on hardware devices in order to initialize and manage device functionality. These devices may include the motherboard, hard drive, or video cards. In general, adversaries may manipulate, overwrite, or corrupt firmware in order to deny the use of the system or devices. For example, corruption of firmware responsible for loading the operating system for network devices may re
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Inhibit System Recovery
+TECHNIQUE ID: T1490
+TACTIC: Impact
+PLATFORMS: Containers, ESXi, IaaS, Linux, macOS, Network Devices, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may delete or remove built-in data and turn off services designed to aid in the recovery of a corrupted system to prevent recovery. This may deny access to available backups and recovery options. Operating systems may contain features that can help fix corrupted systems, such as a backup catalog, volume shadow copies, and automatic repair features. Adversaries may disable or delete system recovery features to augment the effects of [Data Destruction](https://attack.mitre.org/techniques/T1485) and [Data Encrypted for Impact](https://attack.mitre.org/techniques/T1486). Furthermore, adversaries may disable recovery notifications, then corrupt backups. A number of native Windows util
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: Disk Content Wipe
+TECHNIQUE ID: T1561.001
+TACTIC: Impact
+PLATFORMS: Linux, Network Devices, Windows, macOS
+SUB-TECHNIQUE: Yes
+DESCRIPTION: Adversaries may erase the contents of storage devices on specific systems or in large numbers in a network to interrupt availability to system and network resources. Adversaries may partially or completely overwrite the contents of a storage device rendering the data irrecoverable through the storage interface. Instead of wiping specific disk structures or files, adversaries with destructive intent may wipe arbitrary portions of disk content. To wipe disk content, adversaries may acquire direct access to the hard drive in order to overwrite arbitrarily sized portions of disk with random data. Adversaries have also been observed leveraging third-party drivers like [RawDisk](https://attack.mit
+
+──────────────────────────────────────────────────
+
+TECHNIQUE: System Shutdown/Reboot
+TECHNIQUE ID: T1529
+TACTIC: Impact
+PLATFORMS: ESXi, Linux, macOS, Network Devices, Windows
+SUB-TECHNIQUE: No
+DESCRIPTION: Adversaries may shutdown/reboot systems to interrupt access to, or aid in the destruction of, those systems. Operating systems may contain commands to initiate a shutdown/reboot of a machine or network device. In some cases, these commands may also be used to initiate a shutdown/reboot of a remote computer or network device via [Network Device CLI](https://attack.mitre.org/techniques/T1059/008) (e.g. <code>reload</code>). They may also include shutdown/reboot of a virtual machine via hypervisor / cloud consoles or command line tools. Shutting down or rebooting systems may disrupt access to computer resources for legitimate users while also impeding incident response/recovery. Adversaries may
+
+──────────────────────────────────────────────────

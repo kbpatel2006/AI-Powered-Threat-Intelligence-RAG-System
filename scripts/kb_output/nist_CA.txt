@@ -1,0 +1,74 @@
+SOURCE: NIST SP 800-53 rev5 — Control Family CA
+FRAMEWORK: NIST SP 800-53 rev5
+CONTROL FAMILY: CA — Assessment, Authorization, and Monitoring
+CONTROL COUNT: 9
+======================================================================
+
+CONTROL: CA-1 — Policy and Procedures
+FAMILY: CA (Assessment, Authorization, and Monitoring)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop, document, and disseminate to {{ insert: param, ca-1_prm_1 }}: {{ insert: param, ca-01_odp.03 }} assessment, authorization, and monitoring policy that: Addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and Is consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines; and Procedures to facilitate the implementation of the assessment, authorization, and monitoring policy and the associated assessment, authorization, and monitoring controls; Designate a
+
+──────────────────────────────────────────────────
+
+CONTROL: CA-2 — Control Assessments
+FAMILY: CA (Assessment, Authorization, and Monitoring)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Select the appropriate assessor or assessment team for the type of assessment to be conducted; Develop a control assessment plan that describes the scope of the assessment including: Controls and control enhancements under assessment; Assessment procedures to be used to determine control effectiveness; and Assessment environment, assessment team, and assessment roles and responsibilities; Ensure the control assessment plan is reviewed and approved by the authorizing official or designated representative prior to conducting the assessment; Assess the controls in the system and its environment o
+ENHANCEMENTS: CA-2.1: Independent Assessors — Employ independent assessors or assessment teams to conduct control assessments. Independent assessors or assessment teams are individuals or groups who conduct impartial assessments of systems. Impartiality means that assessors are free from any perceived or actual conflicts of interest regarding the development, operation, sustainment, or management of the systems
+
+──────────────────────────────────────────────────
+
+CONTROL: CA-3 — Information Exchange
+FAMILY: CA (Assessment, Authorization, and Monitoring)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Approve and manage the exchange of information between the system and other systems using {{ insert: param, ca-03_odp.01 }}; Document, as part of each exchange agreement, the interface characteristics, security and privacy requirements, controls, and responsibilities for each system, and the impact level of the information communicated; and Review and update the agreements {{ insert: param, ca-03_odp.03 }}. System information exchange requirements apply to information exchanges between two or more systems. System information exchanges include connections via leased lines or virtual private net
+ENHANCEMENTS: CA-3.1: Unclassified National Security System Connections —  | CA-3.2: Classified National Security System Connections —  | CA-3.3: Unclassified Non-national Security System Connections —  | CA-3.4: Connections to Public Networks —  | CA-3.5: Restrictions on External System Connections —  | CA-3.6: Transfer Authorizations — Verify that individuals or systems transferring data between interconnecti
+
+──────────────────────────────────────────────────
+
+CONTROL: CA-4 — Security Certification
+FAMILY: CA (Assessment, Authorization, and Monitoring)
+FRAMEWORK: NIST SP 800-53 rev5
+
+──────────────────────────────────────────────────
+
+CONTROL: CA-5 — Plan of Action and Milestones
+FAMILY: CA (Assessment, Authorization, and Monitoring)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop a plan of action and milestones for the system to document the planned remediation actions of the organization to correct weaknesses or deficiencies noted during the assessment of the controls and to reduce or eliminate known vulnerabilities in the system; and Update existing plan of action and milestones {{ insert: param, ca-05_odp }} based on the findings from control assessments, independent audits or reviews, and continuous monitoring activities. Plans of action and milestones are useful for any type of organization to track planned remedial actions. Plans of action and milestones 
+ENHANCEMENTS: CA-5.1: Automation Support for Accuracy and Currency — Ensure the accuracy, currency, and availability of the plan of action and milestones for the system using {{ insert: param, ca-05.01_odp }}. Using automated tools helps maintain the accuracy, currency, and availability of the plan of action and milestones and facilitates the coordination and sharing of security and privacy information througho
+
+──────────────────────────────────────────────────
+
+CONTROL: CA-6 — Authorization
+FAMILY: CA (Assessment, Authorization, and Monitoring)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Assign a senior official as the authorizing official for the system; Assign a senior official as the authorizing official for common controls available for inheritance by organizational systems; Ensure that the authorizing official for the system, before commencing operations: Accepts the use of common controls inherited by the system; and Authorizes the system to operate; Ensure that the authorizing official for common controls authorizes the use of those controls for inheritance by organizational systems; Update the authorizations {{ insert: param, ca-06_odp }}. Authorizations are official m
+ENHANCEMENTS: CA-6.1: Joint Authorization — Intra-organization — Employ a joint authorization process for the system that includes multiple authorizing officials from the same organization conducting the authorization. Assigning multiple authorizing officials from the same organization to serve as co-authorizing officials for the system increases the level of independence in the risk-based decision-making proce
+
+──────────────────────────────────────────────────
+
+CONTROL: CA-7 — Continuous Monitoring
+FAMILY: CA (Assessment, Authorization, and Monitoring)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop a system-level continuous monitoring strategy and implement continuous monitoring in accordance with the organization-level continuous monitoring strategy that includes: Establishing the following system-level metrics to be monitored: {{ insert: param, ca-07_odp.01 }}; Establishing {{ insert: param, ca-07_odp.02 }} for monitoring and {{ insert: param, ca-07_odp.03 }} for assessment of control effectiveness; Ongoing control assessments in accordance with the continuous monitoring strategy; Ongoing monitoring of system and organization-defined metrics in accordance with the continuous mo
+ENHANCEMENTS: CA-7.1: Independent Assessment — Employ independent assessors or assessment teams to monitor the controls in the system on an ongoing basis. Organizations maximize the value of control assessments by requiring that assessments be conducted by assessors with appropriate levels of independence. The level of required independence is based on organizational continuous monitoring strategies. Assessor i
+
+──────────────────────────────────────────────────
+
+CONTROL: CA-8 — Penetration Testing
+FAMILY: CA (Assessment, Authorization, and Monitoring)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Conduct penetration testing {{ insert: param, ca-08_odp.01 }} on {{ insert: param, ca-08_odp.02 }}. Penetration testing is a specialized type of assessment conducted on systems or individual system components to identify vulnerabilities that could be exploited by adversaries. Penetration testing goes beyond automated vulnerability scanning and is conducted by agents and teams with demonstrable skills and experience that include technical expertise in network, operating system, and/or application level security. Penetration testing can be used to validate vulnerabilities or determine the degree
+ENHANCEMENTS: CA-8.1: Independent Penetration Testing Agent or Team — Employ an independent penetration testing agent or team to perform penetration testing on the system or system components. Independent penetration testing agents or teams are individuals or groups who conduct impartial penetration testing of organizational systems. Impartiality implies that penetration testing agents or teams are free from pe
+
+──────────────────────────────────────────────────
+
+CONTROL: CA-9 — Internal System Connections
+FAMILY: CA (Assessment, Authorization, and Monitoring)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Authorize internal connections of {{ insert: param, ca-09_odp.01 }} to the system; Document, for each internal connection, the interface characteristics, security and privacy requirements, and the nature of the information communicated; Terminate internal system connections after {{ insert: param, ca-09_odp.02 }} ; and Review {{ insert: param, ca-09_odp.03 }} the continued need for each internal connection. Internal system connections are connections between organizational systems and separate constituent system components (i.e., connections between components that are part of the same system)
+ENHANCEMENTS: CA-9.1: Compliance Checks — Perform security and privacy compliance checks on constituent system components prior to the establishment of the internal connection. Compliance checks include verification of the relevant baseline configuration. security compliance checks are performed on constituent system components prior to the establishment of the internal connection; privacy compliance checks are
+
+──────────────────────────────────────────────────

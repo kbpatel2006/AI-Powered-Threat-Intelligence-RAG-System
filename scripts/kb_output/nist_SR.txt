@@ -1,0 +1,96 @@
+SOURCE: NIST SP 800-53 rev5 — Control Family SR
+FRAMEWORK: NIST SP 800-53 rev5
+CONTROL FAMILY: SR — Supply Chain Risk Management
+CONTROL COUNT: 12
+======================================================================
+
+CONTROL: SR-1 — Policy and Procedures
+FAMILY: SR (Supply Chain Risk Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop, document, and disseminate to {{ insert: param, sr-1_prm_1 }}: {{ insert: param, sr-01_odp.03 }} supply chain risk management policy that: Addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and Is consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines; and Procedures to facilitate the implementation of the supply chain risk management policy and the associated supply chain risk management controls; Designate an {{ insert: param, sr-01_odp.04 }} to 
+
+──────────────────────────────────────────────────
+
+CONTROL: SR-2 — Supply Chain Risk Management Plan
+FAMILY: SR (Supply Chain Risk Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop a plan for managing supply chain risks associated with the research and development, design, manufacturing, acquisition, delivery, integration, operations and maintenance, and disposal of the following systems, system components or system services: {{ insert: param, sr-02_odp.01 }}; Review and update the supply chain risk management plan {{ insert: param, sr-02_odp.02 }} or as required, to address threat, organizational or environmental changes; and Protect the supply chain risk management plan from unauthorized disclosure and modification. The dependence on products, systems, and serv
+ENHANCEMENTS: SR-2.1: Establish SCRM Team — Establish a supply chain risk management team consisting of {{ insert: param, sr-02.01_odp.01 }} to lead and support the following SCRM activities: {{ insert: param, sr-02.01_odp.02 }}. To implement supply chain risk management plans, organizations establish a coordinated, team-based approach to identify and assess supply chain risks and manage these risks by using pr
+
+──────────────────────────────────────────────────
+
+CONTROL: SR-3 — Supply Chain Controls and Processes
+FAMILY: SR (Supply Chain Risk Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Establish a process or processes to identify and address weaknesses or deficiencies in the supply chain elements and processes of {{ insert: param, sr-03_odp.01 }} in coordination with {{ insert: param, sr-03_odp.02 }}; Employ the following controls to protect against supply chain risks to the system, system component, or system service and to limit the harm or consequences from supply chain-related events: {{ insert: param, sr-03_odp.03 }} ; and Document the selected and implemented supply chain processes and controls in {{ insert: param, sr-03_odp.04 }}. Supply chain elements include organiz
+ENHANCEMENTS: SR-3.1: Diverse Supply Base — Employ a diverse set of sources for the following system components and services: {{ insert: param, sr-3.1_prm_1 }}. Diversifying the supply of systems, system components, and services can reduce the probability that adversaries will successfully identify and target the supply chain and can reduce the impact of a supply chain event or compromise. Identifying multiple 
+
+──────────────────────────────────────────────────
+
+CONTROL: SR-4 — Provenance
+FAMILY: SR (Supply Chain Risk Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Document, monitor, and maintain valid provenance of the following systems, system components, and associated data: {{ insert: param, sr-04_odp }}. Every system and system component has a point of origin and may be changed throughout its existence. Provenance is the chronology of the origin, development, ownership, location, and changes to a system or system component and associated data. It may also include personnel and processes used to interact with or make modifications to the system, component, or associated data. Organizations consider developing procedures (see [SR-1](#sr-1) ) for alloc
+ENHANCEMENTS: SR-4.1: Identity — Establish and maintain unique identification of the following supply chain elements, processes, and personnel associated with the identified system and critical system components: {{ insert: param, sr-04.01_odp }}. Knowing who and what is in the supply chains of organizations is critical to gaining visibility into supply chain activities. Visibility into supply chain activities 
+
+──────────────────────────────────────────────────
+
+CONTROL: SR-5 — Acquisition Strategies, Tools, and Methods
+FAMILY: SR (Supply Chain Risk Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Employ the following acquisition strategies, contract tools, and procurement methods to protect against, identify, and mitigate supply chain risks: {{ insert: param, sr-05_odp }}. The use of the acquisition process provides an important vehicle to protect the supply chain. There are many useful tools and techniques available, including obscuring the end use of a system or system component, using blind or filtered buys, requiring tamper-evident packaging, or using trusted or controlled distribution. The results from a supply chain risk assessment can guide and inform the strategies, tools, and 
+ENHANCEMENTS: SR-5.1: Adequate Supply — Employ the following controls to ensure an adequate supply of {{ insert: param, sr-05.01_odp.02 }}: {{ insert: param, sr-05.01_odp.01 }}. Adversaries can attempt to impede organizational operations by disrupting the supply of critical system components or corrupting supplier operations. Organizations may track systems and component mean time to failure to mitigate the los
+
+──────────────────────────────────────────────────
+
+CONTROL: SR-6 — Supplier Assessments and Reviews
+FAMILY: SR (Supply Chain Risk Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Assess and review the supply chain-related risks associated with suppliers or contractors and the system, system component, or system service they provide {{ insert: param, sr-06_odp }}. An assessment and review of supplier risk includes security and supply chain risk management processes, foreign ownership, control or influence (FOCI), and the ability of the supplier to effectively assess subordinate second-tier and third-tier suppliers and contractors. The reviews may be conducted by the organization or by an independent third party. The reviews consider documented processes, documented cont
+ENHANCEMENTS: SR-6.1: Testing and Analysis — Employ {{ insert: param, sr-06.01_odp.01 }} of the following supply chain elements, processes, and actors associated with the system, system component, or system service: {{ insert: param, sr-06.01_odp.02 }}. Relationships between entities and procedures within the supply chain, including development and delivery, are considered. Supply chain elements include organiz
+
+──────────────────────────────────────────────────
+
+CONTROL: SR-7 — Supply Chain Operations Security
+FAMILY: SR (Supply Chain Risk Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Employ the following Operations Security (OPSEC) controls to protect supply chain-related information for the system, system component, or system service: {{ insert: param, sr-07_odp }}. Supply chain OPSEC expands the scope of OPSEC to include suppliers and potential suppliers. OPSEC is a process that includes identifying critical information, analyzing friendly actions related to operations and other activities to identify actions that can be observed by potential adversaries, determining indicators that potential adversaries might obtain that could be interpreted or pieced together to derive
+
+──────────────────────────────────────────────────
+
+CONTROL: SR-8 — Notification Agreements
+FAMILY: SR (Supply Chain Risk Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Establish agreements and procedures with entities involved in the supply chain for the system, system component, or system service for the {{ insert: param, sr-08_odp.01 }}. The establishment of agreements and procedures facilitates communications among supply chain entities. Early notification of compromises and potential compromises in the supply chain that can potentially adversely affect or have adversely affected organizational systems or system components is essential for organizations to effectively respond to such incidents. The results of assessments or audits may include open-source 
+
+──────────────────────────────────────────────────
+
+CONTROL: SR-9 — Tamper Resistance and Detection
+FAMILY: SR (Supply Chain Risk Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Implement a tamper protection program for the system, system component, or system service. Anti-tamper technologies, tools, and techniques provide a level of protection for systems, system components, and services against many threats, including reverse engineering, modification, and substitution. Strong identification combined with tamper resistance and/or tamper detection is essential to protecting systems and components during distribution and when in use. a tamper protection program is implemented for the system, system component, or system service. Supply chain risk management policy and 
+ENHANCEMENTS: SR-9.1: Multiple Stages of System Development Life Cycle — Employ anti-tamper technologies, tools, and techniques throughout the system development life cycle. The system development life cycle includes research and development, design, manufacturing, acquisition, delivery, integration, operations and maintenance, and disposal. Organizations use a combination of hardware and software techniques fo
+
+──────────────────────────────────────────────────
+
+CONTROL: SR-10 — Inspection of Systems or Components
+FAMILY: SR (Supply Chain Risk Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Inspect the following systems or system components {{ insert: param, sr-10_odp.02 }} to detect tampering: {{ insert: param, sr-10_odp.01 }}. The inspection of systems or systems components for tamper resistance and detection addresses physical and logical tampering and is applied to systems and system components removed from organization-controlled areas. Indications of a need for inspection include changes in packaging, specifications, factory location, or entity in which the part is purchased, and when individuals return from travel to high-risk locations. {{ insert: param, sr-10_odp.01 }} a
+
+──────────────────────────────────────────────────
+
+CONTROL: SR-11 — Component Authenticity
+FAMILY: SR (Supply Chain Risk Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop and implement anti-counterfeit policy and procedures that include the means to detect and prevent counterfeit components from entering the system; and Report counterfeit system components to {{ insert: param, sr-11_odp.01 }}. Sources of counterfeit components include manufacturers, developers, vendors, and contractors. Anti-counterfeiting policies and procedures support tamper resistance and provide a level of protection against the introduction of malicious code. External reporting organizations include CISA. an anti-counterfeit policy is developed and implemented; anti-counterfeit pr
+ENHANCEMENTS: SR-11.1: Anti-counterfeit Training — Train {{ insert: param, sr-11.01_odp }} to detect counterfeit system components (including hardware, software, and firmware). None. {{ insert: param, sr-11.01_odp }} are trained to detect counterfeit system components (including hardware, software, and firmware). Supply chain risk management policy and procedures supply chain risk management plan system and ser
+
+──────────────────────────────────────────────────
+
+CONTROL: SR-12 — Component Disposal
+FAMILY: SR (Supply Chain Risk Management)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Dispose of {{ insert: param, sr-12_odp.01 }} using the following techniques and methods: {{ insert: param, sr-12_odp.02 }}. Data, documentation, tools, or system components can be disposed of at any time during the system development life cycle (not only in the disposal or retirement phase of the life cycle). For example, disposal can occur during research and development, design, prototyping, or operations/maintenance and include methods such as disk cleaning, removal of cryptographic keys, partial reuse of components. Opportunities for compromise during disposal affect physical and logical d
+
+──────────────────────────────────────────────────

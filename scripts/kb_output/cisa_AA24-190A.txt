@@ -1,0 +1,45 @@
+SOURCE: CISA Advisory AA24-190A
+THREAT ACTOR: GRU Unit 29155 (Russia)
+DATE: 2024-07-09
+ADVISORY ID: AA24-190A
+======================================================================
+
+SECTION: Overview
+TITLE: GRU Unit 29155 — Overview
+ATT&CK TECHNIQUE IDs: N/A
+
+GRU Unit 29155, also known as Cadet Blizzard and previously associated with WhisperGate destructive malware, is a Russian military intelligence (GRU) unit responsible for global operations including cyberattacks, assassinations, and sabotage. A July 2024 joint advisory (AA24-190A) from CISA, NSA, FBI, and international partners identified Unit 29155 as conducting espionage and disruptive cyberattacks against NATO member states, Ukraine, and other European governments since at least 2020. The unit operates with disruptive and destructive objectives distinct from traditional Russian intelligence cyber units.
+
+──────────────────────────────────────────────────
+
+SECTION: TTPs — Initial Access
+TITLE: GRU Unit 29155 — Initial Access and Reconnaissance
+ATT&CK TECHNIQUE IDs: T1595, T1190, T1133, T1589
+
+GRU Unit 29155 conducts extensive pre-compromise reconnaissance (T1595 — Active Scanning) including subdomain enumeration and vulnerability scanning of target infrastructure. Initial access is primarily achieved through exploitation of public-facing applications (T1190) including CVE-2021-33044 (Dahua IP cameras), CVE-2022-26134 (Atlassian Confluence), and various edge device CVEs. The unit also uses external remote services (T1133) and conducts credential gathering operations (T1589 — Gather Victim Identity Information) to identify valid accounts for initial access.
+
+──────────────────────────────────────────────────
+
+SECTION: TTPs — Destructive Activity
+TITLE: GRU Unit 29155 — Destructive Malware and WhisperGate
+ATT&CK TECHNIQUE IDs: T1561.002, T1485, T1491.001
+
+GRU Unit 29155's most notable destructive capability is WhisperGate, a multi-stage wiper malware that corrupts the Master Boot Record (T1561.002 — Disk Structure Wipe) and overwrites files to render systems unbootable. The unit also conducts data destruction operations (T1485 — Data Destruction) and website defacement (T1491.001 — Defacement: Internal Defacement). These destructive objectives distinguish Unit 29155 from espionage-focused Russian APT groups. The advisory notes deployments of WhisperGate against Ukrainian government and critical infrastructure targets in January 2022.
+
+──────────────────────────────────────────────────
+
+SECTION: TTPs — Persistence / Lateral Movement
+TITLE: GRU Unit 29155 — Persistence and Lateral Movement
+ATT&CK TECHNIQUE IDs: T1505.003, T1021.002, T1550.002, T1078
+
+Unit 29155 establishes persistence using web shells (T1505.003 — Server Software Component: Web Shell) on compromised internet-facing servers. Lateral movement is conducted via SMB/Windows Admin Shares (T1021.002) and pass-the-hash techniques (T1550.002). The unit uses valid accounts (T1078) extensively once inside the network. Tools observed include Impacket for lateral movement, and the group leverages Active Directory enumeration to identify high-value targets before deploying destructive payloads.
+
+──────────────────────────────────────────────────
+
+SECTION: Mitigations
+TITLE: GRU Unit 29155 — Mitigations
+ATT&CK TECHNIQUE IDs: T1190, T1561.002, T1505.003, T1078
+
+CISA/NSA recommended mitigations against GRU Unit 29155: (1) Prioritize patching internet-facing systems — especially edge devices, VPN, and collaboration tools exploited by this unit. (2) Implement immutable, offline backups to recover from wiper attacks. (3) Harden web-facing servers to prevent web shell deployment; monitor for unusual web server process children. (4) Deploy network monitoring for unusual SMB activity and lateral movement indicators. (5) Enforce least privilege and segment networks to limit blast radius of destructive payload deployment. (6) Enable Windows Defender Credential Guard to prevent pass-the-hash. (7) Monitor for MBR modification and mass file overwrite activity as destructive indicators.
+
+──────────────────────────────────────────────────

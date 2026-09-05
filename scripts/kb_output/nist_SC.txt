@@ -1,0 +1,388 @@
+SOURCE: NIST SP 800-53 rev5 — Control Family SC
+FRAMEWORK: NIST SP 800-53 rev5
+CONTROL FAMILY: SC — System and Communications Protection
+CONTROL COUNT: 51
+======================================================================
+
+CONTROL: SC-1 — Policy and Procedures
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Develop, document, and disseminate to {{ insert: param, sc-1_prm_1 }}: {{ insert: param, sc-01_odp.03 }} system and communications protection policy that: Addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and Is consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines; and Procedures to facilitate the implementation of the system and communications protection policy and the associated system and communications protection controls; Designate an {{ insert: pa
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-2 — Separation of System and User Functionality
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Separate user functionality, including user interface services, from system management functionality. System management functionality includes functions that are necessary to administer databases, network components, workstations, or servers. These functions typically require privileged user access. The separation of user functions from system management functions is physical or logical. Organizations may separate system management functions from user functions by using different computers, instances of operating systems, central processing units, or network addresses; by employing virtualizat
+ENHANCEMENTS: SC-2.1: Interfaces for Non-privileged Users — Prevent the presentation of system management functionality at interfaces to non-privileged users. Preventing the presentation of system management functionality at interfaces to non-privileged users ensures that system administration options, including administrator privileges, are not available to the general user population. Restricting user access 
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-3 — Security Function Isolation
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Isolate security functions from nonsecurity functions. Security functions are isolated from nonsecurity functions by means of an isolation boundary implemented within a system via partitions and domains. The isolation boundary controls access to and protects the integrity of the hardware, software, and firmware that perform system security functions. Systems implement code separation in many ways, such as through the provision of security kernels via processor rings or processor modes. For non-kernel code, security function isolation is often achieved through file system protections that prote
+ENHANCEMENTS: SC-3.1: Hardware Separation — Employ hardware separation mechanisms to implement security function isolation. Hardware separation mechanisms include hardware ring architectures that are implemented within microprocessors and hardware-enforced address segmentation used to support logically distinct storage objects with separate attributes (i.e., readable, writeable). hardware separation mechanisms 
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-4 — Information in Shared System Resources
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Prevent unauthorized and unintended information transfer via shared system resources. Preventing unauthorized and unintended information transfer via shared system resources stops information produced by the actions of prior users or roles (or the actions of processes acting on behalf of prior users or roles) from being available to current users or roles (or current processes acting on behalf of current users or roles) that obtain access to shared system resources after those resources have been released back to the system. Information in shared system resources also applies to encrypted repr
+ENHANCEMENTS: SC-4.1: Security Levels —  | SC-4.2: Multilevel or Periods Processing — Prevent unauthorized information transfer via shared resources in accordance with {{ insert: param, sc-04.02_odp }} when system processing explicitly switches between different information classification levels or security categories. Changes in processing levels can occur during multilevel or periods processing with informati
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-5 — Denial-of-service Protection
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: {{ insert: param, sc-05_odp.02 }} the effects of the following types of denial-of-service events: {{ insert: param, sc-05_odp.01 }} ; and Employ the following controls to achieve the denial-of-service objective: {{ insert: param, sc-05_odp.03 }}. Denial-of-service events may occur due to a variety of internal and external causes, such as an attack by an adversary or a lack of planning to support organizational needs with respect to capacity and bandwidth. Such attacks can occur across a wide range of network protocols (e.g., IPv4, IPv6). A variety of technologies are available to limit or elim
+ENHANCEMENTS: SC-5.1: Restrict Ability to Attack Other Systems — Restrict the ability of individuals to launch the following denial-of-service attacks against other systems: {{ insert: param, sc-05.01_odp }}. Restricting the ability of individuals to launch denial-of-service attacks requires the mechanisms commonly used for such attacks to be unavailable. Individuals of concern include hostile insiders or exter
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-6 — Resource Availability
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Protect the availability of resources by allocating {{ insert: param, sc-06_odp.01 }} by {{ insert: param, sc-06_odp.02 }}. Priority protection prevents lower-priority processes from delaying or interfering with the system that services higher-priority processes. Quotas prevent users or processes from obtaining more than predetermined amounts of resources. the availability of resources is protected by allocating {{ insert: param, sc-06_odp.01 }} by {{ insert: param, sc-06_odp.02 }}. System and communications protection policy procedures addressing prioritization of system resources system desi
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-7 — Boundary Protection
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Monitor and control communications at the external managed interfaces to the system and at key internal managed interfaces within the system; Implement subnetworks for publicly accessible system components that are {{ insert: param, sc-07_odp }} separated from internal organizational networks; and Connect to external networks or systems only through managed interfaces consisting of boundary protection devices arranged in accordance with an organizational security and privacy architecture. Managed interfaces include gateways, routers, firewalls, guards, network-based malicious code analysis, vi
+ENHANCEMENTS: SC-7.1: Physically Separated Subnetworks —  | SC-7.2: Public Access —  | SC-7.3: Access Points — Limit the number of external network connections to the system. Limiting the number of external network connections facilitates monitoring of inbound and outbound communications traffic. The Trusted Internet Connection [DHS TIC](#4f42ee6e-86cc-403b-a51f-76c2b4f81b54) initiative is an example of a feder
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-8 — Transmission Confidentiality and Integrity
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Protect the {{ insert: param, sc-08_odp }} of transmitted information. Protecting the confidentiality and integrity of transmitted information applies to internal and external networks as well as any system components that can transmit information, including servers, notebook computers, desktop computers, mobile devices, printers, copiers, scanners, facsimile machines, and radios. Unprotected communication paths are exposed to the possibility of interception and modification. Protecting the confidentiality and integrity of information can be accomplished by physical or logical means. Physical 
+ENHANCEMENTS: SC-8.1: Cryptographic Protection — Implement cryptographic mechanisms to {{ insert: param, sc-08.01_odp }} during transmission. Encryption protects information from unauthorized disclosure and modification during transmission. Cryptographic mechanisms that protect the confidentiality and integrity of information during transmission include TLS and IPSec. Cryptographic mechanisms used to protect in
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-9 — Transmission Confidentiality
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-10 — Network Disconnect
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Terminate the network connection associated with a communications session at the end of the session or after {{ insert: param, sc-10_odp }} of inactivity. Network disconnect applies to internal and external networks. Terminating network connections associated with specific communications sessions includes de-allocating TCP/IP address or port pairs at the operating system level and de-allocating the networking assignments at the application level if multiple application sessions are using a single operating system-level network connection. Periods of inactivity may be established by organizatio
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-11 — Trusted Path
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Provide a {{ insert: param, sc-11_odp.01 }} isolated trusted communications path for communications between the user and the trusted components of the system; and Permit users to invoke the trusted communications path for communications between the user and the following security functions of the system, including at a minimum, authentication and re-authentication: {{ insert: param, sc-11_odp.02 }}. Trusted paths are mechanisms by which users can communicate (using input devices such as keyboards) directly with the security functions of systems with the requisite assurance to support security 
+ENHANCEMENTS: SC-11.1: Irrefutable Communications Path — Provide a trusted communications path that is irrefutably distinguishable from other communications paths; and Initiate the trusted communications path for communications between the {{ insert: param, sc-11.01_odp }} of the system and the user. An irrefutable communications path permits the system to initiate a trusted path, which necessitates that the us
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-12 — Cryptographic Key Establishment and Management
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Establish and manage cryptographic keys when cryptography is employed within the system in accordance with the following key management requirements: {{ insert: param, sc-12_odp }}. Cryptographic key management and establishment can be performed using manual procedures or automated mechanisms with supporting manual procedures. Organizations define key management requirements in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines and specify appropriate options, parameters, and levels. Organizations manage trust stores to ensure that o
+ENHANCEMENTS: SC-12.1: Availability — Maintain availability of information in the event of the loss of cryptographic keys by users. Escrowing of encryption keys is a common practice for ensuring availability in the event of key loss. A forgotten passphrase is an example of losing a cryptographic key. information availability is maintained in the event of the loss of cryptographic keys by users. System and commu
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-13 — Cryptographic Protection
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Determine the {{ insert: param, sc-13_odp.01 }} ; and Implement the following types of cryptography required for each specified cryptographic use: {{ insert: param, sc-13_odp.02 }}. Cryptography can be employed to support a variety of security solutions, including the protection of classified information and controlled unclassified information, the provision and implementation of digital signatures, and the enforcement of information separation when authorized individuals have the necessary clearances but lack the necessary formal access approvals. Cryptography can also be used to support rand
+ENHANCEMENTS: SC-13.1: FIPS-validated Cryptography —  | SC-13.2: NSA-approved Cryptography —  | SC-13.3: Individuals Without Formal Access Approvals —  | SC-13.4: Digital Signatures — 
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-14 — Public Access Protections
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-15 — Collaborative Computing Devices and Applications
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Prohibit remote activation of collaborative computing devices and applications with the following exceptions: {{ insert: param, sc-15_odp }} ; and Provide an explicit indication of use to users physically present at the devices. Collaborative computing devices and applications include remote meeting devices and applications, networked white boards, cameras, and microphones. The explicit indication of use includes signals to users when collaborative computing devices and applications are activated. remote activation of collaborative computing devices and applications is prohibited except {{ ins
+ENHANCEMENTS: SC-15.1: Physical or Logical Disconnect — Provide {{ insert: param, sc-15.01_odp }} disconnect of collaborative computing devices in a manner that supports ease of use. Failing to disconnect from collaborative computing devices can result in subsequent compromises of organizational information. Providing easy methods to disconnect from such devices after a collaborative computing session ensures t
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-16 — Transmission of Security and Privacy Attributes
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Associate {{ insert: param, sc-16_prm_1 }} with information exchanged between systems and between system components. Security and privacy attributes can be explicitly or implicitly associated with the information contained in organizational systems or system components. Attributes are abstractions that represent the basic properties or characteristics of an entity with respect to protecting information or the management of personally identifiable information. Attributes are typically associated with internal data structures, including records, buffers, and files within the system. Security and
+ENHANCEMENTS: SC-16.1: Integrity Verification — Verify the integrity of transmitted security and privacy attributes. Part of verifying the integrity of transmitted information is ensuring that security and privacy attributes that are associated with such information have not been modified in an unauthorized manner. Unauthorized modification of security or privacy attributes can result in a loss of integrity for
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-17 — Public Key Infrastructure Certificates
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Issue public key certificates under an {{ insert: param, sc-17_odp }} or obtain public key certificates from an approved service provider; and Include only approved trust anchors in trust stores or certificate stores managed by the organization. Public key infrastructure (PKI) certificates are certificates with visibility external to organizational systems and certificates related to the internal operations of systems, such as application-specific time services. In cryptographic systems with a hierarchical structure, a trust anchor is an authoritative source (i.e., a certificate authority) for
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-18 — Mobile Code
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Define acceptable and unacceptable mobile code and mobile code technologies; and Authorize, monitor, and control the use of mobile code within the system. Mobile code includes any program, application, or content that can be transmitted across a network (e.g., embedded in an email, document, or website) and executed on a remote system. Decisions regarding the use of mobile code within organizational systems are based on the potential for the code to cause damage to the systems if used maliciously. Mobile code technologies include Java applets, JavaScript, HTML5, WebGL, and VBScript. Usage rest
+ENHANCEMENTS: SC-18.1: Identify Unacceptable Code and Take Corrective Actions — Identify {{ insert: param, sc-18.01_odp.01 }} and take {{ insert: param, sc-18.01_odp.02 }}. Corrective actions when unacceptable mobile code is detected include blocking, quarantine, or alerting administrators. Blocking includes preventing the transmission of word processing files with embedded macros when such macros have been det
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-19 — Voice Over Internet Protocol
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Technology-specific; addressed as any other technology or protocol.
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-20 — Secure Name/Address Resolution Service (Authoritative Source)
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Provide additional data origin authentication and integrity verification artifacts along with the authoritative name resolution data the system returns in response to external name/address resolution queries; and Provide the means to indicate the security status of child zones and (if the child supports secure resolution services) to enable verification of a chain of trust among parent and child domains, when operating as part of a distributed, hierarchical namespace. Providing authoritative source information enables external clients, including remote Internet clients, to obtain origin authen
+ENHANCEMENTS: SC-20.1: Child Subspaces —  | SC-20.2: Data Origin and Integrity — Provide data origin and integrity protection artifacts for internal name/address resolution queries. None. data origin artifacts are provided for internal name/address resolution queries; integrity protection artifacts are provided for internal name/address resolution queries. System and communications protection policy procedures 
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-21 — Secure Name/Address Resolution Service (Recursive or Caching Resolver)
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Request and perform data origin authentication and data integrity verification on the name/address resolution responses the system receives from authoritative sources. Each client of name resolution services either performs this validation on its own or has authenticated channels to trusted validation providers. Systems that provide name and address resolution services for local clients include recursive resolving or caching domain name system (DNS) servers. DNS client resolvers either perform validation of DNSSEC signatures, or clients use authenticated channels to recursive resolvers that pe
+ENHANCEMENTS: SC-21.1: Data Origin and Integrity — 
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-22 — Architecture and Provisioning for Name/Address Resolution Service
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Ensure the systems that collectively provide name/address resolution service for an organization are fault-tolerant and implement internal and external role separation. Systems that provide name and address resolution services include domain name system (DNS) servers. To eliminate single points of failure in systems and enhance redundancy, organizations employ at least two authoritative domain name system servers—one configured as the primary server and the other configured as the secondary server. Additionally, organizations typically deploy the servers in two geographically separated network
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-23 — Session Authenticity
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Protect the authenticity of communications sessions. Protecting session authenticity addresses communications protection at the session level, not at the packet level. Such protection establishes grounds for confidence at both ends of communications sessions in the ongoing identities of other parties and the validity of transmitted information. Authenticity protection includes protecting against "man-in-the-middle" attacks, session hijacking, and the insertion of false information into sessions. the authenticity of communication sessions is protected. System and communications protection polic
+ENHANCEMENTS: SC-23.1: Invalidate Session Identifiers at Logout — Invalidate session identifiers upon user logout or other session termination. Invalidating session identifiers at logout curtails the ability of adversaries to capture and continue to employ previously valid session IDs. session identifiers are invalidated upon user logout or other session termination. System and communications protection policy 
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-24 — Fail in Known State
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Fail to a {{ insert: param, sc-24_odp.02 }} for the following failures on the indicated components while preserving {{ insert: param, sc-24_odp.03 }} in failure: {{ insert: param, sc-24_odp.01 }}. Failure in a known state addresses security concerns in accordance with the mission and business needs of organizations. Failure in a known state prevents the loss of confidentiality, integrity, or availability of information in the event of failures of organizational systems or system components. Failure in a known safe state helps to prevent systems from failing to a state that may cause injury to 
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-25 — Thin Nodes
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Employ minimal functionality and information storage on the following system components: {{ insert: param, sc-25_odp }}. The deployment of system components with minimal functionality reduces the need to secure every endpoint and may reduce the exposure of information, systems, and services to attacks. Reduced or minimal functionality includes diskless nodes and thin client technologies. minimal functionality for {{ insert: param, sc-25_odp }} is employed; minimal information storage on {{ insert: param, sc-25_odp }} is allocated. System and communications protection policy procedures addressi
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-26 — Decoys
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Include components within organizational systems specifically designed to be the target of malicious attacks for detecting, deflecting, and analyzing such attacks. Decoys (i.e., honeypots, honeynets, or deception nets) are established to attract adversaries and deflect attacks away from the operational systems that support organizational mission and business functions. Use of decoys requires some supporting isolation measures to ensure that any deflected malicious code does not infect organizational systems. Depending on the specific usage of the decoy, consultation with the Office of the Gene
+ENHANCEMENTS: SC-26.1: Detection of Malicious Code — 
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-27 — Platform-independent Applications
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Include within organizational systems the following platform independent applications: {{ insert: param, sc-27_odp }}. Platforms are combinations of hardware, firmware, and software components used to execute software applications. Platforms include operating systems, the underlying computer architectures, or both. Platform-independent applications are applications with the capability to execute on multiple platforms. Such applications promote portability and reconstitution on different platforms. Application portability and the ability to reconstitute on different platforms increase the avail
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-28 — Protection of Information at Rest
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Protect the {{ insert: param, sc-28_odp.01 }} of the following information at rest: {{ insert: param, sc-28_odp.02 }}. Information at rest refers to the state of information when it is not in process or in transit and is located on system components. Such components include internal or external hard disk drives, storage area network devices, or databases. However, the focus of protecting information at rest is not on the type of storage device or frequency of access but rather on the state of the information. Information at rest addresses the confidentiality and integrity of information and co
+ENHANCEMENTS: SC-28.1: Cryptographic Protection — Implement cryptographic mechanisms to prevent unauthorized disclosure and modification of the following information at rest on {{ insert: param, sc-28.01_odp.02 }}: {{ insert: param, sc-28.01_odp.01 }}. The selection of cryptographic mechanisms is based on the need to protect the confidentiality and integrity of organizational information. The strength of mechan
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-29 — Heterogeneity
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Employ a diverse set of information technologies for the following system components in the implementation of the system: {{ insert: param, sc-29_odp }}. Increasing the diversity of information technologies within organizational systems reduces the impact of potential exploitations or compromises of specific technologies. Such diversity protects against common mode failures, including those failures induced by supply chain attacks. Diversity in information technologies also reduces the likelihood that the means adversaries use to compromise one system component will be effective against other 
+ENHANCEMENTS: SC-29.1: Virtualization Techniques — Employ virtualization techniques to support the deployment of a diversity of operating systems and applications that are changed {{ insert: param, sc-29.01_odp }}. While frequent changes to operating systems and applications can pose significant configuration management challenges, the changes can result in an increased work factor for adversaries to conduct su
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-30 — Concealment and Misdirection
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Employ the following concealment and misdirection techniques for {{ insert: param, sc-30_odp.02 }} at {{ insert: param, sc-30_odp.03 }} to confuse and mislead adversaries: {{ insert: param, sc-30_odp.01 }}. Concealment and misdirection techniques can significantly reduce the targeting capabilities of adversaries (i.e., window of opportunity and available attack surface) to initiate and complete attacks. For example, virtualization techniques provide organizations with the ability to disguise systems, potentially reducing the likelihood of successful attacks without the cost of having multiple 
+ENHANCEMENTS: SC-30.1: Virtualization Techniques —  | SC-30.2: Randomness — Employ {{ insert: param, sc-30.02_odp }} to introduce randomness into organizational operations and assets. Randomness introduces increased levels of uncertainty for adversaries regarding the actions that organizations take to defend their systems against attacks. Such actions may impede the ability of adversaries to correctly target in
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-31 — Covert Channel Analysis
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Perform a covert channel analysis to identify those aspects of communications within the system that are potential avenues for covert {{ insert: param, sc-31_odp }} channels; and Estimate the maximum bandwidth of those channels. Developers are in the best position to identify potential areas within systems that might lead to covert channels. Covert channel analysis is a meaningful activity when there is the potential for unauthorized information flows across security domains, such as in the case of systems that contain export-controlled information and have connections to external networks (i.
+ENHANCEMENTS: SC-31.1: Test Covert Channels for Exploitability — Test a subset of the identified covert channels to determine the channels that are exploitable. None. a subset of the identified covert channels is tested to determine the channels that are exploitable. System and communications protection policy procedures addressing covert channel analysis system design documentation system configuration setting
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-32 — System Partitioning
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Partition the system into {{ insert: param, sc-32_odp.01 }} residing in separate {{ insert: param, sc-32_odp.02 }} domains or environments based on {{ insert: param, sc-32_odp.03 }}. System partitioning is part of a defense-in-depth protection strategy. Organizations determine the degree of physical separation of system components. Physical separation options include physically distinct components in separate racks in the same room, critical components in separate rooms, and geographical separation of critical components. Security categorization can guide the selection of candidates for domain
+ENHANCEMENTS: SC-32.1: Separate Physical Domains for Privileged Functions — Partition privileged functions into separate physical domains. Privileged functions that operate in a single physical domain may represent a single point of failure if that domain becomes compromised or experiences a denial of service. privileged functions are partitioned into separate physical domains. System and communications protect
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-33 — Transmission Preparation Integrity
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-34 — Non-modifiable Executable Programs
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: For {{ insert: param, sc-34_odp.01 }} , load and execute: The operating environment from hardware-enforced, read-only media; and The following applications from hardware-enforced, read-only media: {{ insert: param, sc-34_odp.02 }}. The operating environment for a system contains the code that hosts applications, including operating systems, executives, or virtual machine monitors (i.e., hypervisors). It can also include certain applications that run directly on hardware platforms. Hardware-enforced, read-only media include Compact Disc-Recordable (CD-R) and Digital Versatile Disc-Recordable (D
+ENHANCEMENTS: SC-34.1: No Writable Storage — Employ {{ insert: param, sc-34.01_odp }} with no writeable storage that is persistent across component restart or power on/off. Disallowing writeable storage eliminates the possibility of malicious code insertion via persistent, writeable storage within the designated system components. The restriction applies to fixed and removable storage, with the latter being add
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-35 — External Malicious Code Identification
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Include system components that proactively seek to identify network-based malicious code or malicious websites. External malicious code identification differs from decoys in [SC-26](#sc-26) in that the components actively probe networks, including the Internet, in search of malicious code contained on external websites. Like decoys, the use of external malicious code identification techniques requires some supporting isolation measures to ensure that any malicious code discovered during the search and subsequently executed does not infect organizational systems. Virtualization is a common tech
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-36 — Distributed Processing and Storage
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Distribute the following processing and storage components across multiple {{ insert: param, sc-36_prm_1 }}: {{ insert: param, sc-36_prm_2 }}. Distributing processing and storage across multiple physical locations or logical domains provides a degree of redundancy or overlap for organizations. The redundancy and overlap increase the work factor of adversaries to adversely impact organizational operations, assets, and individuals. The use of distributed processing and storage does not assume a single primary processing or storage location. Therefore, it allows for parallel processing and storag
+ENHANCEMENTS: SC-36.1: Polling Techniques — Employ polling techniques to identify potential faults, errors, or compromises to the following processing and storage components: {{ insert: param, sc-36.01_odp.01 }} ; and Take the following actions in response to identified faults, errors, or compromises: {{ insert: param, sc-36.01_odp.02 }}. Distributed processing and/or storage may be used to reduce opportunities
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-37 — Out-of-band Channels
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Employ the following out-of-band channels for the physical delivery or electronic transmission of {{ insert: param, sc-37_odp.02 }} to {{ insert: param, sc-37_odp.03 }}: {{ insert: param, sc-37_odp.01 }}. Out-of-band channels include local, non-network accesses to systems; network paths physically separate from network paths used for operational traffic; or non-electronic paths, such as the U.S. Postal Service. The use of out-of-band channels is contrasted with the use of in-band channels (i.e., the same channels) that carry routine operational traffic. Out-of-band channels do not have the sam
+ENHANCEMENTS: SC-37.1: Ensure Delivery and Transmission — Employ {{ insert: param, sc-37.01_odp.01 }} to ensure that only {{ insert: param, sc-37.01_odp.02 }} receive the following information, system components, or devices: {{ insert: param, sc-37.01_odp.03 }}. Techniques employed by organizations to ensure that only designated systems or individuals receive certain information, system components, or devices i
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-38 — Operations Security
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Employ the following operations security controls to protect key organizational information throughout the system development life cycle: {{ insert: param, sc-38_odp }}. Operations security (OPSEC) is a systematic process by which potential adversaries can be denied information about the capabilities and intentions of organizations by identifying, controlling, and protecting generally unclassified information that specifically relates to the planning and execution of sensitive organizational activities. The OPSEC process involves five steps: identification of critical information, analysis of 
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-39 — Process Isolation
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Maintain a separate execution domain for each executing system process. Systems can maintain separate execution domains for each executing process by assigning each process a separate address space. Each system process has a distinct address space so that communication between processes is performed in a manner controlled through the security functions, and one process cannot modify the executing code of another process. Maintaining separate execution domains for executing processes can be achieved, for example, by implementing separate address spaces. Process isolation technologies, including
+ENHANCEMENTS: SC-39.1: Hardware Separation — Implement hardware separation mechanisms to facilitate process isolation. Hardware-based separation of system processes is generally less susceptible to compromise than software-based separation, thus providing greater assurance that the separation will be enforced. Hardware separation mechanisms include hardware memory management. hardware separation is implemented 
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-40 — Wireless Link Protection
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Protect external and internal {{ insert: param, sc-40_prm_1 }} from the following signal parameter attacks: {{ insert: param, sc-40_prm_2 }}. Wireless link protection applies to internal and external wireless communication links that may be visible to individuals who are not authorized system users. Adversaries can exploit the signal parameters of wireless links if such links are not adequately protected. There are many ways to exploit the signal parameters of wireless links to gain intelligence, deny service, or spoof system users. Protection of wireless links reduces the impact of attacks th
+ENHANCEMENTS: SC-40.1: Electromagnetic Interference — Implement cryptographic mechanisms that achieve {{ insert: param, sc-40.01_odp }} against the effects of intentional electromagnetic interference. The implementation of cryptographic mechanisms for electromagnetic interference protects systems against intentional jamming that might deny or impair communications by ensuring that wireless spread spectrum wavef
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-41 — Port and I/O Device Access
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: {{ insert: param, sc-41_odp.02 }} disable or remove {{ insert: param, sc-41_odp.01 }} on the following systems or system components: {{ insert: param, sc-41_odp.03 }}. Connection ports include Universal Serial Bus (USB), Thunderbolt, and Firewire (IEEE 1394). Input/output (I/O) devices include compact disc and digital versatile disc drives. Disabling or removing such connection ports and I/O devices helps prevent the exfiltration of information from systems and the introduction of malicious code from those ports or devices. Physically disabling or removing ports and/or devices is the stronger 
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-42 — Sensor Capability and Data
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Prohibit {{ insert: param, sc-42_odp.01 }} ; and Provide an explicit indication of sensor use to {{ insert: param, sc-42_odp.05 }}. Sensor capability and data applies to types of systems or system components characterized as mobile devices, such as cellular telephones, smart phones, and tablets. Mobile devices often include sensors that can collect and record data regarding the environment where the system is in use. Sensors that are embedded within mobile devices include microphones, cameras, Global Positioning System (GPS) mechanisms, and accelerometers. While the sensors on mobiles devices 
+ENHANCEMENTS: SC-42.1: Reporting to Authorized Individuals or Roles — Verify that the system is configured so that data or information collected by the {{ insert: param, sc-42.01_odp }} is only reported to authorized individuals or roles. In situations where sensors are activated by authorized individuals, it is still possible that the data or information collected by the sensors will be sent to unauthorized en
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-43 — Usage Restrictions
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Establish usage restrictions and implementation guidelines for the following system components: {{ insert: param, sc-43_odp }} ; and Authorize, monitor, and control the use of such components within the system. Usage restrictions apply to all system components including but not limited to mobile code, mobile devices, wireless access, and wired and wireless peripheral components (e.g., copiers, printers, scanners, optical devices, and other similar technologies). The usage restrictions and implementation guidelines are based on the potential for system components to cause damage to the system a
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-44 — Detonation Chambers
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Employ a detonation chamber capability within {{ insert: param, sc-44_odp }}. Detonation chambers, also known as dynamic execution environments, allow organizations to open email attachments, execute untrusted or suspicious applications, and execute Universal Resource Locator requests in the safety of an isolated environment or a virtualized sandbox. Protected and isolated execution environments provide a means of determining whether the associated attachments or applications contain malicious code. While related to the concept of deception nets, the employment of detonation chambers is not in
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-45 — System Time Synchronization
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Synchronize system clocks within and between systems and system components. Time synchronization of system clocks is essential for the correct execution of many system services, including identification and authentication processes that involve certificates and time-of-day restrictions as part of access control. Denial of service or failure to deny expired credentials may result without properly synchronized clocks within and between systems and system components. Time is commonly expressed in Coordinated Universal Time (UTC), a modern continuation of Greenwich Mean Time (GMT), or local time w
+ENHANCEMENTS: SC-45.1: Synchronization with Authoritative Time Source — Compare the internal system clocks {{ insert: param, sc-45.01_odp.01 }} with {{ insert: param, sc-45.01_odp.02 }} ; and Synchronize the internal system clocks to the authoritative time source when the time difference is greater than {{ insert: param, sc-45.01_odp.03 }}. Synchronization of internal system clocks with an authoritative source 
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-46 — Cross Domain Policy Enforcement
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Implement a policy enforcement mechanism {{ insert: param, sc-46_odp }} between the physical and/or network interfaces for the connecting security domains. For logical policy enforcement mechanisms, organizations avoid creating a logical path between interfaces to prevent the ability to bypass the policy enforcement mechanism. For physical policy enforcement mechanisms, the robustness of physical isolation afforded by the physical implementation of policy enforcement to preclude the presence of logical covert channels penetrating the security domain may be needed. Contact [ncdsmo@nsa.gov](mail
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-47 — Alternate Communications Paths
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Establish {{ insert: param, sc-47_odp }} for system operations organizational command and control. An incident, whether adversarial- or nonadversarial-based, can disrupt established communications paths used for system operations and organizational command and control. Alternate communications paths reduce the risk of all communications paths being affected by the same incident. To compound the problem, the inability of organizational officials to obtain timely information about disruptions or to provide timely direction to operational elements after a communications path incident, can impact 
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-48 — Sensor Relocation
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Relocate {{ insert: param, sc-48_odp.01 }} to {{ insert: param, sc-48_odp.02 }} under the following conditions or circumstances: {{ insert: param, sc-48_odp.03 }}. Adversaries may take various paths and use different approaches as they move laterally through an organization (including its systems) to reach their target or as they attempt to exfiltrate information from the organization. The organization often only has a limited set of monitoring and detection capabilities, and they may be focused on the critical or likely infiltration or exfiltration paths. By using communications paths that th
+ENHANCEMENTS: SC-48.1: Dynamic Relocation of Sensors or Monitoring Capabilities — Dynamically relocate {{ insert: param, sc-48.01_odp.01 }} to {{ insert: param, sc-48.01_odp.02 }} under the following conditions or circumstances: {{ insert: param, sc-48.01_odp.03 }}. None. {{ insert: param, sc-48.01_odp.01 }} are dynamically relocated to {{ insert: param, sc-48.01_odp.02 }} under {{ insert: param, sc-48.01_odp.0
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-49 — Hardware-enforced Separation and Policy Enforcement
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Implement hardware-enforced separation and policy enforcement mechanisms between {{ insert: param, sc-49_odp }}. System owners may require additional strength of mechanism and robustness to ensure domain separation and policy enforcement for specific types of threats and environments of operation. Hardware-enforced separation and policy enforcement provide greater strength of mechanism than software-enforced separation and policy enforcement. hardware-enforced separation and policy enforcement mechanisms are implemented between {{ insert: param, sc-49_odp }}. System and communications protecti
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-50 — Software-enforced Separation and Policy Enforcement
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Implement software-enforced separation and policy enforcement mechanisms between {{ insert: param, sc-50_odp }}. System owners may require additional strength of mechanism to ensure domain separation and policy enforcement for specific types of threats and environments of operation. software-enforced separation and policy enforcement mechanisms are implemented between {{ insert: param, sc-50_odp }}. System and communications protection policy procedures addressing cross-domain policy enforcement system design documentation system configuration settings and associated documentation system audit
+
+──────────────────────────────────────────────────
+
+CONTROL: SC-51 — Hardware-based Protection
+FAMILY: SC (System and Communications Protection)
+FRAMEWORK: NIST SP 800-53 rev5
+DESCRIPTION: Employ hardware-based, write-protect for {{ insert: param, sc-51_odp.01 }} ; and Implement specific procedures for {{ insert: param, sc-51_odp.02 }} to manually disable hardware write-protect for firmware modifications and re-enable the write-protect prior to returning to operational mode. None. hardware-based write-protect for {{ insert: param, sc-51_odp.01 }} is employed; specific procedures are implemented for {{ insert: param, sc-51_odp.02 }} to manually disable hardware write-protect for firmware modifications; specific procedures are implemented for {{ insert: param, sc-51_odp.02 }} to r
+
+──────────────────────────────────────────────────
