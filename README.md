@@ -98,9 +98,3 @@ python scripts/openwebui-convert.py
 ```
 
 This writes text files into `scripts/kb_output/`, grouped by source and framework so they can be uploaded into Open WebUI as knowledge-base documents.
-
-## Notes
-
-- Local virtual environments and machine-specific files are intentionally ignored.
-- Generated project artifacts are included where they are small enough for normal GitHub storage.
-- The ChromaDB embedding model is `all-MiniLM-L6-v2`; keep query and ingestion scripts aligned if you change it.
